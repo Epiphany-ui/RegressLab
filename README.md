@@ -1,47 +1,69 @@
-# 大模型分类应用退化诊断与回归测试系统开发文档包
+# RegressLab · 模型退化诊断 Demo
 
-版本1.3 · 2026年10月22日 · 正式开发期2027年1—4月。
+本地中文工作台：导入标注数据和两版分类预测，严格校验完整性，计算发现集 D 的成对指标、候选分组与混淆变化，查看逐条证据并导出 JSON / HTML。分析结果保存在本机，刷新或重启后可以继续查看。
 
-**论文题目：面向大模型分类应用的退化诊断与回归测试系统的设计与实现。论文按应用开发类规划，具体登记由学院确认。**
+当前交付为 **0.1.0 描述性 Demo**。原始 1.3 设计、机器合同和教师 Word 已复制到本目录；原文档入口保留在 [DOCUMENTS.md](DOCUMENTS.md)，完整产品定义见 [PRODUCT.md](PRODUCT.md)。主实验仍为小模型真实微调更新，逻辑回归重新训练为对照；本 Demo 尚未执行这些训练或正式效果实验。
 
-本包是开发设计、机器合同及验证记录，不是已经完成的软件或模型效果。用户已确认：小型开源语言模型真实微调更新为主实验，逻辑回归重新训练为对照，API选做。当前没有完成真实训练、GPU资源、应用运行和研究效果验收。
+## 启动
 
-先读[PRODUCT](PRODUCT.md)理解完整成品，再读[19模型版本生成](19-model-version-protocol.md)回答“旧版从哪来、新版怎么修改”。发老师使用[Word简版](teacher-brief.docx)；PDF仅在实际生成并核验后附在本目录，不沿用旧在线转换链接。
+需要 Python 3.11+、uv 和 Node 24。首次准备需要联网安装依赖；依赖和构建产物准备好后，启动与夹具演示无需联网。
 
-## 核心范围
+```bash
+bash scripts/setup.sh
+bash scripts/demo.sh
+```
 
-- 固定标签文本分类/意图识别，MASSIVE1.1 zh-CN及公开gold；不做开放回答或视觉评测。
-- Qwen3-0.6B TRAIN-only LoRA的预定检查点v1/v2/v3为主版本链；6GB显存可行性先测，不保证效果。
-- TF-IDF＋逻辑回归CPU重新训练对照；Ollama已安装模型原生推理；外部微调模型同后端真实推理导入。
-- FastAPI＋Vue3/TypeScript、PostgreSQL、单Worker、Docker Compose、中文界面、版本/任务/报告/恢复闭环。
-- 成对比较、D分组、合格证据的一次C、审查、预算精选、冻结套件、后续版本真实重放。
-- API分类、其他规模/语言和微调模型转Ollama为P1；旧解释接口关闭兼容，不列开发计划。
+浏览器访问 **http://127.0.0.1:8080**。自定义端口：`REGRESSLAB_PORT=8090 bash scripts/demo.sh`。停止时按 Ctrl+C。
 
-“第一版/P0”指最终毕业成品；前期Demo只是部分流程。硬件按用户说明为桌面端3060、6GB显存。2026年10月下旬—11月中旬Demo暂估累计8—12小时，11月下旬—12月备考优先。
+也可分步启动：
 
-## 导航
+```bash
+cd backend
+uv sync --frozen --cache-dir ../.cache/uv
+cd ../frontend
+npm ci --cache ../.cache/npm
+npm run build
+cd ..
+backend/.venv/bin/python -m regresslab.cli demo --port 8080
+```
 
-| 文件 | 用途 |
-|---|---|
-| [PRODUCT](PRODUCT.md) / [00](00-project-charter.md) | 产品全貌、范围、价值、可行性和风险 |
-| [01](01-requirements.md) / [02](02-domain-workflows.md) | 需求、对象、状态、事务和边界 |
-| [03](03-data-protocol.md) / [04](04-algorithms.md) | 数据/版本/预测合同及指标、分组、精选算法 |
-| [05](05-architecture.md) / [06](06-database.md) / [07](07-api.md) | 架构、DDL、HTTP和机器合同 |
-| [08](08-ui-spec.md) / [09](09-test-plan.md) | 页面、异常、软件测试和成品验收 |
-| [10](10-deployment-security.md) / [13](13-user-operations.md) | 部署、宿主机Ollama、备份、用户与答辩流程 |
-| [11](11-experiment-protocol.md) / [17](17-baselines-and-algorithm-evolution.md) | 正式实验、五基线两消融、开发调整与停止规则 |
-| [12](12-implementation-plan.md) | 任务、文件、接口、验证命令及阶段出口 |
-| [14](14-traceability-review.md) / [18](18-revision-notes.md) | 需求追踪、漏洞修订、评审与版本记录 |
-| [15](15-sources-decisions.md) / [16](16-proposal-summary.md) | 一手来源及教师开题摘要 |
-| [19](19-model-version-protocol.md) | 真实修改、检查点、训练/推理准备、资源和冻结顺序 |
-| [机器合同](contracts/README.md) / [验证记录](verification/README.md) | OpenAPI、DDL、Schema、样例和静态检查边界 |
+命令适用于当前 Linux / WSL 工作区。前端开发：在一个终端运行 Demo，在另一个终端执行 `cd frontend && npm run dev`，访问 http://127.0.0.1:5173；Vite 将 API 与示例文件代理到 8080。
 
-## 开发顺序和证据边界
+## 三分钟演示
 
-按12执行，先环境/数据，再19小模型资源与输出预实验，再版本/预测/诊断/套件/UI和恢复。0.6B微调失败须明确记录，不能以逻辑回归冒称完成主验证。训练环境独立锁定，不开发网页大模型训练平台。
+1. 点击“载入工程夹具”，真实运行导入和分析。12 条 D 样本应为 a=6、b=3、c=1、d=2；旧准确率 75%，新准确率 58.3%，下降 16.7 个百分点。小夹具低于分组支持量 30，因此没有候选。
+2. 切换“负向翻转”，查看 3 条旧对新错，分页或展开文本。
+3. 载入分组发现夹具：D=96，能以固定生产门槛产生候选。合成夹具用于检验软件，不代表真实模型效果。
+4. 下载格式示例，用“导入预测对比”上传数据和两份预测。缺失、重复、多余 ID、未知标签、混合 run 或原始响应不一致都会阻止分析。
+5. 导出 JSON 或 HTML，刷新页面，在历史分析中重新打开。
 
-先通过合成工程夹具，再运行真实数据。预测100%合法覆盖才允许统计；所有原始响应与run身份可追溯，不拼接不同LLM运行。DEV100例×3稳定性门槛不通过时只描述D、不确认；来源DECLARED不因hash合法变成真实训练认证。
+格式和精确预期见 [examples/README.md](examples/README.md)。界面仅展示 D 逐例证据；C/A 不参与当前统计或分组，确认字段始终为 null。来源固定为 `DECLARED`，不认证外部推理和权重。有限样本和“未发现退化”都不代表模型安全。
 
-固定初版选择策略为默认，所有方法共用池、预算和后续目标；训练链、检查点、样本和selector随机seed不是同一独立单位。未来预测在套件冻结后生成/解封；无退化、无分组或无增益如实报告。不把“未发现”当安全，不承诺创新或发表。
+## 验证与开发
 
-文档静态检查、示例合法和独立设计审阅仅证明相应检查范围；不能证明6GB训练、真实统计功效、产品部署和效果已经通过。锁文件、源文件hash及实测结果在开发时记录，不预造。
+```bash
+cd backend && .venv/bin/python -m pytest -q
+cd ../frontend && npm run build
+cd ../e2e && npm ci --cache ../.cache/npm
+npx playwright install chromium
+npm test
+```
+
+浏览器测试会使用独立临时数据库并启动本地服务，包含桌面/360px移动布局、夹具、真实上传、负例与导出。已安装的 Chromium 可通过 `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` 指定。
+
+```bash
+backend/.venv/bin/python -m regresslab.cli doctor
+node verification/check-package.cjs
+```
+
+后一个命令仅验证原设计文档与合同，不能代替应用或模型实验验收。当前实现范围和后续任务见 [docs/IMPLEMENTATION.md](docs/IMPLEMENTATION.md)，API 约定见 [docs/DEMO-API.md](docs/DEMO-API.md)，实测记录见 [docs/VALIDATION.md](docs/VALIDATION.md)。界面规范见 [DESIGN.md](DESIGN.md)。
+
+## 数据与当前边界
+
+默认数据文件为 `var/demo.sqlite3`，包含成功导入的原文和预测，目录已从 Git 排除。`REGRESSLAB_DATA_DIR` 可指定另一个目录。所有成功结果只追加，读取时核对完整记录指纹。停止服务后可备份整个 `var` 目录；恢复到新目录再运行 doctor。失败上传只留输入摘要和错误码，不保存失败原始文件。
+
+此 Demo 使用 SQLite 和有界同步导入，单份文件 ≤10 MiB、数据 ≤5000 行，仅绑定 `127.0.0.1`。这是有意缩小的前期实现，API 独立使用 `/api/demo`，未冒充最终 `/api/v1` 或完整报告合同。最终 PostgreSQL、持久队列/Worker、认证、模型来源登记、GPU微调/Ollama、DEV稳定性、C一次确认、冻结套件和真实后续版本重放尚待后续阶段完成。不要把此入口用于公网部署。
+
+---
+
+原始设计包说明已完整保留于 [DOCUMENTS.md](DOCUMENTS.md)。

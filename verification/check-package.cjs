@@ -3,7 +3,8 @@ const base=path.resolve(__dirname,'..');
 const results=[];
 function check(name,fn){try{fn();results.push({name,status:'PASS'});}catch(e){results.push({name,status:'FAIL',detail:e.message});}}
 function assert(x,m){if(!x)throw Error(m);}
-function files(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?files(path.join(dir,e.name)):[path.join(dir,e.name)]);}
+const excludedDirs=new Set(['.git','.cache','.venv','node_modules','dist','var','.pytest_cache','__pycache__','test-results','playwright-report']);
+function files(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?(excludedDirs.has(e.name)?[]:files(path.join(dir,e.name))):[path.join(dir,e.name)]);}
 const load=f=>JSON.parse(fs.readFileSync(path.join(base,f),'utf8'));
 const api=load('contracts/openapi.json');
 function pointer(root,ref){assert(ref.startsWith('#/'),'non-local reference '+ref);return ref.slice(2).split('/').reduce((o,k)=>{k=k.replaceAll('~1','/').replaceAll('~0','~');assert(o&&Object.hasOwn(o,k),'unresolved '+ref);return o[k];},root);}
