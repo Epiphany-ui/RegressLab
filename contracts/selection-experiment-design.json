@@ -1,0 +1,381 @@
+{
+  "schema_version": "selection-experiment-design-1.3",
+  "scope": "LAB_ONLY",
+  "result_schema_version": "lab-1.3",
+  "production": {
+    "algorithm": "coverage_diversity_v1",
+    "formula_version": "weighted_lexicographic_v1",
+    "changed_in_this_revision": false,
+    "priority": [
+      "gain",
+      "historical_flip",
+      "diversity"
+    ],
+    "group_weight": 2,
+    "label_weight": 1,
+    "score_coefficients": [
+      1000,
+      10,
+      1
+    ],
+    "tie_break": "sample_id_utf8_ascending",
+    "implementation_ordering": "compare_tuple_gain_H_D_directly_avoid_scalar_float_cancellation"
+  },
+  "common": {
+    "pool": "historical_discovery_old_correct",
+    "shared_pool_snapshot": true,
+    "pool_cap": 5000,
+    "obligations_built_before_truncation": true,
+    "vectorizer": "04-algorithms.md:ALG-05",
+    "budgets": [
+      20,
+      50,
+      100,
+      200
+    ],
+    "actual_budget": "min(requested_budget,shared_pool_size)",
+    "random_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "random_order": "SHA256(UTF8('baseline-rng-v1|'+str(seed)+'|'+sample_id)) ascending, then sample_id UTF8 ascending",
+    "paired_output_requirement": "100_percent_legal_complete_exact_scope_no_row_dropping",
+    "preprocessing": "freeze_converter_profile_before_models_and_formal_results; cleaned_components_exclusions_fully_manifested"
+  },
+  "methods": [
+    {
+      "id": "random",
+      "kind": "baseline",
+      "required": true,
+      "randomized": true,
+      "rule": "shared_seeded_order_without_replacement"
+    },
+    {
+      "id": "stratified",
+      "kind": "baseline",
+      "required": true,
+      "randomized": true,
+      "rule": "proportional_largest_remainder_then_seeded_within_label"
+    },
+    {
+      "id": "historical",
+      "kind": "baseline",
+      "required": true,
+      "randomized": true,
+      "priority": [
+        "historical_flip",
+        "seeded_order_ascending"
+      ]
+    },
+    {
+      "id": "coverage",
+      "kind": "baseline",
+      "required": true,
+      "randomized": true,
+      "priority": [
+        "gain",
+        "seeded_order_ascending"
+      ]
+    },
+    {
+      "id": "diversity",
+      "kind": "baseline",
+      "required": true,
+      "randomized": true,
+      "rule": "seeded_first_then_farthest_first_with_id_ties"
+    },
+    {
+      "id": "complete",
+      "kind": "proposed",
+      "required": true,
+      "randomized": false,
+      "priority": [
+        "gain",
+        "historical_flip",
+        "diversity"
+      ],
+      "tie_break": "sample_id_utf8_ascending"
+    },
+    {
+      "id": "ablate_history",
+      "kind": "ablation",
+      "required": true,
+      "randomized": false,
+      "priority": [
+        "gain",
+        "diversity"
+      ],
+      "tie_break": "sample_id_utf8_ascending"
+    },
+    {
+      "id": "ablate_diversity",
+      "kind": "ablation",
+      "required": true,
+      "randomized": false,
+      "priority": [
+        "gain",
+        "historical_flip"
+      ],
+      "tie_break": "sample_id_utf8_ascending"
+    },
+    {
+      "id": "history_first",
+      "kind": "priority_control",
+      "required": false,
+      "randomized": false,
+      "priority": [
+        "historical_flip",
+        "gain",
+        "diversity"
+      ],
+      "tie_break": "sample_id_utf8_ascending"
+    }
+  ],
+  "development": {
+    "data": "DEV_or_independent_development_corpus",
+    "dev_lab_component_split": [
+      0.5,
+      0.25,
+      0.25
+    ],
+    "dev_statistics_exploratory": true,
+    "max_rounds": 2,
+    "max_modified_families_in_round_2": 1,
+    "min_valid_chains_for_promotion": 3,
+    "forbidden_inputs": [
+      "formal_TEST_CONFIRM",
+      "formal_TEST_AUDIT",
+      "formal_future_predictions_on_DISCOVERY",
+      "formal_future_scores_before_suite_freeze"
+    ],
+    "future_model_content_hashes_disjoint_from_final": true,
+    "candidate_families": [
+      "priority_history_first",
+      "group_weight_1_2_4",
+      "saturated_group_coverage_r2_lab_v2",
+      "remove_diversity"
+    ],
+    "group_weight_grid": [
+      1,
+      2,
+      4
+    ],
+    "label_weight_fixed": 1,
+    "enabled_by_default": false,
+    "applies_to": "OPTIONAL_SELECTOR_ADJUSTMENT_ONLY",
+    "min_distinct_training_runs_for_promotion": 3,
+    "future_weights_hashes_disjoint_from_final": true
+  },
+  "promotion_gate": {
+    "status": "PRESET_ENGINEERING_CRITERIA_NOT_STATISTICAL_GUARANTEE",
+    "budgets": [
+      50,
+      100
+    ],
+    "valid_chain_pool_min": 100,
+    "valid_chain_observed_groups_min": 1,
+    "min_valid_chains": 3,
+    "reference": "best_of_five_baselines_on_round1_development_macro_average_then_time_then_id",
+    "reference_frozen_before_round2": true,
+    "min_macro_group_recall_gain": 0.05,
+    "min_nonnegative_chain_fraction": 0.6666666666666666,
+    "max_negative_flip_yield_drop": 0.02,
+    "max_time_ratio_to_initial_complete": 2,
+    "time_floor_seconds": 0.01,
+    "time_warm_repetitions": 5,
+    "timeout_seconds": 600,
+    "zero_denominator": "NOT_APPLICABLE_NOT_PASS",
+    "requires_distinct_training_runs": true,
+    "same_run_checkpoints_count_as_chains": false
+  },
+  "final": {
+    "min_chains": 2,
+    "freeze_before_formal_confirmation_and_future_predictions": true,
+    "all_methods_share_one_confirmation_union": true,
+    "confirmation_consumption_key": [
+      "evaluation_data_sha256",
+      "old_model_content_hash",
+      "new_model_content_hash"
+    ],
+    "primary_metric": "audit_observed_frozen_group_detection_fraction",
+    "zero_primary_denominator": "not_applicable",
+    "aggregation": "mean_over_selector_seeds_then_display_each_chain_separately_by_technology;optional_chain_equal_weight_descriptive_summary",
+    "report_all_budgets_and_chains": true,
+    "min_llm_weight_update_chains": 1,
+    "min_lr_retraining_control_chains": 1,
+    "minimum_is_software_acceptance_gate": false,
+    "min_3_formal_chains_only_if_optional_adjustment": true,
+    "primary_historical_pair": "v1_to_v2",
+    "primary_future_pair": "v1_to_v3",
+    "secondary_future_pair": "v2_to_v3_with_fixed_budget_and_explicit_old_correct_count",
+    "future_predictions_unavailable_to_selector": true,
+    "all_suites_frozen_before_future_prediction_access": true,
+    "evaluation_data_sha256_definition": "SHA256_canonical_JSON_of_canonical_rows_sha256_labelset_sha256_split_manifest_sha256_excludes_UUID_source_name_version_license",
+    "application_fingerprint_not_raw_weights": true,
+    "confirmation_control_scope": "ONE_FROZEN_FAMILY_ONE_MODEL_PAIR_not_lifetime_or_all_chains",
+    "reference_group_family": "same_frozen_union_U_all_discovery_configurations_all_selectors",
+    "audit_observed_group_rule": "component_support_at_least_40_and_observed_net_drop_at_least_0.05;descriptive_not_significance",
+    "future_flip_yield": "v1_correct_v3_wrong_count_divided_by_same_actual_budget",
+    "same_run_checkpoints_are_independent_replicates": false,
+    "selector_seeds_are_training_replicates": false,
+    "no_observed_groups": "not_applicable_not_100_percent_not_posthoc_metric_switch",
+    "no_future_negative_flips": "report_zero_and_insufficient_evidence_no_artificial_injection",
+    "research_full_prediction_cost_counted": true
+  },
+  "registration_contract": {
+    "required_keys": [
+      "run_id",
+      "stage",
+      "design_hash",
+      "git_sha",
+      "evaluation_data_sha256",
+      "data_content_hash",
+      "preprocessing_profile_hash",
+      "development_future_model_hashes",
+      "formal_future_model_hashes",
+      "weights_hashes",
+      "inference_config_sha256",
+      "prediction_snapshot_hashes",
+      "training_runs",
+      "chains",
+      "methods",
+      "budgets",
+      "selector_seeds",
+      "selected_candidate_config_hash",
+      "evidence_mode",
+      "stability_manifest_sha256",
+      "provenance_status",
+      "suite_freeze_at",
+      "future_prediction_access_at",
+      "frozen_at"
+    ],
+    "stages": [
+      "DEVELOPMENT",
+      "FROZEN_FINAL",
+      "EXPLORATORY"
+    ],
+    "missing_runtime_hash": "REJECT_FOR_ALREADY_PRODUCED_ARTIFACTS;future_predictions_explicit_UNAVAILABLE_BEFORE_FREEZE_allowed_until_generation",
+    "changed_frozen_config": "REJECT_OR_NEW_EXPLORATORY_RUN",
+    "future_runtime_hashes": "declared_unavailable_until_postfreeze_generation;final_result_requires_actual_hashes_no_invented_values"
+  },
+  "change_log_required": [
+    "old_config_hash",
+    "new_config_hash",
+    "changed_family",
+    "development_evidence",
+    "reference_baseline_id",
+    "gate_results",
+    "decision",
+    "frozen_at",
+    "formal_data_accessed"
+  ],
+  "evidence_status": {
+    "actual_models_trained": false,
+    "actual_effects_measured": false,
+    "novelty_verified": false,
+    "primary_training_viability_measured": false
+  },
+  "default_path": "FIXED_INITIAL_SELECTOR_NO_ADAPTIVE_OPTIMIZATION",
+  "model_protocol": {
+    "primary": "Qwen3-0.6B_fixed_revision_TRAIN_only_PEFT_LoRA_checkpoints_v1_v2_v3",
+    "exact_recipe": "19-model-version-protocol.md",
+    "resource_viability": "UNTESTED_6GB_GPU;1.7B_optional_after_measurement",
+    "control": "TFIDF_LogisticRegression_C1_nested_TRAIN_fractions_0.5_0.8_1.0_seed42",
+    "optional_service": "API_application_config_or_service_reference_not_own_weight_update",
+    "application_fingerprint": "ModelVersion.content_sha256",
+    "weight_fingerprint": "weights_sha256",
+    "fixed_inference_fingerprint": "inference_config_sha256",
+    "weight_update_requires": [
+      "different_weights_sha256",
+      "same_inference_config_sha256",
+      "TRAINING_UPDATE",
+      "parent_model_version_id",
+      "training_provenance_manifest"
+    ],
+    "provenance_statuses": [
+      "SERVER_VERIFIED",
+      "DECLARED"
+    ],
+    "imported_provenance": "DECLARED_not_proven_by_shape_validation",
+    "main_prediction_route": "external_Transformers_PEFT_predictions_imported_PRECOMPUTED",
+    "ollama_conversion_required": false,
+    "same_run_checkpoints_are_independent_replicates": false,
+    "application_content_fields": [
+      "labelset_sha256",
+      "weights_sha256",
+      "inference_config_sha256"
+    ],
+    "excluded_metadata_from_application_identity": [
+      "kind",
+      "name",
+      "provenance_sha256",
+      "run_id",
+      "chain_id"
+    ]
+  },
+  "stability_gate": {
+    "dev_sample_count": 100,
+    "repeated_runs_per_version": 3,
+    "sample_order": "SHA256('stability-v1|42|'+sample_id)_ascending_then_sample_id",
+    "require_all_parsed_labels_identical": true,
+    "require_100_percent_legal_outputs": true,
+    "fewer_than_100_dev_samples": "LLM_CONFIRMATORY_NOT_ALLOWED",
+    "passing": "CONFIRMATORY_only_with_frozen_runtime_and_provenance_requirements",
+    "failing": "DESCRIPTIVE_ONLY_no_C_read_no_confirmed_regression_claim",
+    "descriptive_slice_status": "PROPOSED",
+    "descriptive_confirmation": null,
+    "descriptive_verdict": "INCONCLUSIVE",
+    "descriptive_summary_reason": "EVIDENCE_NOT_CONFIRMABLE",
+    "zero_observed_noise_proves_determinism": false,
+    "repeats_are_independent_samples": false,
+    "future_v3_dev_pilot_order": "after_all_selector_suites_frozen; no_tuning_or_target_replacement_after_v3; failing_future_claims_descriptive_only"
+  },
+  "lab_prediction": {
+    "manifest_schema": "lab-prediction-run.schema.json",
+    "schema_version": "lab-1.3",
+    "manifest_kind": "LAB_ONLY",
+    "input_command": "python -m regresslab.cli lab prediction-inputs --registration <registration.json> --target-model <model-version-id> --scope AUDIT|POOL --output <inputs.jsonl>",
+    "inference_command": "python -m regresslab_experiments.cli infer --manifest-kind lab --model-manifest <model.json> --run-manifest <lab-run-manifest.json> --inputs <inputs.jsonl> --output <predictions.jsonl>",
+    "validation_command": "python -m regresslab.cli lab prediction-validate --manifest <lab-run-manifest.json> --predictions <predictions.jsonl>",
+    "evaluation_command": "python -m regresslab.cli lab evaluate --registration <registration.json> --predictions <validated-lab-run-directory> --output <result-directory>",
+    "scope_kinds": [
+      "LAB_AUDIT",
+      "LAB_POOL"
+    ],
+    "inputs_have_gold": false,
+    "pool_is_shared_P_prime": true,
+    "future_export_requires_all_suites_frozen": true,
+    "all_suites_freeze_hash": "all_suites_freeze_sha256",
+    "audit_gold_read": "once_in_final_evaluation_after_all_preregistered_prediction_runs_complete",
+    "product_HTTP_import_allowed": false,
+    "product_HTTP_AUDIT_access": false,
+    "outputs_consumed_by": "lab_frozen_evaluator_only",
+    "research_full_pool_and_audit_cost_reported": true,
+    "runtime_invariants": [
+      "valid_equals_expected",
+      "exact_expected_ID_set",
+      "all_run_ids_match_manifest",
+      "hashes_recomputed",
+      "suite_freeze_before_future_access",
+      "scope_and_target_match_registration"
+    ]
+  }
+}

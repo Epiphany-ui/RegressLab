@@ -1,0 +1,40 @@
+{
+  "revision": "1.3",
+  "checked_at": "2026-10-22T15:57:46.074686+00:00",
+  "scope": "Documentation and contract review; no application or training validation",
+  "status": "PASS",
+  "static_groups": 17,
+  "old_v1_2_files_unchanged": 43,
+  "changed_old_files": [],
+  "teacher_docx_sha256": "4968ea0445479d0be72b9961ba3318c8926dd756c7ba1a480ee55b8caa5893f0",
+  "standalone_teacher_docx_identical": true,
+  "teacher_visual_qa": {
+    "pages": 2,
+    "method": "Adobe DOCX to PDF; final first page and exact second-page copy inspected by document author",
+    "local_canonical_renderer": "attempted; unavailable bundled LibreOffice, user desktop binary not used",
+    "local_pdf": "not included; conversion download blocked by network sandbox",
+    "cloud_pdf_url": "https://to.adobe.com/esEbxi4msJc1fpIsFSwTnxDvnliN"
+  },
+  "independent_review": {
+    "stage": "fresh initial design review, followed by root final contract checks",
+    "findings": [
+      "missing lab AUDIT/POOL execution path",
+      "confirmation identity must exclude metadata/kind"
+    ],
+    "resolution": [
+      "added LAB_ONLY manifest and audited CLI entry points",
+      "content uses labelset/weights/inference; data uses evaluation fingerprint"
+    ],
+    "not_claimed": "No second independent full-contract approval or runtime validity claim"
+  },
+  "not_executed": [
+    "PostgreSQL migration execution",
+    "SciPy/sklearn runtime cross-checks",
+    "actual MASSIVE download and model runs",
+    "application API/UI/worker tests",
+    "research effect experiments",
+    "6GB LoRA memory/time feasibility",
+    "LLM stability and natural regression counts",
+    "formal standard-complete JSON Schema/OpenAPI validation"
+  ]
+}

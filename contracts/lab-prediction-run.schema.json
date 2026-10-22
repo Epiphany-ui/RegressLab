@@ -1,0 +1,355 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://regresslab.local/contracts/lab-prediction-run.schema.json",
+  "title": "LabPredictionRunManifest",
+  "description": "LAB_ONLY prediction provenance. Not a Product PredictionSet and never accepted by HTTP import. Planning schema, no actual run evidence.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "manifest_kind",
+    "run_id",
+    "status",
+    "registration_sha256",
+    "design_hash",
+    "evaluation_data_sha256",
+    "labelset_sha256",
+    "target_model_version_id",
+    "target_model_content_sha256",
+    "weights_sha256",
+    "inference_config_sha256",
+    "scope",
+    "all_suites_freeze_sha256",
+    "expected_ids_sha256",
+    "expected_count",
+    "input_jsonl_sha256",
+    "created_at",
+    "started_at",
+    "completed_at",
+    "prediction_jsonl_sha256",
+    "coverage",
+    "evidence_mode",
+    "stability_manifest_sha256",
+    "provenance_status",
+    "product_import_allowed"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "lab-1.3"
+    },
+    "manifest_kind": {
+      "const": "LAB_ONLY"
+    },
+    "run_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "status": {
+      "enum": [
+        "PREPARED",
+        "RUNNING",
+        "SUCCEEDED",
+        "FAILED"
+      ]
+    },
+    "registration_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "design_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "evaluation_data_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "labelset_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "target_model_version_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "target_model_content_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "weights_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "inference_config_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "pool_sha256"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "LAB_AUDIT",
+            "LAB_POOL"
+          ]
+        },
+        "pool_sha256": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "LAB_POOL"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "pool_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "LAB_AUDIT"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "pool_sha256": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "all_suites_freeze_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "expected_ids_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "expected_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "input_jsonl_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "started_at": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "completed_at": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "prediction_jsonl_sha256": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "coverage": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "expected",
+            "valid",
+            "missing",
+            "duplicate",
+            "extra",
+            "invalid"
+          ],
+          "properties": {
+            "expected": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "valid": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "missing": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "duplicate": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "extra": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "invalid": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      ]
+    },
+    "evidence_mode": {
+      "enum": [
+        "CONFIRMATORY",
+        "DESCRIPTIVE_ONLY"
+      ]
+    },
+    "stability_manifest_sha256": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "provenance_status": {
+      "enum": [
+        "SERVER_VERIFIED",
+        "DECLARED"
+      ]
+    },
+    "product_import_allowed": {
+      "const": false
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "SUCCEEDED"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "prediction_jsonl_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "started_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "completed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "coverage": {
+            "type": "object",
+            "properties": {
+              "missing": {
+                "const": 0
+              },
+              "duplicate": {
+                "const": 0
+              },
+              "extra": {
+                "const": 0
+              },
+              "invalid": {
+                "const": 0
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "PredictionRow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "run_id",
+        "sample_id",
+        "prediction_label",
+        "raw_response"
+      ],
+      "properties": {
+        "run_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "sample_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "prediction_label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "raw_response": {
+          "type": "string",
+          "maxLength": 32768,
+          "minLength": 1
+        },
+        "latency_ms": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

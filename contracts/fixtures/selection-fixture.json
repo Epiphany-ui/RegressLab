@@ -1,0 +1,51 @@
+{
+  "fixture_only": true,
+  "algorithm": "coverage_diversity_v1",
+  "budget": 2,
+  "obligations": [
+    {
+      "id": "u1",
+      "weight": 2
+    },
+    {
+      "id": "u2",
+      "weight": 1
+    },
+    {
+      "id": "u3",
+      "weight": 1
+    }
+  ],
+  "items": [
+    {
+      "sample_id": "s1",
+      "covers": [
+        "u1",
+        "u2"
+      ],
+      "historical_negative_flip": false,
+      "diversity": 1
+    },
+    {
+      "sample_id": "s2",
+      "covers": [
+        "u1"
+      ],
+      "historical_negative_flip": true,
+      "diversity": 1
+    },
+    {
+      "sample_id": "s3",
+      "covers": [
+        "u3"
+      ],
+      "historical_negative_flip": false,
+      "diversity": 1
+    }
+  ],
+  "expected_ids": [
+    "s1",
+    "s3"
+  ],
+  "expected_covered_weight": 4
+}

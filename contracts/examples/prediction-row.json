@@ -1,0 +1,7 @@
+{
+  "sample_id": "fixture:01",
+  "prediction_label": "A",
+  "latency_ms": 1,
+  "run_id": "00000000-0000-4000-8000-000000000010",
+  "raw_response": "{\"label\":\"A\"}"
+}

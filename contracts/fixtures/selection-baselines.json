@@ -1,0 +1,146 @@
+{
+  "fixture_only": true,
+  "seed": 42,
+  "budget": 2,
+  "obligations": [
+    {
+      "id": "g1",
+      "weight": 2
+    },
+    {
+      "id": "g2",
+      "weight": 2
+    },
+    {
+      "id": "label_A",
+      "weight": 1
+    },
+    {
+      "id": "label_B",
+      "weight": 1
+    }
+  ],
+  "items": [
+    {
+      "sample_id": "s1",
+      "gold_label": "A",
+      "covers": [
+        "g1",
+        "label_A"
+      ],
+      "historical_flip": 1,
+      "vector": [
+        1,
+        0
+      ]
+    },
+    {
+      "sample_id": "s2",
+      "gold_label": "A",
+      "covers": [
+        "g1",
+        "label_A"
+      ],
+      "historical_flip": 1,
+      "vector": [
+        1,
+        0
+      ]
+    },
+    {
+      "sample_id": "s3",
+      "gold_label": "B",
+      "covers": [
+        "g2",
+        "label_B"
+      ],
+      "historical_flip": 0,
+      "vector": [
+        0,
+        1
+      ]
+    },
+    {
+      "sample_id": "s4",
+      "gold_label": "A",
+      "covers": [
+        "label_A"
+      ],
+      "historical_flip": 0,
+      "vector": [
+        0.7071067811865476,
+        0.7071067811865476
+      ]
+    }
+  ],
+  "expected": {
+    "complete": [
+      "s1",
+      "s3"
+    ],
+    "coverage": [
+      "s1",
+      "s3"
+    ],
+    "diversity": [
+      "s1",
+      "s3"
+    ],
+    "ablate_history": [
+      "s1",
+      "s3"
+    ],
+    "ablate_diversity": [
+      "s1",
+      "s3"
+    ],
+    "history_first": [
+      "s1",
+      "s2"
+    ],
+    "stratified_quotas": {
+      "A": 2,
+      "B": 0
+    },
+    "seeded_order": [
+      "s1",
+      "s4",
+      "s3",
+      "s2"
+    ],
+    "random": [
+      "s1",
+      "s4"
+    ],
+    "historical": [
+      "s1",
+      "s2"
+    ],
+    "stratified": [
+      "s1",
+      "s4"
+    ]
+  },
+  "score_order_cases": [
+    {
+      "gain": 1,
+      "historical_flip": 0,
+      "diversity": 0
+    },
+    {
+      "gain": 0,
+      "historical_flip": 1,
+      "diversity": 1
+    },
+    {
+      "gain": 0,
+      "historical_flip": 0,
+      "diversity": 1
+    }
+  ],
+  "expected_score_order": [
+    0,
+    1,
+    2
+  ]
+}

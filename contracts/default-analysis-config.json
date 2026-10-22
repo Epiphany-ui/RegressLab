@@ -1,0 +1,13 @@
+{
+  "max_depth": 2,
+  "top_m": 20,
+  "min_discovery_support": 30,
+  "min_discovery_drop": 0.05,
+  "duplicate_jaccard": 0.9,
+  "min_confirm_support": 40,
+  "min_confirm_drop": 0.05,
+  "alpha": 0.05,
+  "bootstrap_reps": 2000,
+  "seed": 42,
+  "feature_catalog_version": "surface-v1"
+}

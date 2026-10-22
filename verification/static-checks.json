@@ -1,0 +1,88 @@
+{
+  "generated_at": "2026-10-22T15:57:46.185Z",
+  "scope": "Document static checks only; custom validator covers used JSON Schema keywords, not a formal standards-certified validator. No application, external API, model training or PostgreSQL runtime validation was performed.",
+  "counts": {
+    "markdown_files": 24,
+    "openapi_paths": 37,
+    "openapi_operations": 43,
+    "openapi_schemas": 61
+  },
+  "checks": [
+    {
+      "name": "All JSON files parse and local schema references resolve",
+      "status": "PASS"
+    },
+    {
+      "name": "OpenAPI operation IDs/path parameters/idempotency headers",
+      "status": "PASS"
+    },
+    {
+      "name": "Default production configuration and valid examples",
+      "status": "PASS"
+    },
+    {
+      "name": "Schemas reject illegal fields, labels shape, ranges and changed protocol",
+      "status": "PASS"
+    },
+    {
+      "name": "Paired fixture arithmetic and independent exact binomial tail",
+      "status": "PASS"
+    },
+    {
+      "name": "Coverage selection fixture and Holm worked example",
+      "status": "PASS"
+    },
+    {
+      "name": "DDL structural references, balanced syntax and review constraints",
+      "status": "PASS"
+    },
+    {
+      "name": "Internal Markdown links resolve and no unresolved planning markers",
+      "status": "PASS"
+    },
+    {
+      "name": "Experiment method registry and documented development/final gates agree",
+      "status": "PASS"
+    },
+    {
+      "name": "Independent baseline fixture calculations and ablation invariance",
+      "status": "PASS"
+    },
+    {
+      "name": "Integer coverage score is equivalent to explicit lexicographic priority",
+      "status": "PASS"
+    },
+    {
+      "name": "v1.3 adapters and immutable identity contracts",
+      "status": "PASS"
+    },
+    {
+      "name": "v1.3 conditional local weight provenance shape rejects fabricated missing identity",
+      "status": "PASS"
+    },
+    {
+      "name": "v1.3 evidence modes and complete prediction boundary",
+      "status": "PASS"
+    },
+    {
+      "name": "v1.3 lab AUDIT and common-pool execution path is separate and frozen",
+      "status": "PASS"
+    },
+    {
+      "name": "v1.3 tuple implementation preserves tiny diversity tie-breaks",
+      "status": "PASS"
+    },
+    {
+      "name": "v1.3 root scope and test traceability have no inherited contradictions",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "not_executed": [
+    "PostgreSQL migration execution",
+    "SciPy/sklearn runtime cross-checks",
+    "actual MASSIVE download and model runs",
+    "application API/UI/worker tests",
+    "research effect experiments"
+  ]
+}

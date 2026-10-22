@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.1",
+  "analysis_id": "00000000-0000-4000-8000-000000000001",
+  "generated_at": "2026-10-22T00:00:00Z",
+  "dataset": {
+    "id": "00000000-0000-4000-8000-000000000001",
+    "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "labelset_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "split_manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "source_name": "SYNTHETIC_FIXTURE",
+    "source_version": "1",
+    "license_url": "https://example.invalid/fixture-only",
+    "evaluation_data_sha256": "7777777777777777777777777777777777777777777777777777777777777777"
+  },
+  "models": {
+    "old": {
+      "id": "00000000-0000-4000-8000-000000000001",
+      "name": "synthetic-old",
+      "kind": "PRECOMPUTED",
+      "content_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+      "weights_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+      "inference_config_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+      "provenance_sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+      "provenance_status": "DECLARED",
+      "change_type": "REFERENCE",
+      "parent_model_version_id": null
+    },
+    "new": {
+      "id": "00000000-0000-4000-8000-000000000002",
+      "name": "synthetic-new",
+      "kind": "PRECOMPUTED",
+      "content_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+      "weights_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+      "inference_config_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+      "provenance_sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+      "provenance_status": "DECLARED",
+      "change_type": "REFERENCE",
+      "parent_model_version_id": null
+    }
+  },
+  "config": {
+    "max_depth": 2,
+    "top_m": 20,
+    "min_discovery_support": 30,
+    "min_discovery_drop": 0.05,
+    "duplicate_jaccard": 0.9,
+    "min_confirm_support": 40,
+    "min_confirm_drop": 0.05,
+    "alpha": 0.05,
+    "bootstrap_reps": 2000,
+    "seed": 42,
+    "feature_catalog_version": "surface-v1"
+  },
+  "candidate_set_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "metrics": {
+    "discovery": {
+      "n": 12,
+      "a": 6,
+      "b": 3,
+      "c": 1,
+      "d": 2,
+      "old_accuracy": 0.75,
+      "new_accuracy": 0.5833333333333334,
+      "accuracy_drop": 0.16666666666666666,
+      "negative_flip_rate": 0.25,
+      "positive_flip_rate": 0.08333333333333333,
+      "old_correct_regression_rate": 0.3333333333333333,
+      "old_macro_f1": 0.42857142857142855,
+      "new_macro_f1": 0.3684210526315789,
+      "per_label_support": {
+        "A": 12,
+        "B": 0
+      }
+    },
+    "confirmation": null
+  },
+  "confusion_changes": {
+    "role": "DISCOVERY",
+    "cells": [
+      {
+        "gold_label": "A",
+        "prediction_label": "A",
+        "old_count": 9,
+        "new_count": 7,
+        "delta": -2
+      },
+      {
+        "gold_label": "A",
+        "prediction_label": "B",
+        "old_count": 3,
+        "new_count": 5,
+        "delta": 2
+      }
+    ],
+    "total_nonzero": 2,
+    "truncated": false
+  },
+  "summary": "INCONCLUSIVE",
+  "slices": [],
+  "limitations": [
+    "合成合同示例；所有身份与来源指纹均为占位，不是真实数据或模型结果。",
+    "样本数小于生产发现门槛，未产生候选，也未使用确认集。",
+    "DESCRIPTIVE_ONLY工程夹具；没有真实训练链或稳定性证据，不可据此调用确认或报告科学效果。"
+  ],
+  "provenance": {
+    "algorithm_version": "regression-v1",
+    "git_sha": "fixture",
+    "dependency_lock_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "confirmation_use_id": null
+  },
+  "evidence_mode": "DESCRIPTIVE_ONLY",
+  "stability_manifest_sha256": null,
+  "fixture": true,
+  "summary_reason": "EVIDENCE_NOT_CONFIRMABLE",
+  "prediction_runs": {
+    "old": {
+      "run_id": "00000000-0000-4000-8000-000000000011",
+      "model_content_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+      "weights_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+      "inference_config_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+      "dataset_content_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "scope_hash": "5555555555555555555555555555555555555555555555555555555555555555",
+      "started_at": "2026-10-22T00:00:00Z",
+      "completed_at": "2026-10-22T00:00:01Z",
+      "environment_sha256": "6666666666666666666666666666666666666666666666666666666666666666",
+      "cache_mode": "CACHED_PLAYBACK"
+    },
+    "new": {
+      "run_id": "00000000-0000-4000-8000-000000000012",
+      "model_content_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+      "weights_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+      "inference_config_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+      "dataset_content_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "scope_hash": "5555555555555555555555555555555555555555555555555555555555555555",
+      "started_at": "2026-10-22T00:00:00Z",
+      "completed_at": "2026-10-22T00:00:01Z",
+      "environment_sha256": "6666666666666666666666666666666666666666666666666666666666666666",
+      "cache_mode": "CACHED_PLAYBACK"
+    }
+  }
+}
