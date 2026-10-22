@@ -15,6 +15,7 @@ from regresslab.domain import (
 
 
 ROOT = Path(__file__).resolve().parents[2]
+CONTRACTS = ROOT / "docs" / "contracts"
 SOURCE = {"name": "Engineering fixture", "version": "1", "source_url": "https://example.invalid/fixture", "license": "fixture-only", "fixture_only": True}
 
 
@@ -53,7 +54,7 @@ def prediction_rows(dataset, predictions=None, parser="label-json-v1", run_id=No
 
 def fixture_analysis():
     dataset = validate_dataset(input_rows(), SOURCE)
-    fixture = parse_jsonl((ROOT / "contracts/fixtures/paired-cases.jsonl").read_text())
+    fixture = parse_jsonl((CONTRACTS / "fixtures/paired-cases.jsonl").read_text())
     old_labels = {row["sample_id"]: row["old_prediction_label"] for row in fixture}
     new_labels = {row["sample_id"]: row["new_prediction_label"] for row in fixture}
     old = validate_predictions(prediction_rows(dataset, old_labels), dataset)
@@ -63,7 +64,7 @@ def fixture_analysis():
 
 def test_fixture_metrics_match_hand_calculation_and_do_not_claim_confirmation():
     _, _, _, result = fixture_analysis()
-    expected = json.loads((ROOT / "contracts/fixtures/paired-expected.json").read_text())
+    expected = json.loads((CONTRACTS / "fixtures/paired-expected.json").read_text())
     actual = result["metrics"]["discovery"]
     for key in ("n", "a", "b", "c", "d", "old_accuracy", "new_accuracy", "accuracy_drop", "negative_flip_rate", "positive_flip_rate", "old_correct_regression_rate"):
         assert actual[key] == pytest.approx(expected[key])
@@ -234,7 +235,7 @@ def test_no_discovery_scope_and_zero_old_correct_denominator():
 
 
 def test_production_defaults_and_input_feature_contract_match_design():
-    assert DEFAULT_CONFIG == json.loads((ROOT / "contracts/default-analysis-config.json").read_text())
+    assert DEFAULT_CONFIG == json.loads((CONTRACTS / "default-analysis-config.json").read_text())
     features = surface_features("  不要　Ａ１２？  ", "zh-CN")
     assert features == {"locale": "zh-CN", "length_bin": "1-8", "has_negation": True, "has_digit": True, "has_question_mark": True}
     assert surface_features("cannot play", "en-US")["has_negation"] is True

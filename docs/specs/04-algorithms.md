@@ -17,7 +17,7 @@
 
 混淆变化单独由D聚合：对每个非零旧/新混淆单元(gold_label,prediction_label)，输出old_count,new_count,delta=new_count-old_count。按abs(delta)降序，再按gold/pred标签字节升序。Analysis/Report内只嵌前50项及total_nonzero/truncated，完整结果走分页confusions接口；不把全矩阵塞进每个Slice的PairedMetrics。
 
-夹具12行：a=6,b=3,c=1,d=2；旧准确率0.75，新准确率7/12，drop=1/6，NFR0.25，positive1/12，旧正确样本退化率1/3。见contracts/fixtures。
+夹具12行：a=6,b=3,c=1,d=2；旧准确率0.75，新准确率7/12，drop=1/6，NFR0.25，positive1/12，旧正确样本退化率1/3。见[合同夹具](../contracts/fixtures)。
 
 ## 2. 候选发现（ALG-02）
 

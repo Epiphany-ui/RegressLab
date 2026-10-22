@@ -1,6 +1,6 @@
 # Demo 验证记录
 
-此文件记录应用级实际检查；原verification目录记录设计静态检查。合成夹具验证软件行为，不证明模型效果或研究结论。
+此文件记录应用级实际检查；[设计验证目录](../verification/README.md)保留设计阶段的静态检查与审阅。合成夹具验证软件行为，不证明模型效果或研究结论。
 
 验收日期：2026-10-23（Asia/Shanghai）。实际环境：Linux 6.18.33.2-microsoft-standard-WSL2、Python 3.14.4、Node 24.19.0、npm 12.2.1；浏览器使用环境已安装的 Chromium，依赖版本由三份锁文件固定。Python 3.11为兼容目标，此次没有另起3.11环境验证。
 
@@ -12,9 +12,9 @@
 | `cd frontend && npm run typecheck` | PASS | Vue/TypeScript静态类型 |
 | `cd frontend && npm run build` | PASS | Vite生产构建，JS约110kB、CSS约63kB，均未压缩尺寸 |
 | `cd e2e && npm test`（指定已安装Chromium） | 6 passed，约11秒 | 1440×1000桌面与360×800移动端，各3个流程 |
-| `node verification/check-package.cjs` | 17组全部PASS | 原设计、Schema、公式与追踪静态检查 |
+| `node scripts/check-design.cjs`（仓库根目录） | 17组全部PASS | 原设计、Schema、公式与追踪静态检查；当前入口名称 |
 | `backend/.venv/bin/python -m regresslab.cli doctor` | SQLite ok、历史hash通过、前端已构建 | 本机实际数据目录检查 |
-| 原包逐文件SHA256对比 | 48份均已导入；46份原文一致 | 原README在DOCUMENTS.md；仅校验器及静态检查记录有意更新 |
+| 原包首次导入SHA256对比（历史记录） | 48份均已导入；46份原文一致 | 首次导入时的记录；原README现见[设计总目录](../specs/README.md)，当时仅校验器及静态检查记录有意更新 |
 
 后端使用FastAPI TestClient及临时SQLite。当前受限执行环境会阻塞异步测试客户端的线程唤醒，改在获准的沙箱外运行后通过；纯领域测试可直接在沙箱内运行。测试出现Starlette对httpx测试适配器的未来弃用提示，不影响本次结果。
 
@@ -22,7 +22,21 @@
 
 API检查还覆盖同group/同文本传递泄漏、未知标签、重复JSON键/非有限值、同run约束、raw重解析、缺失/重复/额外ID、C/A案例拒绝、描述模式确认409、失败不新增成功记录、跨站写入、按实际字节限制、HTML注入转义、存储损坏拒绝、重启后读取与hash核对。独立代码审查发现的历史请求覆盖新建分析问题已修复，并通过慢请求场景验收。
 
-界面实测截图：[桌面](screenshots/demo-desktop.png)、[360px移动端](screenshots/demo-mobile.png)。截图仅包含合成工程数据。
+界面实测截图：[桌面](../screenshots/demo-desktop.png)、[360px移动端](../screenshots/demo-mobile.png)。截图仅包含合成工程数据。
+
+## 目录整理与复验（2026-10-23）
+
+设计正文、机器合同、界面约定和验收记录已按用途归入`docs/specs`、`docs/contracts`、`docs/design`和`docs/quality`；静态校验脚本现为`scripts/check-design.cjs`。原包48份/46份一致的数量保留为首次导入历史，不作为路径及说明维护后的逐字节一致性结论。目录整理不改变上述软件验收的范围和研究证据边界。
+
+| 整理后检查 | 结果 |
+|---|---|
+| 后端领域与API测试 | 67 passed |
+| 合成夹具重新生成 | 7个输出工件逐字节一致 |
+| 本机doctor与HTTP健康接口 | 通过 |
+| `node scripts/check-design.cjs`（仓库根目录） | 17/17通过，覆盖31份Markdown |
+| 文档与夹具说明的本地链接核验 | 30份Markdown、118个目标均存在 |
+
+本次目录整理没有修改界面，未重跑浏览器测试；上方6条浏览器通过结果及截图保留为整理前的验收记录。
 
 ## 机械核对值
 
@@ -40,4 +54,4 @@ e2e/package-lock.json      5f60f2a2a47a477fa81872779726c5150764df775489311f2bbc5
 
 ## 未执行的产品与实验工作
 
-真实MASSIVE下载、GPU训练/显存和恢复、真实模型推理、DEV稳定性、一次C确认、套件/未来版本重放、PostgreSQL/Worker恢复部署、正式实验和算法增益均未执行。当前成功仅证明此Demo在上述检查范围内可用；不是P0成品或研究效果验收。完整后续顺序见 [IMPLEMENTATION.md](IMPLEMENTATION.md)。
+真实MASSIVE下载、GPU训练/显存和恢复、真实模型推理、DEV稳定性、一次C确认、套件/未来版本重放、PostgreSQL/Worker恢复部署、正式实验和算法增益均未执行。当前成功仅证明此Demo在上述检查范围内可用；不是P0成品或研究效果验收。完整后续顺序见 [IMPLEMENTATION.md](../development/IMPLEMENTATION.md)。

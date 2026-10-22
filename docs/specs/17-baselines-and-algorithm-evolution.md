@@ -101,13 +101,13 @@ R2有多个权重水平通过时，在开发集按主指标、时间、配置can
 
 ## 9. 实验记录与实施接口
 
-机器登记见[selection-experiment-design.json](contracts/selection-experiment-design.json)。lab输出版本`lab-1.3`，与产品Report/Suite Schema分开。每条结果至少含run_id、stage、design_hash、git_sha、data/pool/app-content/weights/inference-config/prediction/vectorizer/config hash、chain_id、training_run_id/training_seed/checkpoint_step、method_id、selector_seed或null、evidence_mode、stability_manifest_sha256、provenance_status、requested/actual_budget、selected_ids、covered/uncovered、未来检出计数/共同分母、seconds、peak_rss、status和failure_reason。选择seed和训练seed不得混用一个无语义的seed列。
+机器登记见[selection-experiment-design.json](../contracts/selection-experiment-design.json)。lab输出版本`lab-1.3`，与产品Report/Suite Schema分开。每条结果至少含run_id、stage、design_hash、git_sha、data/pool/app-content/weights/inference-config/prediction/vectorizer/config hash、chain_id、training_run_id/training_seed/checkpoint_step、method_id、selector_seed或null、evidence_mode、stability_manifest_sha256、provenance_status、requested/actual_budget、selected_ids、covered/uncovered、未来检出计数/共同分母、seconds、peak_rss、status和failure_reason。选择seed和训练seed不得混用一个无语义的seed列。
 
 新增`algorithm_change_log.jsonl`，每次记录旧/新配置hash、唯一改动、开发证据、参考基线、晋级条件计算、决定、冻结时点和是否读过正式数据。正式运行先独占创建registration.json；配置变更拒绝覆盖原run，只能创建明确标记探索的新run。确认占用键为(evaluation_data_sha256,old_model_content_hash,new_model_content_hash)；evaluation_data_sha256只绑定canonical rows、labelset及split manifest，不含UUID/source/version描述，复制数据或换run不能产生新确认机会。冻结登记中未来预测hash明确为尚未生成，解封后的结果必须补真实hash和访问时间，不伪造运行值或将未来预测提前生成后供策略读取。
 
 未来代码接口：`build_common_pool(rows, config) -> PoolSnapshot`；`select_cases(pool, obligations, vectors, method_id, budget, seed, params) -> SelectionResult`；`validate_run_registration(registration, prior_uses) -> None`；`evaluate_frozen_suite(suite, future_predictions, reference_groups) -> EvaluationRow`。selector接口不接收future_predictions。开发/正式runner负责role检查；生产select_suite继续使用04接口，不加载lab插件。
 
-CLI合同：`python -m regresslab.cli lab run --config <registration.json> --output <run-dir>`。配置必须已有数据与模型指纹，不能从网页请求任意路径执行。M11实现后才可运行；当前没有对应产品代码。选择正确性的夹具见[selection-baselines.json](contracts/fixtures/selection-baselines.json)，不作为论文效果。
+CLI合同：`python -m regresslab.cli lab run --config <registration.json> --output <run-dir>`。配置必须已有数据与模型指纹，不能从网页请求任意路径执行。M11实现后才可运行；当前没有对应产品代码。选择正确性的夹具见[selection-baselines.json](../contracts/fixtures/selection-baselines.json)，不作为论文效果。
 
 ## 10. 版本与论文表述
 

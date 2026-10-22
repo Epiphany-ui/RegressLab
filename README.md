@@ -2,7 +2,30 @@
 
 本地中文工作台：导入标注数据和两版分类预测，严格校验完整性，计算发现集 D 的成对指标、候选分组与混淆变化，查看逐条证据并导出 JSON / HTML。分析结果保存在本机，刷新或重启后可以继续查看。
 
-当前交付为 **0.1.0 描述性 Demo**。原始 1.3 设计、机器合同和教师 Word 已复制到本目录；原文档入口保留在 [DOCUMENTS.md](DOCUMENTS.md)，完整产品定义见 [PRODUCT.md](PRODUCT.md)。主实验仍为小模型真实微调更新，逻辑回归重新训练为对照；本 Demo 尚未执行这些训练或正式效果实验。
+当前交付为 **0.1.0 描述性 Demo**。项目文档统一从 [文档导航](docs/README.md) 进入，完整产品定义见 [PRODUCT.md](docs/specs/PRODUCT.md)。主实验仍为小模型真实微调更新，逻辑回归重新训练为对照；本 Demo 尚未执行这些训练或正式效果实验。
+
+## 项目结构
+
+```text
+RegressLab/
+├── README.md                  # 项目入口与启动说明
+├── backend/                   # Python API、领域逻辑与后端测试
+├── frontend/                  # Vue / TypeScript 中文工作台
+├── e2e/                       # Playwright 浏览器测试
+├── examples/                  # 合成工程夹具与格式示例
+├── scripts/                   # 安装、启动、夹具生成、文档校验
+└── docs/
+    ├── README.md              # 文档导航
+    ├── development/           # 当前实现、Demo API 与后续任务
+    ├── specs/                 # 完整产品规格、编号设计文档与教师材料
+    ├── design/                # 前端视觉规范
+    ├── contracts/             # OpenAPI、JSON Schema、SQL 与合同夹具
+    ├── quality/               # 软件验收记录
+    ├── verification/          # 设计与合同静态检查记录
+    └── screenshots/           # 界面截图
+```
+
+本地数据保存在被 Git 排除的 `var/`；依赖、缓存和构建产物也不提交。
 
 ## 启动
 
@@ -53,17 +76,13 @@ npm test
 
 ```bash
 backend/.venv/bin/python -m regresslab.cli doctor
-node verification/check-package.cjs
+node scripts/check-design.cjs
 ```
 
-后一个命令仅验证原设计文档与合同，不能代替应用或模型实验验收。当前实现范围和后续任务见 [docs/IMPLEMENTATION.md](docs/IMPLEMENTATION.md)，API 约定见 [docs/DEMO-API.md](docs/DEMO-API.md)，实测记录见 [docs/VALIDATION.md](docs/VALIDATION.md)。界面规范见 [DESIGN.md](DESIGN.md)。
+后一个命令仅验证原设计文档与合同，不能代替应用或模型实验验收。当前实现范围和后续任务见 [实施进展](docs/development/IMPLEMENTATION.md)，API 约定见 [Demo API](docs/development/DEMO-API.md)，实测记录见 [验收记录](docs/quality/VALIDATION.md)。界面规范见 [DESIGN.md](docs/design/DESIGN.md)，完整资料可从 [文档导航](docs/README.md) 查找。
 
 ## 数据与当前边界
 
 默认数据文件为 `var/demo.sqlite3`，包含成功导入的原文和预测，目录已从 Git 排除。`REGRESSLAB_DATA_DIR` 可指定另一个目录。所有成功结果只追加，读取时核对完整记录指纹。停止服务后可备份整个 `var` 目录；恢复到新目录再运行 doctor。失败上传只留输入摘要和错误码，不保存失败原始文件。
 
 此 Demo 使用 SQLite 和有界同步导入，单份文件 ≤10 MiB、数据 ≤5000 行，仅绑定 `127.0.0.1`。这是有意缩小的前期实现，API 独立使用 `/api/demo`，未冒充最终 `/api/v1` 或完整报告合同。最终 PostgreSQL、持久队列/Worker、认证、模型来源登记、GPU微调/Ollama、DEV稳定性、C一次确认、冻结套件和真实后续版本重放尚待后续阶段完成。不要把此入口用于公网部署。
-
----
-
-原始设计包说明已完整保留于 [DOCUMENTS.md](DOCUMENTS.md)。

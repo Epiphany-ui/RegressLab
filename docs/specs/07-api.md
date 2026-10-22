@@ -1,6 +1,6 @@
 # HTTP API与错误合同
 
-机器权威：[contracts/openapi.json](contracts/openapi.json)，OpenAPI3.1。本文定义语义；API DTO字段与机器合同一致，不允许额外未声明输入字段。未来实现的`/openapi.json`必须通过合同差异检查。
+机器权威：[contracts/openapi.json](../contracts/openapi.json)，OpenAPI3.1。本文定义语义；API DTO字段与机器合同一致，不允许额外未声明输入字段。未来实现的`/openapi.json`必须通过合同差异检查。
 
 ## 1. 通用约定
 

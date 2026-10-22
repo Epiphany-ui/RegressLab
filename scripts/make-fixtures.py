@@ -14,6 +14,7 @@ from uuid import UUID
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "examples"
+CONTRACTS = ROOT / "docs" / "contracts"
 RUN_IDS = {
     "basic-old": "00000000-0000-4000-8000-000000000101",
     "basic-new": "00000000-0000-4000-8000-000000000102",
@@ -81,7 +82,7 @@ def training_rows(profile: str) -> list[dict]:
 
 
 def basic_fixture() -> tuple[list[dict], list[dict], list[dict]]:
-    fixture_path = ROOT / "contracts" / "fixtures" / "paired-cases.jsonl"
+    fixture_path = CONTRACTS / "fixtures" / "paired-cases.jsonl"
     paired = [json.loads(line) for line in fixture_path.read_text(encoding="utf-8").splitlines() if line]
     assert len(paired) == 12, "The canonical paired fixture must contain 12 rows."
     rows = training_rows("basic")

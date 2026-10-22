@@ -8,7 +8,7 @@
 
 **Tech Stack:** Python3.11、FastAPI/Pydantic2、SQLAlchemy2/Alembic、PostgreSQL16、sklearn/SciPy、Vue3/TypeScript、Node24、pytest/Vitest/Playwright。
 
-**Spec:** PRODUCT、00—11、13—19及contracts/；版本生成精确配方见19，机器字段以OpenAPI为准。
+**Spec:** 本目录的PRODUCT、00—11、13—19及[机器合同](../contracts/README.md)；版本生成精确配方见19，机器字段以OpenAPI为准。
 
 ## Global Constraints
 
@@ -17,7 +17,7 @@
 - 单版本≤50,000行，单文本≤8,192 Unicode码点，文件≤100MiB，标签2—200类。
 - 训练只用TRAIN，调参只用DEV，D发现、C一次确认、A最终实验。
 - 模型输入仅sample_id与text；预测缺/重/多ID或非法标签不可进入能力指标。
-- Analysis生产默认参数与contracts/default-analysis-config.json逐字一致。
+- Analysis生产默认参数与[默认分析配置](../contracts/default-analysis-config.json)逐字一致。
 - UI不得将NOT_CONFIRMED或Replay PASS写成安全/非劣认证。
 - 同一确认家族不在C增删条件；同一模型应用身份对同evaluation_data_sha256只消费一次C，换dataset UUID/来源元数据不能重置。
 - worker心跳10秒，租约90秒，最多3次attempt，旧attempt不得发布。
@@ -35,7 +35,7 @@
 
 ```text
 regresslab/
-  contracts/                   # 复制本包机器合同，作为版本化基线
+  docs/contracts/              # 机器合同的版本化基线（现有目录）
   backend/
     pyproject.toml
     uv.lock
@@ -279,6 +279,6 @@ python -m regresslab.cli lab prediction-validate --manifest <lab-run-manifest.js
 python -m regresslab.cli lab evaluate --registration <registration.json> --predictions <validated-lab-run-directory> --output <result-directory>
 ```
 
-M11实现上述输入导出、预置LabPredictionRunManifest和最终评价；M03T的同一离线infer模块新增--manifest-kind product|lab（默认product），两个manifest严格判别。lab manifest见contracts/lab-prediction-run.schema.json，含registration/evaluation/权重/推理/全部suite冻结hash及ID集合，不能导入产品HTTP。导出时同时生成PREPARED manifest，预登记模型白名单仅允许固定v1/v3。A和完整共同P'的未来预测均在套件冻结后；A逐例gold仅最终evaluate读取一次。失败或hash不符不出正式结果，不能把任意本地ID列表伪装成A。研究全池/A推理成本完整计入，不把查缓存当节省模型调用。
+M11实现上述输入导出、预置LabPredictionRunManifest和最终评价；M03T的同一离线infer模块新增--manifest-kind product|lab（默认product），两个manifest严格判别。lab manifest见[Lab预测合同](../contracts/lab-prediction-run.schema.json)，含registration/evaluation/权重/推理/全部suite冻结hash及ID集合，不能导入产品HTTP。导出时同时生成PREPARED manifest，预登记模型白名单仅允许固定v1/v3。A和完整共同P'的未来预测均在套件冻结后；A逐例gold仅最终evaluate读取一次。失败或hash不符不出正式结果，不能把任意本地ID列表伪装成A。研究全池/A推理成本完整计入，不把查缓存当节省模型调用。
 
 新增测试TC-61：未冻结全体suite或模型不在登记中时拒绝lab AUDIT/POOL输入导出；输入无gold、预测完整且单run、LAB_ONLY在HTTP导入被拒、最终A标签读取一次，错误时不发布正式评价。测试模块为tests/unit/test_lab_prediction_boundary.py与experiments/tests/test_lab_manifest.py，先红后实现，CLI入口字段与Schema一致。

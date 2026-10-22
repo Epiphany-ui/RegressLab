@@ -1,6 +1,6 @@
 # 数据库设计与持久化约定
 
-初始结构权威：[contracts/schema.sql](contracts/schema.sql)，PostgreSQL16。实际实现以Alembic迁移部署；不同时运行DDL文件与同等迁移造成重复建表。
+初始结构权威：[contracts/schema.sql](../contracts/schema.sql)，PostgreSQL16。实际实现以Alembic迁移部署；不同时运行DDL文件与同等迁移造成重复建表。
 
 ## 1. 关系
 

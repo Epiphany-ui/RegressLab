@@ -6,7 +6,7 @@
 
 纯函数pytest → PostgreSQL集成 → FastAPI合同 → Vue组件 → Playwright端到端 → 故障恢复与性能。单元测试不访问网络、不训练大模型；集成测试用独立临时数据库和文件卷，不清空开发库。
 
-`contracts/fixtures/paired-cases.jsonl`为12行合成金标准；`paired-expected.json`给手算四格表；`selection-fixture.json`给最大覆盖选择金标准。新增`selection-baselines.json`核对五基线与消融的手算顺序。这些仅证明工程计算，不代表MASSIVE真实模型性能。P0演示另用真实数据、Ollama/微调真实预测及CPU对照，合成夹具不补足真实更新验证。
+[成对夹具](../contracts/fixtures/paired-cases.jsonl)为12行合成金标准；`paired-expected.json`给手算四格表；`selection-fixture.json`给最大覆盖选择金标准。新增`selection-baselines.json`核对五基线与消融的手算顺序。这些仅证明工程计算，不代表MASSIVE真实模型性能。P0演示另用真实数据、Ollama/微调真实预测及CPU对照，合成夹具不补足真实更新验证。
 
 ## 2. 测试矩阵
 

@@ -71,7 +71,7 @@ v3的DEV稳定性推理也必须等全部selector套件冻结后再做，不仅�
 
 v1/v2/v3的推理配置指纹必须相同，权重指纹不同，change_type=TRAINING_UPDATE。模型来源真实性对外部导入仍为DECLARED；服务器只能校验提供记录的一致性，不证明外部训练从未作弊。权重文件、adapter、训练日志及原始预测保留本地归档，Web不上传执行模型。
 
-先在系统创建PRECOMPUTED模型及PredictionSet，取得服务器run_id、scope_hash和冻结ID清单；导出仅含sample_id/text的推理输入。外部脚本生成带run_id、prediction_label、raw_response的JSONL及run_manifest，再导入；字段以[03](03-data-protocol.md)与[OpenAPI](contracts/openapi.json)为准。不能先随便生成一个run_id，再绕过scope核对。
+先在系统创建PRECOMPUTED模型及PredictionSet，取得服务器run_id、scope_hash和冻结ID清单；导出仅含sample_id/text的推理输入。外部脚本生成带run_id、prediction_label、raw_response的JSONL及run_manifest，再导入；字段以[03](03-data-protocol.md)与[OpenAPI](../contracts/openapi.json)为准。不能先随便生成一个run_id，再绕过scope核对。
 
 两份完整合法预测才允许分析，错误和覆盖率单独保留。不得把非法标签替换成gold、删掉失败行、选多次推理中最好的一次，或把旧缓存当新调用。LLM失败恢复的整run/attempt策略按02/03；不从不同随机实现拼接一份“成功”预测。
 
@@ -107,6 +107,6 @@ python -m regresslab.cli lab prediction-validate --manifest <lab-run-manifest.js
 python -m regresslab.cli lab evaluate --registration <registration.json> --predictions <validated-lab-run-directory> --output <result-directory>
 ```
 
-M11实现上述输入导出、预置LabPredictionRunManifest和最终评价；M03T的同一离线infer模块新增--manifest-kind product|lab（默认product），两个manifest严格判别。lab manifest见contracts/lab-prediction-run.schema.json，含registration/evaluation/权重/推理/全部suite冻结hash及ID集合，不能导入产品HTTP。导出时同时生成PREPARED manifest，预登记模型白名单仅允许固定v1/v3。A和完整共同P'的未来预测均在套件冻结后；A逐例gold仅最终evaluate读取一次。失败或hash不符不出正式结果，不能把任意本地ID列表伪装成A。研究全池/A推理成本完整计入，不把查缓存当节省模型调用。
+M11实现上述输入导出、预置LabPredictionRunManifest和最终评价；M03T的同一离线infer模块新增--manifest-kind product|lab（默认product），两个manifest严格判别。lab manifest见[Lab预测合同](../contracts/lab-prediction-run.schema.json)，含registration/evaluation/权重/推理/全部suite冻结hash及ID集合，不能导入产品HTTP。导出时同时生成PREPARED manifest，预登记模型白名单仅允许固定v1/v3。A和完整共同P'的未来预测均在套件冻结后；A逐例gold仅最终evaluate读取一次。失败或hash不符不出正式结果，不能把任意本地ID列表伪装成A。研究全池/A推理成本完整计入，不把查缓存当节省模型调用。
 
 新增测试TC-61：未冻结全体suite或模型不在登记中时拒绝lab AUDIT/POOL输入导出；输入无gold、预测完整且单run、LAB_ONLY在HTTP导入被拒、最终A标签读取一次，错误时不发布正式评价。测试模块为tests/unit/test_lab_prediction_boundary.py与experiments/tests/test_lab_manifest.py，先红后实现，CLI入口字段与Schema一致。

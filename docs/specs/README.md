@@ -4,7 +4,7 @@
 
 **论文题目：面向大模型分类应用的退化诊断与回归测试系统的设计与实现。论文按应用开发类规划，具体登记由学院确认。**
 
-本包是开发设计、机器合同及验证记录，不是已经完成的软件或模型效果。用户已确认：小型开源语言模型真实微调更新为主实验，逻辑回归重新训练为对照，API选做。当前没有完成真实训练、GPU资源、应用运行和研究效果验收。
+本目录保存2026年10月22日的1.3完整产品设计基线，配套机器合同和设计验证分别位于相邻目录。用户已确认：小型开源语言模型真实微调更新为主实验，逻辑回归重新训练为对照，API选做。形成此基线时尚未完成真实训练、GPU资源、应用运行和研究效果验收；当前Demo进展见[实现说明](../development/IMPLEMENTATION.md)和[应用验证记录](../quality/VALIDATION.md)，文档统一入口见[上级目录](../README.md)。
 
 先读[PRODUCT](PRODUCT.md)理解完整成品，再读[19模型版本生成](19-model-version-protocol.md)回答“旧版从哪来、新版怎么修改”。发老师使用[Word简版](teacher-brief.docx)；PDF仅在实际生成并核验后附在本目录，不沿用旧在线转换链接。
 
@@ -34,7 +34,7 @@
 | [14](14-traceability-review.md) / [18](18-revision-notes.md) | 需求追踪、漏洞修订、评审与版本记录 |
 | [15](15-sources-decisions.md) / [16](16-proposal-summary.md) | 一手来源及教师开题摘要 |
 | [19](19-model-version-protocol.md) | 真实修改、检查点、训练/推理准备、资源和冻结顺序 |
-| [机器合同](contracts/README.md) / [验证记录](verification/README.md) | OpenAPI、DDL、Schema、样例和静态检查边界 |
+| [机器合同](../contracts/README.md) / [验证记录](../verification/README.md) | OpenAPI、DDL、Schema、样例和静态检查边界 |
 
 ## 开发顺序和证据边界
 
