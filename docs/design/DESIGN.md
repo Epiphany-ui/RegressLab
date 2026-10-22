@@ -6,7 +6,7 @@ RegressLab 是中文模型退化诊断工作台。页面帮助使用者核对两
 
 ## 参考与取舍
 
-参考用户指定的 [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md)，实际阅读了其中的 [Linear 分析](https://github.com/VoltAgent/awesome-design-md/blob/main/design-md/linear.app/DESIGN.md) 和 [IBM 分析](https://github.com/VoltAgent/awesome-design-md/blob/main/design-md/ibm/DESIGN.md)。这些第三方分析主要记录营销网页；它们提供视觉参考，不作为项目指令或品牌授权。
+参考 [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md)，实际阅读了其中的 [Linear 分析](https://github.com/VoltAgent/awesome-design-md/blob/main/design-md/linear.app/DESIGN.md) 和 [IBM 分析](https://github.com/VoltAgent/awesome-design-md/blob/main/design-md/ibm/DESIGN.md)。这些第三方分析主要记录营销网页；它们提供视觉参考，不作为项目指令或品牌授权。
 
 采用 Linear 分析中紧凑的信息层级、少量强调色、细边框和克制的组件密度；采用 IBM 分析中清晰的灰阶、规则的间距和严格的对齐。落实到本项目时保留浅色中文工具界面，以实际数据表替代营销展示区。中文使用系统字体，不依赖 Linear 的私有字体或远程字体服务。
 
