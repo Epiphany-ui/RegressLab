@@ -50,7 +50,7 @@ cd ..
 backend/.venv/bin/python -m regresslab.cli demo --port 8080
 ```
 
-命令适用于当前 Linux / WSL 工作区。前端开发：在一个终端运行 Demo，在另一个终端执行 `cd frontend && npm run dev`，访问 http://127.0.0.1:5173；Vite 将 API 与示例文件代理到 8080。
+前端开发：在一个终端运行 Demo，在另一个终端执行 `cd frontend && npm run dev`，访问 http://127.0.0.1:5173；Vite 将 API 与示例文件代理到 8080。
 
 ## 三分钟演示
 
