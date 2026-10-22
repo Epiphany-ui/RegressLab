@@ -36,7 +36,7 @@ bash scripts/setup.sh
 bash scripts/demo.sh
 ```
 
-浏览器访问**http://127.0.0.1:8080**。自定义端口：`REGRESSLAB_PORT=8090 bash scripts/demo.sh`。停止时按 Ctrl+C。
+浏览器访问**http://127.0.0.1:8080** 。自定义端口：`REGRESSLAB_PORT=8090 bash scripts/demo.sh`。停止时按 Ctrl+C。
 
 也可分步启动：
 
