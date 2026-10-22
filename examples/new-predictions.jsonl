@@ -1,0 +1,16 @@
+{"sample_id":"fixture:01","prediction_label":"A","run_id":"00000000-0000-4000-8000-000000000102","raw_response":"{\"label\":\"A\"}"}
+{"sample_id":"fixture:02","prediction_label":"A","run_id":"00000000-0000-4000-8000-000000000102","raw_response":"{\"label\":\"A\"}"}
+{"sample_id":"fixture:03","prediction_label":"A","run_id":"00000000-0000-4000-8000-000000000102","raw_response":"{\"label\":\"A\"}"}
+{"sample_id":"fixture:04","prediction_label":"A","run_id":"00000000-0000-4000-8000-000000000102","raw_response":"{\"label\":\"A\"}"}
+{"sample_id":"fixture:05","prediction_label":"A","run_id":"00000000-0000-4000-8000-000000000102","raw_response":"{\"label\":\"A\"}"}
+{"sample_id":"fixture:06","prediction_label":"A","run_id":"00000000-0000-4000-8000-000000000102","raw_response":"{\"label\":\"A\"}"}
+{"sample_id":"fixture:07","prediction_label":"B","run_id":"00000000-0000-4000-8000-000000000102","raw_response":"{\"label\":\"B\"}"}
+{"sample_id":"fixture:08","prediction_label":"B","run_id":"00000000-0000-4000-8000-000000000102","raw_response":"{\"label\":\"B\"}"}
+{"sample_id":"fixture:09","prediction_label":"B","run_id":"00000000-0000-4000-8000-000000000102","raw_response":"{\"label\":\"B\"}"}
+{"sample_id":"fixture:10","prediction_label":"A","run_id":"00000000-0000-4000-8000-000000000102","raw_response":"{\"label\":\"A\"}"}
+{"sample_id":"fixture:11","prediction_label":"B","run_id":"00000000-0000-4000-8000-000000000102","raw_response":"{\"label\":\"B\"}"}
+{"sample_id":"fixture:12","prediction_label":"B","run_id":"00000000-0000-4000-8000-000000000102","raw_response":"{\"label\":\"B\"}"}
+{"sample_id":"basic:confirm:01","prediction_label":"A","run_id":"00000000-0000-4000-8000-000000000102","raw_response":"{\"label\":\"A\"}"}
+{"sample_id":"basic:confirm:02","prediction_label":"B","run_id":"00000000-0000-4000-8000-000000000102","raw_response":"{\"label\":\"B\"}"}
+{"sample_id":"basic:confirm:03","prediction_label":"B","run_id":"00000000-0000-4000-8000-000000000102","raw_response":"{\"label\":\"B\"}"}
+{"sample_id":"basic:confirm:04","prediction_label":"B","run_id":"00000000-0000-4000-8000-000000000102","raw_response":"{\"label\":\"B\"}"}

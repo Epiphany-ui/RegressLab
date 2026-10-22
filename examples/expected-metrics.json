@@ -1,0 +1,91 @@
+{
+  "synthetic_only": true,
+  "basic": {
+    "DISCOVERY": {
+      "n": 12,
+      "a": 6,
+      "b": 3,
+      "c": 1,
+      "d": 2,
+      "old_accuracy": 0.75,
+      "new_accuracy": 0.5833333333333334,
+      "accuracy_drop": 0.16666666666666666,
+      "negative_flip_rate": 0.25,
+      "positive_flip_rate": 0.08333333333333333,
+      "old_correct_regression_rate": 0.3333333333333333,
+      "exact_one_sided_p": 0.3125
+    },
+    "CONFIRM": {
+      "n": 4,
+      "a": 2,
+      "b": 1,
+      "c": 1,
+      "d": 0,
+      "old_accuracy": 0.75,
+      "new_accuracy": 0.75,
+      "accuracy_drop": 0.0,
+      "negative_flip_rate": 0.25,
+      "positive_flip_rate": 0.25,
+      "old_correct_regression_rate": 0.3333333333333333,
+      "exact_one_sided_p": 0.75
+    },
+    "D_PLUS_C": {
+      "n": 16,
+      "a": 8,
+      "b": 4,
+      "c": 2,
+      "d": 2,
+      "old_accuracy": 0.75,
+      "new_accuracy": 0.625,
+      "accuracy_drop": 0.125,
+      "negative_flip_rate": 0.25,
+      "positive_flip_rate": 0.125,
+      "old_correct_regression_rate": 0.3333333333333333,
+      "exact_one_sided_p": 0.34375
+    }
+  },
+  "discovery": {
+    "DISCOVERY": {
+      "n": 96,
+      "a": 64,
+      "b": 24,
+      "c": 4,
+      "d": 4,
+      "old_accuracy": 0.9166666666666666,
+      "new_accuracy": 0.7083333333333334,
+      "accuracy_drop": 0.20833333333333334,
+      "negative_flip_rate": 0.25,
+      "positive_flip_rate": 0.041666666666666664,
+      "old_correct_regression_rate": 0.2727272727272727,
+      "exact_one_sided_p": 8.999556303024292e-05
+    },
+    "CONFIRM": {
+      "n": 96,
+      "a": 64,
+      "b": 24,
+      "c": 4,
+      "d": 4,
+      "old_accuracy": 0.9166666666666666,
+      "new_accuracy": 0.7083333333333334,
+      "accuracy_drop": 0.20833333333333334,
+      "negative_flip_rate": 0.25,
+      "positive_flip_rate": 0.041666666666666664,
+      "old_correct_regression_rate": 0.2727272727272727,
+      "exact_one_sided_p": 8.999556303024292e-05
+    },
+    "D_PLUS_C": {
+      "n": 192,
+      "a": 128,
+      "b": 48,
+      "c": 8,
+      "d": 8,
+      "old_accuracy": 0.9166666666666666,
+      "new_accuracy": 0.7083333333333334,
+      "accuracy_drop": 0.20833333333333334,
+      "negative_flip_rate": 0.25,
+      "positive_flip_rate": 0.041666666666666664,
+      "old_correct_regression_rate": 0.2727272727272727,
+      "exact_one_sided_p": 2.3440920510209295e-08
+    }
+  }
+}
