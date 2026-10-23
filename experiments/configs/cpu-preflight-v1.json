@@ -1,0 +1,26 @@
+{
+  "schema_version": "regresslab-cpu-preflight-v1",
+  "purpose": "DEVELOPMENT_SIGNAL_PILOT",
+  "dataset": "MASSIVE-1.1-zh-CN-cleaned-subset",
+  "archive_sha256": "4cba5faa11c71437928e17cb1b9b3d8b8e727e7ea363a3a9a8045e19c0491577",
+  "cleaning_policy": "EXCLUDE_WHOLE_CROSS_PARTITION_CONFLICTING_OR_DUPLICATE_ID_COMPONENT",
+  "test_policy": "AUDIT_ONLY_NO_MODEL_INPUT_OR_EVALUATION",
+  "dev_split": {"protocol": "pilot-dev-v1", "seed": 42, "dev_model_fraction": 0.5},
+  "training_seeds": [11, 23, 37],
+  "selection_seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+  "budgets": [20, 50, 100, 200],
+  "primary_budget": 100,
+  "families": [
+    {"id": "data-growth", "train_fractions": [0.4, 0.6, 0.8, 1.0], "C": [1.0, 1.0, 1.0, 1.0]},
+    {"id": "regularization", "train_fractions": [1.0, 1.0, 1.0, 1.0], "C": [0.25, 0.5, 1.0, 2.0]}
+  ],
+  "classifier_representation": {"analyzer": "char", "ngram_range": [2, 4], "min_df": 2, "max_features": 30000, "sublinear_tf": true, "lowercase": false, "norm": "l2", "fit_on": "SAME_REALIZATION_F0_40_PERCENT_TRAIN_ONLY"},
+  "classifier": {"solver": "lbfgs", "max_iter": 1000, "tol": 0.0001},
+  "selection_representation": {"analyzer": "char", "ngram_range": [2, 4], "min_df": 1, "max_features": 20000, "sublinear_tf": true, "lowercase": false, "norm": "l2", "fit_on": "CURRENT_CORRECT_DEV_SELECTOR_POOL_ONLY"},
+  "methods": ["random", "stratified", "past-flip", "ref-maxprob", "ref-margin", "ref-entropy", "ref-deepgini", "facility", "kcenter"],
+  "cpu_threads": 2,
+  "max_training_seconds_per_model": 180,
+  "freeze_policy": "ALL_SIX_CHAIN_BASELINE_BUDGET_SEED_SUITES_BEFORE_ANY_F3_DEV_SELECTOR_PREDICTION",
+  "signal_rule": {"min_chains_with_future_flips_per_family": 2, "min_future_flips_per_valid_chain": 1, "decision": "DESCRIPTIVE_PILOT_ONLY_NOT_FORMAL_G1_APPROVAL"},
+  "limitations": ["One dataset, one CPU model family; six related TRAIN/basis realizations are not six independent model families.", "No HGC, Risk-LR, external dataset, Grad-PD, GPU training or formal TEST evaluation in this pilot.", "No statistical superiority or noninferiority claims; all baselines and zero-flip chains retained."]
+}
