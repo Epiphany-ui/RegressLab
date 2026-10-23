@@ -15,7 +15,7 @@ from regresslab.domain import (
 
 
 ROOT = Path(__file__).resolve().parents[2]
-CONTRACTS = ROOT / "docs" / "contracts"
+CONTRACTS = ROOT / "docs" / "archive" / "v1.3" / "contracts"
 SOURCE = {"name": "Engineering fixture", "version": "1", "source_url": "https://example.invalid/fixture", "license": "fixture-only", "fixture_only": True}
 
 

@@ -1,33 +1,36 @@
-# RegressLab · 模型退化诊断 Demo
+# RegressLab · 文本分类回归选样研究
 
-本地中文工作台：导入标注数据和两版分类预测，严格校验完整性，计算发现集 D 的成对指标、候选分组与混淆变化，查看逐条证据并导出 JSON / HTML。分析结果保存在本机，刷新或重启后可以继续查看。
+当前研究方向是**《基于历史群体风险的文本分类模型回归测试样本选择方法研究》**：利用f0/f1/f2的历史，在执行目标f3前选出有限预算测试集，比较HGC与强基线的未来负向翻转检出和成本。HGC是待验证候选，尚无真实收益结果。
 
-当前交付为 **0.1.0 描述性 Demo**。项目文档统一从 [文档导航](docs/README.md) 进入，完整产品定义见 [PRODUCT.md](docs/specs/PRODUCT.md)。主实验仍为小模型真实微调更新，逻辑回归重新训练为对照；本 Demo 尚未执行这些训练或正式效果实验。
+**本轮交付是研究v2的工程规划，当前可执行代码仍为0.1描述性Demo。** 新增离线研究、数据/工件合同、冻结与信息隔离、成本、Demo演进、测试和分阶段计划；未把旧Demo改名成HGC实现。优先进行CPU真实四版链，神经模型迁移由资源预实验决定。原微调主实验/完整产品建设的v1.3路线已归档。
+
+从 [研究资料](docs/research/v2/README.md)、[工程设计与实施计划](docs/engineering/v2/README.md) 或 [统一文档导航](docs/README.md) 开始。8份源Markdown逐字节保留；源包未附其引用的Word，差异见[导入清单](docs/research/v2/import-manifest.json)。
 
 ## 项目结构
 
 ```text
 RegressLab/
-├── README.md                  # 项目入口与启动说明
-├── backend/                   # Python API、领域逻辑与后端测试
-├── frontend/                  # Vue / TypeScript 中文工作台
-├── e2e/                       # Playwright 浏览器测试
-├── examples/                  # 合成工程夹具与格式示例
-├── scripts/                   # 安装、启动、夹具生成、文档校验
+├── README.md                  # 当前方向与可运行Demo入口
+├── backend/                   # 已实现：0.1 Demo API与测试
+├── frontend/                  # 已实现：中文工作台；研究证据展示待扩展
+├── e2e/                       # 已实现：Demo浏览器测试
+├── examples/                  # 已实现：v1合成夹具，不是v2实验结果
+├── lab/                       # 本次规划：离线选择/冻结/评测，尚无算法代码
+├── experiments/               # 本次规划：独立训练/推理，尚无训练代码
+├── scripts/                   # 启动、夹具、当前文档/历史合同校验
 └── docs/
-    ├── README.md              # 文档导航
-    ├── development/           # 当前实现、Demo API 与后续任务
-    ├── specs/                 # 完整产品规格、编号设计文档与教师材料
-    ├── design/                # 前端视觉规范
-    ├── contracts/             # OpenAPI、JSON Schema、SQL 与合同夹具
-    ├── quality/               # 软件验收记录
-    ├── verification/          # 设计与合同静态检查记录
-    └── screenshots/           # 界面截图
+    ├── research/v2/           # 新研究原文与来源清单
+    ├── engineering/v2/        # 新软件设计、工件Schema与开发规划
+    ├── development/           # 当前实现状态与v1 Demo实际接口
+    ├── archive/v1.3/          # 被取代的规格、合同与应用建设计划
+    ├── design/                # 沿用的视觉规范与研究展示补充
+    ├── quality/               # Demo历史验收与本轮规划检查
+    └── screenshots/           # 原Demo截图
 ```
 
-本地数据保存在被 Git 排除的 `var/`；依赖、缓存和构建产物也不提交。
+本地运行数据`var/`、研究工件`artifacts/`、原始数据`datasets/`、模型`checkpoints/`及依赖/缓存被Git排除。`lab/`和`experiments/`目前只有目录说明，计划中的命令不能当作已有功能执行。
 
-## 启动
+## 启动现有兼容 Demo
 
 需要 Python 3.11+、uv 和 Node 24。首次准备需要联网安装依赖；依赖和构建产物准备好后，启动与夹具演示无需联网。
 
@@ -60,7 +63,7 @@ backend/.venv/bin/python -m regresslab.cli demo --port 8080
 4. 下载格式示例，用“导入预测对比”上传数据和两份预测。缺失、重复、多余 ID、未知标签、混合 run 或原始响应不一致都会阻止分析。
 5. 导出 JSON 或 HTML，刷新页面，在历史分析中重新打开。
 
-格式和精确预期见 [examples/README.md](examples/README.md)。界面仅展示 D 逐例证据；C/A 不参与当前统计或分组，确认字段始终为 null。来源固定为 `DECLARED`，不认证外部推理和权重。有限样本和“未发现退化”都不代表模型安全。
+格式和精确预期见 [examples/README.md](examples/README.md)。当前Demo仍按v1的50/25/25划分和D+C覆盖运行，不能自动当成v2的80/10/10实验或四版历史。C/A不参与当前统计或分组，来源固定为`DECLARED`；合成夹具不是模型效果证据。
 
 ## 验证与开发
 
@@ -76,13 +79,14 @@ npm test
 
 ```bash
 backend/.venv/bin/python -m regresslab.cli doctor
-node scripts/check-design.cjs
+backend/.venv/bin/python scripts/check-docs.py
+node scripts/check-legacy-design.cjs
 ```
 
-后一个命令仅验证原设计文档与合同，不能代替应用或模型实验验收。当前实现范围和后续任务见 [实施进展](docs/development/IMPLEMENTATION.md)，API 约定见 [Demo API](docs/development/DEMO-API.md)，实测记录见 [验收记录](docs/quality/VALIDATION.md)。界面规范见 [DESIGN.md](docs/design/DESIGN.md)，完整资料可从 [文档导航](docs/README.md) 查找。
+`check-docs.py`核对来源摘要、文档链接和v2合同草案；源包缺失的Word会明确报告为已知警告。历史校验器只检查归档的v1.3包。两者都不证明研究方法已实现或实验有效。当前状态见[实施进展](docs/development/IMPLEMENTATION.md)，实际接口见[Demo API](docs/development/DEMO-API.md)，原软件验收见[记录](docs/quality/VALIDATION.md)，本轮规划验收另见[v2记录](docs/quality/V2-PLANNING-VALIDATION.md)。
 
 ## 数据与当前边界
 
 默认数据文件为 `var/demo.sqlite3`，包含成功导入的原文和预测，目录已从 Git 排除。`REGRESSLAB_DATA_DIR` 可指定另一个目录。所有成功结果只追加，读取时核对完整记录指纹。停止服务后可备份整个 `var` 目录；恢复到新目录再运行 doctor。失败上传只留输入摘要和错误码，不保存失败原始文件。
 
-此 Demo 使用 SQLite 和有界同步导入，单份文件 ≤10 MiB、数据 ≤5000 行，仅绑定 `127.0.0.1`。这是有意缩小的前期实现，API 独立使用 `/api/demo`，未冒充最终 `/api/v1` 或完整报告合同。最终 PostgreSQL、持久队列/Worker、认证、模型来源登记、GPU微调/Ollama、DEV稳定性、C一次确认、冻结套件和真实后续版本重放尚待后续阶段完成。不要把此入口用于公网部署。
+此Demo使用SQLite、有界同步导入及`/api/demo`，保持单份10MiB/5000行护栏和回环绑定。v2将由独立离线lab构造共同候选池、登记方法、冻结完整矩阵，再由评测器解封目标；Web只读取验证后的证据。PostgreSQL、多Worker、账号、完整Ollama/API和网页训练已暂缓，不能继续作为下一轮必做项。具体任务和G0—G3出口见[开发计划](docs/engineering/v2/07-implementation-plan.md)。

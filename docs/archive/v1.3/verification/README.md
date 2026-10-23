@@ -1,6 +1,6 @@
 # 文档验证记录
 
-本文保留2026年10月22日1.3设计阶段的审阅及未执行项，不是当前Demo产品验收。当前应用结果见[应用验证记录](../quality/VALIDATION.md)。设计静态检查输出见[static-checks.json](static-checks.json)及[revision-checks.json](revision-checks.json)。
+本文保留2026年10月22日1.3设计阶段的审阅及未执行项，不是当前Demo产品验收。当前应用结果见[应用验证记录](../../../quality/VALIDATION.md)。设计静态检查输出见[static-checks.json](static-checks.json)及[revision-checks.json](revision-checks.json)。
 
 ## 审阅与修订
 
@@ -12,7 +12,7 @@
 
 ## 可重复静态检查
 
-在仓库根目录执行`node scripts/check-design.cjs`，脚本按自身位置定位输入并重写`docs/verification/static-checks.json`。17组检查覆盖JSON解析/本地引用、OpenAPI路径与幂等、有效和非法样例、成对四格与精确小样本尾概率、Holm与选择算例、五基线/消融、DDL静态引用、链接、版本/运行/证据合同、条件Schema、本地权重缺失拒绝、lab隔离、微小多样性排序和需求/来源追踪。
+在仓库根目录执行`node scripts/check-legacy-design.cjs`，脚本按自身位置定位输入并重写`docs/archive/v1.3/verification/static-checks.json`。17组检查覆盖JSON解析/本地引用、OpenAPI路径与幂等、有效和非法样例、成对四格与精确小样本尾概率、Holm与选择算例、五基线/消融、DDL静态引用、链接、版本/运行/证据合同、条件Schema、本地权重缺失拒绝、lab隔离、微小多样性排序和需求/来源追踪。
 
 当前合同为43个HTTP操作、37条路径、61个组件Schema、17张表。自带校验器覆盖本包使用的关键形状和allOf/if/then条件，**不是完整标准认证的JSON Schema/OpenAPI验证器**；DDL未在PostgreSQL执行。默认统计/精选参数未晋级，未声称算法效果已验证。
 

@@ -14,7 +14,7 @@ from uuid import UUID
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "examples"
-CONTRACTS = ROOT / "docs" / "contracts"
+CONTRACTS = ROOT / "docs" / "archive" / "v1.3" / "contracts"
 RUN_IDS = {
     "basic-old": "00000000-0000-4000-8000-000000000101",
     "basic-new": "00000000-0000-4000-8000-000000000102",

@@ -11,6 +11,9 @@ frontend/dist/
 playwright-report/
 test-results/
 var/
+artifacts/
+datasets/
+checkpoints/
 .env
 .env.*
 !.env.example

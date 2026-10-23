@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-22T17:04:29.668Z",
+  "generated_at": "2026-10-23T14:39:04.226Z",
   "scope": "Document static checks only; custom validator covers used JSON Schema keywords, not a formal standards-certified validator. No application, external API, model training or PostgreSQL runtime validation was performed.",
   "counts": {
-    "markdown_files": 31,
+    "markdown_files": 26,
     "openapi_paths": 37,
     "openapi_operations": 43,
     "openapi_schemas": 61

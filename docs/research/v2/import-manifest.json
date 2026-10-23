@@ -1,0 +1,73 @@
+{
+  "schema_version": "regresslab-research-source-import-v1",
+  "source_package": "regresslab-research-v2",
+  "source_document_date": "2026-10-23",
+  "imported_at": "2026-10-23T13:45:11.838224+00:00",
+  "repository_base_commit": "46f4ed4e8160c5b169b90335a55eff61ba54b280",
+  "files": [
+    {
+      "path": "source/01-research-position.md",
+      "sha256": "bb523a0ab182f817ab4c6638fbd10253b7ff3dd77531889b98097b70beb56dbe",
+      "size_bytes": 6151
+    },
+    {
+      "path": "source/02-literature-map.md",
+      "sha256": "ba185916e2d8f43cc454ddd6bee8a0ac03550b2b272259f3b9e853011581f39f",
+      "size_bytes": 17625
+    },
+    {
+      "path": "source/03-algorithm-spec.md",
+      "sha256": "a2c93535a23c70a3790142e8afde809c5366fcf35b7647afd9f71feec746c7df",
+      "size_bytes": 8776
+    },
+    {
+      "path": "source/04-experiment-protocol.md",
+      "sha256": "71b2f125ad8830c5cdbaff7ea870b4d660a40ed8fd2cae3b2e297a6fd67b2bd2",
+      "size_bytes": 18200
+    },
+    {
+      "path": "source/05-teacher-brief.md",
+      "sha256": "cdcdd7b31886a062ae187b4bed2a0881ae8e26311f9d88976381bedbd403b92a",
+      "size_bytes": 3312
+    },
+    {
+      "path": "source/06-review-and-verification.md",
+      "sha256": "b55c6ce90b7542e168d5733aa8480746cc4414181d533e931a4b2c949fffcfd6",
+      "size_bytes": 2378
+    },
+    {
+      "path": "source/PRODUCT.md",
+      "sha256": "8ad8b141582d23a786fe48caac1ce1a06923cab6fd2c837219ebf5f62c4a584f",
+      "size_bytes": 3769
+    },
+    {
+      "path": "source/README.md",
+      "sha256": "b4b3070f515e7a68750f9ca1dcead1a9eadb9aa77bb7dcda858e5ee2593139a2",
+      "size_bytes": 3448
+    }
+  ],
+  "known_missing_local_links": [
+    {
+      "from": "source/README.md",
+      "target": "source/研究方向调整方案简述.docx",
+      "reason": "Source README references this Word document, but only eight Markdown files were supplied. Use source/05-teacher-brief.md; no attachment or verification result was fabricated."
+    }
+  ],
+  "source_claims_not_reverified": [
+    {
+      "claim": "Source PRODUCT.md mentions checked Demo commit a702894",
+      "status": "UPSTREAM_COMMIT_EXISTS_SOURCE_TEST_CLAIM_NOT_REPRODUCED",
+      "local_baseline": "46f4ed4 at task start; upstream a702894 fetched and inspected during final sync. Preserve upstream history and rerun local tests instead of inheriting source test claims."
+    },
+    {
+      "claim": "Literature and Word rendering review in source/06-review-and-verification.md",
+      "status": "SOURCE_REPORTED_ONLY",
+      "note": "This task imports and engineers the plan; it does not rerun all literature reproduction or Word rendering."
+    }
+  ],
+  "upstream_review": {
+    "fetched_main_commit": "a7028941bc0e388b2aa746bd1635da856e3aa714",
+    "relation_to_local_base": "Remote contained README/design wording edits after 46f4ed4; these commits will be retained through normal history integration.",
+    "source_commit_reference": "Source PRODUCT a702894 is an actual fetched upstream commit. Its reported testing remains a source claim; this task reruns local compatibility checks separately."
+  }
+}

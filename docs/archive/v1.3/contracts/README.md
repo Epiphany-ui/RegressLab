@@ -1,6 +1,6 @@
 # 机器合同与夹具
 
-本目录保存完整产品的1.3机器合同，服务前缀为`/api/v1`；当前描述性Demo使用独立接口，见[Demo API](../development/DEMO-API.md)。设计背景见[产品定义](../specs/PRODUCT.md)，静态检查范围见[设计验证记录](../verification/README.md)。
+本目录保存完整产品的1.3机器合同，服务前缀为`/api/v1`；当前描述性Demo使用独立接口，见[Demo API](../../../development/DEMO-API.md)。设计背景见[产品定义](../specs/PRODUCT.md)，静态检查范围见[设计验证记录](../verification/README.md)。
 
 - [openapi.json](openapi.json)：HTTP形状基线；服务前缀/api/v1，Bearer认证，POST幂等键。
 - [schema.sql](schema.sql)：PostgreSQL16初始结构；实现时转为Alembic0001，不能与迁移重复执行。

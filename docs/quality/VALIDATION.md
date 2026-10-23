@@ -1,6 +1,6 @@
 # Demo 验证记录
 
-此文件记录应用级实际检查；[设计验证目录](../verification/README.md)保留设计阶段的静态检查与审阅。合成夹具验证软件行为，不证明模型效果或研究结论。
+此文件记录应用级实际检查；[设计验证目录](../archive/v1.3/verification/README.md)保留设计阶段的静态检查与审阅。合成夹具验证软件行为，不证明模型效果或研究结论。
 
 验收日期：2026-10-23（Asia/Shanghai）。实际环境：Linux 6.18.33.2-microsoft-standard-WSL2、Python 3.14.4、Node 24.19.0、npm 12.2.1；浏览器使用环境已安装的 Chromium，依赖版本由三份锁文件固定。Python 3.11为兼容目标，此次没有另起3.11环境验证。
 
@@ -14,7 +14,7 @@
 | `cd e2e && npm test`（指定已安装Chromium） | 6 passed，约11秒 | 1440×1000桌面与360×800移动端，各3个流程 |
 | `node scripts/check-design.cjs`（仓库根目录） | 17组全部PASS | 原设计、Schema、公式与追踪静态检查；当前入口名称 |
 | `backend/.venv/bin/python -m regresslab.cli doctor` | SQLite ok、历史hash通过、前端已构建 | 本机实际数据目录检查 |
-| 原包首次导入SHA256对比（历史记录） | 48份均已导入；46份原文一致 | 首次导入时的记录；原README现见[设计总目录](../specs/README.md)，当时仅校验器及静态检查记录有意更新 |
+| 原包首次导入SHA256对比（历史记录） | 48份均已导入；46份原文一致 | 首次导入时的记录；原README现见[设计总目录](../archive/v1.3/specs/README.md)，当时仅校验器及静态检查记录有意更新 |
 
 后端使用FastAPI TestClient及临时SQLite。当前受限执行环境会阻塞异步测试客户端的线程唤醒，改在获准的沙箱外运行后通过；纯领域测试可直接在沙箱内运行。测试出现Starlette对httpx测试适配器的未来弃用提示，不影响本次结果。
 
@@ -55,3 +55,7 @@ e2e/package-lock.json      5f60f2a2a47a477fa81872779726c5150764df775489311f2bbc5
 ## 未执行的产品与实验工作
 
 真实MASSIVE下载、GPU训练/显存和恢复、真实模型推理、DEV稳定性、一次C确认、套件/未来版本重放、PostgreSQL/Worker恢复部署、正式实验和算法增益均未执行。当前成功仅证明此Demo在上述检查范围内可用；不是P0成品或研究效果验收。完整后续顺序见 [IMPLEMENTATION.md](../development/IMPLEMENTATION.md)。
+
+## v2迁移后的历史路径说明
+
+上述代码/浏览器和第一次目录整理结果保留为历史记录。v2规划归档后，旧规格/合同/验证移至`docs/archive/v1.3/`，旧检查入口改为`node scripts/check-legacy-design.cjs`；当时记录中的`check-design.cjs`不是当前命令。当前规划与本轮实际复验另见[V2-PLANNING-VALIDATION.md](V2-PLANNING-VALIDATION.md)。

@@ -1,18 +1,17 @@
-# 文档入口
+# 文档导航：当前研究 v2
 
-当前软件是 0.1.0 描述性 Demo。完整产品的 1.3 设计基线单独保存在 `specs/`；其中的未来任务、部署命令和“尚未实现”描述属于设计阶段，不表示当前 Demo 的实际运行状态。
+当前主线由“应用系统开发”转为“历史群体风险驱动的回归测试选样研究”。软件仍是0.1描述性Demo；本次交付v2工程设计和开发规划。真实模型链、HGC/强基线实现、目标冻结评测与效果实验尚未完成。
 
-| 分类 | 入口 | 适合查什么 |
+| 类别 | 入口 | 状态与用途 |
 |---|---|---|
-| 当前 Demo | [实现与后续里程碑](development/IMPLEMENTATION.md)、[Demo API](development/DEMO-API.md) | 已实现范围、与完整成品的差异、当前接口 |
-| 运行与验收 | [仓库启动说明](../README.md)、[应用验证记录](quality/VALIDATION.md)、[合成夹具](../examples/README.md) | 启动、实测结果、精确核对值和截图 |
-| 完整产品设计 | [设计总目录](specs/README.md)、[产品定义](specs/PRODUCT.md)、[实施计划](specs/12-implementation-plan.md) | 毕设完整范围、需求、算法、实验和后续任务 |
-| 界面约定 | [工作台设计规范](design/DESIGN.md) | 配色、层级、响应式与无障碍目标 |
-| 机器合同 | [合同与夹具目录](contracts/README.md) | 完整产品的 OpenAPI、DDL、JSON Schema 和算法金标准 |
-| 设计验证历史 | [设计静态检查记录](verification/README.md) | 原设计的检查范围、输出和未执行项 |
+| 研究依据 | [研究v2](research/v2/README.md) | 用户提供8份原文、来源hash和已知缺失附件；科学问题/算法/实验 |
+| 当前开发计划 | [工程v2总目录](engineering/v2/README.md)、[分阶段任务](engineering/v2/07-implementation-plan.md) | 本轮补齐：架构、模块、工件/数据、工作流、Demo迁移、测试和出口 |
+| 当前代码事实 | [实施状态](development/IMPLEMENTATION.md)、[现有Demo API](development/DEMO-API.md) | 已实现的v1兼容软件，不等于v2实验实现 |
+| 运行与小夹具 | [仓库README](../README.md)、[examples](../examples/README.md) | 可启动演示与历史工程夹具 |
+| 质量证据 | [Demo历史验收](quality/VALIDATION.md)、[本轮规划验收](quality/V2-PLANNING-VALIDATION.md) | 分开记录代码测试、文档/schema检查和未执行实验 |
+| 视觉约定 | [DESIGN](design/DESIGN.md) | 沿用设计体系，未来增加研究证据视图 |
+| 历史方案 | [v1.3归档](archive/v1.3/README.md) | 原规格/合同/实验及旧产品路线，仅追溯，不再支配v2开发 |
 
-建议先读当前实现与应用验证记录，再按需查看 Demo API 和合成夹具。继续开发完整系统时，从产品定义进入设计总目录，依次阅读数据/算法协议、模型版本协议及实施计划。
+建议阅读：研究定位/算法/实验协议 → 工程01范围与02架构 → 07实施计划 → 按任务查03合同、04工作流、05界面迁移、06验收。科学参数尚未冻结的事项集中在[决策清单](engineering/v2/01-scope-and-decisions.md)。
 
-应用测试与设计静态检查分别记录。合成夹具、合同通过和页面可运行都不等于真实模型训练、独立确认或研究效果已验证。
-
-文档路径以当前目录为基准；启动和验证命令如无特别说明，在仓库根目录执行。设计静态检查入口为 `node scripts/check-design.cjs`。
+当前文档检查：从仓库根目录执行`backend/.venv/bin/python scripts/check-docs.py`。它核对8份来源的完整性、所有本地文档目标及v2 Schema草案；源Word未提供的链接单独列为已知警告。`node scripts/check-legacy-design.cjs`只验证历史合同包，不是v2实验测试。

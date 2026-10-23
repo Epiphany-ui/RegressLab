@@ -1,8 +1,8 @@
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
-const base=path.resolve(__dirname,'..');
-const specs=path.join(base,'docs','specs');
-const contracts=path.join(base,'docs','contracts');
-const records=path.join(base,'docs','verification');
+const base=path.resolve(__dirname,'..','docs','archive','v1.3');
+const specs=path.join(base,'specs');
+const contracts=path.join(base,'contracts');
+const records=path.join(base,'verification');
 const results=[];
 function check(name,fn){try{fn();results.push({name,status:'PASS'});}catch(e){results.push({name,status:'FAIL',detail:e.message});}}
 function assert(x,m){if(!x)throw Error(m);}
@@ -210,7 +210,7 @@ check('v1.3 tuple implementation preserves tiny diversity tie-breaks',()=>{
 });
 check('v1.3 root scope and test traceability have no inherited contradictions',()=>{
  for(const f of ['PRODUCT.md','README.md','00-project-charter.md','16-proposal-summary.md']){
-  const text=fs.readFileSync(path.join(f==='README.md'?base:specs,f),'utf8');assert(text.includes('微调')&&text.includes('逻辑回归'),'main and control '+f);assert(!/Laptop|6GB.*笔记本/.test(text),'hardware '+f);
+  const text=fs.readFileSync(path.join(specs,f),'utf8');assert(text.includes('微调')&&text.includes('逻辑回归'),'main and control '+f);assert(!/Laptop|6GB.*笔记本/.test(text),'hardware '+f);
  }
  const tests=fs.readFileSync(path.join(specs,'09-test-plan.md'),'utf8');for(let n=45;n<=62;n++)assert(tests.includes('TC-'+n),'new test '+n);
  const sources=fs.readFileSync(path.join(specs,'15-sources-decisions.md'),'utf8'),ids=Array.from(sources.matchAll(/^\| (S\d+) \|[^\n]*https?:/gm),m=>m[1]);assert(ids.length===new Set(ids).size,'duplicate source definition IDs');
