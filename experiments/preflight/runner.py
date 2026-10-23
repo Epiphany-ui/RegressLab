@@ -90,6 +90,8 @@ def evaluate_cells(pool_gold, history, target, selections):
     """Only the post-freeze evaluator receives target predictions."""
     gold = np.asarray(pool_gold)
     history = np.asarray(history)
+    if len(gold) == 0 and history.size == 0:
+        history = np.empty((0, 3), dtype=str)
     target = np.asarray(target)
     if history.shape != (len(gold), 3) or target.shape != gold.shape or not np.all(history[:, 2] == gold):
         raise ValueError("INVALID_EVALUATION_SCOPE")

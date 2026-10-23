@@ -2,7 +2,7 @@
 
 当前研究方向是**《基于历史群体风险的文本分类模型回归测试样本选择方法研究》**：利用f0/f1/f2的历史，在执行目标f3前选出有限预算测试集，比较HGC与强基线的未来负向翻转检出和成本。HGC是待验证候选，尚无真实收益结果。
 
-**本轮交付是研究v2的工程规划，当前可执行代码仍为0.1描述性Demo。** 新增离线研究、数据/工件合同、冻结与信息隔离、成本、Demo演进、测试和分阶段计划；未把旧Demo改名成HGC实现。优先进行CPU真实四版链，神经模型迁移由资源预实验决定。原微调主实验/完整产品建设的v1.3路线已归档。
+**已完成首轮真实CPU开发预实验；Web仍为0.1描述性Demo。** MASSIVE中文数据上训练24个模型、运行6条四版链和9种基线，每条链发现5—9条未来负向翻转。这说明有开发信号，但跨链等价模型复用、信号稀疏等问题尚未解决，不能当作正式实验结论。详见[预实验报告](docs/experiments/cpu-preflight-v1/README.md)和[开发日志](docs/development/logs/2026-10-23-cpu-preflight.md)。下一步先复核实验有效性，再推进HGC；神经模型迁移由资源预实验决定。
 
 从 [研究资料](docs/research/v2/README.md)、[工程设计与实施计划](docs/engineering/v2/README.md) 或 [统一文档导航](docs/README.md) 开始。8份源Markdown逐字节保留；源包未附其引用的Word，差异见[导入清单](docs/research/v2/import-manifest.json)。
 
@@ -16,19 +16,20 @@ RegressLab/
 ├── e2e/                       # 已实现：Demo浏览器测试
 ├── examples/                  # 已实现：v1合成夹具，不是v2实验结果
 ├── lab/                       # 本次规划：离线选择/冻结/评测，尚无算法代码
-├── experiments/               # 本次规划：独立训练/推理，尚无训练代码
+├── experiments/               # 已实现：独立CPU预实验、基线、冻结与结果复核
 ├── scripts/                   # 启动、夹具、当前文档/历史合同校验
 └── docs/
     ├── research/v2/           # 新研究原文与来源清单
     ├── engineering/v2/        # 新软件设计、工件Schema与开发规划
-    ├── development/           # 当前实现状态与v1 Demo实际接口
+    ├── development/           # 当前实现状态、开发日志与v1 Demo实际接口
+    ├── experiments/           # 真实预实验报告及轻量审计工件
     ├── archive/v1.3/          # 被取代的规格、合同与应用建设计划
     ├── design/                # 沿用的视觉规范与研究展示补充
     ├── quality/               # Demo历史验收与本轮规划检查
     └── screenshots/           # 原Demo截图
 ```
 
-本地运行数据`var/`、研究工件`artifacts/`、原始数据`datasets/`、模型`checkpoints/`及依赖/缓存被Git排除。`lab/`和`experiments/`目前只有目录说明，计划中的命令不能当作已有功能执行。
+本地运行数据`var/`、完整研究工件`artifacts/`、原始数据`datasets/`、模型`checkpoints/`及依赖/缓存被Git排除。`lab/`仍为计划目录；CPU预实验的实际运行命令见[experiments](experiments/README.md)，计划中的`regresslab_experiments.cli`尚未实现。
 
 ## 启动现有兼容 Demo
 

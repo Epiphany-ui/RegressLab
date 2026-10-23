@@ -1,6 +1,6 @@
 # v2 研究原型架构
 
-状态：工程设计，非已实现系统。研究依据见[范围与决策](01-scope-and-decisions.md)。目标是让实验独立可运行、边界可检查、结果可复现，Web作为已有证据的读取器。
+状态：通用研究系统的工程设计。已实现的独立CPU预实验入口见[报告](../../experiments/cpu-preflight-v1/README.md)，不等于下列全部模块已完成。研究依据见[范围与决策](01-scope-and-decisions.md)。目标是让实验独立可运行、边界可检查、结果可复现，Web作为已有证据的读取器。
 
 ## 1. 三个执行边界
 
@@ -41,19 +41,20 @@ RegressLab/
   examples/                        # 已实现：明确为v1的合成夹具
   scripts/                         # 现有启动/生成；本次文档与历史合同校验
   lab/README.md                    # 本次新增：离线研究代码目录说明，尚无算法代码
-  experiments/README.md            # 本次新增：训练/推理环境说明，尚无训练代码
+  experiments/                    # 已实现：preflight、独立依赖锁、配置与测试
   docs/
     research/v2/source/            # 用户提供的8份原始研究文档，逐字节保留
     research/v2/import-manifest.json
     engineering/v2/                # 本次工程设计、合同、实施与验收
-    development/                   # 当前Demo说明和新方向状态入口
+    development/                   # 当前Demo说明、实现状态与开发日志
+    experiments/                   # 真实预实验报告与轻量审计工件
     quality/                       # 历史软件验收与本次规划检查
     archive/v1.3/                  # 取代的规格/合同/验证与旧路线
     design/                        # 现有视觉规范及研究展示补充
     screenshots/                   # 历史Demo截图
 ```
 
-后续才创建的Python包如下；当前不能运行这些模块。每项在对应任务提交时才加入真实依赖/锁文件，不预造锁hash。
+后续完整Python包规划如下；当前不能运行这些模块。`experiments/preflight`已有独立锁定的CPU实现，未来完整包按任务演进，不预造锁hash。
 
 ```text
 lab/

@@ -1,0 +1,38 @@
+{
+  "schema_version": "cpu-preflight-audit-v1",
+  "purpose": "DEVELOPMENT_ONLY",
+  "executed_code_commit": "08cd7ad",
+  "preregistration_code_fingerprints_match_executed_commit": true,
+  "files_verified_against_freeze": 56,
+  "event_hash_chain_verified": true,
+  "all_declared_target_evaluation_events_after_freeze": true,
+  "equivalent_target_historical_models_across_chains": [
+    {
+      "chain_a": "data-growth-seed11",
+      "slot_a": "f3",
+      "chain_b": "regularization-seed11",
+      "slot_b": "f2",
+      "identical_model_file_sha256": "6309209ca60e20271777e03ce7eb0ded7aaf62b6ff88e49e034d13d481461342"
+    },
+    {
+      "chain_a": "data-growth-seed23",
+      "slot_a": "f3",
+      "chain_b": "regularization-seed23",
+      "slot_b": "f2",
+      "identical_model_file_sha256": "b2a18f420124d5ae88b380b2a8d5de7c8647e5de86e77881734a037c9474a182"
+    },
+    {
+      "chain_a": "data-growth-seed37",
+      "slot_a": "f3",
+      "chain_b": "regularization-seed37",
+      "slot_b": "f2",
+      "identical_model_file_sha256": "f94b6e07ff2bbd3da9c2bd5c849ea70fdb290438eaf1601ea7bf837d512b40af"
+    }
+  ],
+  "formal_blind_evaluation_eligible": false,
+  "limitations": [
+    "Per-chain selectors received only their own f0-f2 inputs, but three development target models are byte-identical to another development chain historical model. Do not claim all target behavior remained globally unseen before the matrix freeze.",
+    "The events certify the implemented path and actual file identities, not an adversarial operating-system access sandbox.",
+    "The empty-pool JSON round-trip fix was added after the real run; executed code is recoverable at the fingerprint-matching commit. All real pools in this run were nonempty."
+  ]
+}

@@ -1,9 +1,35 @@
-# 真实模型准备：计划目录
+# CPU开发预实验
 
-本目录目前只有工作边界说明，**尚无训练/推理代码、依赖锁或模型效果结果**。
+已实现独立包`preflight`，用于先验证真实数据、四版链、自然未来翻转及强基线是否可运行。首轮结果见[报告](../docs/experiments/cpu-preflight-v1/README.md)，实施经过见[开发日志](../docs/development/logs/2026-10-23-cpu-preflight.md)。它不是通用研究平台，也不包含HGC或正式TEST评价。
 
-未来包名`regresslab_experiments`，与Web和lab环境分开锁定。计划包括MASSIVE/CLINC150适配、TRAIN-only CPU四版更新、0.6B LoRA资源试验、受登记scope约束的推理、完整类别分数适配及真实来源/硬件/运行清单。
+需要Python 3.11+、uv和curl；实际执行环境/版本在报告中记录，依赖由本目录`uv.lock`锁定。该环境与Web后端分开。
 
-模型训练与选择方法开发是两类工作。实验准备器可以生成f3权重，但主selector不能读取f3；其完整预测须按冻结协议封存并由独立评测器解封。不能沿用旧三检查点配方声称已经形成四版链。GPU初始20小时护栏和实际配方均需开发试验登记。
+```bash
+cd experiments
+uv sync --frozen --cache-dir ../.cache/uv
+uv run python -m preflight.fetch --output ../datasets/massive-1.1
+uv run python -m preflight.runner --output ../artifacts/preflight/my-new-pilot
+uv run python -m preflight.verify ../artifacts/preflight/my-new-pilot
+uv run pytest -q
+```
 
-计划命令前缀`python -m regresslab_experiments.cli`当前不可执行。开发任务见[实施计划](../docs/engineering/v2/07-implementation-plan.md)，来源要求见[数据合同](../docs/engineering/v2/03-domain-data-contracts.md)。数据与权重分别写入Git排除的`datasets/`、`checkpoints/`，不上传模型权重到Web。
+每次训练必须用不存在的新输出目录，避免覆盖原登记和结果。下载器使用[MASSIVE官方项目](https://github.com/alexa/massive)发布的1.1压缩包，约40MB；核对固定SHA-256，仅解出中文文件及许可/NOTICE，不解出任意归档路径。数据和权重不提交Git。
+
+| 文件/目录 | 职责 |
+|---|---|
+| `configs/cpu-preflight-v1.json` | 首轮开发登记：数据来源、清理、CPU链配方、预算、方法、种子及信号规则 |
+| `preflight/fetch.py`、`data.py` | 固定来源下载；按来源/同文组件审计与排除；仅返回TRAIN和两类DEV |
+| `preflight/baselines.py` | 只收自身f0/f1/f2历史、f2概率及P表示的9种选择器 |
+| `preflight/runner.py` | TRAIN-only训练、模型恢复检查、全矩阵文件冻结、冻结后DEV评分与成本采集 |
+| `preflight/verify.py` | 核对冻结工件、事件及完整矩阵，从已存预测重跑评分器验证报告 |
+| `tests/` | 清理隔离、选择规则、评分边界及审计篡改测试 |
+
+默认配方：MASSIVE 1.1 zh-CN，TRAIN按类别分层嵌套抽样；字符TF-IDF＋逻辑回归，冻结同一实现种子40% TRAIN拟合的表示。数据增长40/60/80/100%与正则化C=0.25/0.5/1/2两个更新家族，各3个训练种子，每链f0—f3四版。预算20/50/100/200，主预算100；Random、Stratified、PastFlip、KCenter各20个选择种子，其余5种确定性方法各1次。全部6链共2,040个选样单元，在显式调用目标DEV预测之前冻结。
+
+正式TEST存在于中文原始文件中，仅用于最初无模型的跨分区组件审计/清理和计数；不作为训练或任何模型的输入，也不选样、预测或评价。DEV_MODEL与DEV_SELECTOR按组件hash固定划分，不允许以目标效果改变分区。当前代码没有GPU训练入口。
+
+首轮中数据增长f3与同种子正则化f2模型相同，**不能声称全局目标行为在冻结前均未见**；该配置仅保留为开发预实验复现入口，不用于正式盲评。下一轮须另行登记、核对跨链语义模型身份，不覆盖此配置。冻结文件和事件审计记录实际路径，不构成操作系统层面的访问隔离。
+
+完整本地工件在`artifacts/preflight/<run>/`，含模型、向量器、选择ID、预测和排除清单。仅加载本运行器自己生成的本地模型pickle进行恢复检查。Git中的轻量报告不包含原文、权重或逐样本预测，因此仅克隆仓库不能重算首轮全部单元；可以用上述命令新建开发运行。严格追溯首轮代码时使用报告记录的`08cd7ad`及依赖锁，新运行不会覆盖首轮审计。
+
+计时目前区分训练、表示、整批基线选择和目标推理；尚无每方法、同范围、含完整预处理的成本比较。`max_training_seconds_per_model=180`在fit返回后检查，不能当成强制中断超时。计划包`regresslab_experiments.cli`、通用lab合同、Risk-LR/Behavior-Anchor/Grad-PD、外部数据和LoRA迁移仍见[实施计划](../docs/engineering/v2/07-implementation-plan.md)，尚未实现。

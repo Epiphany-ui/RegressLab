@@ -45,6 +45,13 @@ def test_zero_target_flips_are_retained_with_na():
     assert result["na_reason"] == "NO_TARGET_FLIPS"
 
 
+def test_empty_pool_round_trips_through_json_as_na():
+    cell = {"method": "x", "seed": None, "budget": 20, "indices": []}
+    result = evaluate_cells([], [], [], [cell])[0]
+    assert result["pool_count"] == result["future_flip_count"] == result["actual_size"] == 0
+    assert result["recall"] is result["precision"] is result["enrichment"] is None
+
+
 def test_invalid_suite_or_wrong_reference_pool_rejected():
     with pytest.raises(ValueError, match="INVALID_SELECTION"):
         evaluate_cells(["A"], [["A", "A", "A"]], ["B"], [{"budget": 20, "indices": [0, 0]}])

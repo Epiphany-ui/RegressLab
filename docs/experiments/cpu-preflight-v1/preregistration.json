@@ -1,0 +1,149 @@
+{
+  "code_files": {
+    "experiments/preflight/__init__.py": "3a03a776bec9c2a70968f0beb40b71122ad65493bb1ded96112881a4d1f256f0",
+    "experiments/preflight/baselines.py": "4d4162a8d080fb7578af1c9c8c81845e406011339d3b10a30f533304c6cc154a",
+    "experiments/preflight/data.py": "8c38dac9ca751e434b77520d03a3796d2ad5aa569f9e8c3f54118b52b0c95f46",
+    "experiments/preflight/fetch.py": "8a7ded7fafdb6d9206094ffe5a03ca1c450ca107b0358fe0f676b3cdc53fb035",
+    "experiments/preflight/runner.py": "eb58802825ba9817437a9665370e7a03fb579f5d591900b3e05ba05bea2c54ad"
+  },
+  "config": {
+    "archive_sha256": "4cba5faa11c71437928e17cb1b9b3d8b8e727e7ea363a3a9a8045e19c0491577",
+    "budgets": [
+      20,
+      50,
+      100,
+      200
+    ],
+    "classifier": {
+      "max_iter": 1000,
+      "solver": "lbfgs",
+      "tol": 0.0001
+    },
+    "classifier_representation": {
+      "analyzer": "char",
+      "fit_on": "SAME_REALIZATION_F0_40_PERCENT_TRAIN_ONLY",
+      "lowercase": false,
+      "max_features": 30000,
+      "min_df": 2,
+      "ngram_range": [
+        2,
+        4
+      ],
+      "norm": "l2",
+      "sublinear_tf": true
+    },
+    "cleaning_policy": "EXCLUDE_WHOLE_CROSS_PARTITION_CONFLICTING_OR_DUPLICATE_ID_COMPONENT",
+    "cpu_threads": 2,
+    "dataset": "MASSIVE-1.1-zh-CN-cleaned-subset",
+    "dev_split": {
+      "dev_model_fraction": 0.5,
+      "protocol": "pilot-dev-v1",
+      "seed": 42
+    },
+    "families": [
+      {
+        "C": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "id": "data-growth",
+        "train_fractions": [
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ]
+      },
+      {
+        "C": [
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "id": "regularization",
+        "train_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "freeze_policy": "ALL_SIX_CHAIN_BASELINE_BUDGET_SEED_SUITES_BEFORE_ANY_F3_DEV_SELECTOR_PREDICTION",
+    "limitations": [
+      "One dataset, one CPU model family; six related TRAIN/basis realizations are not six independent model families.",
+      "No HGC, Risk-LR, external dataset, Grad-PD, GPU training or formal TEST evaluation in this pilot.",
+      "No statistical superiority or noninferiority claims; all baselines and zero-flip chains retained."
+    ],
+    "max_training_seconds_per_model": 180,
+    "methods": [
+      "random",
+      "stratified",
+      "past-flip",
+      "ref-maxprob",
+      "ref-margin",
+      "ref-entropy",
+      "ref-deepgini",
+      "facility",
+      "kcenter"
+    ],
+    "primary_budget": 100,
+    "purpose": "DEVELOPMENT_SIGNAL_PILOT",
+    "schema_version": "regresslab-cpu-preflight-v1",
+    "selection_representation": {
+      "analyzer": "char",
+      "fit_on": "CURRENT_CORRECT_DEV_SELECTOR_POOL_ONLY",
+      "lowercase": false,
+      "max_features": 20000,
+      "min_df": 1,
+      "ngram_range": [
+        2,
+        4
+      ],
+      "norm": "l2",
+      "sublinear_tf": true
+    },
+    "selection_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "signal_rule": {
+      "decision": "DESCRIPTIVE_PILOT_ONLY_NOT_FORMAL_G1_APPROVAL",
+      "min_chains_with_future_flips_per_family": 2,
+      "min_future_flips_per_valid_chain": 1
+    },
+    "test_policy": "AUDIT_ONLY_NO_MODEL_INPUT_OR_EVALUATION",
+    "training_seeds": [
+      11,
+      23,
+      37
+    ]
+  },
+  "config_sha256": "b63847cf8944637cce0836d88902cf8d6004ff29becd285898ab3e8c262f9fe6",
+  "dependency_lock_sha256": "99f88a3239512b4197cdfd96de94f9d32cf609a0d4aac23c7065132b9d7bcf14",
+  "git_base_commit": "a2f036fe1a420c0f33389faae544411b43ba8c9e",
+  "registered_at": "2026-10-23T15:08:57.846261+00:00",
+  "run_id": "798590e4-ee01-40f7-9e19-4c2cdda13765",
+  "working_tree_dirty": true
+}
