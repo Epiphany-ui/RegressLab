@@ -1,0 +1,134 @@
+{
+  "stage": "HISTORY_INCREMENT_CHECK_COMPLETE",
+  "academic_novelty_established": false,
+  "all_cells_adequate": false,
+  "automatic_further_search": false,
+  "final_title_established": false,
+  "formal_test_model_inputs": 0,
+  "groups": {
+    "neural/data-growth": {
+      "adequate_events": true,
+      "chains": [
+        {
+          "AP_gain": 0.004900112392815126,
+          "chain_id": "heldout-neural-data-growth-seed1103",
+          "future_flip_count": 60,
+          "gain_over_raw_margin": 0.08333333333333337,
+          "recall_gain": 0.08333333333333337
+        },
+        {
+          "AP_gain": 0.02712849468339329,
+          "chain_id": "heldout-neural-data-growth-seed1109",
+          "future_flip_count": 62,
+          "gain_over_raw_margin": 0.08064516129032256,
+          "recall_gain": 0.08064516129032256
+        },
+        {
+          "AP_gain": 0.10281243732404888,
+          "chain_id": "heldout-neural-data-growth-seed1117",
+          "future_flip_count": 69,
+          "gain_over_raw_margin": 0.07246376811594202,
+          "recall_gain": 0.07246376811594202
+        }
+      ],
+      "mean_AP_gain": 0.04494701480008576,
+      "mean_gain_over_raw_margin": 0.07881408757986598,
+      "mean_recall_gain": 0.07881408757986598,
+      "stable_increment": true
+    },
+    "neural/data-refresh": {
+      "adequate_events": true,
+      "chains": [
+        {
+          "AP_gain": 0.08961535136444848,
+          "chain_id": "heldout-neural-data-refresh-seed1103",
+          "future_flip_count": 99,
+          "gain_over_raw_margin": 0.05050505050505055,
+          "recall_gain": 0.05050505050505055
+        },
+        {
+          "AP_gain": 0.07387771905715518,
+          "chain_id": "heldout-neural-data-refresh-seed1109",
+          "future_flip_count": 92,
+          "gain_over_raw_margin": 0.02173913043478265,
+          "recall_gain": 0.02173913043478265
+        },
+        {
+          "AP_gain": 0.08927634691738212,
+          "chain_id": "heldout-neural-data-refresh-seed1117",
+          "future_flip_count": 86,
+          "gain_over_raw_margin": 0.05813953488372092,
+          "recall_gain": 0.05813953488372092
+        }
+      ],
+      "mean_AP_gain": 0.0842564724463286,
+      "mean_gain_over_raw_margin": 0.04346123860785137,
+      "mean_recall_gain": 0.04346123860785137,
+      "stable_increment": false
+    },
+    "sgd/data-growth": {
+      "adequate_events": false,
+      "chains": [
+        {
+          "AP_gain": -0.024017543440259026,
+          "chain_id": "heldout-sgd-data-growth-seed1103",
+          "future_flip_count": 23,
+          "gain_over_raw_margin": 0.13043478260869568,
+          "recall_gain": 0.13043478260869568
+        },
+        {
+          "AP_gain": -0.3210791372309967,
+          "chain_id": "heldout-sgd-data-growth-seed1109",
+          "future_flip_count": 20,
+          "gain_over_raw_margin": 0.09999999999999998,
+          "recall_gain": 0.09999999999999998
+        },
+        {
+          "AP_gain": -0.08204681339489461,
+          "chain_id": "heldout-sgd-data-growth-seed1117",
+          "future_flip_count": 17,
+          "gain_over_raw_margin": 0.0,
+          "recall_gain": 0.0
+        }
+      ],
+      "mean_AP_gain": -0.14238116468871678,
+      "mean_gain_over_raw_margin": 0.07681159420289856,
+      "mean_recall_gain": 0.07681159420289856,
+      "stable_increment": false
+    },
+    "sgd/data-refresh": {
+      "adequate_events": true,
+      "chains": [
+        {
+          "AP_gain": -0.0220546611928647,
+          "chain_id": "heldout-sgd-data-refresh-seed1103",
+          "future_flip_count": 43,
+          "gain_over_raw_margin": 0.023255813953488413,
+          "recall_gain": 0.023255813953488413
+        },
+        {
+          "AP_gain": -0.09040177237599184,
+          "chain_id": "heldout-sgd-data-refresh-seed1109",
+          "future_flip_count": 30,
+          "gain_over_raw_margin": -0.033333333333333326,
+          "recall_gain": -0.033333333333333326
+        },
+        {
+          "AP_gain": -0.15450649368185787,
+          "chain_id": "heldout-sgd-data-refresh-seed1117",
+          "future_flip_count": 42,
+          "gain_over_raw_margin": 0.0,
+          "recall_gain": 0.0
+        }
+      ],
+      "mean_AP_gain": -0.08898764241690481,
+      "mean_gain_over_raw_margin": -0.0033591731266149707,
+      "mean_recall_gain": -0.0033591731266149707,
+      "stable_increment": false
+    }
+  },
+  "hgc_archived": true,
+  "recommendation": "CONDITIONAL_SIGNAL_REQUIRES_REPLICATION",
+  "replicated_update_conditions": [],
+  "statistical_superiority_established": false
+}

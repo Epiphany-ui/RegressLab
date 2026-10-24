@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "frozen_files_verified": 131,
+  "current_model_states_verified": 64,
+  "previous_model_states_verified": 72,
+  "heldout_chains_verified": 12,
+  "development_chains_refitted": {
+    "sgd": 4,
+    "neural": 4
+  },
+  "cells_recomputed": 1152,
+  "ranking_rows_recomputed": 48,
+  "target_cost_rows_verified": 48,
+  "events_verified": 98,
+  "actual_model_prediction_caches_replayed": true,
+  "whole_heldout_matrix_frozen_before_target_events": true,
+  "formal_test_model_input_count": 0,
+  "recommendation": "CONDITIONAL_SIGNAL_REQUIRES_REPLICATION",
+  "limitations": [
+    "Trusted local pickle artifacts only; no task models retrained; inference replay and development predictor refit add audit cost.",
+    "Metric, selection and decision functions are replayed, not an independent proof of all formulas.",
+    "Source hashes, training metadata and event chains establish internal consistency, not an adversarial execution sandbox.",
+    "VAL texts were exposed previously; only model-update chains are held out; no formal TEST or significance claim."
+  ]
+}

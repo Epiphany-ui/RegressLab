@@ -1,0 +1,1384 @@
+{
+  "neural": {
+    "C_grid": [
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "development_chains": [
+      {
+        "chain_id": "development-neural-data-growth-seed901",
+        "positive_events": 53,
+        "rows": 2535
+      },
+      {
+        "chain_id": "development-neural-data-growth-seed907",
+        "positive_events": 65,
+        "rows": 2557
+      },
+      {
+        "chain_id": "development-neural-data-refresh-seed901",
+        "positive_events": 95,
+        "rows": 2539
+      },
+      {
+        "chain_id": "development-neural-data-refresh-seed907",
+        "positive_events": 89,
+        "rows": 2549
+      }
+    ],
+    "feature_names": {
+      "margin-history-lr": [
+        "reference_margin",
+        "past_wrong_fraction_f0_f1",
+        "past_negative_flip_rate",
+        "maximum_gold_probability_drop",
+        "mean_adjacent_probability_total_variation",
+        "frozen_group_risk_sum"
+      ],
+      "margin-lr": [
+        "reference_margin"
+      ]
+    },
+    "method_origin": "score_enabled_Risk_LR_adaptation_not_new_algorithm",
+    "methods": {
+      "margin-history-lr": {
+        "candidates": [
+          {
+            "C": 0.01,
+            "folds": [
+              {
+                "average_precision": 0.33113545451384935,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed901",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6258140349495706,
+                  0.2234684982275471,
+                  0.07704152559032985,
+                  0.08346517317716842,
+                  0.1893285825132038,
+                  0.00981913408160363
+                ],
+                "validation_chain_id": "development-neural-data-growth-seed901"
+              },
+              {
+                "average_precision": 0.18617015327092756,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-refresh-seed901",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6160511140142654,
+                  0.25695083369591626,
+                  0.08454890785149975,
+                  0.08511274915769411,
+                  0.198362563987038,
+                  0.008697188320573321
+                ],
+                "validation_chain_id": "development-neural-data-growth-seed907"
+              },
+              {
+                "average_precision": 0.403750921881606,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6163795164130755,
+                  0.25336613038297107,
+                  0.06292350476415767,
+                  0.07057001126644133,
+                  0.199120123307371,
+                  0.00980336596736467
+                ],
+                "validation_chain_id": "development-neural-data-refresh-seed901"
+              },
+              {
+                "average_precision": 0.3426800048669408,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed901"
+                ],
+                "training_feature_mean": [
+                  0.6171302964490673,
+                  0.2623463942572503,
+                  0.08010204081213324,
+                  0.07360121237963511,
+                  0.20631569562534885,
+                  0.010899249123473106
+                ],
+                "validation_chain_id": "development-neural-data-refresh-seed907"
+              }
+            ],
+            "macro_average_precision": 0.3159341336333309
+          },
+          {
+            "C": 0.1,
+            "folds": [
+              {
+                "average_precision": 0.3170289552915872,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed901",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6258140349495706,
+                  0.2234684982275471,
+                  0.07704152559032985,
+                  0.08346517317716842,
+                  0.1893285825132038,
+                  0.00981913408160363
+                ],
+                "validation_chain_id": "development-neural-data-growth-seed901"
+              },
+              {
+                "average_precision": 0.17431812383705853,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-refresh-seed901",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6160511140142654,
+                  0.25695083369591626,
+                  0.08454890785149975,
+                  0.08511274915769411,
+                  0.198362563987038,
+                  0.008697188320573321
+                ],
+                "validation_chain_id": "development-neural-data-growth-seed907"
+              },
+              {
+                "average_precision": 0.40052462854580806,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6163795164130755,
+                  0.25336613038297107,
+                  0.06292350476415767,
+                  0.07057001126644133,
+                  0.199120123307371,
+                  0.00980336596736467
+                ],
+                "validation_chain_id": "development-neural-data-refresh-seed901"
+              },
+              {
+                "average_precision": 0.34904955412409755,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed901"
+                ],
+                "training_feature_mean": [
+                  0.6171302964490673,
+                  0.2623463942572503,
+                  0.08010204081213324,
+                  0.07360121237963511,
+                  0.20631569562534885,
+                  0.010899249123473106
+                ],
+                "validation_chain_id": "development-neural-data-refresh-seed907"
+              }
+            ],
+            "macro_average_precision": 0.31023031544963786
+          },
+          {
+            "C": 1.0,
+            "folds": [
+              {
+                "average_precision": 0.31579622654800715,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed901",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6258140349495706,
+                  0.2234684982275471,
+                  0.07704152559032985,
+                  0.08346517317716842,
+                  0.1893285825132038,
+                  0.00981913408160363
+                ],
+                "validation_chain_id": "development-neural-data-growth-seed901"
+              },
+              {
+                "average_precision": 0.1741951888923881,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-refresh-seed901",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6160511140142654,
+                  0.25695083369591626,
+                  0.08454890785149975,
+                  0.08511274915769411,
+                  0.198362563987038,
+                  0.008697188320573321
+                ],
+                "validation_chain_id": "development-neural-data-growth-seed907"
+              },
+              {
+                "average_precision": 0.3982462942461676,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6163795164130755,
+                  0.25336613038297107,
+                  0.06292350476415767,
+                  0.07057001126644133,
+                  0.199120123307371,
+                  0.00980336596736467
+                ],
+                "validation_chain_id": "development-neural-data-refresh-seed901"
+              },
+              {
+                "average_precision": 0.3492038115341199,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed901"
+                ],
+                "training_feature_mean": [
+                  0.6171302964490673,
+                  0.2623463942572503,
+                  0.08010204081213324,
+                  0.07360121237963511,
+                  0.20631569562534885,
+                  0.010899249123473106
+                ],
+                "validation_chain_id": "development-neural-data-refresh-seed907"
+              }
+            ],
+            "macro_average_precision": 0.30936038030517066
+          },
+          {
+            "C": 10.0,
+            "folds": [
+              {
+                "average_precision": 0.3151629949475838,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed901",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6258140349495706,
+                  0.2234684982275471,
+                  0.07704152559032985,
+                  0.08346517317716842,
+                  0.1893285825132038,
+                  0.00981913408160363
+                ],
+                "validation_chain_id": "development-neural-data-growth-seed901"
+              },
+              {
+                "average_precision": 0.17457400256409686,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-refresh-seed901",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6160511140142654,
+                  0.25695083369591626,
+                  0.08454890785149975,
+                  0.08511274915769411,
+                  0.198362563987038,
+                  0.008697188320573321
+                ],
+                "validation_chain_id": "development-neural-data-growth-seed907"
+              },
+              {
+                "average_precision": 0.39866919131362666,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6163795164130755,
+                  0.25336613038297107,
+                  0.06292350476415767,
+                  0.07057001126644133,
+                  0.199120123307371,
+                  0.00980336596736467
+                ],
+                "validation_chain_id": "development-neural-data-refresh-seed901"
+              },
+              {
+                "average_precision": 0.3489903919624208,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed901"
+                ],
+                "training_feature_mean": [
+                  0.6171302964490673,
+                  0.2623463942572503,
+                  0.08010204081213324,
+                  0.07360121237963511,
+                  0.20631569562534885,
+                  0.010899249123473106
+                ],
+                "validation_chain_id": "development-neural-data-refresh-seed907"
+              }
+            ],
+            "macro_average_precision": 0.309349145196932
+          }
+        ],
+        "final_state": {
+          "C": 0.01,
+          "class_order": [
+            false,
+            true
+          ],
+          "coefficients": [
+            -1.7077068096949022,
+            0.24623965429739547,
+            0.13587565424376521,
+            -0.09992000335123981,
+            0.6471367994750998,
+            -0.03007271132694771
+          ],
+          "intercept": 0.15175380032725724,
+          "n_iter": 15,
+          "scale_mean": [
+            0.6188437404563969,
+            0.24903296414088172,
+            0.07615399475451791,
+            0.07818728649522208,
+            0.19828174135820797,
+            0.009804734373252234
+          ],
+          "scale_scale": [
+            0.3541166135276927,
+            0.37450807374586986,
+            0.26524434741845954,
+            0.1304103115991171,
+            0.17859674512324547,
+            0.02235463423324183
+          ]
+        },
+        "selected_C": 0.01,
+        "selected_macro_average_precision": 0.3159341336333309
+      },
+      "margin-lr": {
+        "candidates": [
+          {
+            "C": 0.01,
+            "folds": [
+              {
+                "average_precision": 0.3383901059567926,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed901",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6258140349495815
+                ],
+                "validation_chain_id": "development-neural-data-growth-seed901"
+              },
+              {
+                "average_precision": 0.19127829280100764,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-refresh-seed901",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6160511140142158
+                ],
+                "validation_chain_id": "development-neural-data-growth-seed907"
+              },
+              {
+                "average_precision": 0.29262668369023515,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6163795164130726
+                ],
+                "validation_chain_id": "development-neural-data-refresh-seed901"
+              },
+              {
+                "average_precision": 0.30146915368909843,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed901"
+                ],
+                "training_feature_mean": [
+                  0.6171302964490788
+                ],
+                "validation_chain_id": "development-neural-data-refresh-seed907"
+              }
+            ],
+            "macro_average_precision": 0.28094105903428346
+          },
+          {
+            "C": 0.1,
+            "folds": [
+              {
+                "average_precision": 0.3383901059567926,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed901",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6258140349495815
+                ],
+                "validation_chain_id": "development-neural-data-growth-seed901"
+              },
+              {
+                "average_precision": 0.19127829280100764,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-refresh-seed901",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6160511140142158
+                ],
+                "validation_chain_id": "development-neural-data-growth-seed907"
+              },
+              {
+                "average_precision": 0.29262668369023515,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6163795164130726
+                ],
+                "validation_chain_id": "development-neural-data-refresh-seed901"
+              },
+              {
+                "average_precision": 0.30146915368909843,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed901"
+                ],
+                "training_feature_mean": [
+                  0.6171302964490788
+                ],
+                "validation_chain_id": "development-neural-data-refresh-seed907"
+              }
+            ],
+            "macro_average_precision": 0.28094105903428346
+          },
+          {
+            "C": 1.0,
+            "folds": [
+              {
+                "average_precision": 0.3383901059567926,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed901",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6258140349495815
+                ],
+                "validation_chain_id": "development-neural-data-growth-seed901"
+              },
+              {
+                "average_precision": 0.19127829280100764,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-refresh-seed901",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6160511140142158
+                ],
+                "validation_chain_id": "development-neural-data-growth-seed907"
+              },
+              {
+                "average_precision": 0.29262668369023515,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6163795164130726
+                ],
+                "validation_chain_id": "development-neural-data-refresh-seed901"
+              },
+              {
+                "average_precision": 0.30146915368909843,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed901"
+                ],
+                "training_feature_mean": [
+                  0.6171302964490788
+                ],
+                "validation_chain_id": "development-neural-data-refresh-seed907"
+              }
+            ],
+            "macro_average_precision": 0.28094105903428346
+          },
+          {
+            "C": 10.0,
+            "folds": [
+              {
+                "average_precision": 0.3383901059567926,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed901",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6258140349495815
+                ],
+                "validation_chain_id": "development-neural-data-growth-seed901"
+              },
+              {
+                "average_precision": 0.19127829280100764,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-refresh-seed901",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6160511140142158
+                ],
+                "validation_chain_id": "development-neural-data-growth-seed907"
+              },
+              {
+                "average_precision": 0.29262668369023515,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed907"
+                ],
+                "training_feature_mean": [
+                  0.6163795164130726
+                ],
+                "validation_chain_id": "development-neural-data-refresh-seed901"
+              },
+              {
+                "average_precision": 0.30146915368909843,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "development-neural-data-growth-seed901",
+                  "development-neural-data-growth-seed907",
+                  "development-neural-data-refresh-seed901"
+                ],
+                "training_feature_mean": [
+                  0.6171302964490788
+                ],
+                "validation_chain_id": "development-neural-data-refresh-seed907"
+              }
+            ],
+            "macro_average_precision": 0.28094105903428346
+          }
+        ],
+        "final_state": {
+          "C": 0.01,
+          "class_order": [
+            false,
+            true
+          ],
+          "coefficients": [
+            -2.1332132364941487
+          ],
+          "intercept": 0.1825199287643037,
+          "n_iter": 9,
+          "scale_mean": [
+            0.6188437404564873
+          ],
+          "scale_scale": [
+            0.35411661352771845
+          ]
+        },
+        "selected_C": 0.01,
+        "selected_macro_average_precision": 0.28094105903428346
+      }
+    },
+    "probability_interpretation": "class-balanced diagnostic scores, not natural-prevalence calibrated probabilities",
+    "purpose": "CONTROLLED_ADDED_VALUE_DIAGNOSTIC",
+    "schema_version": "incremental-risk-lr-v1",
+    "tie_rule": "smallest_C_within_1e-12_of_best_macro_AP",
+    "tuning": "leave_one_entire_exposed_chain_out_macro_threshold_group_AP",
+    "weighting": "each_chain_mass_one_split_equally_among_observed_outcome_classes_then_global_mean_one"
+  },
+  "sgd": {
+    "C_grid": [
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "development_chains": [
+      {
+        "chain_id": "clinc-sgd-data-growth-seed501",
+        "positive_events": 22,
+        "rows": 2661
+      },
+      {
+        "chain_id": "clinc-sgd-data-growth-seed503",
+        "positive_events": 16,
+        "rows": 2650
+      },
+      {
+        "chain_id": "clinc-sgd-epoch-growth-seed601",
+        "positive_events": 1,
+        "rows": 2666
+      },
+      {
+        "chain_id": "clinc-sgd-epoch-growth-seed607",
+        "positive_events": 3,
+        "rows": 2666
+      }
+    ],
+    "feature_names": {
+      "margin-history-lr": [
+        "reference_margin",
+        "past_wrong_fraction_f0_f1",
+        "past_negative_flip_rate",
+        "maximum_gold_probability_drop",
+        "mean_adjacent_probability_total_variation",
+        "frozen_group_risk_sum"
+      ],
+      "margin-lr": [
+        "reference_margin"
+      ]
+    },
+    "method_origin": "score_enabled_Risk_LR_adaptation_not_new_algorithm",
+    "methods": {
+      "margin-history-lr": {
+        "candidates": [
+          {
+            "C": 0.01,
+            "folds": [
+              {
+                "average_precision": 0.19604831196647227,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed601",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12007806156179113,
+                  0.27717788695695483,
+                  0.056565107283745385,
+                  0.0033078035721356854,
+                  0.01802482266828149,
+                  0.023746270627242265
+                ],
+                "validation_chain_id": "clinc-sgd-data-growth-seed501"
+              },
+              {
+                "average_precision": 0.21672805413985946,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-epoch-growth-seed601",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12046923494524416,
+                  0.2709840529989764,
+                  0.06401311577252689,
+                  0.0031900305285507582,
+                  0.01953893077537849,
+                  0.018170528623551244
+                ],
+                "validation_chain_id": "clinc-sgd-data-growth-seed503"
+              },
+              {
+                "average_precision": 0.16666666666666666,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12184337457560339,
+                  0.2690391725734225,
+                  0.0646473390413176,
+                  0.0057417302434766854,
+                  0.02429643673752484,
+                  0.02086042304504546
+                ],
+                "validation_chain_id": "clinc-sgd-epoch-growth-seed601"
+              },
+              {
+                "average_precision": 0.1603641456582633,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed601"
+                ],
+                "training_feature_mean": [
+                  0.1218814961218089,
+                  0.2411359173862049,
+                  0.009091689547979138,
+                  0.005358639463134252,
+                  0.02602294581469225,
+                  0.023778122370283993
+                ],
+                "validation_chain_id": "clinc-sgd-epoch-growth-seed607"
+              }
+            ],
+            "macro_average_precision": 0.1849517946078154
+          },
+          {
+            "C": 0.1,
+            "folds": [
+              {
+                "average_precision": 0.1887592997923424,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed601",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12007806156179113,
+                  0.27717788695695483,
+                  0.056565107283745385,
+                  0.0033078035721356854,
+                  0.01802482266828149,
+                  0.023746270627242265
+                ],
+                "validation_chain_id": "clinc-sgd-data-growth-seed501"
+              },
+              {
+                "average_precision": 0.2118346705526784,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-epoch-growth-seed601",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12046923494524416,
+                  0.2709840529989764,
+                  0.06401311577252689,
+                  0.0031900305285507582,
+                  0.01953893077537849,
+                  0.018170528623551244
+                ],
+                "validation_chain_id": "clinc-sgd-data-growth-seed503"
+              },
+              {
+                "average_precision": 0.16666666666666666,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12184337457560339,
+                  0.2690391725734225,
+                  0.0646473390413176,
+                  0.0057417302434766854,
+                  0.02429643673752484,
+                  0.02086042304504546
+                ],
+                "validation_chain_id": "clinc-sgd-epoch-growth-seed601"
+              },
+              {
+                "average_precision": 0.20405310971348706,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed601"
+                ],
+                "training_feature_mean": [
+                  0.1218814961218089,
+                  0.2411359173862049,
+                  0.009091689547979138,
+                  0.005358639463134252,
+                  0.02602294581469225,
+                  0.023778122370283993
+                ],
+                "validation_chain_id": "clinc-sgd-epoch-growth-seed607"
+              }
+            ],
+            "macro_average_precision": 0.19282843668129362
+          },
+          {
+            "C": 1.0,
+            "folds": [
+              {
+                "average_precision": 0.24351289523469163,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed601",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12007806156179113,
+                  0.27717788695695483,
+                  0.056565107283745385,
+                  0.0033078035721356854,
+                  0.01802482266828149,
+                  0.023746270627242265
+                ],
+                "validation_chain_id": "clinc-sgd-data-growth-seed501"
+              },
+              {
+                "average_precision": 0.20676625917759195,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-epoch-growth-seed601",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12046923494524416,
+                  0.2709840529989764,
+                  0.06401311577252689,
+                  0.0031900305285507582,
+                  0.01953893077537849,
+                  0.018170528623551244
+                ],
+                "validation_chain_id": "clinc-sgd-data-growth-seed503"
+              },
+              {
+                "average_precision": 0.16666666666666666,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12184337457560339,
+                  0.2690391725734225,
+                  0.0646473390413176,
+                  0.0057417302434766854,
+                  0.02429643673752484,
+                  0.02086042304504546
+                ],
+                "validation_chain_id": "clinc-sgd-epoch-growth-seed601"
+              },
+              {
+                "average_precision": 0.22023809523809523,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed601"
+                ],
+                "training_feature_mean": [
+                  0.1218814961218089,
+                  0.2411359173862049,
+                  0.009091689547979138,
+                  0.005358639463134252,
+                  0.02602294581469225,
+                  0.023778122370283993
+                ],
+                "validation_chain_id": "clinc-sgd-epoch-growth-seed607"
+              }
+            ],
+            "macro_average_precision": 0.20929597907926137
+          },
+          {
+            "C": 10.0,
+            "folds": [
+              {
+                "average_precision": 0.233830341017514,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed601",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12007806156179113,
+                  0.27717788695695483,
+                  0.056565107283745385,
+                  0.0033078035721356854,
+                  0.01802482266828149,
+                  0.023746270627242265
+                ],
+                "validation_chain_id": "clinc-sgd-data-growth-seed501"
+              },
+              {
+                "average_precision": 0.21203345113523872,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-epoch-growth-seed601",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12046923494524416,
+                  0.2709840529989764,
+                  0.06401311577252689,
+                  0.0031900305285507582,
+                  0.01953893077537849,
+                  0.018170528623551244
+                ],
+                "validation_chain_id": "clinc-sgd-data-growth-seed503"
+              },
+              {
+                "average_precision": 0.2,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12184337457560339,
+                  0.2690391725734225,
+                  0.0646473390413176,
+                  0.0057417302434766854,
+                  0.02429643673752484,
+                  0.02086042304504546
+                ],
+                "validation_chain_id": "clinc-sgd-epoch-growth-seed601"
+              },
+              {
+                "average_precision": 0.21986271986271985,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed601"
+                ],
+                "training_feature_mean": [
+                  0.1218814961218089,
+                  0.2411359173862049,
+                  0.009091689547979138,
+                  0.005358639463134252,
+                  0.02602294581469225,
+                  0.023778122370283993
+                ],
+                "validation_chain_id": "clinc-sgd-epoch-growth-seed607"
+              }
+            ],
+            "macro_average_precision": 0.21643162800386817
+          }
+        ],
+        "final_state": {
+          "C": 10.0,
+          "class_order": [
+            false,
+            true
+          ],
+          "coefficients": [
+            -26.32337352581541,
+            1.358649040539603,
+            -0.1538568026761836,
+            1.4171873125140972,
+            0.8625434673491323,
+            0.3042933426418967
+          ],
+          "intercept": -16.97241655222211,
+          "n_iter": 23,
+          "scale_mean": [
+            0.12106804180108822,
+            0.264584257478837,
+            0.04857931291138241,
+            0.004399550951823608,
+            0.02197078399896527,
+            0.021638836166528758
+          ],
+          "scale_scale": [
+            0.1532777309937192,
+            0.3616970895826244,
+            0.2149868909223078,
+            0.008498292176596886,
+            0.01271471401983303,
+            0.030871980841175338
+          ]
+        },
+        "selected_C": 10.0,
+        "selected_macro_average_precision": 0.21643162800386817
+      },
+      "margin-lr": {
+        "candidates": [
+          {
+            "C": 0.01,
+            "folds": [
+              {
+                "average_precision": 0.4110439176275543,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed601",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12007806156178066
+                ],
+                "validation_chain_id": "clinc-sgd-data-growth-seed501"
+              },
+              {
+                "average_precision": 0.31258779454730645,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-epoch-growth-seed601",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12046923494522288
+                ],
+                "validation_chain_id": "clinc-sgd-data-growth-seed503"
+              },
+              {
+                "average_precision": 0.3333333333333333,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12184337457562612
+                ],
+                "validation_chain_id": "clinc-sgd-epoch-growth-seed601"
+              },
+              {
+                "average_precision": 0.8333333333333333,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed601"
+                ],
+                "training_feature_mean": [
+                  0.12188149612181033
+                ],
+                "validation_chain_id": "clinc-sgd-epoch-growth-seed607"
+              }
+            ],
+            "macro_average_precision": 0.4725745947103818
+          },
+          {
+            "C": 0.1,
+            "folds": [
+              {
+                "average_precision": 0.4110439176275543,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed601",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12007806156178066
+                ],
+                "validation_chain_id": "clinc-sgd-data-growth-seed501"
+              },
+              {
+                "average_precision": 0.31258779454730645,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-epoch-growth-seed601",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12046923494522288
+                ],
+                "validation_chain_id": "clinc-sgd-data-growth-seed503"
+              },
+              {
+                "average_precision": 0.3333333333333333,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12184337457562612
+                ],
+                "validation_chain_id": "clinc-sgd-epoch-growth-seed601"
+              },
+              {
+                "average_precision": 0.8333333333333333,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed601"
+                ],
+                "training_feature_mean": [
+                  0.12188149612181033
+                ],
+                "validation_chain_id": "clinc-sgd-epoch-growth-seed607"
+              }
+            ],
+            "macro_average_precision": 0.4725745947103818
+          },
+          {
+            "C": 1.0,
+            "folds": [
+              {
+                "average_precision": 0.4110439176275543,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed601",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12007806156178066
+                ],
+                "validation_chain_id": "clinc-sgd-data-growth-seed501"
+              },
+              {
+                "average_precision": 0.31258779454730645,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-epoch-growth-seed601",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12046923494522288
+                ],
+                "validation_chain_id": "clinc-sgd-data-growth-seed503"
+              },
+              {
+                "average_precision": 0.3333333333333333,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12184337457562612
+                ],
+                "validation_chain_id": "clinc-sgd-epoch-growth-seed601"
+              },
+              {
+                "average_precision": 0.8333333333333333,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed601"
+                ],
+                "training_feature_mean": [
+                  0.12188149612181033
+                ],
+                "validation_chain_id": "clinc-sgd-epoch-growth-seed607"
+              }
+            ],
+            "macro_average_precision": 0.4725745947103818
+          },
+          {
+            "C": 10.0,
+            "folds": [
+              {
+                "average_precision": 0.4110439176275543,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed601",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12007806156178066
+                ],
+                "validation_chain_id": "clinc-sgd-data-growth-seed501"
+              },
+              {
+                "average_precision": 0.31258779454730645,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-epoch-growth-seed601",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12046923494522288
+                ],
+                "validation_chain_id": "clinc-sgd-data-growth-seed503"
+              },
+              {
+                "average_precision": 0.3333333333333333,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed607"
+                ],
+                "training_feature_mean": [
+                  0.12184337457562612
+                ],
+                "validation_chain_id": "clinc-sgd-epoch-growth-seed601"
+              },
+              {
+                "average_precision": 0.8333333333333333,
+                "eligible": true,
+                "na_reason": null,
+                "train_chain_ids": [
+                  "clinc-sgd-data-growth-seed501",
+                  "clinc-sgd-data-growth-seed503",
+                  "clinc-sgd-epoch-growth-seed601"
+                ],
+                "training_feature_mean": [
+                  0.12188149612181033
+                ],
+                "validation_chain_id": "clinc-sgd-epoch-growth-seed607"
+              }
+            ],
+            "macro_average_precision": 0.4725745947103818
+          }
+        ],
+        "final_state": {
+          "C": 0.01,
+          "class_order": [
+            false,
+            true
+          ],
+          "coefficients": [
+            -3.543569426171163
+          ],
+          "intercept": -1.1239838519013565,
+          "n_iter": 10,
+          "scale_mean": [
+            0.12106804180111
+          ],
+          "scale_scale": [
+            0.153277730993733
+          ]
+        },
+        "selected_C": 0.01,
+        "selected_macro_average_precision": 0.4725745947103818
+      }
+    },
+    "probability_interpretation": "class-balanced diagnostic scores, not natural-prevalence calibrated probabilities",
+    "purpose": "CONTROLLED_ADDED_VALUE_DIAGNOSTIC",
+    "schema_version": "incremental-risk-lr-v1",
+    "tie_rule": "smallest_C_within_1e-12_of_best_macro_AP",
+    "tuning": "leave_one_entire_exposed_chain_out_macro_threshold_group_AP",
+    "weighting": "each_chain_mass_one_split_equally_among_observed_outcome_classes_then_global_mean_one"
+  }
+}

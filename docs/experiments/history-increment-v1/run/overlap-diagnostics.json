@@ -1,0 +1,137 @@
+{
+  "scope": "POST_HOC_DESCRIPTIVE_FROZEN_SUITE_OVERLAP_NOT_A_NEW_SELECTOR_OR_THRESHOLD",
+  "rows": [
+    {
+      "chain_id": "heldout-sgd-data-growth-seed1103",
+      "budget": 100,
+      "future_events": 23,
+      "history_detected": 19,
+      "margin_detected": 16,
+      "newly_detected_beyond_margin": 4,
+      "margin_detected_but_lost": 1,
+      "suite_overlap": 69,
+      "net_detection_gain": 3
+    },
+    {
+      "chain_id": "heldout-sgd-data-growth-seed1109",
+      "budget": 100,
+      "future_events": 20,
+      "history_detected": 19,
+      "margin_detected": 17,
+      "newly_detected_beyond_margin": 2,
+      "margin_detected_but_lost": 0,
+      "suite_overlap": 71,
+      "net_detection_gain": 2
+    },
+    {
+      "chain_id": "heldout-sgd-data-growth-seed1117",
+      "budget": 100,
+      "future_events": 17,
+      "history_detected": 13,
+      "margin_detected": 13,
+      "newly_detected_beyond_margin": 2,
+      "margin_detected_but_lost": 2,
+      "suite_overlap": 71,
+      "net_detection_gain": 0
+    },
+    {
+      "chain_id": "heldout-sgd-data-refresh-seed1103",
+      "budget": 100,
+      "future_events": 43,
+      "history_detected": 24,
+      "margin_detected": 23,
+      "newly_detected_beyond_margin": 5,
+      "margin_detected_but_lost": 4,
+      "suite_overlap": 64,
+      "net_detection_gain": 1
+    },
+    {
+      "chain_id": "heldout-sgd-data-refresh-seed1109",
+      "budget": 100,
+      "future_events": 30,
+      "history_detected": 17,
+      "margin_detected": 18,
+      "newly_detected_beyond_margin": 2,
+      "margin_detected_but_lost": 3,
+      "suite_overlap": 58,
+      "net_detection_gain": -1
+    },
+    {
+      "chain_id": "heldout-sgd-data-refresh-seed1117",
+      "budget": 100,
+      "future_events": 42,
+      "history_detected": 25,
+      "margin_detected": 25,
+      "newly_detected_beyond_margin": 3,
+      "margin_detected_but_lost": 3,
+      "suite_overlap": 70,
+      "net_detection_gain": 0
+    },
+    {
+      "chain_id": "heldout-neural-data-growth-seed1103",
+      "budget": 100,
+      "future_events": 60,
+      "history_detected": 33,
+      "margin_detected": 28,
+      "newly_detected_beyond_margin": 5,
+      "margin_detected_but_lost": 0,
+      "suite_overlap": 81,
+      "net_detection_gain": 5
+    },
+    {
+      "chain_id": "heldout-neural-data-growth-seed1109",
+      "budget": 100,
+      "future_events": 62,
+      "history_detected": 31,
+      "margin_detected": 26,
+      "newly_detected_beyond_margin": 11,
+      "margin_detected_but_lost": 6,
+      "suite_overlap": 76,
+      "net_detection_gain": 5
+    },
+    {
+      "chain_id": "heldout-neural-data-growth-seed1117",
+      "budget": 100,
+      "future_events": 69,
+      "history_detected": 33,
+      "margin_detected": 28,
+      "newly_detected_beyond_margin": 8,
+      "margin_detected_but_lost": 3,
+      "suite_overlap": 77,
+      "net_detection_gain": 5
+    },
+    {
+      "chain_id": "heldout-neural-data-refresh-seed1103",
+      "budget": 100,
+      "future_events": 99,
+      "history_detected": 43,
+      "margin_detected": 38,
+      "newly_detected_beyond_margin": 9,
+      "margin_detected_but_lost": 4,
+      "suite_overlap": 78,
+      "net_detection_gain": 5
+    },
+    {
+      "chain_id": "heldout-neural-data-refresh-seed1109",
+      "budget": 100,
+      "future_events": 92,
+      "history_detected": 43,
+      "margin_detected": 41,
+      "newly_detected_beyond_margin": 7,
+      "margin_detected_but_lost": 5,
+      "suite_overlap": 76,
+      "net_detection_gain": 2
+    },
+    {
+      "chain_id": "heldout-neural-data-refresh-seed1117",
+      "budget": 100,
+      "future_events": 86,
+      "history_detected": 41,
+      "margin_detected": 36,
+      "newly_detected_beyond_margin": 7,
+      "margin_detected_but_lost": 2,
+      "suite_overlap": 80,
+      "net_detection_gain": 5
+    }
+  ]
+}

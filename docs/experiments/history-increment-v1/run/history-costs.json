@@ -1,0 +1,122 @@
+[
+  {
+    "chain_id": "heldout-sgd-data-growth-seed1103",
+    "all_suite_selection_seconds": 0.008056994000071427,
+    "cached_history": true,
+    "deployment_savings_established": false,
+    "feature_construction_seconds": 0.11995049300003302,
+    "group_count": 30,
+    "history_seconds": 0.4085610970005291,
+    "history_setup_free": false
+  },
+  {
+    "chain_id": "heldout-sgd-data-growth-seed1109",
+    "all_suite_selection_seconds": 0.008057244999690738,
+    "cached_history": true,
+    "deployment_savings_established": false,
+    "feature_construction_seconds": 0.11280144299962558,
+    "group_count": 30,
+    "history_seconds": 0.41035390599972743,
+    "history_setup_free": false
+  },
+  {
+    "chain_id": "heldout-sgd-data-growth-seed1117",
+    "all_suite_selection_seconds": 0.009426020000319113,
+    "cached_history": true,
+    "deployment_savings_established": false,
+    "feature_construction_seconds": 0.11255995200008329,
+    "group_count": 30,
+    "history_seconds": 0.40121484700011933,
+    "history_setup_free": false
+  },
+  {
+    "chain_id": "heldout-sgd-data-refresh-seed1103",
+    "all_suite_selection_seconds": 0.008533585000805033,
+    "cached_history": true,
+    "deployment_savings_established": false,
+    "feature_construction_seconds": 0.11456180999994103,
+    "group_count": 30,
+    "history_seconds": 0.40794842400009657,
+    "history_setup_free": false
+  },
+  {
+    "chain_id": "heldout-sgd-data-refresh-seed1109",
+    "all_suite_selection_seconds": 0.008434901999862632,
+    "cached_history": true,
+    "deployment_savings_established": false,
+    "feature_construction_seconds": 0.11684247100038192,
+    "group_count": 30,
+    "history_seconds": 0.4121519310001531,
+    "history_setup_free": false
+  },
+  {
+    "chain_id": "heldout-sgd-data-refresh-seed1117",
+    "all_suite_selection_seconds": 0.009239439000339189,
+    "cached_history": true,
+    "deployment_savings_established": false,
+    "feature_construction_seconds": 0.11288943599993218,
+    "group_count": 30,
+    "history_seconds": 0.3966811840000446,
+    "history_setup_free": false
+  },
+  {
+    "chain_id": "heldout-neural-data-growth-seed1103",
+    "all_suite_selection_seconds": 0.007592267000291031,
+    "cached_history": true,
+    "deployment_savings_established": false,
+    "feature_construction_seconds": 0.13142982200042752,
+    "group_count": 30,
+    "history_seconds": 0.12231163700016623,
+    "history_setup_free": false
+  },
+  {
+    "chain_id": "heldout-neural-data-growth-seed1109",
+    "all_suite_selection_seconds": 0.007606903999658243,
+    "cached_history": true,
+    "deployment_savings_established": false,
+    "feature_construction_seconds": 0.13298355599999923,
+    "group_count": 30,
+    "history_seconds": 0.1252030689993262,
+    "history_setup_free": false
+  },
+  {
+    "chain_id": "heldout-neural-data-growth-seed1117",
+    "all_suite_selection_seconds": 0.008193463000679913,
+    "cached_history": true,
+    "deployment_savings_established": false,
+    "feature_construction_seconds": 0.1343344659999275,
+    "group_count": 30,
+    "history_seconds": 0.1227687299997342,
+    "history_setup_free": false
+  },
+  {
+    "chain_id": "heldout-neural-data-refresh-seed1103",
+    "all_suite_selection_seconds": 0.008018902000003436,
+    "cached_history": true,
+    "deployment_savings_established": false,
+    "feature_construction_seconds": 0.15511674400022457,
+    "group_count": 30,
+    "history_seconds": 0.12486871399960364,
+    "history_setup_free": false
+  },
+  {
+    "chain_id": "heldout-neural-data-refresh-seed1109",
+    "all_suite_selection_seconds": 0.008504121999976633,
+    "cached_history": true,
+    "deployment_savings_established": false,
+    "feature_construction_seconds": 0.1365497199994934,
+    "group_count": 30,
+    "history_seconds": 0.1651644089997717,
+    "history_setup_free": false
+  },
+  {
+    "chain_id": "heldout-neural-data-refresh-seed1117",
+    "all_suite_selection_seconds": 0.008268376999694738,
+    "cached_history": true,
+    "deployment_savings_established": false,
+    "feature_construction_seconds": 0.14767638100056502,
+    "group_count": 30,
+    "history_seconds": 0.12404351700024563,
+    "history_setup_free": false
+  }
+]

@@ -1,6 +1,6 @@
 # v2 验证计划与研究关卡
 
-状态：**统一lab验收仍为计划，preflight已部分实现并完成两轮开发运行**。已执行内容见[预实验收尾](../../experiments/feasibility-closeout/README.md)，不能据此把下列全部测试文件、fixture、CLI和研究门标为完成；现有Demo测试仍只证明旧描述性流程。本文将[三个研究问题](../../research/v2/source/01-research-position.md)、[算法原案](../../research/v2/source/03-algorithm-spec.md)与[实验关卡](../../research/v2/source/04-experiment-protocol.md)转成可核验的未来验收条件，不承诺HGC胜出。
+状态：**统一lab验收仍为计划**，实际preflight已完成[HGC收尾](../../experiments/feasibility-closeout/README.md)和新[历史增量检验](../../experiments/history-increment-v1/README.md)：288项软件测试、131冻结文件/98事件与实际64新/72旧状态审计及4故障拒绝。神经增长单格通过只属于描述性条件筛查，不是下列正式G0—G3全部通过。既有Demo未改；本计划的标签层Risk-LR／cold-start等完整合同不由本轮分数版适配自动满足。
 
 ## 1. 证据分层
 

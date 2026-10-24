@@ -1,0 +1,22 @@
+[
+  {
+    "chain_id": "development-neural-data-growth-seed901",
+    "future_flip_count": 53,
+    "pool_count": 2535
+  },
+  {
+    "chain_id": "development-neural-data-growth-seed907",
+    "future_flip_count": 65,
+    "pool_count": 2557
+  },
+  {
+    "chain_id": "development-neural-data-refresh-seed901",
+    "future_flip_count": 95,
+    "pool_count": 2539
+  },
+  {
+    "chain_id": "development-neural-data-refresh-seed907",
+    "future_flip_count": 89,
+    "pool_count": 2549
+  }
+]

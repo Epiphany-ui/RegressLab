@@ -1,0 +1,149 @@
+{
+  "schema_version": "history-increment-publication-v1",
+  "executed_commit": "cd07b1d008a17c869e4b4ae6f72d0e078185cc08",
+  "execution_started_with_clean_tree": true,
+  "run_id": "8a1c5c56-fd9c-4a0a-a3fd-2c7c168329b9",
+  "config_sha256": "63835c648ad407128609fe16e13de14797c3b12a86d33659338cd7089de6cb2f",
+  "freeze_sha256": "4a39781056c4fdc3188d3a7568ddc351da5c794fc70aa9ebd55d8b43fec2aa80",
+  "copies": [
+    {
+      "published": "docs/experiments/history-increment-v1/run/report.json",
+      "source": "artifacts/preflight/history-increment-20261024-v1/report.json",
+      "sha256": "91142c95944688d0fca86d0075a2945e4888d558ec461e1be7aa53940a47953e",
+      "bytes": 264055
+    },
+    {
+      "published": "docs/experiments/history-increment-v1/run/preregistration.json",
+      "source": "artifacts/preflight/history-increment-20261024-v1/preregistration.json",
+      "sha256": "59673b8518033ef4522bc2ca8b194b0be8c8e74eb79a50099e57d4b33b657f52",
+      "bytes": 13000
+    },
+    {
+      "published": "docs/experiments/history-increment-v1/run/matrix-freeze.json",
+      "source": "artifacts/preflight/history-increment-20261024-v1/matrix-freeze.json",
+      "sha256": "4a39781056c4fdc3188d3a7568ddc351da5c794fc70aa9ebd55d8b43fec2aa80",
+      "bytes": 17361
+    },
+    {
+      "published": "docs/experiments/history-increment-v1/run/events.jsonl",
+      "source": "artifacts/preflight/history-increment-20261024-v1/events.jsonl",
+      "sha256": "945f187f6ae0055e02ee4324ac28cf1e249616f395822eb02a26af1884539302",
+      "bytes": 31042
+    },
+    {
+      "published": "docs/experiments/history-increment-v1/run/development-tuning.json",
+      "source": "artifacts/preflight/history-increment-20261024-v1/development-tuning.json",
+      "sha256": "5f9e88a9de5050dcf5e24ccf9dede8dea4d1dd831e78d018f2b731753ae18a5d",
+      "bytes": 50582
+    },
+    {
+      "published": "docs/experiments/history-increment-v1/run/development-summaries.json",
+      "source": "artifacts/preflight/history-increment-20261024-v1/development-summaries.json",
+      "sha256": "7ffd7a3ccb560b73e1426da17a8a268a8d855417928d62f888c3820e7d8dc4ee",
+      "bytes": 481
+    },
+    {
+      "published": "docs/experiments/history-increment-v1/run/identity-audit.json",
+      "source": "artifacts/preflight/history-increment-20261024-v1/identity-audit.json",
+      "sha256": "1100aada84c9ef39239e09db29abca1fec117bd96390ae7bb03a9c9d81d99cb9",
+      "bytes": 29084
+    },
+    {
+      "published": "docs/experiments/history-increment-v1/run/evaluation-cells.json",
+      "source": "artifacts/preflight/history-increment-20261024-v1/evaluation-cells.json",
+      "sha256": "2994bec324f8db4a601f76c570227772947a924c8701418b3313ab4af87717a1",
+      "bytes": 691233
+    },
+    {
+      "published": "docs/experiments/history-increment-v1/run/ranking-metrics.json",
+      "source": "artifacts/preflight/history-increment-20261024-v1/ranking-metrics.json",
+      "sha256": "89cc86fdda88fc98b71c9e71bc6caa317b3fb117eadd2d98ac52d9ed38ff5b23",
+      "bytes": 18890
+    },
+    {
+      "published": "docs/experiments/history-increment-v1/run/target-costs.json",
+      "source": "artifacts/preflight/history-increment-20261024-v1/target-costs.json",
+      "sha256": "7e47b8497a7c8472bbf42b85db149915146cdd03ec6d60e8b143a6afed705fd5",
+      "bytes": 42902
+    },
+    {
+      "published": "docs/experiments/history-increment-v1/run/data-audit.json",
+      "source": "artifacts/preflight/history-increment-20261024-v1/data-audit.json",
+      "sha256": "9af008c000b35e93cda7b1e0d5787cd4fb0402a3c0c175c0d74047d2a575c3ef",
+      "bytes": 16608
+    },
+    {
+      "published": "docs/experiments/history-increment-v1/run/data-role-contract.json",
+      "source": "artifacts/preflight/history-increment-20261024-v1/data-role-contract.json",
+      "sha256": "24b84d72a129ef55df16b017c8c3427d406ea69a5b43e7db1008abe48299bb4b",
+      "bytes": 1285
+    },
+    {
+      "published": "docs/experiments/history-increment-v1/run/train-id-contract.json",
+      "source": "artifacts/preflight/history-increment-20261024-v1/train-id-contract.json",
+      "sha256": "6ee3efcdb0d8c185e446d96d6e7587a1b0ae5069bc0629cbc86147c3eb68dcc6",
+      "bytes": 126
+    },
+    {
+      "published": "docs/experiments/history-increment-v1/resource/registration.json",
+      "source": "artifacts/preflight/history-increment-20261024-resource/registration.json",
+      "sha256": "7da82752bb4872532194dffde8896437dd8649869c15f2f9818bcf1f9c3dfea5",
+      "bytes": 1080
+    },
+    {
+      "published": "docs/experiments/history-increment-v1/resource/report.json",
+      "source": "artifacts/preflight/history-increment-20261024-resource/report.json",
+      "sha256": "58cc0aee9da4e9c5e1c13baa5beadb6bb3bc3613c168bb86ca983ae218d3abe4",
+      "bytes": 3379
+    },
+    {
+      "published": "docs/experiments/history-increment-v1/run/verification.json",
+      "source": ".cache/history-increment-verification.json",
+      "sha256": "b2b02f0190b8c74f6aa23a5a26e183db14d6bdec61e93712721b45aeffcdfbed",
+      "bytes": 1078
+    },
+    {
+      "published": "docs/experiments/history-increment-v1/run/fault-injection.json",
+      "source": ".cache/history-increment-faults.json",
+      "sha256": "da60b3f9b1f1ded14e42332cb4acf1fdb82a58eabd858732f454f0d1cfd60603",
+      "bytes": 1066
+    },
+    {
+      "published": "docs/experiments/history-increment-v1/run/independent-metric-audit.json",
+      "source": ".cache/history-increment-independent-metrics.json",
+      "sha256": "a5cbca42a89ec9d1a1d3f18a5d6dc5c664a7d62deecfc63bcbb78f070c63263f",
+      "bytes": 600
+    },
+    {
+      "published": "docs/experiments/history-increment-v1/run/overlap-diagnostics.json",
+      "source": ".cache/history-increment-overlap.json",
+      "sha256": "48e601873951ff88895ba2e57ddc38a76a824fd17fd6ac16d763fb44886af3b8",
+      "bytes": 3841
+    },
+    {
+      "published": "docs/experiments/history-increment-v1/run/history-increment-incremental-counts.json",
+      "source": ".cache/history-increment-incremental-counts.json",
+      "sha256": "25b867e1ccae10645d6654c40975997a3626523984a3c4d042be7d59e731e7af",
+      "bytes": 56122
+    },
+    {
+      "published": "docs/experiments/history-increment-v1/run/history-increment-results-assessment.md",
+      "source": ".cache/history-increment-results-assessment.md",
+      "sha256": "c036469d705e2601983ded4823cb98524509b1b58019378d345cc0049b67f1c8",
+      "bytes": 6539
+    }
+  ],
+  "derived_files": {
+    "run/history-costs.json": "Aggregate of the twelve frozen per-chain history-costs.json records; contents unchanged."
+  },
+  "test_result": {
+    "environment": "experiments/neural/.venv",
+    "passed": 288,
+    "skipped": 0,
+    "seconds": 9.66
+  },
+  "raw_text_models_full_vocab_and_per_sample_predictions_in_git": false,
+  "formal_test_model_inputs": 0,
+  "executed_report_sha256": "91142c95944688d0fca86d0075a2945e4888d558ec461e1be7aa53940a47953e",
+  "stage_complete": true
+}

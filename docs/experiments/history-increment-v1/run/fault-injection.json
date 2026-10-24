@@ -1,0 +1,31 @@
+{
+  "cases": [
+    {
+      "case": "missing_frozen_observation_even_when_manifest_rewritten",
+      "error_code": "FROZEN_FILE_SET_MISMATCH",
+      "status": "REJECTED"
+    },
+    {
+      "case": "modified_unfrozen_target_cache",
+      "error_code": "HELDOUT_TARGET_CACHE_NOT_ACTUAL_MODEL_OUTPUT",
+      "status": "REJECTED"
+    },
+    {
+      "case": "forged_report_model_identity",
+      "error_code": "REPORT_TRAINING_STATE_MISMATCH",
+      "status": "REJECTED"
+    },
+    {
+      "case": "early_heldout_target_with_rehashed_events",
+      "error_code": "HELDOUT_TARGET_BEFORE_GLOBAL_FREEZE",
+      "status": "REJECTED"
+    }
+  ],
+  "limitation": "Same checker replays its production inference, selectors and metrics; faults are not a proof against all tampering or external target access.",
+  "original_files_hashed": 149,
+  "original_run_bytes_unchanged": true,
+  "scope": "Post-completion consistency faults in isolated hard-linked copies; each changed file unlinked first.",
+  "source_code_modified": false,
+  "status": "PASS",
+  "task_models_retrained": 0
+}

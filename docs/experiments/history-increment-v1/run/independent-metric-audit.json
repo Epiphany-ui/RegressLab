@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "independent_ranking_implementation": "sklearn.metrics.average_precision_score and roc_auc_score",
+  "ranking_rows": 48,
+  "cell_counts_directly_recomputed": 1152,
+  "maximum_AP_absolute_error": 3.3306690738754696e-16,
+  "maximum_AUROC_absolute_error": 1.1102230246251565e-16,
+  "cell_mismatches": [],
+  "new_model_inference": false,
+  "new_training": false,
+  "selection_or_threshold_changed": false,
+  "limitations": "Checks cached outputs with independent metric implementations; does not add update observations, prove no leakage, or establish statistical superiority."
+}

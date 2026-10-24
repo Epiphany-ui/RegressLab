@@ -1,0 +1,33 @@
+{
+  "code_sha256": "639f97bf2dbb7df6628235c05c926179d0c1a77e4bb526451a8368c455fc9a8a",
+  "config": {
+    "architecture": "word-mean-embedding-relu-mlp",
+    "batch_size": 128,
+    "device": "cpu",
+    "dropout": 0.0,
+    "embedding_dim": 64,
+    "hidden_dim": 64,
+    "learning_rate": 0.003,
+    "max_length": 40,
+    "min_frequency": 1,
+    "optimizer": "Adam",
+    "threads": 2,
+    "tokenizer": "nfkc-space-casefold-unicode-word-or-punctuation-v1",
+    "vocabulary_limit": 12000,
+    "weight_decay": 0.0
+  },
+  "dependency_lock_sha256": "48d495d4ced72f0e0234fa91965c84f526376d5cea9fee1b0ff402a9e465977b",
+  "dev_allowed": false,
+  "epochs": 2,
+  "fraction": 0.1,
+  "max_rss_mib": 2048.0,
+  "max_seconds": 120.0,
+  "probe_rows": 1495,
+  "probe_train_ids_sha256": "916c49aa737afd2a67862c11699786aaaecc281ea9b44a9ab30bec4177a831e3",
+  "purpose": "TRAIN_ONLY_RESOURCE_PROBE_NOT_MODEL_OR_FEATURE_SELECTION",
+  "registered_at": "2026-10-24T08:44:59.095087+00:00",
+  "schema_version": "neural-train-only-resource-v1",
+  "seed": 90001,
+  "test_allowed": false,
+  "train_rows": 14995
+}

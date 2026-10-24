@@ -1,6 +1,10 @@
-# CPU开发预实验
+# 离线研究实验与预实验
 
-已实现独立包`preflight`，用于先验证真实数据、四版链、自然未来翻转及强基线是否可运行。最终结论见[预实验收尾](../docs/experiments/feasibility-closeout/README.md)，经过见[收尾日志](../docs/development/logs/2026-10-24-feasibility-closeout.md)。原[第二轮](../docs/experiments/cpu-preflight-v2/README.md)和[首轮](../docs/experiments/cpu-preflight-v1/README.md)保留追溯；当前HGC不支持扩大，广义问题仅保留为条件研究候选。通用平台和正式TEST评价未实现。
+已实现独立包`preflight`，当前最新结果见[历史增量检验](../docs/experiments/history-increment-v1/README.md)与[开发日志](../docs/development/logs/2026-10-24-history-increment.md)：同预测器margin／历史比较、整链留出、64新训练和12条留出链，神经增长有条件正信号，尚未跨架构复现。HGC已经[归档](../docs/experiments/HGC-ARCHIVE.md)，通用平台和正式TEST评价未实现。
+
+新模块`incremental.py`负责仅f0—f2输入的特征与整链LOCO；`incremental_run.py`负责固定训练矩阵和全局冻结；`neural.py`负责CPU词均值MLP及TRAIN-only资源门；`verify_incremental.py`重放存储模型、合法开发拟合和完整指标。Torch使用`neural/pyproject.toml`与独立锁，不装入Web环境。全部实验测试在该环境为288 passed，无跳过；完整命令、已存在运行与复核条件见[新报告复现段](../docs/experiments/history-increment-v1/README.md)。不覆盖既有目录，不据本轮目标追加搜索。
+
+此前[HGC可行性收尾](../docs/experiments/feasibility-closeout/README.md)、[收尾日志](../docs/development/logs/2026-10-24-feasibility-closeout.md)、原[第二轮](../docs/experiments/cpu-preflight-v2/README.md)和[首轮](../docs/experiments/cpu-preflight-v1/README.md)保留追溯。以下各入口为已结束的历史登记，不自动启动额外寻优。
 
 预实验收尾已按固定登记完成。实际执行入口如下；现有目录会拒绝覆盖，复核需本机完整工件及原两轮模型：
 
@@ -12,7 +16,7 @@ timeout --signal=TERM 1200s uv run python -m preflight.feasibility --config conf
 uv run python -m preflight.verify_feasibility ../artifacts/preflight/feasibility-closeout-20261024-natural
 ```
 
-`clinc.py`固定官方commit/许可并仅返回闭集TRAIN/VAL；`linear_state.py`分别核对LR/SGD线性标签状态与概率合同；`diagnostics.py`区分旧结果后验/新外部事前诊断；`mechanisms.py`只产生合成证据；`feasibility.py`运行一次无调参自然收尾。当前227项单元测试通过，自然2,088单元与机制14,400单元均已完整复核；当前HGC判定NO_GO不等于全部历史风险问题无价值。
+`clinc.py`固定官方commit/许可并仅返回闭集TRAIN/VAL；`linear_state.py`分别核对LR/SGD线性标签状态与概率合同；`diagnostics.py`区分旧结果后验/新外部事前诊断；`mechanisms.py`只产生合成证据；`feasibility.py`运行一次无调参自然收尾。HGC收尾当时227项单元测试通过，自然2,088单元与机制14,400单元已完整复核；这些历史结论不由新检验改写。
 
 这次收尾由用户明确授权，并在新目标前固定协议，HGC参数不变；不改写原两轮登记，也不将首轮基线试跑说成HGC已经充分开发。后续新问题不由这些入口自动开启。以下保留历史运行说明。
 
@@ -58,4 +62,4 @@ uv run pytest -q
 
 完整本地工件在`artifacts/preflight/<run>/`，含模型、向量器、选择ID、预测和排除清单。仅加载本运行器自己生成的本地模型pickle进行恢复检查。Git中的轻量报告不包含原文、权重或逐样本预测，因此仅克隆仓库不能重算首轮全部单元；可以用上述命令新建开发运行。严格追溯首轮代码时使用报告记录的`08cd7ad`及依赖锁，新运行不会覆盖首轮审计。
 
-计时目前区分训练、表示、整批基线选择和目标推理；尚无每方法、同范围、含完整预处理的成本比较。`max_training_seconds_per_model=180`在fit返回后检查，不能当成强制中断超时。计划包`regresslab_experiments.cli`、通用lab合同、Risk-LR/Behavior-Anchor/Grad-PD、外部数据和LoRA迁移仍见[实施计划](../docs/engineering/v2/07-implementation-plan.md)，尚未实现。
+上述首轮计时只区分训练、表示、整批选择和目标推理，不能当每方法完整部署比较；后续成本另见各自登记。首轮`max_training_seconds_per_model=180`在fit返回后检查，不是强制中断。当前Risk-LR分数版诊断、CLINC外部审计与小神经CPU链已实现；完整标签层Risk-LR、Behavior-Anchor、Grad-PD、LoRA、通用lab和`regresslab_experiments.cli`仍见[实施计划](../docs/engineering/v2/07-implementation-plan.md)，尚未实现。

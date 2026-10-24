@@ -1,6 +1,6 @@
 # v2 研究原型架构
 
-状态：通用研究系统的工程设计。已实现的独立CPU预实验、最小HGC与机制/独立数据收尾见[最终报告](../../experiments/feasibility-closeout/README.md)，不等于下列全部模块已完成。研究依据见[范围与决策](01-scope-and-decisions.md)。目标是让实验独立可运行、边界可检查、结果可复现，Web作为已有证据的读取器。
+状态：通用研究系统的工程设计，不等于全部模块已实现。实际代码新增`incremental.py`、`incremental_run.py`、`neural.py`与`verify_incremental.py`，完成[历史增量检验](../../experiments/history-increment-v1/README.md)；CPU Torch隔离在`experiments/neural`，不加入Web依赖。HGC原实现冻结归档，Web仍作为已有证据的未来读取器，当前兼容Demo未改。研究范围见[决策](01-scope-and-decisions.md)。
 
 ## 1. 三个执行边界
 

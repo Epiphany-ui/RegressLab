@@ -1,0 +1,2084 @@
+{
+  "schema_version": "postrun-incremental-count-audit-v1",
+  "scope": "READ_ONLY_POST_RUN_COUNT_AND_METRIC_RECONSTRUCTION_NOT_NEW_MODEL_SEARCH",
+  "run_id": "8a1c5c56-fd9c-4a0a-a3fd-2c7c168329b9",
+  "source_report_sha256": "91142c95944688d0fca86d0075a2945e4888d558ec461e1be7aa53940a47953e",
+  "source_freeze_sha256": "4a39781056c4fdc3188d3a7568ddc351da5c794fc70aa9ebd55d8b43fec2aa80",
+  "verified_deterministic_cells": 192,
+  "independently_recomputed_ranking_rows": 48,
+  "all_fitted_margin_rankings_equal_raw_margin": true,
+  "historical_flip_unseen_definition": "No observed old-correct to new-wrong transition in f0->f1/f1->f2; does not mean always-correct historical predictions.",
+  "groups": {
+    "sgd/data-growth": {
+      "budget_curves": [
+        {
+          "budget": 20,
+          "chain_net_detected_gains": [
+            -3,
+            -6,
+            -3
+          ],
+          "macro_recall_gain": -0.2023017902813299,
+          "raw_margin_detected": [
+            9,
+            11,
+            6
+          ],
+          "combined_detected": [
+            6,
+            5,
+            3
+          ],
+          "new_events": [
+            4,
+            2,
+            1
+          ],
+          "lost_events": [
+            7,
+            8,
+            4
+          ],
+          "new_unseen": [
+            3,
+            1,
+            0
+          ],
+          "lost_unseen": [
+            7,
+            7,
+            4
+          ],
+          "new_recurrent": [
+            1,
+            1,
+            1
+          ],
+          "lost_recurrent": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "budget": 50,
+          "chain_net_detected_gains": [
+            2,
+            -3,
+            -3
+          ],
+          "macro_recall_gain": -0.07983802216538789,
+          "raw_margin_detected": [
+            11,
+            15,
+            10
+          ],
+          "combined_detected": [
+            13,
+            12,
+            7
+          ],
+          "new_events": [
+            4,
+            3,
+            3
+          ],
+          "lost_events": [
+            2,
+            6,
+            6
+          ],
+          "new_unseen": [
+            3,
+            2,
+            3
+          ],
+          "lost_unseen": [
+            2,
+            5,
+            5
+          ],
+          "new_recurrent": [
+            1,
+            1,
+            0
+          ],
+          "lost_recurrent": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "budget": 100,
+          "chain_net_detected_gains": [
+            3,
+            2,
+            0
+          ],
+          "macro_recall_gain": 0.07681159420289856,
+          "raw_margin_detected": [
+            16,
+            17,
+            13
+          ],
+          "combined_detected": [
+            19,
+            19,
+            13
+          ],
+          "new_events": [
+            4,
+            2,
+            2
+          ],
+          "lost_events": [
+            1,
+            0,
+            2
+          ],
+          "new_unseen": [
+            3,
+            2,
+            2
+          ],
+          "lost_unseen": [
+            1,
+            0,
+            2
+          ],
+          "new_recurrent": [
+            1,
+            0,
+            0
+          ],
+          "lost_recurrent": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "budget": 200,
+          "chain_net_detected_gains": [
+            1,
+            0,
+            -1
+          ],
+          "macro_recall_gain": -0.005115089514066497,
+          "raw_margin_detected": [
+            20,
+            20,
+            17
+          ],
+          "combined_detected": [
+            21,
+            20,
+            16
+          ],
+          "new_events": [
+            1,
+            0,
+            0
+          ],
+          "lost_events": [
+            0,
+            0,
+            1
+          ],
+          "new_unseen": [
+            0,
+            0,
+            0
+          ],
+          "lost_unseen": [
+            0,
+            0,
+            1
+          ],
+          "new_recurrent": [
+            1,
+            0,
+            0
+          ],
+          "lost_recurrent": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "mean_AP_gain": -0.14238116468871684,
+      "mean_AUROC_gain": -0.0012929567430931173,
+      "primary_added_event_occurrences": 8,
+      "primary_added_unique_sample_ids": 5,
+      "primary_added_sample_ids_repeated_in_all_three_chains": 0,
+      "primary_added_sample_id_chain_frequency_histogram": {
+        "1": 2,
+        "2": 3
+      },
+      "development_event_sample_id_union_count": 35
+    },
+    "sgd/data-refresh": {
+      "budget_curves": [
+        {
+          "budget": 20,
+          "chain_net_detected_gains": [
+            -2,
+            -5,
+            -4
+          ],
+          "macro_recall_gain": -0.10280546327057954,
+          "raw_margin_detected": [
+            7,
+            6,
+            11
+          ],
+          "combined_detected": [
+            5,
+            1,
+            7
+          ],
+          "new_events": [
+            5,
+            0,
+            4
+          ],
+          "lost_events": [
+            7,
+            5,
+            8
+          ],
+          "new_unseen": [
+            5,
+            0,
+            3
+          ],
+          "lost_unseen": [
+            5,
+            5,
+            4
+          ],
+          "new_recurrent": [
+            0,
+            0,
+            1
+          ],
+          "lost_recurrent": [
+            2,
+            0,
+            4
+          ]
+        },
+        {
+          "budget": 50,
+          "chain_net_detected_gains": [
+            -1,
+            -5,
+            -6
+          ],
+          "macro_recall_gain": -0.11092654115909929,
+          "raw_margin_detected": [
+            14,
+            14,
+            19
+          ],
+          "combined_detected": [
+            13,
+            9,
+            13
+          ],
+          "new_events": [
+            6,
+            1,
+            3
+          ],
+          "lost_events": [
+            7,
+            6,
+            9
+          ],
+          "new_unseen": [
+            6,
+            1,
+            1
+          ],
+          "lost_unseen": [
+            4,
+            5,
+            5
+          ],
+          "new_recurrent": [
+            0,
+            0,
+            2
+          ],
+          "lost_recurrent": [
+            3,
+            1,
+            4
+          ]
+        },
+        {
+          "budget": 100,
+          "chain_net_detected_gains": [
+            1,
+            -1,
+            0
+          ],
+          "macro_recall_gain": -0.003359173126614987,
+          "raw_margin_detected": [
+            23,
+            18,
+            25
+          ],
+          "combined_detected": [
+            24,
+            17,
+            25
+          ],
+          "new_events": [
+            5,
+            2,
+            3
+          ],
+          "lost_events": [
+            4,
+            3,
+            3
+          ],
+          "new_unseen": [
+            5,
+            1,
+            2
+          ],
+          "lost_unseen": [
+            4,
+            3,
+            3
+          ],
+          "new_recurrent": [
+            0,
+            1,
+            1
+          ],
+          "lost_recurrent": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "budget": 200,
+          "chain_net_detected_gains": [
+            3,
+            -1,
+            -4
+          ],
+          "macro_recall_gain": -0.019601328903654482,
+          "raw_margin_detected": [
+            33,
+            22,
+            35
+          ],
+          "combined_detected": [
+            36,
+            21,
+            31
+          ],
+          "new_events": [
+            3,
+            1,
+            0
+          ],
+          "lost_events": [
+            0,
+            2,
+            4
+          ],
+          "new_unseen": [
+            3,
+            1,
+            0
+          ],
+          "lost_unseen": [
+            0,
+            2,
+            4
+          ],
+          "new_recurrent": [
+            0,
+            0,
+            0
+          ],
+          "lost_recurrent": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "mean_AP_gain": -0.08898764241690481,
+      "mean_AUROC_gain": -0.005446393604371528,
+      "primary_added_event_occurrences": 10,
+      "primary_added_unique_sample_ids": 10,
+      "primary_added_sample_ids_repeated_in_all_three_chains": 0,
+      "primary_added_sample_id_chain_frequency_histogram": {
+        "1": 10
+      },
+      "development_event_sample_id_union_count": 35
+    },
+    "neural/data-growth": {
+      "budget_curves": [
+        {
+          "budget": 20,
+          "chain_net_detected_gains": [
+            -1,
+            3,
+            5
+          ],
+          "macro_recall_gain": 0.03472806607448964,
+          "raw_margin_detected": [
+            6,
+            5,
+            6
+          ],
+          "combined_detected": [
+            5,
+            8,
+            11
+          ],
+          "new_events": [
+            3,
+            4,
+            7
+          ],
+          "lost_events": [
+            4,
+            1,
+            2
+          ],
+          "new_unseen": [
+            3,
+            2,
+            6
+          ],
+          "lost_unseen": [
+            4,
+            1,
+            2
+          ],
+          "new_recurrent": [
+            0,
+            2,
+            1
+          ],
+          "lost_recurrent": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "budget": 50,
+          "chain_net_detected_gains": [
+            1,
+            3,
+            2
+          ],
+          "macro_recall_gain": 0.031346423562412344,
+          "raw_margin_detected": [
+            15,
+            15,
+            20
+          ],
+          "combined_detected": [
+            16,
+            18,
+            22
+          ],
+          "new_events": [
+            5,
+            8,
+            6
+          ],
+          "lost_events": [
+            4,
+            5,
+            4
+          ],
+          "new_unseen": [
+            5,
+            6,
+            6
+          ],
+          "lost_unseen": [
+            4,
+            5,
+            4
+          ],
+          "new_recurrent": [
+            0,
+            2,
+            0
+          ],
+          "lost_recurrent": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "budget": 100,
+          "chain_net_detected_gains": [
+            5,
+            5,
+            5
+          ],
+          "macro_recall_gain": 0.07881408757986598,
+          "raw_margin_detected": [
+            28,
+            26,
+            28
+          ],
+          "combined_detected": [
+            33,
+            31,
+            33
+          ],
+          "new_events": [
+            5,
+            11,
+            8
+          ],
+          "lost_events": [
+            0,
+            6,
+            3
+          ],
+          "new_unseen": [
+            4,
+            10,
+            7
+          ],
+          "lost_unseen": [
+            0,
+            6,
+            3
+          ],
+          "new_recurrent": [
+            1,
+            1,
+            1
+          ],
+          "lost_recurrent": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "budget": 200,
+          "chain_net_detected_gains": [
+            3,
+            1,
+            2
+          ],
+          "macro_recall_gain": 0.03170484650148044,
+          "raw_margin_detected": [
+            41,
+            46,
+            45
+          ],
+          "combined_detected": [
+            44,
+            47,
+            47
+          ],
+          "new_events": [
+            5,
+            2,
+            6
+          ],
+          "lost_events": [
+            2,
+            1,
+            4
+          ],
+          "new_unseen": [
+            5,
+            2,
+            5
+          ],
+          "lost_unseen": [
+            2,
+            1,
+            4
+          ],
+          "new_recurrent": [
+            0,
+            0,
+            1
+          ],
+          "lost_recurrent": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "mean_AP_gain": 0.04494701480008565,
+      "mean_AUROC_gain": 0.005950457287969206,
+      "primary_added_event_occurrences": 24,
+      "primary_added_unique_sample_ids": 24,
+      "primary_added_sample_ids_repeated_in_all_three_chains": 0,
+      "primary_added_sample_id_chain_frequency_histogram": {
+        "1": 24
+      },
+      "development_event_sample_id_union_count": 266
+    },
+    "neural/data-refresh": {
+      "budget_curves": [
+        {
+          "budget": 20,
+          "chain_net_detected_gains": [
+            4,
+            2,
+            4
+          ],
+          "macro_recall_gain": 0.03621826624859992,
+          "raw_margin_detected": [
+            8,
+            12,
+            10
+          ],
+          "combined_detected": [
+            12,
+            14,
+            14
+          ],
+          "new_events": [
+            8,
+            6,
+            7
+          ],
+          "lost_events": [
+            4,
+            4,
+            3
+          ],
+          "new_unseen": [
+            4,
+            5,
+            4
+          ],
+          "lost_unseen": [
+            4,
+            4,
+            3
+          ],
+          "new_recurrent": [
+            4,
+            1,
+            3
+          ],
+          "lost_recurrent": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "budget": 50,
+          "chain_net_detected_gains": [
+            6,
+            8,
+            8
+          ],
+          "macro_recall_gain": 0.0801952793863815,
+          "raw_margin_detected": [
+            20,
+            24,
+            19
+          ],
+          "combined_detected": [
+            26,
+            32,
+            27
+          ],
+          "new_events": [
+            12,
+            13,
+            12
+          ],
+          "lost_events": [
+            6,
+            5,
+            4
+          ],
+          "new_unseen": [
+            7,
+            8,
+            6
+          ],
+          "lost_unseen": [
+            5,
+            5,
+            4
+          ],
+          "new_recurrent": [
+            5,
+            5,
+            6
+          ],
+          "lost_recurrent": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "budget": 100,
+          "chain_net_detected_gains": [
+            5,
+            2,
+            5
+          ],
+          "macro_recall_gain": 0.043461238607851345,
+          "raw_margin_detected": [
+            38,
+            41,
+            36
+          ],
+          "combined_detected": [
+            43,
+            43,
+            41
+          ],
+          "new_events": [
+            9,
+            7,
+            7
+          ],
+          "lost_events": [
+            4,
+            5,
+            2
+          ],
+          "new_unseen": [
+            5,
+            2,
+            4
+          ],
+          "lost_unseen": [
+            4,
+            5,
+            2
+          ],
+          "new_recurrent": [
+            4,
+            5,
+            3
+          ],
+          "lost_recurrent": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "budget": 200,
+          "chain_net_detected_gains": [
+            3,
+            2,
+            6
+          ],
+          "macro_recall_gain": 0.040603200866092676,
+          "raw_margin_detected": [
+            66,
+            63,
+            52
+          ],
+          "combined_detected": [
+            69,
+            65,
+            58
+          ],
+          "new_events": [
+            9,
+            7,
+            9
+          ],
+          "lost_events": [
+            6,
+            5,
+            3
+          ],
+          "new_unseen": [
+            6,
+            5,
+            7
+          ],
+          "lost_unseen": [
+            6,
+            5,
+            3
+          ],
+          "new_recurrent": [
+            3,
+            2,
+            2
+          ],
+          "lost_recurrent": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "mean_AP_gain": 0.08425647244632865,
+      "mean_AUROC_gain": 0.012303741063006505,
+      "primary_added_event_occurrences": 23,
+      "primary_added_unique_sample_ids": 22,
+      "primary_added_sample_ids_repeated_in_all_three_chains": 0,
+      "primary_added_sample_id_chain_frequency_histogram": {
+        "1": 21,
+        "2": 1
+      },
+      "development_event_sample_id_union_count": 266
+    }
+  },
+  "chains": [
+    {
+      "chain_id": "heldout-sgd-data-growth-seed1103",
+      "architecture": "sgd",
+      "family": "data-growth",
+      "pool_count": 2668,
+      "future_flips": 23,
+      "historical_flip_unseen_events": 20,
+      "repaired_then_recurred_events": 3,
+      "raw_margin_and_fitted_margin_rankings_identical": true,
+      "AP_gain": -0.02401754344025897,
+      "AUROC_gain": 0.0051779403304019755,
+      "ranking_metrics": {
+        "ref-margin": {
+          "AP": 0.36178318273648086,
+          "AUROC": 0.974389742746774
+        },
+        "margin-lr": {
+          "AP": 0.36178318273648086,
+          "AUROC": 0.974389742746774
+        },
+        "margin-history-lr": {
+          "AP": 0.3377656392962219,
+          "AUROC": 0.979567683077176
+        },
+        "risk-top": {
+          "AP": 0.03311150793538778,
+          "AUROC": 0.5845565874907537
+        }
+      },
+      "budgets": [
+        {
+          "budget": 20,
+          "raw_margin_detected": 9,
+          "combined_detected": 6,
+          "net_detected_gain": -3,
+          "recall_gain": -0.13043478260869565,
+          "common_detected": 2,
+          "newly_detected": 4,
+          "lost_detected": 7,
+          "selected_overlap": 2,
+          "replaced_slots": 18,
+          "new_historical_flip_unseen": 3,
+          "lost_historical_flip_unseen": 7,
+          "new_repaired_then_recurred": 1,
+          "lost_repaired_then_recurred": 0
+        },
+        {
+          "budget": 50,
+          "raw_margin_detected": 11,
+          "combined_detected": 13,
+          "net_detected_gain": 2,
+          "recall_gain": 0.08695652173913043,
+          "common_detected": 9,
+          "newly_detected": 4,
+          "lost_detected": 2,
+          "selected_overlap": 25,
+          "replaced_slots": 25,
+          "new_historical_flip_unseen": 3,
+          "lost_historical_flip_unseen": 2,
+          "new_repaired_then_recurred": 1,
+          "lost_repaired_then_recurred": 0
+        },
+        {
+          "budget": 100,
+          "raw_margin_detected": 16,
+          "combined_detected": 19,
+          "net_detected_gain": 3,
+          "recall_gain": 0.13043478260869565,
+          "common_detected": 15,
+          "newly_detected": 4,
+          "lost_detected": 1,
+          "selected_overlap": 69,
+          "replaced_slots": 31,
+          "new_historical_flip_unseen": 3,
+          "lost_historical_flip_unseen": 1,
+          "new_repaired_then_recurred": 1,
+          "lost_repaired_then_recurred": 0,
+          "newly_detected_sample_ids_previously_flipped_in_any_development_chain": 3
+        },
+        {
+          "budget": 200,
+          "raw_margin_detected": 20,
+          "combined_detected": 21,
+          "net_detected_gain": 1,
+          "recall_gain": 0.043478260869565216,
+          "common_detected": 20,
+          "newly_detected": 1,
+          "lost_detected": 0,
+          "selected_overlap": 168,
+          "replaced_slots": 32,
+          "new_historical_flip_unseen": 0,
+          "lost_historical_flip_unseen": 0,
+          "new_repaired_then_recurred": 1,
+          "lost_repaired_then_recurred": 0
+        }
+      ]
+    },
+    {
+      "chain_id": "heldout-sgd-data-growth-seed1109",
+      "architecture": "sgd",
+      "family": "data-growth",
+      "pool_count": 2654,
+      "future_flips": 20,
+      "historical_flip_unseen_events": 18,
+      "repaired_then_recurred_events": 2,
+      "raw_margin_and_fitted_margin_rankings_identical": true,
+      "AP_gain": -0.3210791372309969,
+      "AUROC_gain": -0.003834472285497381,
+      "ranking_metrics": {
+        "ref-margin": {
+          "AP": 0.5609942387688276,
+          "AUROC": 0.9895026575550494
+        },
+        "margin-lr": {
+          "AP": 0.5609942387688276,
+          "AUROC": 0.9895026575550494
+        },
+        "margin-history-lr": {
+          "AP": 0.23991510153783072,
+          "AUROC": 0.985668185269552
+        },
+        "risk-top": {
+          "AP": 0.009737340005134607,
+          "AUROC": 0.5479024297646166
+        }
+      },
+      "budgets": [
+        {
+          "budget": 20,
+          "raw_margin_detected": 11,
+          "combined_detected": 5,
+          "net_detected_gain": -6,
+          "recall_gain": -0.3,
+          "common_detected": 3,
+          "newly_detected": 2,
+          "lost_detected": 8,
+          "selected_overlap": 4,
+          "replaced_slots": 16,
+          "new_historical_flip_unseen": 1,
+          "lost_historical_flip_unseen": 7,
+          "new_repaired_then_recurred": 1,
+          "lost_repaired_then_recurred": 1
+        },
+        {
+          "budget": 50,
+          "raw_margin_detected": 15,
+          "combined_detected": 12,
+          "net_detected_gain": -3,
+          "recall_gain": -0.15,
+          "common_detected": 9,
+          "newly_detected": 3,
+          "lost_detected": 6,
+          "selected_overlap": 27,
+          "replaced_slots": 23,
+          "new_historical_flip_unseen": 2,
+          "lost_historical_flip_unseen": 5,
+          "new_repaired_then_recurred": 1,
+          "lost_repaired_then_recurred": 1
+        },
+        {
+          "budget": 100,
+          "raw_margin_detected": 17,
+          "combined_detected": 19,
+          "net_detected_gain": 2,
+          "recall_gain": 0.1,
+          "common_detected": 17,
+          "newly_detected": 2,
+          "lost_detected": 0,
+          "selected_overlap": 71,
+          "replaced_slots": 29,
+          "new_historical_flip_unseen": 2,
+          "lost_historical_flip_unseen": 0,
+          "new_repaired_then_recurred": 0,
+          "lost_repaired_then_recurred": 0,
+          "newly_detected_sample_ids_previously_flipped_in_any_development_chain": 2
+        },
+        {
+          "budget": 200,
+          "raw_margin_detected": 20,
+          "combined_detected": 20,
+          "net_detected_gain": 0,
+          "recall_gain": 0.0,
+          "common_detected": 20,
+          "newly_detected": 0,
+          "lost_detected": 0,
+          "selected_overlap": 171,
+          "replaced_slots": 29,
+          "new_historical_flip_unseen": 0,
+          "lost_historical_flip_unseen": 0,
+          "new_repaired_then_recurred": 0,
+          "lost_repaired_then_recurred": 0
+        }
+      ]
+    },
+    {
+      "chain_id": "heldout-sgd-data-growth-seed1117",
+      "architecture": "sgd",
+      "family": "data-growth",
+      "pool_count": 2664,
+      "future_flips": 17,
+      "historical_flip_unseen_events": 14,
+      "repaired_then_recurred_events": 3,
+      "raw_margin_and_fitted_margin_rankings_identical": true,
+      "AP_gain": -0.08204681339489461,
+      "AUROC_gain": -0.005222338274183946,
+      "ranking_metrics": {
+        "ref-margin": {
+          "AP": 0.21663412914564267,
+          "AUROC": 0.9808440187559724
+        },
+        "margin-lr": {
+          "AP": 0.21663412914564267,
+          "AUROC": 0.9808440187559724
+        },
+        "margin-history-lr": {
+          "AP": 0.13458731575074806,
+          "AUROC": 0.9756216804817884
+        },
+        "risk-top": {
+          "AP": 0.012087635462193748,
+          "AUROC": 0.650192226493922
+        }
+      },
+      "budgets": [
+        {
+          "budget": 20,
+          "raw_margin_detected": 6,
+          "combined_detected": 3,
+          "net_detected_gain": -3,
+          "recall_gain": -0.17647058823529413,
+          "common_detected": 2,
+          "newly_detected": 1,
+          "lost_detected": 4,
+          "selected_overlap": 5,
+          "replaced_slots": 15,
+          "new_historical_flip_unseen": 0,
+          "lost_historical_flip_unseen": 4,
+          "new_repaired_then_recurred": 1,
+          "lost_repaired_then_recurred": 0
+        },
+        {
+          "budget": 50,
+          "raw_margin_detected": 10,
+          "combined_detected": 7,
+          "net_detected_gain": -3,
+          "recall_gain": -0.17647058823529413,
+          "common_detected": 4,
+          "newly_detected": 3,
+          "lost_detected": 6,
+          "selected_overlap": 22,
+          "replaced_slots": 28,
+          "new_historical_flip_unseen": 3,
+          "lost_historical_flip_unseen": 5,
+          "new_repaired_then_recurred": 0,
+          "lost_repaired_then_recurred": 1
+        },
+        {
+          "budget": 100,
+          "raw_margin_detected": 13,
+          "combined_detected": 13,
+          "net_detected_gain": 0,
+          "recall_gain": 0.0,
+          "common_detected": 11,
+          "newly_detected": 2,
+          "lost_detected": 2,
+          "selected_overlap": 71,
+          "replaced_slots": 29,
+          "new_historical_flip_unseen": 2,
+          "lost_historical_flip_unseen": 2,
+          "new_repaired_then_recurred": 0,
+          "lost_repaired_then_recurred": 0,
+          "newly_detected_sample_ids_previously_flipped_in_any_development_chain": 1
+        },
+        {
+          "budget": 200,
+          "raw_margin_detected": 17,
+          "combined_detected": 16,
+          "net_detected_gain": -1,
+          "recall_gain": -0.058823529411764705,
+          "common_detected": 16,
+          "newly_detected": 0,
+          "lost_detected": 1,
+          "selected_overlap": 168,
+          "replaced_slots": 32,
+          "new_historical_flip_unseen": 0,
+          "lost_historical_flip_unseen": 1,
+          "new_repaired_then_recurred": 0,
+          "lost_repaired_then_recurred": 0
+        }
+      ]
+    },
+    {
+      "chain_id": "heldout-sgd-data-refresh-seed1103",
+      "architecture": "sgd",
+      "family": "data-refresh",
+      "pool_count": 2662,
+      "future_flips": 43,
+      "historical_flip_unseen_events": 39,
+      "repaired_then_recurred_events": 4,
+      "raw_margin_and_fitted_margin_rankings_identical": true,
+      "AP_gain": -0.0220546611928647,
+      "AUROC_gain": 0.0009590026372572336,
+      "ranking_metrics": {
+        "ref-margin": {
+          "AP": 0.25273165519707746,
+          "AUROC": 0.9556194890647061
+        },
+        "margin-lr": {
+          "AP": 0.25273165519707746,
+          "AUROC": 0.9556194890647061
+        },
+        "margin-history-lr": {
+          "AP": 0.23067699400421277,
+          "AUROC": 0.9565784917019633
+        },
+        "risk-top": {
+          "AP": 0.03899725699328284,
+          "AUROC": 0.6633234769173393
+        }
+      },
+      "budgets": [
+        {
+          "budget": 20,
+          "raw_margin_detected": 7,
+          "combined_detected": 5,
+          "net_detected_gain": -2,
+          "recall_gain": -0.046511627906976744,
+          "common_detected": 0,
+          "newly_detected": 5,
+          "lost_detected": 7,
+          "selected_overlap": 1,
+          "replaced_slots": 19,
+          "new_historical_flip_unseen": 5,
+          "lost_historical_flip_unseen": 5,
+          "new_repaired_then_recurred": 0,
+          "lost_repaired_then_recurred": 2
+        },
+        {
+          "budget": 50,
+          "raw_margin_detected": 14,
+          "combined_detected": 13,
+          "net_detected_gain": -1,
+          "recall_gain": -0.023255813953488372,
+          "common_detected": 7,
+          "newly_detected": 6,
+          "lost_detected": 7,
+          "selected_overlap": 23,
+          "replaced_slots": 27,
+          "new_historical_flip_unseen": 6,
+          "lost_historical_flip_unseen": 4,
+          "new_repaired_then_recurred": 0,
+          "lost_repaired_then_recurred": 3
+        },
+        {
+          "budget": 100,
+          "raw_margin_detected": 23,
+          "combined_detected": 24,
+          "net_detected_gain": 1,
+          "recall_gain": 0.023255813953488372,
+          "common_detected": 19,
+          "newly_detected": 5,
+          "lost_detected": 4,
+          "selected_overlap": 64,
+          "replaced_slots": 36,
+          "new_historical_flip_unseen": 5,
+          "lost_historical_flip_unseen": 4,
+          "new_repaired_then_recurred": 0,
+          "lost_repaired_then_recurred": 0,
+          "newly_detected_sample_ids_previously_flipped_in_any_development_chain": 1
+        },
+        {
+          "budget": 200,
+          "raw_margin_detected": 33,
+          "combined_detected": 36,
+          "net_detected_gain": 3,
+          "recall_gain": 0.06976744186046512,
+          "common_detected": 33,
+          "newly_detected": 3,
+          "lost_detected": 0,
+          "selected_overlap": 164,
+          "replaced_slots": 36,
+          "new_historical_flip_unseen": 3,
+          "lost_historical_flip_unseen": 0,
+          "new_repaired_then_recurred": 0,
+          "lost_repaired_then_recurred": 0
+        }
+      ]
+    },
+    {
+      "chain_id": "heldout-sgd-data-refresh-seed1109",
+      "architecture": "sgd",
+      "family": "data-refresh",
+      "pool_count": 2649,
+      "future_flips": 30,
+      "historical_flip_unseen_events": 28,
+      "repaired_then_recurred_events": 2,
+      "raw_margin_and_fitted_margin_rankings_identical": true,
+      "AP_gain": -0.09040177237599178,
+      "AUROC_gain": -0.010360188367061207,
+      "ranking_metrics": {
+        "ref-margin": {
+          "AP": 0.22788501378523218,
+          "AUROC": 0.9590810742013491
+        },
+        "margin-lr": {
+          "AP": 0.22788501378523218,
+          "AUROC": 0.9590810742013491
+        },
+        "margin-history-lr": {
+          "AP": 0.1374832414092404,
+          "AUROC": 0.9487208858342879
+        },
+        "risk-top": {
+          "AP": 0.012064902044572228,
+          "AUROC": 0.5176721394934454
+        }
+      },
+      "budgets": [
+        {
+          "budget": 20,
+          "raw_margin_detected": 6,
+          "combined_detected": 1,
+          "net_detected_gain": -5,
+          "recall_gain": -0.16666666666666666,
+          "common_detected": 1,
+          "newly_detected": 0,
+          "lost_detected": 5,
+          "selected_overlap": 3,
+          "replaced_slots": 17,
+          "new_historical_flip_unseen": 0,
+          "lost_historical_flip_unseen": 5,
+          "new_repaired_then_recurred": 0,
+          "lost_repaired_then_recurred": 0
+        },
+        {
+          "budget": 50,
+          "raw_margin_detected": 14,
+          "combined_detected": 9,
+          "net_detected_gain": -5,
+          "recall_gain": -0.16666666666666666,
+          "common_detected": 8,
+          "newly_detected": 1,
+          "lost_detected": 6,
+          "selected_overlap": 19,
+          "replaced_slots": 31,
+          "new_historical_flip_unseen": 1,
+          "lost_historical_flip_unseen": 5,
+          "new_repaired_then_recurred": 0,
+          "lost_repaired_then_recurred": 1
+        },
+        {
+          "budget": 100,
+          "raw_margin_detected": 18,
+          "combined_detected": 17,
+          "net_detected_gain": -1,
+          "recall_gain": -0.03333333333333333,
+          "common_detected": 15,
+          "newly_detected": 2,
+          "lost_detected": 3,
+          "selected_overlap": 58,
+          "replaced_slots": 42,
+          "new_historical_flip_unseen": 1,
+          "lost_historical_flip_unseen": 3,
+          "new_repaired_then_recurred": 1,
+          "lost_repaired_then_recurred": 0,
+          "newly_detected_sample_ids_previously_flipped_in_any_development_chain": 0
+        },
+        {
+          "budget": 200,
+          "raw_margin_detected": 22,
+          "combined_detected": 21,
+          "net_detected_gain": -1,
+          "recall_gain": -0.03333333333333333,
+          "common_detected": 20,
+          "newly_detected": 1,
+          "lost_detected": 2,
+          "selected_overlap": 158,
+          "replaced_slots": 42,
+          "new_historical_flip_unseen": 1,
+          "lost_historical_flip_unseen": 2,
+          "new_repaired_then_recurred": 0,
+          "lost_repaired_then_recurred": 0
+        }
+      ]
+    },
+    {
+      "chain_id": "heldout-sgd-data-refresh-seed1117",
+      "architecture": "sgd",
+      "family": "data-refresh",
+      "pool_count": 2657,
+      "future_flips": 42,
+      "historical_flip_unseen_events": 32,
+      "repaired_then_recurred_events": 10,
+      "raw_margin_and_fitted_margin_rankings_identical": true,
+      "AP_gain": -0.15450649368185793,
+      "AUROC_gain": -0.006937995083310611,
+      "ranking_metrics": {
+        "ref-margin": {
+          "AP": 0.4045011466451771,
+          "AUROC": 0.961376673040153
+        },
+        "margin-lr": {
+          "AP": 0.4045011466451771,
+          "AUROC": 0.961376673040153
+        },
+        "margin-history-lr": {
+          "AP": 0.24999465296331919,
+          "AUROC": 0.9544386779568423
+        },
+        "risk-top": {
+          "AP": 0.05210197309010816,
+          "AUROC": 0.6380360557224802
+        }
+      },
+      "budgets": [
+        {
+          "budget": 20,
+          "raw_margin_detected": 11,
+          "combined_detected": 7,
+          "net_detected_gain": -4,
+          "recall_gain": -0.09523809523809523,
+          "common_detected": 3,
+          "newly_detected": 4,
+          "lost_detected": 8,
+          "selected_overlap": 5,
+          "replaced_slots": 15,
+          "new_historical_flip_unseen": 3,
+          "lost_historical_flip_unseen": 4,
+          "new_repaired_then_recurred": 1,
+          "lost_repaired_then_recurred": 4
+        },
+        {
+          "budget": 50,
+          "raw_margin_detected": 19,
+          "combined_detected": 13,
+          "net_detected_gain": -6,
+          "recall_gain": -0.14285714285714285,
+          "common_detected": 10,
+          "newly_detected": 3,
+          "lost_detected": 9,
+          "selected_overlap": 23,
+          "replaced_slots": 27,
+          "new_historical_flip_unseen": 1,
+          "lost_historical_flip_unseen": 5,
+          "new_repaired_then_recurred": 2,
+          "lost_repaired_then_recurred": 4
+        },
+        {
+          "budget": 100,
+          "raw_margin_detected": 25,
+          "combined_detected": 25,
+          "net_detected_gain": 0,
+          "recall_gain": 0.0,
+          "common_detected": 22,
+          "newly_detected": 3,
+          "lost_detected": 3,
+          "selected_overlap": 70,
+          "replaced_slots": 30,
+          "new_historical_flip_unseen": 2,
+          "lost_historical_flip_unseen": 3,
+          "new_repaired_then_recurred": 1,
+          "lost_repaired_then_recurred": 0,
+          "newly_detected_sample_ids_previously_flipped_in_any_development_chain": 0
+        },
+        {
+          "budget": 200,
+          "raw_margin_detected": 35,
+          "combined_detected": 31,
+          "net_detected_gain": -4,
+          "recall_gain": -0.09523809523809523,
+          "common_detected": 31,
+          "newly_detected": 0,
+          "lost_detected": 4,
+          "selected_overlap": 168,
+          "replaced_slots": 32,
+          "new_historical_flip_unseen": 0,
+          "lost_historical_flip_unseen": 4,
+          "new_repaired_then_recurred": 0,
+          "lost_repaired_then_recurred": 0
+        }
+      ]
+    },
+    {
+      "chain_id": "heldout-neural-data-growth-seed1103",
+      "architecture": "neural",
+      "family": "data-growth",
+      "pool_count": 2506,
+      "future_flips": 60,
+      "historical_flip_unseen_events": 54,
+      "repaired_then_recurred_events": 6,
+      "raw_margin_and_fitted_margin_rankings_identical": true,
+      "AP_gain": 0.004900112392815181,
+      "AUROC_gain": 0.0022144998637231295,
+      "ranking_metrics": {
+        "ref-margin": {
+          "AP": 0.2586248804281231,
+          "AUROC": 0.9501294630689561
+        },
+        "margin-lr": {
+          "AP": 0.2586248804281231,
+          "AUROC": 0.9501294630689561
+        },
+        "margin-history-lr": {
+          "AP": 0.2635249928209383,
+          "AUROC": 0.9523439629326792
+        },
+        "risk-top": {
+          "AP": 0.024522616452960645,
+          "AUROC": 0.5327575633687653
+        }
+      },
+      "budgets": [
+        {
+          "budget": 20,
+          "raw_margin_detected": 6,
+          "combined_detected": 5,
+          "net_detected_gain": -1,
+          "recall_gain": -0.016666666666666666,
+          "common_detected": 2,
+          "newly_detected": 3,
+          "lost_detected": 4,
+          "selected_overlap": 9,
+          "replaced_slots": 11,
+          "new_historical_flip_unseen": 3,
+          "lost_historical_flip_unseen": 4,
+          "new_repaired_then_recurred": 0,
+          "lost_repaired_then_recurred": 0
+        },
+        {
+          "budget": 50,
+          "raw_margin_detected": 15,
+          "combined_detected": 16,
+          "net_detected_gain": 1,
+          "recall_gain": 0.016666666666666666,
+          "common_detected": 11,
+          "newly_detected": 5,
+          "lost_detected": 4,
+          "selected_overlap": 33,
+          "replaced_slots": 17,
+          "new_historical_flip_unseen": 5,
+          "lost_historical_flip_unseen": 4,
+          "new_repaired_then_recurred": 0,
+          "lost_repaired_then_recurred": 0
+        },
+        {
+          "budget": 100,
+          "raw_margin_detected": 28,
+          "combined_detected": 33,
+          "net_detected_gain": 5,
+          "recall_gain": 0.08333333333333333,
+          "common_detected": 28,
+          "newly_detected": 5,
+          "lost_detected": 0,
+          "selected_overlap": 81,
+          "replaced_slots": 19,
+          "new_historical_flip_unseen": 4,
+          "lost_historical_flip_unseen": 0,
+          "new_repaired_then_recurred": 1,
+          "lost_repaired_then_recurred": 0,
+          "newly_detected_sample_ids_previously_flipped_in_any_development_chain": 0
+        },
+        {
+          "budget": 200,
+          "raw_margin_detected": 41,
+          "combined_detected": 44,
+          "net_detected_gain": 3,
+          "recall_gain": 0.05,
+          "common_detected": 39,
+          "newly_detected": 5,
+          "lost_detected": 2,
+          "selected_overlap": 172,
+          "replaced_slots": 28,
+          "new_historical_flip_unseen": 5,
+          "lost_historical_flip_unseen": 2,
+          "new_repaired_then_recurred": 0,
+          "lost_repaired_then_recurred": 0
+        }
+      ]
+    },
+    {
+      "chain_id": "heldout-neural-data-growth-seed1109",
+      "architecture": "neural",
+      "family": "data-growth",
+      "pool_count": 2546,
+      "future_flips": 62,
+      "historical_flip_unseen_events": 49,
+      "repaired_then_recurred_events": 13,
+      "raw_margin_and_fitted_margin_rankings_identical": true,
+      "AP_gain": 0.027128494683393067,
+      "AUROC_gain": 0.0027725832424289054,
+      "ranking_metrics": {
+        "ref-margin": {
+          "AP": 0.2661716022381782,
+          "AUROC": 0.9507428185548803
+        },
+        "margin-lr": {
+          "AP": 0.2661716022381782,
+          "AUROC": 0.9507428185548803
+        },
+        "margin-history-lr": {
+          "AP": 0.2933000969215713,
+          "AUROC": 0.9535154017973092
+        },
+        "risk-top": {
+          "AP": 0.0697421164687619,
+          "AUROC": 0.6209709885200769
+        }
+      },
+      "budgets": [
+        {
+          "budget": 20,
+          "raw_margin_detected": 5,
+          "combined_detected": 8,
+          "net_detected_gain": 3,
+          "recall_gain": 0.04838709677419355,
+          "common_detected": 4,
+          "newly_detected": 4,
+          "lost_detected": 1,
+          "selected_overlap": 11,
+          "replaced_slots": 9,
+          "new_historical_flip_unseen": 2,
+          "lost_historical_flip_unseen": 1,
+          "new_repaired_then_recurred": 2,
+          "lost_repaired_then_recurred": 0
+        },
+        {
+          "budget": 50,
+          "raw_margin_detected": 15,
+          "combined_detected": 18,
+          "net_detected_gain": 3,
+          "recall_gain": 0.04838709677419355,
+          "common_detected": 10,
+          "newly_detected": 8,
+          "lost_detected": 5,
+          "selected_overlap": 29,
+          "replaced_slots": 21,
+          "new_historical_flip_unseen": 6,
+          "lost_historical_flip_unseen": 5,
+          "new_repaired_then_recurred": 2,
+          "lost_repaired_then_recurred": 0
+        },
+        {
+          "budget": 100,
+          "raw_margin_detected": 26,
+          "combined_detected": 31,
+          "net_detected_gain": 5,
+          "recall_gain": 0.08064516129032258,
+          "common_detected": 20,
+          "newly_detected": 11,
+          "lost_detected": 6,
+          "selected_overlap": 76,
+          "replaced_slots": 24,
+          "new_historical_flip_unseen": 10,
+          "lost_historical_flip_unseen": 6,
+          "new_repaired_then_recurred": 1,
+          "lost_repaired_then_recurred": 0,
+          "newly_detected_sample_ids_previously_flipped_in_any_development_chain": 2
+        },
+        {
+          "budget": 200,
+          "raw_margin_detected": 46,
+          "combined_detected": 47,
+          "net_detected_gain": 1,
+          "recall_gain": 0.016129032258064516,
+          "common_detected": 45,
+          "newly_detected": 2,
+          "lost_detected": 1,
+          "selected_overlap": 169,
+          "replaced_slots": 31,
+          "new_historical_flip_unseen": 2,
+          "lost_historical_flip_unseen": 1,
+          "new_repaired_then_recurred": 0,
+          "lost_repaired_then_recurred": 0
+        }
+      ]
+    },
+    {
+      "chain_id": "heldout-neural-data-growth-seed1117",
+      "architecture": "neural",
+      "family": "data-growth",
+      "pool_count": 2552,
+      "future_flips": 69,
+      "historical_flip_unseen_events": 65,
+      "repaired_then_recurred_events": 4,
+      "raw_margin_and_fitted_margin_rankings_identical": true,
+      "AP_gain": 0.10281243732404871,
+      "AUROC_gain": 0.012864288757755582,
+      "ranking_metrics": {
+        "ref-margin": {
+          "AP": 0.2693150799718104,
+          "AUROC": 0.932555872687901
+        },
+        "margin-lr": {
+          "AP": 0.2693150799718104,
+          "AUROC": 0.932555872687901
+        },
+        "margin-history-lr": {
+          "AP": 0.37212751729585913,
+          "AUROC": 0.9454201614456565
+        },
+        "risk-top": {
+          "AP": 0.02836063064785329,
+          "AUROC": 0.5155317025337512
+        }
+      },
+      "budgets": [
+        {
+          "budget": 20,
+          "raw_margin_detected": 6,
+          "combined_detected": 11,
+          "net_detected_gain": 5,
+          "recall_gain": 0.07246376811594203,
+          "common_detected": 4,
+          "newly_detected": 7,
+          "lost_detected": 2,
+          "selected_overlap": 7,
+          "replaced_slots": 13,
+          "new_historical_flip_unseen": 6,
+          "lost_historical_flip_unseen": 2,
+          "new_repaired_then_recurred": 1,
+          "lost_repaired_then_recurred": 0
+        },
+        {
+          "budget": 50,
+          "raw_margin_detected": 20,
+          "combined_detected": 22,
+          "net_detected_gain": 2,
+          "recall_gain": 0.028985507246376812,
+          "common_detected": 16,
+          "newly_detected": 6,
+          "lost_detected": 4,
+          "selected_overlap": 33,
+          "replaced_slots": 17,
+          "new_historical_flip_unseen": 6,
+          "lost_historical_flip_unseen": 4,
+          "new_repaired_then_recurred": 0,
+          "lost_repaired_then_recurred": 0
+        },
+        {
+          "budget": 100,
+          "raw_margin_detected": 28,
+          "combined_detected": 33,
+          "net_detected_gain": 5,
+          "recall_gain": 0.07246376811594203,
+          "common_detected": 25,
+          "newly_detected": 8,
+          "lost_detected": 3,
+          "selected_overlap": 77,
+          "replaced_slots": 23,
+          "new_historical_flip_unseen": 7,
+          "lost_historical_flip_unseen": 3,
+          "new_repaired_then_recurred": 1,
+          "lost_repaired_then_recurred": 0,
+          "newly_detected_sample_ids_previously_flipped_in_any_development_chain": 3
+        },
+        {
+          "budget": 200,
+          "raw_margin_detected": 45,
+          "combined_detected": 47,
+          "net_detected_gain": 2,
+          "recall_gain": 0.028985507246376812,
+          "common_detected": 41,
+          "newly_detected": 6,
+          "lost_detected": 4,
+          "selected_overlap": 161,
+          "replaced_slots": 39,
+          "new_historical_flip_unseen": 5,
+          "lost_historical_flip_unseen": 4,
+          "new_repaired_then_recurred": 1,
+          "lost_repaired_then_recurred": 0
+        }
+      ]
+    },
+    {
+      "chain_id": "heldout-neural-data-refresh-seed1103",
+      "architecture": "neural",
+      "family": "data-refresh",
+      "pool_count": 2529,
+      "future_flips": 99,
+      "historical_flip_unseen_events": 83,
+      "repaired_then_recurred_events": 16,
+      "raw_margin_and_fitted_margin_rankings_identical": true,
+      "AP_gain": 0.0896153513644482,
+      "AUROC_gain": 0.010350417757825081,
+      "ranking_metrics": {
+        "ref-margin": {
+          "AP": 0.34202696434683444,
+          "AUROC": 0.9458369705283286
+        },
+        "margin-lr": {
+          "AP": 0.34202696434683444,
+          "AUROC": 0.9458369705283286
+        },
+        "margin-history-lr": {
+          "AP": 0.43164231571128264,
+          "AUROC": 0.9561873882861537
+        },
+        "risk-top": {
+          "AP": 0.06600276184235358,
+          "AUROC": 0.5784574136425988
+        }
+      },
+      "budgets": [
+        {
+          "budget": 20,
+          "raw_margin_detected": 8,
+          "combined_detected": 12,
+          "net_detected_gain": 4,
+          "recall_gain": 0.04040404040404041,
+          "common_detected": 4,
+          "newly_detected": 8,
+          "lost_detected": 4,
+          "selected_overlap": 7,
+          "replaced_slots": 13,
+          "new_historical_flip_unseen": 4,
+          "lost_historical_flip_unseen": 4,
+          "new_repaired_then_recurred": 4,
+          "lost_repaired_then_recurred": 0
+        },
+        {
+          "budget": 50,
+          "raw_margin_detected": 20,
+          "combined_detected": 26,
+          "net_detected_gain": 6,
+          "recall_gain": 0.06060606060606061,
+          "common_detected": 14,
+          "newly_detected": 12,
+          "lost_detected": 6,
+          "selected_overlap": 28,
+          "replaced_slots": 22,
+          "new_historical_flip_unseen": 7,
+          "lost_historical_flip_unseen": 5,
+          "new_repaired_then_recurred": 5,
+          "lost_repaired_then_recurred": 1
+        },
+        {
+          "budget": 100,
+          "raw_margin_detected": 38,
+          "combined_detected": 43,
+          "net_detected_gain": 5,
+          "recall_gain": 0.050505050505050504,
+          "common_detected": 34,
+          "newly_detected": 9,
+          "lost_detected": 4,
+          "selected_overlap": 78,
+          "replaced_slots": 22,
+          "new_historical_flip_unseen": 5,
+          "lost_historical_flip_unseen": 4,
+          "new_repaired_then_recurred": 4,
+          "lost_repaired_then_recurred": 0,
+          "newly_detected_sample_ids_previously_flipped_in_any_development_chain": 4
+        },
+        {
+          "budget": 200,
+          "raw_margin_detected": 66,
+          "combined_detected": 69,
+          "net_detected_gain": 3,
+          "recall_gain": 0.030303030303030304,
+          "common_detected": 60,
+          "newly_detected": 9,
+          "lost_detected": 6,
+          "selected_overlap": 167,
+          "replaced_slots": 33,
+          "new_historical_flip_unseen": 6,
+          "lost_historical_flip_unseen": 6,
+          "new_repaired_then_recurred": 3,
+          "lost_repaired_then_recurred": 0
+        }
+      ]
+    },
+    {
+      "chain_id": "heldout-neural-data-refresh-seed1109",
+      "architecture": "neural",
+      "family": "data-refresh",
+      "pool_count": 2552,
+      "future_flips": 92,
+      "historical_flip_unseen_events": 80,
+      "repaired_then_recurred_events": 12,
+      "raw_margin_and_fitted_margin_rankings_identical": true,
+      "AP_gain": 0.07387771905715518,
+      "AUROC_gain": 0.014369034994697771,
+      "ranking_metrics": {
+        "ref-margin": {
+          "AP": 0.37755931278164306,
+          "AUROC": 0.9376148815835984
+        },
+        "margin-lr": {
+          "AP": 0.37755931278164306,
+          "AUROC": 0.9376148815835984
+        },
+        "margin-history-lr": {
+          "AP": 0.45143703183879824,
+          "AUROC": 0.9519839165782962
+        },
+        "risk-top": {
+          "AP": 0.03799396096035702,
+          "AUROC": 0.5282962177447862
+        }
+      },
+      "budgets": [
+        {
+          "budget": 20,
+          "raw_margin_detected": 12,
+          "combined_detected": 14,
+          "net_detected_gain": 2,
+          "recall_gain": 0.021739130434782608,
+          "common_detected": 8,
+          "newly_detected": 6,
+          "lost_detected": 4,
+          "selected_overlap": 10,
+          "replaced_slots": 10,
+          "new_historical_flip_unseen": 5,
+          "lost_historical_flip_unseen": 4,
+          "new_repaired_then_recurred": 1,
+          "lost_repaired_then_recurred": 0
+        },
+        {
+          "budget": 50,
+          "raw_margin_detected": 24,
+          "combined_detected": 32,
+          "net_detected_gain": 8,
+          "recall_gain": 0.08695652173913043,
+          "common_detected": 19,
+          "newly_detected": 13,
+          "lost_detected": 5,
+          "selected_overlap": 27,
+          "replaced_slots": 23,
+          "new_historical_flip_unseen": 8,
+          "lost_historical_flip_unseen": 5,
+          "new_repaired_then_recurred": 5,
+          "lost_repaired_then_recurred": 0
+        },
+        {
+          "budget": 100,
+          "raw_margin_detected": 41,
+          "combined_detected": 43,
+          "net_detected_gain": 2,
+          "recall_gain": 0.021739130434782608,
+          "common_detected": 36,
+          "newly_detected": 7,
+          "lost_detected": 5,
+          "selected_overlap": 76,
+          "replaced_slots": 24,
+          "new_historical_flip_unseen": 2,
+          "lost_historical_flip_unseen": 5,
+          "new_repaired_then_recurred": 5,
+          "lost_repaired_then_recurred": 0,
+          "newly_detected_sample_ids_previously_flipped_in_any_development_chain": 4
+        },
+        {
+          "budget": 200,
+          "raw_margin_detected": 63,
+          "combined_detected": 65,
+          "net_detected_gain": 2,
+          "recall_gain": 0.021739130434782608,
+          "common_detected": 58,
+          "newly_detected": 7,
+          "lost_detected": 5,
+          "selected_overlap": 173,
+          "replaced_slots": 27,
+          "new_historical_flip_unseen": 5,
+          "lost_historical_flip_unseen": 5,
+          "new_repaired_then_recurred": 2,
+          "lost_repaired_then_recurred": 0
+        }
+      ]
+    },
+    {
+      "chain_id": "heldout-neural-data-refresh-seed1117",
+      "architecture": "neural",
+      "family": "data-refresh",
+      "pool_count": 2540,
+      "future_flips": 86,
+      "historical_flip_unseen_events": 75,
+      "repaired_then_recurred_events": 11,
+      "raw_margin_and_fitted_margin_rankings_identical": true,
+      "AP_gain": 0.08927634691738257,
+      "AUROC_gain": 0.012191770436496663,
+      "ranking_metrics": {
+        "ref-margin": {
+          "AP": 0.3382880551369,
+          "AUROC": 0.9359327912662763
+        },
+        "margin-lr": {
+          "AP": 0.3382880551369,
+          "AUROC": 0.9359327912662763
+        },
+        "margin-history-lr": {
+          "AP": 0.4275644020542826,
+          "AUROC": 0.9481245617027729
+        },
+        "risk-top": {
+          "AP": 0.04406366632996061,
+          "AUROC": 0.5426285513921267
+        }
+      },
+      "budgets": [
+        {
+          "budget": 20,
+          "raw_margin_detected": 10,
+          "combined_detected": 14,
+          "net_detected_gain": 4,
+          "recall_gain": 0.046511627906976744,
+          "common_detected": 7,
+          "newly_detected": 7,
+          "lost_detected": 3,
+          "selected_overlap": 8,
+          "replaced_slots": 12,
+          "new_historical_flip_unseen": 4,
+          "lost_historical_flip_unseen": 3,
+          "new_repaired_then_recurred": 3,
+          "lost_repaired_then_recurred": 0
+        },
+        {
+          "budget": 50,
+          "raw_margin_detected": 19,
+          "combined_detected": 27,
+          "net_detected_gain": 8,
+          "recall_gain": 0.09302325581395349,
+          "common_detected": 15,
+          "newly_detected": 12,
+          "lost_detected": 4,
+          "selected_overlap": 32,
+          "replaced_slots": 18,
+          "new_historical_flip_unseen": 6,
+          "lost_historical_flip_unseen": 4,
+          "new_repaired_then_recurred": 6,
+          "lost_repaired_then_recurred": 0
+        },
+        {
+          "budget": 100,
+          "raw_margin_detected": 36,
+          "combined_detected": 41,
+          "net_detected_gain": 5,
+          "recall_gain": 0.05813953488372093,
+          "common_detected": 34,
+          "newly_detected": 7,
+          "lost_detected": 2,
+          "selected_overlap": 80,
+          "replaced_slots": 20,
+          "new_historical_flip_unseen": 4,
+          "lost_historical_flip_unseen": 2,
+          "new_repaired_then_recurred": 3,
+          "lost_repaired_then_recurred": 0,
+          "newly_detected_sample_ids_previously_flipped_in_any_development_chain": 3
+        },
+        {
+          "budget": 200,
+          "raw_margin_detected": 52,
+          "combined_detected": 58,
+          "net_detected_gain": 6,
+          "recall_gain": 0.06976744186046512,
+          "common_detected": 49,
+          "newly_detected": 9,
+          "lost_detected": 3,
+          "selected_overlap": 171,
+          "replaced_slots": 29,
+          "new_historical_flip_unseen": 7,
+          "lost_historical_flip_unseen": 3,
+          "new_repaired_then_recurred": 2,
+          "lost_repaired_then_recurred": 0
+        }
+      ]
+    }
+  ],
+  "development": {
+    "architectures": {
+      "sgd": {
+        "chains": [
+          {
+            "chain_id": "clinc-sgd-data-growth-seed501",
+            "positive_events": 22,
+            "rows": 2661
+          },
+          {
+            "chain_id": "clinc-sgd-data-growth-seed503",
+            "positive_events": 16,
+            "rows": 2650
+          },
+          {
+            "chain_id": "clinc-sgd-epoch-growth-seed601",
+            "positive_events": 1,
+            "rows": 2666
+          },
+          {
+            "chain_id": "clinc-sgd-epoch-growth-seed607",
+            "positive_events": 3,
+            "rows": 2666
+          }
+        ],
+        "selected_C": {
+          "margin-history-lr": 10.0,
+          "margin-lr": 0.01
+        }
+      },
+      "neural": {
+        "chains": [
+          {
+            "chain_id": "development-neural-data-growth-seed901",
+            "positive_events": 53,
+            "rows": 2535
+          },
+          {
+            "chain_id": "development-neural-data-growth-seed907",
+            "positive_events": 65,
+            "rows": 2557
+          },
+          {
+            "chain_id": "development-neural-data-refresh-seed901",
+            "positive_events": 95,
+            "rows": 2539
+          },
+          {
+            "chain_id": "development-neural-data-refresh-seed907",
+            "positive_events": 89,
+            "rows": 2549
+          }
+        ],
+        "selected_C": {
+          "margin-history-lr": 0.01,
+          "margin-lr": 0.01
+        }
+      }
+    }
+  },
+  "recommendation": "CONDITIONAL_SIGNAL_REQUIRES_REPLICATION",
+  "assessment_formal_test_files_read": 0,
+  "limits": [
+    "Post-run descriptive strata and sample-ID overlap; not new prespecified hypotheses or causal attribution.",
+    "No method fitting, training, model inference, code change or feature search performed.",
+    "Shared VAL rows and related chains are not independent replications."
+  ]
+}

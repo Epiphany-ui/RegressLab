@@ -1,0 +1,32 @@
+{
+  "current_role": "EXPOSED_VAL_FOR_WHOLE_CHAIN_DEVELOPMENT_AND_NEW_UPDATE_VALIDATION",
+  "development_chain_ids": [
+    "clinc-sgd-data-growth-seed501",
+    "clinc-sgd-data-growth-seed503",
+    "clinc-sgd-epoch-growth-seed601",
+    "clinc-sgd-epoch-growth-seed607",
+    "development-neural-data-growth-seed901",
+    "development-neural-data-growth-seed907",
+    "development-neural-data-refresh-seed901",
+    "development-neural-data-refresh-seed907"
+  ],
+  "development_unit": "Whole registered model-update chain, not a random text split",
+  "formal_test_model_input_count": 0,
+  "heldout_chain_ids": [
+    "heldout-sgd-data-growth-seed1103",
+    "heldout-sgd-data-growth-seed1109",
+    "heldout-sgd-data-growth-seed1117",
+    "heldout-sgd-data-refresh-seed1103",
+    "heldout-sgd-data-refresh-seed1109",
+    "heldout-sgd-data-refresh-seed1117",
+    "heldout-neural-data-growth-seed1103",
+    "heldout-neural-data-growth-seed1109",
+    "heldout-neural-data-growth-seed1117",
+    "heldout-neural-data-refresh-seed1103",
+    "heldout-neural-data-refresh-seed1109",
+    "heldout-neural-data-refresh-seed1117"
+  ],
+  "legacy_loader_description_is_current_no_tuning_claim": false,
+  "legacy_loader_protocol": "clinc150-independent-diagnostic-v1",
+  "samples_previously_exposed": true
+}

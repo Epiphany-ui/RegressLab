@@ -1,0 +1,378 @@
+{
+  "chain_specifications": [
+    {
+      "architecture": "neural",
+      "chain_id": "development-neural-data-growth-seed901",
+      "family": "data-growth",
+      "role": "development",
+      "seed": 901
+    },
+    {
+      "architecture": "neural",
+      "chain_id": "development-neural-data-growth-seed907",
+      "family": "data-growth",
+      "role": "development",
+      "seed": 907
+    },
+    {
+      "architecture": "neural",
+      "chain_id": "development-neural-data-refresh-seed901",
+      "family": "data-refresh",
+      "role": "development",
+      "seed": 901
+    },
+    {
+      "architecture": "neural",
+      "chain_id": "development-neural-data-refresh-seed907",
+      "family": "data-refresh",
+      "role": "development",
+      "seed": 907
+    },
+    {
+      "architecture": "sgd",
+      "chain_id": "heldout-sgd-data-growth-seed1103",
+      "family": "data-growth",
+      "role": "heldout",
+      "seed": 1103
+    },
+    {
+      "architecture": "sgd",
+      "chain_id": "heldout-sgd-data-growth-seed1109",
+      "family": "data-growth",
+      "role": "heldout",
+      "seed": 1109
+    },
+    {
+      "architecture": "sgd",
+      "chain_id": "heldout-sgd-data-growth-seed1117",
+      "family": "data-growth",
+      "role": "heldout",
+      "seed": 1117
+    },
+    {
+      "architecture": "sgd",
+      "chain_id": "heldout-sgd-data-refresh-seed1103",
+      "family": "data-refresh",
+      "role": "heldout",
+      "seed": 1103
+    },
+    {
+      "architecture": "sgd",
+      "chain_id": "heldout-sgd-data-refresh-seed1109",
+      "family": "data-refresh",
+      "role": "heldout",
+      "seed": 1109
+    },
+    {
+      "architecture": "sgd",
+      "chain_id": "heldout-sgd-data-refresh-seed1117",
+      "family": "data-refresh",
+      "role": "heldout",
+      "seed": 1117
+    },
+    {
+      "architecture": "neural",
+      "chain_id": "heldout-neural-data-growth-seed1103",
+      "family": "data-growth",
+      "role": "heldout",
+      "seed": 1103
+    },
+    {
+      "architecture": "neural",
+      "chain_id": "heldout-neural-data-growth-seed1109",
+      "family": "data-growth",
+      "role": "heldout",
+      "seed": 1109
+    },
+    {
+      "architecture": "neural",
+      "chain_id": "heldout-neural-data-growth-seed1117",
+      "family": "data-growth",
+      "role": "heldout",
+      "seed": 1117
+    },
+    {
+      "architecture": "neural",
+      "chain_id": "heldout-neural-data-refresh-seed1103",
+      "family": "data-refresh",
+      "role": "heldout",
+      "seed": 1103
+    },
+    {
+      "architecture": "neural",
+      "chain_id": "heldout-neural-data-refresh-seed1109",
+      "family": "data-refresh",
+      "role": "heldout",
+      "seed": 1109
+    },
+    {
+      "architecture": "neural",
+      "chain_id": "heldout-neural-data-refresh-seed1117",
+      "family": "data-refresh",
+      "role": "heldout",
+      "seed": 1117
+    }
+  ],
+  "code_files": {
+    "experiments/preflight/__init__.py": "3a03a776bec9c2a70968f0beb40b71122ad65493bb1ded96112881a4d1f256f0",
+    "experiments/preflight/baselines.py": "15c7759da50bffe7c19ecb3cb0910f61e7aca50163da62f0ce95bd0a6cceb79e",
+    "experiments/preflight/clinc.py": "00ba22f000a0c07ced376227c2dbba79ed2b6304c316402492871449c888f881",
+    "experiments/preflight/data.py": "8c38dac9ca751e434b77520d03a3796d2ad5aa569f9e8c3f54118b52b0c95f46",
+    "experiments/preflight/diagnostics.py": "e7f8b967e3261264add95ad992d78d57e056d926653d563e602992d7ccf38262",
+    "experiments/preflight/feasibility.py": "a66a5636129ed0893e18e339e217dc98aa9ce9ec17a365724df66c12809cb0f5",
+    "experiments/preflight/fetch.py": "8a7ded7fafdb6d9206094ffe5a03ca1c450ca107b0358fe0f676b3cdc53fb035",
+    "experiments/preflight/hgc.py": "4bb521469eee746e4b65b807a055da0887c2a0db046a134d56b58ed9e3d4ef03",
+    "experiments/preflight/identity.py": "7c00ab4e4b334f7f2a40687db5779334614281c476481386a2b41641fb5e12e3",
+    "experiments/preflight/incremental.py": "a26ebcfb523c860601aa4fce31b6d98f0d9d1b83f4086c637a91ace83f52e45b",
+    "experiments/preflight/incremental_run.py": "4cf45d375b46355af5e18b9caf160018d3627f1a955b5563a5e5400df353e957",
+    "experiments/preflight/linear_state.py": "db5571231cd8699c409a9f18fd450649f59940da4ba51e45df6dd35467613b0c",
+    "experiments/preflight/mechanisms.py": "5bbc49cec39ac747e5ac8a5de29ee72f814996845ce243b83198ed2831b7c2ad",
+    "experiments/preflight/neural.py": "639f97bf2dbb7df6628235c05c926179d0c1a77e4bb526451a8368c455fc9a8a",
+    "experiments/preflight/round2.py": "514c6e429b36ef9b94aeae1e8a030b2f3a6900c907955b69a2df37776e838d24",
+    "experiments/preflight/runner.py": "1866b511d484b90bb890c9f45e3ac4403226d6f7016f27010730bc802904cc29",
+    "experiments/preflight/verify.py": "4d11f615bdcc47f5c76f75bd724e8aa0e323863fd5ad33b572ac278508e4c1b6",
+    "experiments/preflight/verify2.py": "c99b86dbac30bdf5ab935bde96bda838883fe9f3357d44333ae4136445562584",
+    "experiments/preflight/verify_feasibility.py": "30030bdcc59da2258327eb3603f780f9b5d74322fd514091e420d6f7dd8db0bc",
+    "experiments/preflight/verify_incremental.py": "601320e7e178057be1157ecefdfc20baa5d6395c37b2918d09e7c4fd849f5649"
+  },
+  "config": {
+    "architectures": [
+      "sgd",
+      "neural"
+    ],
+    "authorization": "2026-10-24 user explicitly requested archive HGC, matched Risk-LR increment test, whole unseen chains, and bounded neural resource/real-chain validation.",
+    "basis_contract": "Same fixed 40% TRAIN basis per seed; may include TRAIN rows outside a refresh slot. Never VAL/TEST. Different architecture-specific tokenization.",
+    "basis_fraction": 0.4,
+    "budgets": [
+      20,
+      50,
+      100,
+      200
+    ],
+    "classifier_representation": {
+      "analyzer": "char",
+      "fit_on": "SAME_REALIZATION_FIXED_40_PERCENT_TRAIN_BASIS",
+      "lowercase": false,
+      "max_features": 30000,
+      "min_df": 2,
+      "ngram_range": [
+        2,
+        4
+      ],
+      "norm": "l2",
+      "sublinear_tf": true
+    },
+    "clinc_cache": "datasets/clinc150-828f8093932c",
+    "cost_policy": {
+      "historical_setup_not_free": true,
+      "history_cached": true,
+      "scope": "text normalize/encode/transform and model probability inference, warm cache; fixed four deterministic primary suites; selection plus shared historical feature construction shown separately; no claimed deployment savings",
+      "target_benchmark_repeats": 3
+    },
+    "data_scope": "Already-exposed official VAL; new whole update realizations, not unseen texts. TEST/OOS never model inputs.",
+    "dataset": "clinc150",
+    "decision_policy": {
+      "chains_per_cell": 3,
+      "insufficient_events": "INCONCLUSIVE_EVENT_SUPPORT and stop automatic scaling/search",
+      "maximum_chain_loss": 0.05,
+      "mean_AP_gain_must_be_positive": true,
+      "minimum_events_per_chain": 20,
+      "minimum_mean_gain_over_raw_margin": 0.0,
+      "minimum_mean_recall_gain": 0.05,
+      "minimum_positive_chains": 2,
+      "no_increment": "NO_DETECTED_STABLE_INCREMENT and stop pursuing historical-risk new algorithms in tested setting",
+      "novelty_or_title_established": false,
+      "raw_margin_gain_must_be_positive": true,
+      "replication": "Both architectures pass in the same registered update condition. One architecture only is exploratory conditional signal, not GO."
+    },
+    "families": [
+      "data-growth",
+      "data-refresh"
+    ],
+    "formal_test_model_input_count": 0,
+    "freeze_policy": "Freeze all twelve heldout chains, models, predictors, histories, scores, pool IDs/gold, and all 1152 suites before ANY heldout-VAL target inference; up to32 TRAIN rows are allowed only for save/restore validation. Neural development targets may only fit development predictors.",
+    "growth_fractions": [
+      0.4,
+      0.6,
+      0.8,
+      1.0
+    ],
+    "heldout_seeds": [
+      1103,
+      1109,
+      1117
+    ],
+    "hgc_archived": true,
+    "hgc_code_sha256": "4bb521469eee746e4b65b807a055da0887c2a0db046a134d56b58ed9e3d4ef03",
+    "historical_group_config": {
+      "jaccard": 0.9,
+      "k": 3,
+      "lambda": 0.5,
+      "length_boundaries": [
+        10,
+        20,
+        40
+      ],
+      "m": 30,
+      "max_groups": 30,
+      "min_support": 10,
+      "negation_terms": [
+        "不",
+        "没",
+        "无",
+        "别",
+        "未",
+        "不要",
+        "不能",
+        "not",
+        "no",
+        "never",
+        "without"
+      ],
+      "question_marks": [
+        "?",
+        "？"
+      ]
+    },
+    "limits": [
+      "3 related seeds per architecture/update condition; descriptive screening, not significance or universal null.",
+      "Only one dataset and one small non-pretrained neural architecture.",
+      "Risk-LR is an adapted diagnostic tool, not the complete original reproduction or a novel algorithm.",
+      "No HGC parameter/feature/objective tuning and no automatic extra chains after results."
+    ],
+    "linear_classifier": {
+      "alpha": 0.0001,
+      "average": false,
+      "early_stopping": false,
+      "fit_intercept": true,
+      "learning_rate": "optimal",
+      "loss": "log_loss",
+      "n_jobs": 2,
+      "penalty": "l2",
+      "shuffle": true,
+      "tol": null
+    },
+    "linear_development_chain_ids": [
+      "clinc-sgd-data-growth-seed501",
+      "clinc-sgd-data-growth-seed503",
+      "clinc-sgd-epoch-growth-seed601",
+      "clinc-sgd-epoch-growth-seed607"
+    ],
+    "linear_epochs": 20,
+    "methods": [
+      "ref-margin",
+      "margin-lr",
+      "margin-history-lr",
+      "risk-top",
+      "random"
+    ],
+    "neural": {
+      "architecture": "word-mean-embedding-relu-mlp",
+      "batch_size": 128,
+      "device": "cpu",
+      "dropout": 0.0,
+      "embedding_dim": 64,
+      "hidden_dim": 64,
+      "learning_rate": 0.003,
+      "max_length": 40,
+      "min_frequency": 1,
+      "optimizer": "Adam",
+      "threads": 2,
+      "tokenizer": "nfkc-space-casefold-unicode-word-or-punctuation-v1",
+      "vocabulary_limit": 12000,
+      "weight_decay": 0.0
+    },
+    "neural_development_seeds": [
+      901,
+      907
+    ],
+    "neural_epochs": 12,
+    "predictor": {
+      "C_grid": [
+        0.01,
+        0.1,
+        1.0,
+        10.0
+      ],
+      "architecture_specific": true,
+      "feature_search": false,
+      "features": [
+        "margin",
+        "past_wrong_fraction",
+        "negative_flip_opportunity_rate",
+        "max_gold_probability_drop",
+        "mean_adjacent_total_variation",
+        "frozen_group_risk"
+      ],
+      "max_iter": 1000,
+      "scaler": "weighted StandardScaler fit on training folds only",
+      "selection": "leave-one-whole-development-chain-out macro average precision; smallest C breaks ties",
+      "solver": "lbfgs",
+      "weights": "each chain total1, positives/negatives each .5 if both present; missing class chain uniform total1"
+    },
+    "primary_budget": 100,
+    "prior_runs": [
+      {
+        "freeze_sha256": "e9274da9250232272f58872d1679ee6eefcab4adb9d576b50e14a37dc8df5047",
+        "path": "artifacts/preflight/cpu-pilot-20261023-v1"
+      },
+      {
+        "freeze_sha256": "ba32f08e4bd0c1ae81b2d9046547b33e2032cb6695c2af0b3ddb95e216f4bc2d",
+        "path": "artifacts/preflight/cpu-pilot-20261024-v2"
+      },
+      {
+        "freeze_sha256": "f4c2b24f846b9aabbff6ca73035d293758fb4a8c8bfc81e455dd9a2d286c0c6f",
+        "path": "artifacts/preflight/feasibility-closeout-20261024-natural"
+      }
+    ],
+    "purpose": "FROZEN_HISTORY_INCREMENT_CHECK",
+    "refresh_contract": "Stratify TRAIN by label; order by SHA256(pilot-train-v1|seed|sample_id), ID tie; array_split into five blocks; f0/f1/f2/f3 exclude block0/1/2/3, respectively. About80% TRAIN each; natural incoming/outgoing data, no label corruption.",
+    "resource_policy": {
+      "device": "cpu",
+      "max_fit_seconds": 180,
+      "max_total_seconds": 1800,
+      "no_recipe_retry": true,
+      "outer_timeout_seconds": 2100,
+      "probe_epochs": 2,
+      "probe_fraction": 0.1,
+      "probe_max_fit_seconds": 120,
+      "probe_max_rss_mib": 2048,
+      "probe_seed": 90001,
+      "threads": 2
+    },
+    "resource_probe_path": "artifacts/preflight/history-increment-20261024-resource",
+    "schema_version": "regresslab-history-increment-v1",
+    "selection_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ]
+  },
+  "config_sha256": "63835c648ad407128609fe16e13de14797c3b12a86d33659338cd7089de6cb2f",
+  "dependency_locks": {
+    "experiments/neural/uv.lock": "48d495d4ced72f0e0234fa91965c84f526376d5cea9fee1b0ff402a9e465977b",
+    "experiments/uv.lock": "99f88a3239512b4197cdfd96de94f9d32cf609a0d4aac23c7065132b9d7bcf14"
+  },
+  "git_base_commit": "cd07b1d008a17c869e4b4ae6f72d0e078185cc08",
+  "registered_at": "2026-10-24T08:45:30.912724+00:00",
+  "resource_probe_report_sha256": "58cc0aee9da4e9c5e1c13baa5beadb6bb3bc3613c168bb86ca983ae218d3abe4",
+  "run_id": "8a1c5c56-fd9c-4a0a-a3fd-2c7c168329b9",
+  "working_tree_dirty": false
+}

@@ -1,8 +1,18 @@
 # v2 分阶段实施计划
 
-状态：**预实验及固定可行性收尾已完成；当前HGC NO_GO，广义问题保留为条件研究候选；完整研究框架/正式门禁未完成**。下文保留完整阶段规划，不因预实验非零信号将P0—P7或G0/G1标为完成。原始依据为[研究产品范围](../../research/v2/source/PRODUCT.md)、[算法](../../research/v2/source/03-algorithm-spec.md)、[实验协议](../../research/v2/source/04-experiment-protocol.md)及[文献复现顺序](../../research/v2/source/02-literature-map.md)。论文主线为方法比较与实验；现有工作台承担证据浏览。
+状态：**HGC归档；历史增量检验已完成，小神经增长条件有待复现线索；完整框架/正式门禁与最终题目未完成**。用户2026-10-24后续指示与[新登记](../../experiments/history-increment-v1/REGISTRATION.md)决定当前优先级。下文保留原P0—P7规划作条件性设计，不将本轮软件或描述性筛查当成正式门全部通过。
 
-## 0. 已完成预实验收尾（2026-10-24）
+## 0. 当前阶段出口与下一步
+
+已按用户四步建议完成[历史增量检验](../../experiments/history-increment-v1/README.md)：冻结HGC，TRAIN-only小神经资源门，同Scaler/LR的margin与历史增量比较，整条新更新留出。固定提交`cd07b1d`先push，随后从干净树完成64次训练／12留出链／1,152单元；288软件测试与实际预测重放通过，正式TEST始终不作模型输入。
+
+小神经增长3链B100检出从28/26/28到33/31/33，平均Recall提高7.88个百分点，AP三链均正；神经更替平均4.35点未达到事前5点门槛，SGD未通过。出口为`CONDITIONAL_SIGNAL_REQUIRES_REPLICATION`，并非跨架构GO、HGC修复或题目确定。当前特征流程也没有总成本优势。
+
+本阶段现在结束，不自动补seed、换预算或调特征。若继续，先把问题收窄到小神经增长条件，独立登记新的数据或另一小神经架构复核，同时补齐可比较开发支持与完整成本；本轮全部目标从此作为开发材料。不能以“不同信号适用于不同任务”或融合LR本身主张创新，不直接扩大LoRA。未能复现则整理具体适用边界，停止历史新算法追逐；正式TEST是否启用须另设完整冻结方案。
+
+新增实际入口是`preflight.incremental_run`／`verify_incremental`，轻量神经实现位于`preflight.neural`，Torch环境在`experiments/neural`，未加入backend。完整通用lab、标签层Risk-LR、Behavior-Anchor、Grad-PD、正式统计和研究UI均未被本次交付自动完成。
+
+### 此前已完成的HGC可行性收尾（2026-10-24）
 
 [最终报告](../../experiments/feasibility-closeout/README.md)与[机器决策](../../experiments/feasibility-closeout/decision.json)已交付：当前固定HGC不建议作为优势方法继续；历史风险在CLINC增长链有描述性关联，广义问题仅保留为比较/机制/适用边界研究候选，不保证学位认可。原题目/source未改写。
 
@@ -36,7 +46,7 @@ CLINC增长链Risk-Top检出5/22、7/16，高于Random/Facility但低于margin16
 |---|---|---|
 | `backend/`、`frontend/`、现有SQLite与描述性Demo | 当前已有 | 保留启动、案例、历史、静态导出；v1划分/报告不更名为v2研究结果 |
 | `lab/` 独立Python研究包 | 计划核心 | 数据/历史视图、风险与selectors、注册/冻结/evaluator、成本/统计/证据包 |
-| `experiments/` 独立训练推理包 | 已有CPU预实验入口；完整包及神经扩展仍计划中 | 已跑相关LR开发链和部分基线；完整来源/访问门禁、外部数据与GPU扩展未完成 |
+| `experiments/` 独立训练推理包 | CPU预实验、增量检验和小神经链已完成；完整包仍规划 | 已有MASSIVE/CLINC、固定风险与同模型增量、状态/来源审计；GPU/LLM和通用框架未完成 |
 | Demo只读研究结果页 | 计划支撑 | 读取已验证工件、展示来源/分母/访问层/成本，不执行训练或统计重算 |
 | PostgreSQL、认证、完整Worker、Ollama、API、网页调参 | 暂缓 | 研究完成不依赖这些产品工程；不得以页面数量弥补方法证据 |
 

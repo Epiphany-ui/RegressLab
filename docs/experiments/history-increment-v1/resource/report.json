@@ -1,0 +1,106 @@
+{
+  "cuda_build": null,
+  "dev_examples_observed": 0,
+  "device": "cpu",
+  "fit_seconds_within_limit": true,
+  "gpu_observation": {
+    "csv_rows": [
+      "NVIDIA GeForce RTX 3060 Laptop GPU, 6144, 1641"
+    ],
+    "fields": [
+      "name",
+      "total_memory_mib",
+      "used_memory_mib"
+    ],
+    "neural_probe_gpu_use": false,
+    "observed_at": "2026-10-24T08:45:00.530891+00:00",
+    "source": "nvidia-smi"
+  },
+  "identity": {
+    "components": {
+      "architecture": "word-mean-embedding-relu-mlp",
+      "embedding_dim": 64,
+      "hidden_dim": 64,
+      "labels_sha256": "c3bcfaf065da690b60e70f13b57111cd5b08babb3dff1f5dc492464886aea8c7",
+      "max_length": 40,
+      "tokenizer": "nfkc-space-casefold-unicode-word-or-punctuation-v1",
+      "vocabulary": {
+        "mapping_sha256": "70eccb7678e78a1cd9a8056e276fd55281ae57b0d33e4585bc8a3cef51ffb1eb",
+        "size": 1692
+      },
+      "weights": {
+        "embedding.weight": {
+          "dtype": "little-endian-float32",
+          "sha256": "4e9875a39ea9fd05045266a44b715f83d65b5d0a0cee69098b53bc450efdc203",
+          "shape": [
+            1692,
+            64
+          ]
+        },
+        "hidden.bias": {
+          "dtype": "little-endian-float32",
+          "sha256": "99b7f708d74bf75f9ff381dbb6a975b610bbc95b7e1c274d720e535c6a8a938f",
+          "shape": [
+            64
+          ]
+        },
+        "hidden.weight": {
+          "dtype": "little-endian-float32",
+          "sha256": "bc20b467c648adfd59a8714e43775a3b12faa49cd64b88a91509c7d77254999e",
+          "shape": [
+            64,
+            64
+          ]
+        },
+        "output.bias": {
+          "dtype": "little-endian-float32",
+          "sha256": "f1db8819050e79b755790ad8fbffd4876675244ba350c039c6bb61052dd79d72",
+          "shape": [
+            150
+          ]
+        },
+        "output.weight": {
+          "dtype": "little-endian-float32",
+          "sha256": "36d86b9488a7e57594c7095772284105414a660f07aad51ba2577c9ecbfab6fa",
+          "shape": [
+            150,
+            64
+          ]
+        }
+      }
+    },
+    "label_state_sha256": "7efc5c474baf527e34218d2e4872e75b1433b43b1ed751e4053b1b7d27d79f2c",
+    "probability_state_sha256": "639430d16c56f786908b37c8437c0aa0cca5df1abc21c0db526feb15e913fec0",
+    "schema_version": "small-neural-identity-v1"
+  },
+  "inference_probe_examples": 32,
+  "inference_probe_partition": "TRAIN",
+  "inference_probe_seconds": 0.0018732669996097684,
+  "passed": true,
+  "peak_process_rss_mib": 756.8515625,
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "python_version": "3.14.4",
+  "registration_sha256": "7da82752bb4872532194dffde8896437dd8649869c15f2f9818bcf1f9c3dfea5",
+  "restore_exact": true,
+  "rss_within_limit": true,
+  "save_restore_seconds": 0.010234708999632858,
+  "schema_version": "neural-train-only-resource-result-v1",
+  "summary": {
+    "dev_examples_observed": 0,
+    "epoch_train_cross_entropy": [
+      4.994798695044374,
+      4.868780952632227
+    ],
+    "epochs": 2,
+    "fixed_epoch_budget_completed": true,
+    "parameter_count": 122198,
+    "rows": 1495,
+    "seed": 90001,
+    "test_examples_observed": 0,
+    "train_ids_sha256": "916c49aa737afd2a67862c11699786aaaecc281ea9b44a9ab30bec4177a831e3",
+    "train_seconds": 1.335344318999887
+  },
+  "test_examples_observed": 0,
+  "threads": 2,
+  "torch_version": "2.14.1+cpu"
+}

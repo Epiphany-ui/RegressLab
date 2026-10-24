@@ -1,6 +1,6 @@
 # v2 工程设计与开发计划
 
-当前权威：研究v2；状态：`research-v2-draft1`软件设计。Web仍为0.1描述性Demo；已通过独立`preflight`入口完成[预实验收尾](../../experiments/feasibility-closeout/README.md)：当前HGC NO_GO，广义历史风险主题仅保留为条件/比较研究候选。通用lab、其余核心方法、神经训练与研究API仍待实现；正式门禁未通过，不自动按旧计划扩规模，范围决策见07。
+当前权威：用户后续研究调整与登记协议；本目录仍为通用软件设计。Web仍为0.1描述性Demo。HGC已[归档](../../experiments/HGC-ARCHIVE.md)，新[历史增量检验](../../experiments/history-increment-v1/README.md)完成64次训练和12留出链，小神经增长有条件正信号，尚未跨架构复现或确定题目。通用lab、其余核心方法与研究API待实现；正式门禁未通过，不自动扩LoRA或续调HGC，当前决策见07。
 
 | 文档 | 用途 |
 |---|---|
