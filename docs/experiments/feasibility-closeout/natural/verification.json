@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "scope": "FIXED_FEASIBILITY_DIAGNOSTIC_ONLY",
+  "frozen_files_verified": 86,
+  "chains_verified": 6,
+  "cells_recomputed": 2088,
+  "aggregates_recomputed": 264,
+  "primary_cost_rows_recomputed": 522,
+  "events_verified": 65,
+  "full_current_correct_pools_reconstructed": true,
+  "history_only_selection_and_risk_diagnostics_replayed": true,
+  "current_linear_identities_verified": 24,
+  "previously_exposed_model_states_verified": 48,
+  "official_source_datasets_reaudited": [
+    "massive",
+    "clinc"
+  ],
+  "global_identity_gate_before_history_events": true,
+  "target_events_after_freeze": true,
+  "recommendation": "NO_GO_CURRENT_HGC_METHOD",
+  "formal_evaluation": false,
+  "statistical_independence_established": false,
+  "limitations": [
+    "Trusted local pickle artifacts only; never apply to untrusted uploads.",
+    "Existing selector, metric and decision implementations are replayed, not independently proven.",
+    "Cached target labels are checked and aligned; target inference is not rerun by this audit.",
+    "Event hashes verify internal consistency, not external proof of hidden access or chronology.",
+    "A fixed feasibility screen is not statistical superiority, noninferiority or thesis approval.",
+    "Related linear classifiers and fixed-order warm-cache costs do not establish neural-model conclusions.",
+    "Missing official source caches prevent repeated model-free source/row-ID reconstruction and are reported explicitly."
+  ]
+}

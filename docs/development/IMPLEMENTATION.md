@@ -8,15 +8,15 @@
 | v1夹具/测试 | 保留：两份预测、50/25/25分区、固定旧门槛；只验证工程流程 |
 | v2研究原文 | 已导入8份并记录摘要，未补造缺失Word或沿用来源提交的验收结论 |
 | v2工程设计 | 本次补齐架构、领域/工件Schema、信息隔离/冻结、成本、Demo迁移、测试和分阶段任务 |
-| experiments/preflight | 已完成两轮CPU开发预实验；第二轮24模型/6链、9基线＋固定HGC、全局推理身份门禁、2,064单元冻结、完整P与每方法成本复核 |
-| 当前任务模型 | 字符TF-IDF＋多类逻辑回归；HGC为选样算法，不是替代分类模型 |
+| experiments/preflight | 原两轮＋固定可行性收尾已完成：200机制环境/14,400单元，独立CLINC审计与24新模型/6链/2,088单元，Risk-Top/HGC/基线及完整审计 |
+| 当前任务模型 | 字符TF-IDF＋LR及SGD log-loss线性分类器；增加优化/概率链接对照，未做神经或大语言模型训练；HGC仅为选样算法 |
 | lab | 统一包仍为规划；HGC已在preflight中最小实现，Risk-LR、Behavior-Anchor、Grad-PD及完整机制/消融尚未完成 |
 | v2研究结果展示 | 已规划只读接口和工件页面；当前UI/API尚未实现 |
-| 真实结果 | 第二轮目标身份门禁通过；每链2—11翻转，HGC@100 Recall=0—.50、margin=.80—1；缓存情景HGC成本为全P推理11—15倍。三项开发筛查未通过，非正式结论 |
+| 真实结果 | 当前HGC NO_GO；模拟定位覆盖过早饱和，独立CLINC增长Risk-Top有受限正线索但margin更强；事件支持量不足，不建立普遍或正式结论 |
 
-最新[第二轮报告](../experiments/cpu-preflight-v2/README.md)和[2026-10-24开发日志](logs/2026-10-24-cpu-preflight-v2.md)记录负结果，首轮发现保留在[原报告](../experiments/cpu-preflight-v1/README.md)。两轮上限已到，不继续同DEV的lambda/m、特征或seed寻优；正式G0/G1/G2均不能据此标通过。GPU仅探测到RTX 3060 Laptop 6GiB，没有训练/显存实测。
+最新[预实验收尾报告](../experiments/feasibility-closeout/README.md)、[收尾日志](logs/2026-10-24-feasibility-closeout.md)和[机器决策](../experiments/feasibility-closeout/decision.json)已形成完整投入建议。原[第二轮](../experiments/cpu-preflight-v2/README.md)及[首轮](../experiments/cpu-preflight-v1/README.md)保留追溯；首轮没有HGC，不能把两次CPU试跑说成HGC已充分开发。本次用户授权一次固定机制/独立数据收尾，未调HGC参数，现已结束。
 
-接下来优先整理研究决策材料，开展事前固定的最小风险迁移机制诊断与独立外部数据的来源/类别审计。若缺少支持，收缩为强基线比较或适用条件研究；不得把扩大GPU、平台或UI当作当前方法证据的替代。完整核心方法、独立外部/留出评价、神经迁移与研究结果页面均未完成。
+建议停止当前覆盖式HGC的优势新方法路线，保留广义历史风险问题作为有条件的比较/机制研究候选。若论文要求稳定超过强基线的新算法，应先调整具体研究主张。正式G0—G3、神经训练/显存实测、完整核心方法与研究页面均未完成，不自动沿旧计划扩规模。原研究文档和题目未擅自改写。
 
 当前`domain.py`的严格JSON解析和成对计数可以提取复用；分区、D+C scope、净下降筛选、特征及候选池含义不能原样变成HGC。每个替换点和下一版最小Demo见[迁移设计](../engineering/v2/05-demo-migration.md)。
 

@@ -1,8 +1,8 @@
 # RegressLab · 文本分类回归选样研究
 
-当前研究方向是**《基于历史群体风险的文本分类模型回归测试样本选择方法研究》**：利用f0/f1/f2的历史，在执行目标f3前选出有限预算测试集，比较HGC与强基线的未来负向翻转检出和成本。HGC是待验证候选；第二轮固定配置在当前CPU开发设置中未显示收益。
+当前研究方向是**《基于历史群体风险的文本分类模型回归测试样本选择方法研究》**：利用f0/f1/f2的历史，在执行目标f3前选出有限预算测试集，比较HGC与强基线的未来负向翻转检出和成本。固定HGC已完成可行性核查，当前证据不支持它作为优势新方法；历史风险问题可作为条件/比较研究候选保留。
 
-**已完成两轮真实CPU开发预实验；Web仍为0.1描述性Demo。** 第二轮修复模型复用检查，完成24次训练、6条四版链、9基线＋固定HGC，共2,064个单元。HGC在B=100时Recall为0—0.50，margin为0.80—1.00；当前缓存情景中HGC总成本为全P推理的11—15倍，三项开发筛查均未通过。详见[第二轮报告](docs/experiments/cpu-preflight-v2/README.md)、[开发日志](docs/development/logs/2026-10-24-cpu-preflight-v2.md)及[首轮记录](docs/experiments/cpu-preflight-v1/README.md)。保留负结果，不再追加第三轮同DEV寻优；先做机制诊断与独立数据审计，再决定研究范围。
+**预实验已收尾；Web仍为0.1描述性Demo。** 在原两轮基础上，完成200个固定机制环境及MASSIVE/独立CLINC数据上的24次新训练、2,088个自然评价单元。当前HGC的检出和CPU成本仍不支持扩大；机制审计定位到固定饱和覆盖很早耗尽风险边际。CLINC增长链的简单Risk-Top有受限正线索，因此建议保留研究问题、调整为适用边界/比较研究候选，停止当前HGC优势主张。详见[收尾结论与完整报告](docs/experiments/feasibility-closeout/README.md)、[开发日志](docs/development/logs/2026-10-24-feasibility-closeout.md)和[机器决策](docs/experiments/feasibility-closeout/decision.json)。正式TEST、神经训练与论文主实验均未完成。
 
 从 [研究资料](docs/research/v2/README.md)、[工程设计与实施计划](docs/engineering/v2/README.md) 或 [统一文档导航](docs/README.md) 开始。8份源Markdown逐字节保留；源包未附其引用的Word，差异见[导入清单](docs/research/v2/import-manifest.json)。
 
@@ -16,7 +16,7 @@ RegressLab/
 ├── e2e/                       # 已实现：Demo浏览器测试
 ├── examples/                  # 已实现：v1合成夹具，不是v2实验结果
 ├── lab/                       # 本次规划：离线选择/冻结/评测，尚无算法代码
-├── experiments/               # 已实现：独立CPU预实验、最小HGC、基线、冻结与结果复核
+├── experiments/               # 已实现：CPU预实验、最小HGC、机制/独立数据收尾与复核
 ├── scripts/                   # 启动、夹具、当前文档/历史合同校验
 └── docs/
     ├── research/v2/           # 新研究原文与来源清单

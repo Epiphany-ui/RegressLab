@@ -1,0 +1,33 @@
+{
+  "original_artifacts_unchanged": true,
+  "protected_original_sha256": {
+    "report.json": "88c3b8f1a7fbf587d9e16da376d395041902e396a669771ff6a02a055e131baf",
+    "events.jsonl": "5478005708263bd00597a16e6013975c5252d9963da0ea0d833ff9637b5148f9",
+    "data/clinc/dev.json": "32fdb2c5f2c6ccfd65606e3a6d607ab8ec90a843328abca5491d593867992b54",
+    "matrix-freeze.json": "f4c2b24f846b9aabbff6ca73035d293758fb4a8c8bfc81e455dd9a2d286c0c6f"
+  },
+  "checks": [
+    {
+      "case": "delete_all_aggregates",
+      "status": "REJECTED",
+      "reason": "AGGREGATE_SET_OR_VALUE_MISMATCH"
+    },
+    {
+      "case": "forge_report_model_hash",
+      "status": "REJECTED",
+      "reason": "REPORT_CHAIN_SUMMARY_MISMATCH"
+    },
+    {
+      "case": "modify_frozen_clinc_dev_gold",
+      "status": "REJECTED",
+      "reason": "FROZEN_INPUT_CHANGED"
+    },
+    {
+      "case": "omit_all_target_events_and_rehash",
+      "status": "REJECTED",
+      "reason": "EVENT_SET_MISMATCH"
+    }
+  ],
+  "temporary_copies_same_filesystem": true,
+  "mutated_files_unlinked_before_writing": true
+}

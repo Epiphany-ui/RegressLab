@@ -1,0 +1,6252 @@
+{
+  "clinc-sgd-data-growth-seed501": {
+    "average_precision_definition": "noninterpolated threshold-group AP; include all tied scores together before computing block precision",
+    "budget": 100,
+    "discovery_count": 2997,
+    "future_flip_count": 22,
+    "group_union_future_flip_count": 9,
+    "group_union_pool_count": 400,
+    "historical_flip_pool_count": 11,
+    "historically_unseen_future_flip_count": 21,
+    "incremental_over_margin_top100": {
+      "common_selected_count": 17,
+      "margin_missed_future_flips": 6,
+      "margin_only_detected": 12,
+      "risk_only_detected": 1,
+      "shared_detected": 4,
+      "union_detected": 17
+    },
+    "limitations": [
+      "Prespecified fixed diagnostic on independently sourced external validation data; no selector tuning or formal TEST evaluation, and model chains are not thereby statistically independent.",
+      "No significance, causal, conditional-independence, superiority or noninferiority claim; sparse group event rates are unstable.",
+      "Risk groups overlap; unique detections use sets and group event counts must not be summed.",
+      "Risk-Top is preregistered for this fixed feasibility closeout; it does not retroactively enter or alter the completed round-two comparison.",
+      "AUC, threshold-group AP and a fixed-budget ID tie break answer different descriptive questions."
+    ],
+    "low_future_event_support": false,
+    "margin": {
+      "average_precision": 0.4110439176275543,
+      "average_precision_na_reason": null,
+      "constant_score": false,
+      "negative_events": 2639,
+      "positive_events": 22,
+      "roc_auc": 0.9815357056736367,
+      "roc_auc_na_reason": null,
+      "score_unique_values": 2661,
+      "top100": {
+        "actual_size": 100,
+        "detected": 16,
+        "precision": 0.16,
+        "recall": 0.7272727272727273
+      }
+    },
+    "margin_score_definition": "negative f2 top-one minus top-two probability gap",
+    "pool_count": 2661,
+    "pool_future_flip_rate": 0.008267568583239383,
+    "positive_risk_coverage": {
+      "future_flip_count": 9,
+      "future_flip_recall": 0.4090909090909091,
+      "pool_count": 400,
+      "pool_fraction": 0.1503194287861706
+    },
+    "reference_probability_label_alignment": "inherited frozen score contract; no inference of class columns from DEV gold",
+    "repaired_then_recurred_count": 1,
+    "risk_groups": [
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 12.095454545454547,
+        "future_flip_rate": 0.1,
+        "group_number": 1,
+        "historical_negative_flips": [
+          2,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          12,
+          10
+        ],
+        "historical_weight": 0.033569363518276434,
+        "low_future_event_support": true,
+        "normalized_weight": 0.07354583784497827,
+        "pool_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "order"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 9.304195804195805,
+        "future_flip_rate": 0.07692307692307693,
+        "group_number": 2,
+        "historical_negative_flips": [
+          2,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          16,
+          14
+        ],
+        "historical_weight": 0.029709146551479673,
+        "low_future_event_support": true,
+        "normalized_weight": 0.06508863576153988,
+        "pool_support": 13,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "travel_suggestion"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 3,
+        "historical_negative_flips": [
+          1,
+          2
+        ],
+        "historical_old_correct_opportunities": [
+          17,
+          17
+        ],
+        "historical_weight": 0.028257151639564753,
+        "low_future_event_support": true,
+        "normalized_weight": 0.06190751550332322,
+        "pool_support": 15,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "todo_list_update"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 39,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 6.71969696969697,
+        "future_flip_rate": 0.05555555555555555,
+        "group_number": 4,
+        "historical_negative_flips": [
+          2,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          19,
+          18
+        ],
+        "historical_weight": 0.02695689246761206,
+        "low_future_event_support": true,
+        "normalized_weight": 0.059058827288999034,
+        "pool_support": 18,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 5,
+        "historical_negative_flips": [
+          0,
+          3
+        ],
+        "historical_old_correct_opportunities": [
+          14,
+          16
+        ],
+        "historical_weight": 0.023367089234426066,
+        "low_future_event_support": true,
+        "normalized_weight": 0.05119406433811568,
+        "pool_support": 13,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "restaurant_reviews"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 17,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 12.095454545454547,
+        "future_flip_rate": 0.1,
+        "group_number": 6,
+        "historical_negative_flips": [
+          1,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          11,
+          10
+        ],
+        "historical_weight": 0.022058383660433865,
+        "low_future_event_support": true,
+        "normalized_weight": 0.04832687122379739,
+        "pool_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "order"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 19,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 7,
+        "historical_negative_flips": [
+          1,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          14,
+          15
+        ],
+        "historical_weight": 0.019193833021414596,
+        "low_future_event_support": true,
+        "normalized_weight": 0.04205103651274187,
+        "pool_support": 15,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "greeting"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 8,
+        "historical_negative_flips": [
+          1,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          16,
+          15
+        ],
+        "historical_weight": 0.01852378096134039,
+        "low_future_event_support": true,
+        "normalized_weight": 0.040583045017130656,
+        "pool_support": 14,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "bill_due"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 12,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 9,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          8
+        ],
+        "historical_weight": 0.01763692072003064,
+        "low_future_event_support": true,
+        "normalized_weight": 0.03864005674858591,
+        "pool_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "no"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 12,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 10,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          8
+        ],
+        "historical_weight": 0.01763692072003064,
+        "low_future_event_support": true,
+        "normalized_weight": 0.03864005674858591,
+        "pool_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 15,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 11,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          11,
+          9
+        ],
+        "historical_weight": 0.017098158821496297,
+        "low_future_event_support": true,
+        "normalized_weight": 0.037459703859110155,
+        "pool_support": 11,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "no"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 14,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 12,
+        "historical_negative_flips": [
+          2,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          11,
+          9
+        ],
+        "historical_weight": 0.017098158821496297,
+        "low_future_event_support": true,
+        "normalized_weight": 0.037459703859110155,
+        "pool_support": 8,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "travel_suggestion"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "41+"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 13,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          12,
+          10
+        ],
+        "historical_weight": 0.01658505225146359,
+        "low_future_event_support": true,
+        "normalized_weight": 0.03633555825008563,
+        "pool_support": 13,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "cancel"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 14,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          12,
+          11
+        ],
+        "historical_weight": 0.01658505225146359,
+        "low_future_event_support": true,
+        "normalized_weight": 0.03633555825008563,
+        "pool_support": 13,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "no"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 14,
+        "enrichment_na_reason": null,
+        "future_flip_count": 2,
+        "future_flip_enrichment": 20.15909090909091,
+        "future_flip_rate": 0.16666666666666666,
+        "group_number": 15,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          13,
+          11
+        ],
+        "historical_weight": 0.016095811103292865,
+        "low_future_event_support": true,
+        "normalized_weight": 0.035263698483341314,
+        "pool_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "how_old_are_you"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 17,
+        "enrichment_na_reason": null,
+        "future_flip_count": 2,
+        "future_flip_enrichment": 15.119318181818182,
+        "future_flip_rate": 0.125,
+        "group_number": 16,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          17,
+          15
+        ],
+        "historical_weight": 0.01434703423323582,
+        "low_future_event_support": true,
+        "normalized_weight": 0.031432369955404195,
+        "pool_support": 16,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "how_old_are_you"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 2,
+        "future_flip_enrichment": 13.43939393939394,
+        "future_flip_rate": 0.1111111111111111,
+        "group_number": 17,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          19,
+          17
+        ],
+        "historical_weight": 0.013579713769843441,
+        "low_future_event_support": true,
+        "normalized_weight": 0.029751276825799127,
+        "pool_support": 18,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "how_old_are_you"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 199,
+        "enrichment_na_reason": null,
+        "future_flip_count": 3,
+        "future_flip_enrichment": 2.23989898989899,
+        "future_flip_rate": 0.018518518518518517,
+        "group_number": 18,
+        "historical_negative_flips": [
+          4,
+          3
+        ],
+        "historical_old_correct_opportunities": [
+          158,
+          158
+        ],
+        "historical_weight": 0.010118150211329115,
+        "low_future_event_support": true,
+        "normalized_weight": 0.022167469285749235,
+        "pool_support": 162,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 2,
+        "future_flip_enrichment": 26.87878787878788,
+        "future_flip_rate": 0.2222222222222222,
+        "group_number": 19,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          10
+        ],
+        "historical_weight": 0.008591970387243736,
+        "low_future_event_support": true,
+        "normalized_weight": 0.01882382013364807,
+        "pool_support": 9,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "change_user_name"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 10,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 20,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          9,
+          10
+        ],
+        "historical_weight": 0.008591970387243736,
+        "low_future_event_support": true,
+        "normalized_weight": 0.01882382013364807,
+        "pool_support": 9,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "confirm_reservation"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 11,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 21,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          9,
+          10
+        ],
+        "historical_weight": 0.008591970387243736,
+        "low_future_event_support": true,
+        "normalized_weight": 0.01882382013364807,
+        "pool_support": 9,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "goodbye"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 11,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 22,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          11
+        ],
+        "historical_weight": 0.008306017000944497,
+        "low_future_event_support": true,
+        "normalized_weight": 0.01819733576886301,
+        "pool_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_update"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 12,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 23,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          11
+        ],
+        "historical_weight": 0.008306017000944497,
+        "low_future_event_support": true,
+        "normalized_weight": 0.01819733576886301,
+        "pool_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "what_is_your_name"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 12,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 24,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          9
+        ],
+        "historical_weight": 0.00826192072003064,
+        "low_future_event_support": true,
+        "normalized_weight": 0.018100726909302967,
+        "pool_support": 11,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "cancel_reservation"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 12,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 25,
+        "historical_negative_flips": [
+          1,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          9
+        ],
+        "historical_weight": 0.00826192072003064,
+        "low_future_event_support": true,
+        "normalized_weight": 0.018100726909302967,
+        "pool_support": 8,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "todo_list_update"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 15,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 26,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          11,
+          12
+        ],
+        "historical_weight": 0.00803368044256427,
+        "low_future_event_support": true,
+        "normalized_weight": 0.017600683992877234,
+        "pool_support": 13,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "change_ai_name"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 52,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 27,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          41,
+          40
+        ],
+        "historical_weight": 0.007992323916690492,
+        "low_future_event_support": true,
+        "normalized_weight": 0.017510077558111542,
+        "pool_support": 42,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 15,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 28,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          13,
+          13
+        ],
+        "historical_weight": 0.00777401070085289,
+        "low_future_event_support": true,
+        "normalized_weight": 0.01703178346228615,
+        "pool_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "book_hotel"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 29,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          12,
+          13
+        ],
+        "historical_weight": 0.007656480822892159,
+        "low_future_event_support": true,
+        "normalized_weight": 0.01677429173648283,
+        "pool_support": 15,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "ingredient_substitution"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 15,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 30,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          12,
+          12
+        ],
+        "historical_weight": 0.007656480822892159,
+        "low_future_event_support": true,
+        "normalized_weight": 0.01677429173648283,
+        "pool_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "freeze_account"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "41+"
+            }
+          ]
+        }
+      }
+    ],
+    "risk_score_definition": "sum of frozen normalized group weights covering each pool row; not calibrated future probability",
+    "risk_top": {
+      "average_precision": 0.0248183091724433,
+      "average_precision_na_reason": null,
+      "constant_score": false,
+      "negative_events": 2639,
+      "positive_events": 22,
+      "roc_auc": 0.6434858245203072,
+      "roc_auc_na_reason": null,
+      "score_unique_values": 35,
+      "top100": {
+        "actual_size": 100,
+        "detected": 5,
+        "precision": 0.05,
+        "recall": 0.22727272727272727
+      }
+    },
+    "roc_auc_definition": "positive-negative pair agreement with 0.5 credit for exactly tied scores",
+    "scope": "PRESPECIFIED_EXTERNAL_FEASIBILITY_DIAGNOSTIC",
+    "top100_confusion_strata": [
+      {
+        "future_flip_count": 4,
+        "future_flip_rate": 0.23529411764705882,
+        "sample_count": 17,
+        "stratum": "both_top100"
+      },
+      {
+        "future_flip_count": 1,
+        "future_flip_rate": 0.012048192771084338,
+        "sample_count": 83,
+        "stratum": "risk_top100_only"
+      },
+      {
+        "future_flip_count": 12,
+        "future_flip_rate": 0.14457831325301204,
+        "sample_count": 83,
+        "stratum": "margin_top100_only"
+      },
+      {
+        "future_flip_count": 5,
+        "future_flip_rate": 0.0020177562550443904,
+        "sample_count": 2478,
+        "stratum": "neither_top100"
+      }
+    ],
+    "top_budget_tie_rule": "descending score, then sample_id UTF-8 bytes"
+  },
+  "clinc-sgd-data-growth-seed503": {
+    "average_precision_definition": "noninterpolated threshold-group AP; include all tied scores together before computing block precision",
+    "budget": 100,
+    "discovery_count": 2997,
+    "future_flip_count": 16,
+    "group_union_future_flip_count": 11,
+    "group_union_pool_count": 419,
+    "historical_flip_pool_count": 12,
+    "historically_unseen_future_flip_count": 16,
+    "incremental_over_margin_top100": {
+      "common_selected_count": 21,
+      "margin_missed_future_flips": 3,
+      "margin_only_detected": 6,
+      "risk_only_detected": 0,
+      "shared_detected": 7,
+      "union_detected": 13
+    },
+    "limitations": [
+      "Prespecified fixed diagnostic on independently sourced external validation data; no selector tuning or formal TEST evaluation, and model chains are not thereby statistically independent.",
+      "No significance, causal, conditional-independence, superiority or noninferiority claim; sparse group event rates are unstable.",
+      "Risk groups overlap; unique detections use sets and group event counts must not be summed.",
+      "Risk-Top is preregistered for this fixed feasibility closeout; it does not retroactively enter or alter the completed round-two comparison.",
+      "AUC, threshold-group AP and a fixed-budget ID tie break answer different descriptive questions."
+    ],
+    "low_future_event_support": true,
+    "margin": {
+      "average_precision": 0.31258779454730645,
+      "average_precision_na_reason": null,
+      "constant_score": false,
+      "negative_events": 2634,
+      "positive_events": 16,
+      "roc_auc": 0.9818242217160212,
+      "roc_auc_na_reason": null,
+      "score_unique_values": 2650,
+      "top100": {
+        "actual_size": 100,
+        "detected": 13,
+        "precision": 0.13,
+        "recall": 0.8125
+      }
+    },
+    "margin_score_definition": "negative f2 top-one minus top-two probability gap",
+    "pool_count": 2650,
+    "pool_future_flip_rate": 0.0060377358490566035,
+    "positive_risk_coverage": {
+      "future_flip_count": 11,
+      "future_flip_recall": 0.6875,
+      "pool_count": 419,
+      "pool_fraction": 0.15811320754716982
+    },
+    "reference_probability_label_alignment": "inherited frozen score contract; no inference of class columns from DEV gold",
+    "repaired_then_recurred_count": 0,
+    "risk_groups": [
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 13.802083333333334,
+        "future_flip_rate": 0.08333333333333333,
+        "group_number": 1,
+        "historical_negative_flips": [
+          3,
+          2
+        ],
+        "historical_old_correct_opportunities": [
+          15,
+          14
+        ],
+        "historical_weight": 0.051830602123626016,
+        "low_future_event_support": true,
+        "normalized_weight": 0.0832597607082663,
+        "pool_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "current_location"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 39,
+        "enrichment_na_reason": null,
+        "future_flip_count": 2,
+        "future_flip_enrichment": 16.5625,
+        "future_flip_rate": 0.1,
+        "group_number": 2,
+        "historical_negative_flips": [
+          3,
+          2
+        ],
+        "historical_old_correct_opportunities": [
+          18,
+          19
+        ],
+        "historical_weight": 0.04671845668994918,
+        "low_future_event_support": true,
+        "normalized_weight": 0.07504770088116713,
+        "pool_support": 20,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 3,
+        "historical_negative_flips": [
+          3,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          19,
+          16
+        ],
+        "historical_weight": 0.03669662423217028,
+        "low_future_event_support": true,
+        "normalized_weight": 0.05894880682813713,
+        "pool_support": 15,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "oil_change_when"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 12,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 4,
+        "historical_negative_flips": [
+          2,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          12,
+          10
+        ],
+        "historical_weight": 0.032821808564297464,
+        "low_future_event_support": true,
+        "normalized_weight": 0.052724371608838895,
+        "pool_support": 9,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "oil_change_when"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 5,
+        "historical_negative_flips": [
+          1,
+          2
+        ],
+        "historical_old_correct_opportunities": [
+          17,
+          16
+        ],
+        "historical_weight": 0.02777184929443779,
+        "low_future_event_support": true,
+        "normalized_weight": 0.044612206533230996,
+        "pool_support": 15,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "what_is_your_name"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 6,
+        "historical_negative_flips": [
+          2,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          18,
+          16
+        ],
+        "historical_weight": 0.027005645197890924,
+        "low_future_event_support": true,
+        "normalized_weight": 0.043381389851224784,
+        "pool_support": 16,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "thank_you"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 11.830357142857142,
+        "future_flip_rate": 0.07142857142857142,
+        "group_number": 7,
+        "historical_negative_flips": [
+          3,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          11,
+          11
+        ],
+        "historical_weight": 0.026051835106631418,
+        "low_future_event_support": true,
+        "normalized_weight": 0.04184920622406995,
+        "pool_support": 14,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "cancel"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 18.40277777777778,
+        "future_flip_rate": 0.1111111111111111,
+        "group_number": 8,
+        "historical_negative_flips": [
+          0,
+          3
+        ],
+        "historical_old_correct_opportunities": [
+          8,
+          12
+        ],
+        "historical_weight": 0.025484548658172946,
+        "low_future_event_support": true,
+        "normalized_weight": 0.04093792732672979,
+        "pool_support": 9,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "order"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 17,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 18.40277777777778,
+        "future_flip_rate": 0.1111111111111111,
+        "group_number": 9,
+        "historical_negative_flips": [
+          0,
+          3
+        ],
+        "historical_old_correct_opportunities": [
+          8,
+          12
+        ],
+        "historical_weight": 0.025484548658172946,
+        "low_future_event_support": true,
+        "normalized_weight": 0.04093792732672979,
+        "pool_support": 9,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "order"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 10,
+        "historical_negative_flips": [
+          3,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          14,
+          11
+        ],
+        "historical_weight": 0.02392304411406288,
+        "low_future_event_support": true,
+        "normalized_weight": 0.03842955410009093,
+        "pool_support": 17,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "shopping_list_update"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 11,
+        "historical_negative_flips": [
+          0,
+          3
+        ],
+        "historical_old_correct_opportunities": [
+          15,
+          17
+        ],
+        "historical_weight": 0.02228894989704873,
+        "low_future_event_support": true,
+        "normalized_weight": 0.03580457410933481,
+        "pool_support": 14,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "goodbye"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 14,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 12,
+        "historical_negative_flips": [
+          1,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          11,
+          10
+        ],
+        "historical_weight": 0.021327509674271303,
+        "low_future_event_support": true,
+        "normalized_weight": 0.03426013357413096,
+        "pool_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 13,
+        "historical_negative_flips": [
+          1,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          13,
+          13
+        ],
+        "historical_weight": 0.019335855434108824,
+        "low_future_event_support": true,
+        "normalized_weight": 0.03106077549887635,
+        "pool_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "travel_suggestion"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 196,
+        "enrichment_na_reason": null,
+        "future_flip_count": 6,
+        "future_flip_enrichment": 6.2109375,
+        "future_flip_rate": 0.0375,
+        "group_number": 14,
+        "historical_negative_flips": [
+          8,
+          3
+        ],
+        "historical_old_correct_opportunities": [
+          153,
+          151
+        ],
+        "historical_weight": 0.019315775368650662,
+        "low_future_event_support": false,
+        "normalized_weight": 0.031028519237583735,
+        "pool_support": 160,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 16,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 15,
+        "historical_negative_flips": [
+          1,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          14,
+          13
+        ],
+        "historical_weight": 0.018962273345644265,
+        "low_future_event_support": true,
+        "normalized_weight": 0.030460659852597265,
+        "pool_support": 13,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "thank_you"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 199,
+        "enrichment_na_reason": null,
+        "future_flip_count": 6,
+        "future_flip_enrichment": 6.059451219512195,
+        "future_flip_rate": 0.036585365853658534,
+        "group_number": 16,
+        "historical_negative_flips": [
+          8,
+          3
+        ],
+        "historical_old_correct_opportunities": [
+          156,
+          155
+        ],
+        "historical_weight": 0.018744054720368622,
+        "low_future_event_support": false,
+        "normalized_weight": 0.030110117320229987,
+        "pool_support": 164,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 3,
+        "future_flip_enrichment": 49.6875,
+        "future_flip_rate": 0.3,
+        "group_number": 17,
+        "historical_negative_flips": [
+          0,
+          2
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          11
+        ],
+        "historical_weight": 0.017070856666820938,
+        "low_future_event_support": true,
+        "normalized_weight": 0.027422321619465492,
+        "pool_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "change_user_name"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 11,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 18,
+        "historical_negative_flips": [
+          0,
+          2
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          11
+        ],
+        "historical_weight": 0.017070856666820938,
+        "low_future_event_support": true,
+        "normalized_weight": 0.027422321619465492,
+        "pool_support": 9,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "goodbye"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 13,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 19,
+        "historical_negative_flips": [
+          0,
+          2
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          12
+        ],
+        "historical_weight": 0.016555977229601518,
+        "low_future_event_support": true,
+        "normalized_weight": 0.02659522841622148,
+        "pool_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "credit_limit_change"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 19,
+        "enrichment_na_reason": null,
+        "future_flip_count": 2,
+        "future_flip_enrichment": 20.703125,
+        "future_flip_rate": 0.125,
+        "group_number": 20,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          12,
+          13
+        ],
+        "historical_weight": 0.01637987634732177,
+        "low_future_event_support": true,
+        "normalized_weight": 0.026312343079791193,
+        "pool_support": 16,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "greeting"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 15,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 21,
+        "historical_negative_flips": [
+          0,
+          2
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          13
+        ],
+        "historical_weight": 0.016065045673183002,
+        "low_future_event_support": true,
+        "normalized_weight": 0.025806604664291143,
+        "pool_support": 11,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "credit_limit_change"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 19,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 22,
+        "historical_negative_flips": [
+          0,
+          2
+        ],
+        "historical_old_correct_opportunities": [
+          14,
+          14
+        ],
+        "historical_weight": 0.015596429187510781,
+        "low_future_event_support": true,
+        "normalized_weight": 0.02505382744653946,
+        "pool_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "nutrition_info"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 23,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          17,
+          15
+        ],
+        "historical_weight": 0.014087290269481816,
+        "low_future_event_support": true,
+        "normalized_weight": 0.022629573433612448,
+        "pool_support": 16,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "shopping_list"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 24,
+        "historical_negative_flips": [
+          0,
+          2
+        ],
+        "historical_old_correct_opportunities": [
+          15,
+          18
+        ],
+        "historical_weight": 0.013917220113851993,
+        "low_future_event_support": true,
+        "normalized_weight": 0.02235637574959592,
+        "pool_support": 16,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "credit_limit_change"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 25,
+        "historical_negative_flips": [
+          0,
+          2
+        ],
+        "historical_old_correct_opportunities": [
+          18,
+          18
+        ],
+        "historical_weight": 0.013917220113851993,
+        "low_future_event_support": true,
+        "normalized_weight": 0.02235637574959592,
+        "pool_support": 16,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "do_you_have_pets"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 11,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 26,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          11,
+          10
+        ],
+        "historical_weight": 0.007759152179802151,
+        "low_future_event_support": true,
+        "normalized_weight": 0.012464164553760246,
+        "pool_support": 11,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "food_last"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "41+"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 2,
+        "future_flip_enrichment": 27.604166666666668,
+        "future_flip_rate": 0.16666666666666666,
+        "group_number": 27,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          12,
+          12
+        ],
+        "historical_weight": 0.00762740580103009,
+        "low_future_event_support": true,
+        "normalized_weight": 0.01225252950571317,
+        "pool_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "yes"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 28,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          11,
+          12
+        ],
+        "historical_weight": 0.00762740580103009,
+        "low_future_event_support": true,
+        "normalized_weight": 0.01225252950571317,
+        "pool_support": 11,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "distance"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 13,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 29,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          9,
+          12
+        ],
+        "historical_weight": 0.00762740580103009,
+        "low_future_event_support": true,
+        "normalized_weight": 0.01225252950571317,
+        "pool_support": 11,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "next_song"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 11.041666666666668,
+        "future_flip_rate": 0.06666666666666667,
+        "group_number": 30,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          12,
+          12
+        ],
+        "historical_weight": 0.007451304918750342,
+        "low_future_event_support": true,
+        "normalized_weight": 0.011969644169282883,
+        "pool_support": 15,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "todo_list_update"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      }
+    ],
+    "risk_score_definition": "sum of frozen normalized group weights covering each pool row; not calibrated future probability",
+    "risk_top": {
+      "average_precision": 0.06629355845894282,
+      "average_precision_na_reason": null,
+      "constant_score": false,
+      "negative_events": 2634,
+      "positive_events": 16,
+      "roc_auc": 0.7991766324981018,
+      "roc_auc_na_reason": null,
+      "score_unique_values": 43,
+      "top100": {
+        "actual_size": 100,
+        "detected": 7,
+        "precision": 0.07,
+        "recall": 0.4375
+      }
+    },
+    "roc_auc_definition": "positive-negative pair agreement with 0.5 credit for exactly tied scores",
+    "scope": "PRESPECIFIED_EXTERNAL_FEASIBILITY_DIAGNOSTIC",
+    "top100_confusion_strata": [
+      {
+        "future_flip_count": 7,
+        "future_flip_rate": 0.3333333333333333,
+        "sample_count": 21,
+        "stratum": "both_top100"
+      },
+      {
+        "future_flip_count": 0,
+        "future_flip_rate": 0.0,
+        "sample_count": 79,
+        "stratum": "risk_top100_only"
+      },
+      {
+        "future_flip_count": 6,
+        "future_flip_rate": 0.0759493670886076,
+        "sample_count": 79,
+        "stratum": "margin_top100_only"
+      },
+      {
+        "future_flip_count": 3,
+        "future_flip_rate": 0.0012140833670578712,
+        "sample_count": 2471,
+        "stratum": "neither_top100"
+      }
+    ],
+    "top_budget_tie_rule": "descending score, then sample_id UTF-8 bytes"
+  },
+  "clinc-sgd-epoch-growth-seed601": {
+    "average_precision_definition": "noninterpolated threshold-group AP; include all tied scores together before computing block precision",
+    "budget": 100,
+    "discovery_count": 2997,
+    "future_flip_count": 1,
+    "group_union_future_flip_count": 1,
+    "group_union_pool_count": 2654,
+    "historical_flip_pool_count": 2,
+    "historically_unseen_future_flip_count": 1,
+    "incremental_over_margin_top100": {
+      "common_selected_count": 5,
+      "margin_missed_future_flips": 0,
+      "margin_only_detected": 1,
+      "risk_only_detected": 0,
+      "shared_detected": 0,
+      "union_detected": 1
+    },
+    "limitations": [
+      "Prespecified fixed diagnostic on independently sourced external validation data; no selector tuning or formal TEST evaluation, and model chains are not thereby statistically independent.",
+      "No significance, causal, conditional-independence, superiority or noninferiority claim; sparse group event rates are unstable.",
+      "Risk groups overlap; unique detections use sets and group event counts must not be summed.",
+      "Risk-Top is preregistered for this fixed feasibility closeout; it does not retroactively enter or alter the completed round-two comparison.",
+      "AUC, threshold-group AP and a fixed-budget ID tie break answer different descriptive questions."
+    ],
+    "low_future_event_support": true,
+    "margin": {
+      "average_precision": 0.3333333333333333,
+      "average_precision_na_reason": null,
+      "constant_score": false,
+      "negative_events": 2665,
+      "positive_events": 1,
+      "roc_auc": 0.999249530956848,
+      "roc_auc_na_reason": null,
+      "score_unique_values": 2666,
+      "top100": {
+        "actual_size": 100,
+        "detected": 1,
+        "precision": 0.01,
+        "recall": 1.0
+      }
+    },
+    "margin_score_definition": "negative f2 top-one minus top-two probability gap",
+    "pool_count": 2666,
+    "pool_future_flip_rate": 0.00037509377344336085,
+    "positive_risk_coverage": {
+      "future_flip_count": 1,
+      "future_flip_recall": 1.0,
+      "pool_count": 2654,
+      "pool_fraction": 0.9954988747186797
+    },
+    "reference_probability_label_alignment": "inherited frozen score contract; no inference of class columns from DEV gold",
+    "repaired_then_recurred_count": 0,
+    "risk_groups": [
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 1,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          16,
+          14
+        ],
+        "historical_weight": 0.015961742393343664,
+        "low_future_event_support": true,
+        "normalized_weight": 0.0892517908444524,
+        "pool_support": 15,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "todo_list_update"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 2,
+        "historical_negative_flips": [
+          0,
+          2
+        ],
+        "historical_old_correct_opportunities": [
+          17,
+          18
+        ],
+        "historical_weight": 0.015361262190547637,
+        "low_future_event_support": true,
+        "normalized_weight": 0.08589414152613392,
+        "pool_support": 16,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "oil_change_when"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 14,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 3,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          9
+        ],
+        "historical_weight": 0.00912875234521576,
+        "low_future_event_support": true,
+        "normalized_weight": 0.051044395712448655,
+        "pool_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "how_old_are_you"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 10,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 4,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          9
+        ],
+        "historical_weight": 0.00912875234521576,
+        "low_future_event_support": true,
+        "normalized_weight": 0.051044395712448655,
+        "pool_support": 9,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "confirm_reservation"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 11,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 5,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          11,
+          11
+        ],
+        "historical_weight": 0.008957650998115383,
+        "low_future_event_support": true,
+        "normalized_weight": 0.05008766421858773,
+        "pool_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_update"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 12,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 6,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          11
+        ],
+        "historical_weight": 0.008957650998115383,
+        "low_future_event_support": true,
+        "normalized_weight": 0.05008766421858773,
+        "pool_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "oil_change_when"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 13,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 7,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          12,
+          12
+        ],
+        "historical_weight": 0.008727628335655343,
+        "low_future_event_support": true,
+        "normalized_weight": 0.04880146788403662,
+        "pool_support": 11,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "credit_limit_change"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 13,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 8,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          13,
+          12
+        ],
+        "historical_weight": 0.008423142370958593,
+        "low_future_event_support": true,
+        "normalized_weight": 0.0470989020258432,
+        "pool_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "meeting_schedule"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "41+"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 15,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 9,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          14,
+          14
+        ],
+        "historical_weight": 0.008298949737434358,
+        "low_future_event_support": true,
+        "normalized_weight": 0.046404465624191385,
+        "pool_support": 13,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "credit_limit_change"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 17,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 10,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          14,
+          13
+        ],
+        "historical_weight": 0.00820932116663824,
+        "low_future_event_support": true,
+        "normalized_weight": 0.045903297878387,
+        "pool_support": 14,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "how_old_are_you"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 18,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 11,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          14,
+          13
+        ],
+        "historical_weight": 0.00820932116663824,
+        "low_future_event_support": true,
+        "normalized_weight": 0.045903297878387,
+        "pool_support": 13,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "confirm_reservation"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "41+"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 12,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          14,
+          13
+        ],
+        "historical_weight": 0.00820932116663824,
+        "low_future_event_support": true,
+        "normalized_weight": 0.045903297878387,
+        "pool_support": 13,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "restaurant_reviews"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 13,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          14,
+          15
+        ],
+        "historical_weight": 0.008098899724931233,
+        "low_future_event_support": true,
+        "normalized_weight": 0.04528586456959694,
+        "pool_support": 14,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "bill_due"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 15,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 14,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          15,
+          14
+        ],
+        "historical_weight": 0.008005003126954346,
+        "low_future_event_support": true,
+        "normalized_weight": 0.04476083169303997,
+        "pool_support": 14,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "meeting_schedule"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 15,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          16,
+          15
+        ],
+        "historical_weight": 0.007809568480300188,
+        "low_future_event_support": true,
+        "normalized_weight": 0.04366803795053411,
+        "pool_support": 16,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "how_old_are_you"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 18,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 16,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          18,
+          18
+        ],
+        "historical_weight": 0.007548762190547637,
+        "low_future_event_support": true,
+        "normalized_weight": 0.042209711669462226,
+        "pool_support": 17,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_update"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "41+"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 17,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          18,
+          17
+        ],
+        "historical_weight": 0.00744312851782364,
+        "low_future_event_support": true,
+        "normalized_weight": 0.04161904968333562,
+        "pool_support": 17,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "bill_balance"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 18,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          19,
+          19
+        ],
+        "historical_weight": 0.007380352741246536,
+        "low_future_event_support": true,
+        "normalized_weight": 0.04126803221023731,
+        "pool_support": 18,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "credit_limit_change"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 19,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 19,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          19,
+          18
+        ],
+        "historical_weight": 0.007271126086457097,
+        "low_future_event_support": true,
+        "normalized_weight": 0.04065727968036491,
+        "pool_support": 18,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "meeting_schedule"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 196,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 16.767295597484278,
+        "future_flip_rate": 0.006289308176100629,
+        "group_number": 20,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          159,
+          158
+        ],
+        "historical_weight": 0.0031396110664403346,
+        "low_future_event_support": true,
+        "normalized_weight": 0.017555471284370305,
+        "pool_support": 159,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 199,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 16.355828220858896,
+        "future_flip_rate": 0.006134969325153374,
+        "group_number": 21,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          163,
+          162
+        ],
+        "historical_weight": 0.003054127093682256,
+        "low_future_event_support": true,
+        "normalized_weight": 0.017077478502057358,
+        "pool_support": 163,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 1079,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 22,
+        "historical_negative_flips": [
+          3,
+          3
+        ],
+        "historical_old_correct_opportunities": [
+          983,
+          984
+        ],
+        "historical_weight": 0.0007756225535218557,
+        "low_future_event_support": true,
+        "normalized_weight": 0.004336976516425996,
+        "pool_support": 983,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "41+"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 1242,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 23,
+        "historical_negative_flips": [
+          3,
+          3
+        ],
+        "historical_old_correct_opportunities": [
+          1137,
+          1138
+        ],
+        "historical_weight": 0.0003763854654289402,
+        "low_future_event_support": true,
+        "normalized_weight": 0.002104599611340962,
+        "pool_support": 1137,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "41+"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 2626,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 1.1461736887360274,
+        "future_flip_rate": 0.0004299226139294927,
+        "group_number": 24,
+        "historical_negative_flips": [
+          7,
+          5
+        ],
+        "historical_old_correct_opportunities": [
+          2326,
+          2326
+        ],
+        "historical_weight": 0.00032429773653512854,
+        "low_future_event_support": true,
+        "normalized_weight": 0.0018133455007163163,
+        "pool_support": 2326,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 2941,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 1.0175572519083969,
+        "future_flip_rate": 0.0003816793893129771,
+        "group_number": 25,
+        "historical_negative_flips": [
+          7,
+          5
+        ],
+        "historical_old_correct_opportunities": [
+          2619,
+          2620
+        ],
+        "historical_weight": 3.908352746900749e-05,
+        "low_future_event_support": true,
+        "normalized_weight": 0.00021853972662670836,
+        "pool_support": 2620,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "has_question_mark",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      }
+    ],
+    "risk_score_definition": "sum of frozen normalized group weights covering each pool row; not calibrated future probability",
+    "risk_top": {
+      "average_precision": 0.003246753246753247,
+      "average_precision_na_reason": null,
+      "constant_score": false,
+      "negative_events": 2665,
+      "positive_events": 1,
+      "roc_auc": 0.9121951219512195,
+      "roc_auc_na_reason": null,
+      "score_unique_values": 38,
+      "top100": {
+        "actual_size": 100,
+        "detected": 0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    "roc_auc_definition": "positive-negative pair agreement with 0.5 credit for exactly tied scores",
+    "scope": "PRESPECIFIED_EXTERNAL_FEASIBILITY_DIAGNOSTIC",
+    "top100_confusion_strata": [
+      {
+        "future_flip_count": 0,
+        "future_flip_rate": 0.0,
+        "sample_count": 5,
+        "stratum": "both_top100"
+      },
+      {
+        "future_flip_count": 0,
+        "future_flip_rate": 0.0,
+        "sample_count": 95,
+        "stratum": "risk_top100_only"
+      },
+      {
+        "future_flip_count": 1,
+        "future_flip_rate": 0.010526315789473684,
+        "sample_count": 95,
+        "stratum": "margin_top100_only"
+      },
+      {
+        "future_flip_count": 0,
+        "future_flip_rate": 0.0,
+        "sample_count": 2471,
+        "stratum": "neither_top100"
+      }
+    ],
+    "top_budget_tie_rule": "descending score, then sample_id UTF-8 bytes"
+  },
+  "clinc-sgd-epoch-growth-seed607": {
+    "average_precision_definition": "noninterpolated threshold-group AP; include all tied scores together before computing block precision",
+    "budget": 100,
+    "discovery_count": 2997,
+    "future_flip_count": 3,
+    "group_union_future_flip_count": 3,
+    "group_union_pool_count": 2638,
+    "historical_flip_pool_count": 3,
+    "historically_unseen_future_flip_count": 2,
+    "incremental_over_margin_top100": {
+      "common_selected_count": 4,
+      "margin_missed_future_flips": 0,
+      "margin_only_detected": 3,
+      "risk_only_detected": 0,
+      "shared_detected": 0,
+      "union_detected": 3
+    },
+    "limitations": [
+      "Prespecified fixed diagnostic on independently sourced external validation data; no selector tuning or formal TEST evaluation, and model chains are not thereby statistically independent.",
+      "No significance, causal, conditional-independence, superiority or noninferiority claim; sparse group event rates are unstable.",
+      "Risk groups overlap; unique detections use sets and group event counts must not be summed.",
+      "Risk-Top is preregistered for this fixed feasibility closeout; it does not retroactively enter or alter the completed round-two comparison.",
+      "AUC, threshold-group AP and a fixed-budget ID tie break answer different descriptive questions."
+    ],
+    "low_future_event_support": true,
+    "margin": {
+      "average_precision": 0.8333333333333333,
+      "average_precision_na_reason": null,
+      "constant_score": false,
+      "negative_events": 2663,
+      "positive_events": 3,
+      "roc_auc": 0.9996244836650394,
+      "roc_auc_na_reason": null,
+      "score_unique_values": 2666,
+      "top100": {
+        "actual_size": 100,
+        "detected": 3,
+        "precision": 0.03,
+        "recall": 1.0
+      }
+    },
+    "margin_score_definition": "negative f2 top-one minus top-two probability gap",
+    "pool_count": 2666,
+    "pool_future_flip_rate": 0.0011252813203300824,
+    "positive_risk_coverage": {
+      "future_flip_count": 3,
+      "future_flip_recall": 1.0,
+      "pool_count": 2638,
+      "pool_fraction": 0.9894973743435859
+    },
+    "reference_probability_label_alignment": "inherited frozen score contract; no inference of class columns from DEV gold",
+    "repaired_then_recurred_count": 1,
+    "risk_groups": [
+      {
+        "discovery_support": 14,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 1,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          9
+        ],
+        "historical_weight": 0.008987312030075188,
+        "low_future_event_support": true,
+        "normalized_weight": 0.05912386461142382,
+        "pool_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "how_old_are_you"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 12,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 2,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          11,
+          10
+        ],
+        "historical_weight": 0.008730286081056299,
+        "low_future_event_support": true,
+        "normalized_weight": 0.057432995599581094,
+        "pool_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "cancel_reservation"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 13,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 3,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          12,
+          11
+        ],
+        "historical_weight": 0.008485499462943072,
+        "low_future_event_support": true,
+        "normalized_weight": 0.05582264415973087,
+        "pool_support": 11,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "next_song"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 4,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          15,
+          16
+        ],
+        "historical_weight": 0.008103138280483818,
+        "low_future_event_support": true,
+        "normalized_weight": 0.053307245705918015,
+        "pool_support": 15,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "todo_list_update"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 17,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 5,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          14,
+          13
+        ],
+        "historical_weight": 0.008029306220095693,
+        "low_future_event_support": true,
+        "normalized_weight": 0.05282153465819183,
+        "pool_support": 14,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "how_old_are_you"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 15,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 6,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          14,
+          13
+        ],
+        "historical_weight": 0.008029306220095693,
+        "low_future_event_support": true,
+        "normalized_weight": 0.05282153465819183,
+        "pool_support": 13,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "account_blocked"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 15,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 7,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          14,
+          13
+        ],
+        "historical_weight": 0.008029306220095693,
+        "low_future_event_support": true,
+        "normalized_weight": 0.05282153465819183,
+        "pool_support": 13,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "change_ai_name"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 14,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 8,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          14,
+          13
+        ],
+        "historical_weight": 0.008029306220095693,
+        "low_future_event_support": true,
+        "normalized_weight": 0.05282153465819183,
+        "pool_support": 13,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "taxes"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 9,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          15,
+          14
+        ],
+        "historical_weight": 0.007816416040100251,
+        "low_future_event_support": true,
+        "normalized_weight": 0.05142101689080695,
+        "pool_support": 14,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "todo_list"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 10,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          16,
+          15
+        ],
+        "historical_weight": 0.007612781954887218,
+        "low_future_event_support": true,
+        "normalized_weight": 0.050081391200264884,
+        "pool_support": 16,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "how_old_are_you"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 11,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          16,
+          15
+        ],
+        "historical_weight": 0.007612781954887218,
+        "low_future_event_support": true,
+        "normalized_weight": 0.050081391200264884,
+        "pool_support": 15,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "what_is_your_name"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 52.274509803921575,
+        "future_flip_rate": 0.058823529411764705,
+        "group_number": 12,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          17,
+          16
+        ],
+        "historical_weight": 0.007417813149896016,
+        "low_future_event_support": true,
+        "normalized_weight": 0.04879877085825652,
+        "pool_support": 17,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "oil_change_when"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 19,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 13,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          18,
+          17
+        ],
+        "historical_weight": 0.007230968045112782,
+        "low_future_event_support": true,
+        "normalized_weight": 0.047569593030498514,
+        "pool_support": 17,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "cancel_reservation"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 14,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          18,
+          17
+        ],
+        "historical_weight": 0.007230968045112782,
+        "low_future_event_support": true,
+        "normalized_weight": 0.047569593030498514,
+        "pool_support": 17,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "gas"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 15,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          19,
+          18
+        ],
+        "historical_weight": 0.007051749271137026,
+        "low_future_event_support": true,
+        "normalized_weight": 0.04639058572632246,
+        "pool_support": 18,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "account_blocked"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 16,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          19,
+          18
+        ],
+        "historical_weight": 0.007051749271137026,
+        "low_future_event_support": true,
+        "normalized_weight": 0.04639058572632246,
+        "pool_support": 18,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "change_ai_name"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 17,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          19,
+          18
+        ],
+        "historical_weight": 0.007051749271137026,
+        "low_future_event_support": true,
+        "normalized_weight": 0.04639058572632246,
+        "pool_support": 18,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "next_song"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 18,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          19,
+          18
+        ],
+        "historical_weight": 0.007051749271137026,
+        "low_future_event_support": true,
+        "normalized_weight": 0.04639058572632246,
+        "pool_support": 18,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "taxes"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 119,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 19,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          112,
+          110
+        ],
+        "historical_weight": 0.004058561897702002,
+        "low_future_event_support": true,
+        "normalized_weight": 0.026699625355592442,
+        "pool_support": 111,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 196,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 20,
+        "historical_negative_flips": [
+          1,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          158,
+          159
+        ],
+        "historical_weight": 0.003409221720291949,
+        "low_future_event_support": true,
+        "normalized_weight": 0.022427880855404137,
+        "pool_support": 159,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 199,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 21,
+        "historical_negative_flips": [
+          1,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          162,
+          163
+        ],
+        "historical_weight": 0.003291492575350293,
+        "low_future_event_support": true,
+        "normalized_weight": 0.021653388771112843,
+        "pool_support": 163,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 315,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 22,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          294,
+          292
+        ],
+        "historical_weight": 0.0009076510721247563,
+        "low_future_event_support": true,
+        "normalized_weight": 0.005971066646305015,
+        "pool_support": 293,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 1466,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 0.6804492087799898,
+        "future_flip_rate": 0.0007656967840735069,
+        "group_number": 23,
+        "historical_negative_flips": [
+          8,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          1306,
+          1301
+        ],
+        "historical_weight": 0.0007295793750844177,
+        "low_future_event_support": true,
+        "normalized_weight": 0.0047996054939930055,
+        "pool_support": 1306,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 2941,
+        "enrichment_na_reason": null,
+        "future_flip_count": 3,
+        "future_flip_enrichment": 1.017557251908397,
+        "future_flip_rate": 0.0011450381679389313,
+        "group_number": 24,
+        "historical_negative_flips": [
+          11,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          2614,
+          2614
+        ],
+        "historical_weight": 3.924334285031793e-05,
+        "low_future_event_support": true,
+        "normalized_weight": 0.00025816596573230064,
+        "pool_support": 2620,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "has_question_mark",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 2626,
+        "enrichment_na_reason": null,
+        "future_flip_count": 3,
+        "future_flip_enrichment": 1.1456811345079503,
+        "future_flip_rate": 0.001289213579716373,
+        "group_number": 25,
+        "historical_negative_flips": [
+          9,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          2320,
+          2322
+        ],
+        "historical_weight": 2.0259513579868036e-05,
+        "low_future_event_support": true,
+        "normalized_weight": 0.00013327908655903195,
+        "pool_support": 2327,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      }
+    ],
+    "risk_score_definition": "sum of frozen normalized group weights covering each pool row; not calibrated future probability",
+    "risk_top": {
+      "average_precision": 0.002905235293301869,
+      "average_precision_na_reason": null,
+      "constant_score": false,
+      "negative_events": 2663,
+      "positive_events": 3,
+      "roc_auc": 0.5637751908874703,
+      "roc_auc_na_reason": null,
+      "score_unique_values": 36,
+      "top100": {
+        "actual_size": 100,
+        "detected": 0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    "roc_auc_definition": "positive-negative pair agreement with 0.5 credit for exactly tied scores",
+    "scope": "PRESPECIFIED_EXTERNAL_FEASIBILITY_DIAGNOSTIC",
+    "top100_confusion_strata": [
+      {
+        "future_flip_count": 0,
+        "future_flip_rate": 0.0,
+        "sample_count": 4,
+        "stratum": "both_top100"
+      },
+      {
+        "future_flip_count": 0,
+        "future_flip_rate": 0.0,
+        "sample_count": 96,
+        "stratum": "risk_top100_only"
+      },
+      {
+        "future_flip_count": 3,
+        "future_flip_rate": 0.03125,
+        "sample_count": 96,
+        "stratum": "margin_top100_only"
+      },
+      {
+        "future_flip_count": 0,
+        "future_flip_rate": 0.0,
+        "sample_count": 2470,
+        "stratum": "neither_top100"
+      }
+    ],
+    "top_budget_tie_rule": "descending score, then sample_id UTF-8 bytes"
+  },
+  "massive-sgd-data-growth-seed701": {
+    "average_precision_definition": "noninterpolated threshold-group AP; include all tied scores together before computing block precision",
+    "budget": 100,
+    "discovery_count": 935,
+    "future_flip_count": 9,
+    "group_union_future_flip_count": 9,
+    "group_union_pool_count": 686,
+    "historical_flip_pool_count": 6,
+    "historically_unseen_future_flip_count": 9,
+    "incremental_over_margin_top100": {
+      "common_selected_count": 22,
+      "margin_missed_future_flips": 1,
+      "margin_only_detected": 8,
+      "risk_only_detected": 0,
+      "shared_detected": 0,
+      "union_detected": 8
+    },
+    "limitations": [
+      "Prespecified fixed diagnostic of new model realizations on previously exposed DEV rows; does not make the data untouched or constitute formal TEST evaluation.",
+      "No significance, causal, conditional-independence, superiority or noninferiority claim; sparse group event rates are unstable.",
+      "Risk groups overlap; unique detections use sets and group event counts must not be summed.",
+      "Risk-Top is preregistered for this fixed feasibility closeout; it does not retroactively enter or alter the completed round-two comparison.",
+      "AUC, threshold-group AP and a fixed-budget ID tie break answer different descriptive questions."
+    ],
+    "low_future_event_support": true,
+    "margin": {
+      "average_precision": 0.1923399396225483,
+      "average_precision_na_reason": null,
+      "constant_score": false,
+      "negative_events": 677,
+      "positive_events": 9,
+      "roc_auc": 0.955030362711308,
+      "roc_auc_na_reason": null,
+      "score_unique_values": 677,
+      "top100": {
+        "actual_size": 100,
+        "detected": 8,
+        "precision": 0.08,
+        "recall": 0.8888888888888888
+      }
+    },
+    "margin_score_definition": "negative f2 top-one minus top-two probability gap",
+    "pool_count": 686,
+    "pool_future_flip_rate": 0.013119533527696793,
+    "positive_risk_coverage": {
+      "future_flip_count": 9,
+      "future_flip_recall": 1.0,
+      "pool_count": 686,
+      "pool_fraction": 1.0
+    },
+    "reference_probability_label_alignment": "inherited frozen score contract; no inference of class columns from DEV gold",
+    "repaired_then_recurred_count": 0,
+    "risk_groups": [
+      {
+        "discovery_support": 27,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 1,
+        "historical_negative_flips": [
+          1,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          12,
+          12
+        ],
+        "historical_weight": 0.015797511270888593,
+        "low_future_event_support": true,
+        "normalized_weight": 0.09989531623439962,
+        "pool_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "general_quirky"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 47,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 2,
+        "historical_negative_flips": [
+          1,
+          2
+        ],
+        "historical_old_correct_opportunities": [
+          23,
+          25
+        ],
+        "historical_weight": 0.01510153810682761,
+        "low_future_event_support": true,
+        "normalized_weight": 0.09549434078185186,
+        "pool_support": 24,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "general_quirky"
+            },
+            {
+              "feature": "has_question_mark",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 21,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 3,
+        "historical_negative_flips": [
+          1,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          13,
+          14
+        ],
+        "historical_weight": 0.014247904569639138,
+        "low_future_event_support": true,
+        "normalized_weight": 0.09009640241779618,
+        "pool_support": 16,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_query"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 27,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 4,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          15,
+          14
+        ],
+        "historical_weight": 0.013847117794486215,
+        "low_future_event_support": true,
+        "normalized_weight": 0.0875620334934805,
+        "pool_support": 14,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 46,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 5,
+        "historical_negative_flips": [
+          1,
+          2
+        ],
+        "historical_old_correct_opportunities": [
+          32,
+          31
+        ],
+        "historical_weight": 0.010117621837107148,
+        "low_future_event_support": true,
+        "normalized_weight": 0.06397862395074809,
+        "pool_support": 29,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "qa_factoid"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 30,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 6,
+        "historical_negative_flips": [
+          0,
+          2
+        ],
+        "historical_old_correct_opportunities": [
+          22,
+          22
+        ],
+        "historical_weight": 0.009103778874187037,
+        "low_future_event_support": true,
+        "normalized_weight": 0.057567603780782524,
+        "pool_support": 20,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "qa_factoid"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 17,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 7,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          10
+        ],
+        "historical_weight": 0.007260338345864661,
+        "low_future_event_support": true,
+        "normalized_weight": 0.04591063633962468,
+        "pool_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "lists_remove"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 15,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 8,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          10
+        ],
+        "historical_weight": 0.007260338345864661,
+        "low_future_event_support": true,
+        "normalized_weight": 0.04591063633962468,
+        "pool_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "lists_remove"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 14,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 9,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          9
+        ],
+        "historical_weight": 0.007260338345864661,
+        "low_future_event_support": true,
+        "normalized_weight": 0.04591063633962468,
+        "pool_support": 9,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "qa_factoid"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 14,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 10,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          12,
+          12
+        ],
+        "historical_weight": 0.0065118152524167566,
+        "low_future_event_support": true,
+        "normalized_weight": 0.041177362227864944,
+        "pool_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "email_sendemail"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 14,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 11,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          9,
+          10
+        ],
+        "historical_weight": 0.006231778425655977,
+        "low_future_event_support": true,
+        "normalized_weight": 0.03940655371968577,
+        "pool_support": 9,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "play_radio"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 40,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 12,
+        "historical_negative_flips": [
+          1,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          24,
+          25
+        ],
+        "historical_weight": 0.005717705932528704,
+        "low_future_event_support": true,
+        "normalized_weight": 0.03615582432391136,
+        "pool_support": 28,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_query"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 17,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 13,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          12
+        ],
+        "historical_weight": 0.005336318200749687,
+        "low_future_event_support": true,
+        "normalized_weight": 0.03374412494793477,
+        "pool_support": 11,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "general_quirky"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 19,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 14,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          16,
+          15
+        ],
+        "historical_weight": 0.005210035959463877,
+        "low_future_event_support": true,
+        "normalized_weight": 0.03294558116393497,
+        "pool_support": 15,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "weather_query"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 15,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          18,
+          18
+        ],
+        "historical_weight": 0.004640507518796993,
+        "low_future_event_support": true,
+        "normalized_weight": 0.02934417694846561,
+        "pool_support": 19,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "play_music"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 18,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 16,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          13,
+          14
+        ],
+        "historical_weight": 0.004522263450834879,
+        "low_future_event_support": true,
+        "normalized_weight": 0.028596462428161128,
+        "pool_support": 13,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "lists_query"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 23,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 17,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          14,
+          16
+        ],
+        "historical_weight": 0.0037789960704778807,
+        "low_future_event_support": true,
+        "normalized_weight": 0.02389642273619389,
+        "pool_support": 15,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "play_radio"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 33,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 18,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          23,
+          23
+        ],
+        "historical_weight": 0.003404738260746205,
+        "low_future_event_support": true,
+        "normalized_weight": 0.02152980931112643,
+        "pool_support": 23,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "email_sendemail"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 513,
+        "enrichment_na_reason": null,
+        "future_flip_count": 7,
+        "future_flip_enrichment": 1.4381551362683438,
+        "future_flip_rate": 0.018867924528301886,
+        "group_number": 19,
+        "historical_negative_flips": [
+          6,
+          15
+        ],
+        "historical_old_correct_opportunities": [
+          363,
+          376
+        ],
+        "historical_weight": 0.0022108245127748496,
+        "low_future_event_support": false,
+        "normalized_weight": 0.013980114339236894,
+        "pool_support": 371,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 26,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 20,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          19,
+          21
+        ],
+        "historical_weight": 0.0021758703481392556,
+        "low_future_event_support": true,
+        "normalized_weight": 0.013759082224107693,
+        "pool_support": 20,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "lists_query"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 26,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 21,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          20,
+          21
+        ],
+        "historical_weight": 0.0021758703481392556,
+        "low_future_event_support": true,
+        "normalized_weight": 0.013759082224107693,
+        "pool_support": 20,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "qa_definition"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 36,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 22,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          22,
+          22
+        ],
+        "historical_weight": 0.001892240412648576,
+        "low_future_event_support": true,
+        "normalized_weight": 0.011965552748892442,
+        "pool_support": 23,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 29,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 23,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          21,
+          23
+        ],
+        "historical_weight": 0.0016193134935915067,
+        "low_future_event_support": true,
+        "normalized_weight": 0.010239703631232484,
+        "pool_support": 22,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "qa_definition"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 357,
+        "enrichment_na_reason": null,
+        "future_flip_count": 2,
+        "future_flip_enrichment": 0.5503409546730846,
+        "future_flip_rate": 0.007220216606498195,
+        "group_number": 24,
+        "historical_negative_flips": [
+          7,
+          7
+        ],
+        "historical_old_correct_opportunities": [
+          265,
+          273
+        ],
+        "historical_weight": 0.0012998598190391232,
+        "low_future_event_support": true,
+        "normalized_weight": 0.008219643300561404,
+        "pool_support": 277,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 30,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 25,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          26,
+          27
+        ],
+        "historical_weight": 0.0006233696486113242,
+        "low_future_event_support": true,
+        "normalized_weight": 0.003941868254508426,
+        "pool_support": 28,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "email_query"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 41,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 26,
+        "historical_negative_flips": [
+          1,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          40,
+          39
+        ],
+        "historical_weight": 0.0005236305048335123,
+        "low_future_event_support": true,
+        "normalized_weight": 0.003311169333787078,
+        "pool_support": 39,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_set"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 907,
+        "enrichment_na_reason": null,
+        "future_flip_count": 9,
+        "future_flip_enrichment": 1.0223546944858422,
+        "future_flip_rate": 0.013412816691505217,
+        "group_number": 27,
+        "historical_negative_flips": [
+          13,
+          23
+        ],
+        "historical_old_correct_opportunities": [
+          649,
+          671
+        ],
+        "historical_weight": 0.0002690346568625412,
+        "low_future_event_support": false,
+        "normalized_weight": 0.0017012364583541798,
+        "pool_support": 671,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "has_question_mark",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      }
+    ],
+    "risk_score_definition": "sum of frozen normalized group weights covering each pool row; not calibrated future probability",
+    "risk_top": {
+      "average_precision": 0.013940850629287049,
+      "average_precision_na_reason": null,
+      "constant_score": false,
+      "negative_events": 677,
+      "positive_events": 9,
+      "roc_auc": 0.38815033645166586,
+      "roc_auc_na_reason": null,
+      "score_unique_values": 35,
+      "top100": {
+        "actual_size": 100,
+        "detected": 0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    "roc_auc_definition": "positive-negative pair agreement with 0.5 credit for exactly tied scores",
+    "scope": "PRESPECIFIED_NEW_MODEL_OLD_DEV_FEASIBILITY_DIAGNOSTIC",
+    "top100_confusion_strata": [
+      {
+        "future_flip_count": 0,
+        "future_flip_rate": 0.0,
+        "sample_count": 22,
+        "stratum": "both_top100"
+      },
+      {
+        "future_flip_count": 0,
+        "future_flip_rate": 0.0,
+        "sample_count": 78,
+        "stratum": "risk_top100_only"
+      },
+      {
+        "future_flip_count": 8,
+        "future_flip_rate": 0.10256410256410256,
+        "sample_count": 78,
+        "stratum": "margin_top100_only"
+      },
+      {
+        "future_flip_count": 1,
+        "future_flip_rate": 0.001968503937007874,
+        "sample_count": 508,
+        "stratum": "neither_top100"
+      }
+    ],
+    "top_budget_tie_rule": "descending score, then sample_id UTF-8 bytes"
+  },
+  "massive-sgd-data-growth-seed709": {
+    "average_precision_definition": "noninterpolated threshold-group AP; include all tied scores together before computing block precision",
+    "budget": 100,
+    "discovery_count": 935,
+    "future_flip_count": 14,
+    "group_union_future_flip_count": 14,
+    "group_union_pool_count": 675,
+    "historical_flip_pool_count": 4,
+    "historically_unseen_future_flip_count": 13,
+    "incremental_over_margin_top100": {
+      "common_selected_count": 13,
+      "margin_missed_future_flips": 0,
+      "margin_only_detected": 11,
+      "risk_only_detected": 0,
+      "shared_detected": 3,
+      "union_detected": 14
+    },
+    "limitations": [
+      "Prespecified fixed diagnostic of new model realizations on previously exposed DEV rows; does not make the data untouched or constitute formal TEST evaluation.",
+      "No significance, causal, conditional-independence, superiority or noninferiority claim; sparse group event rates are unstable.",
+      "Risk groups overlap; unique detections use sets and group event counts must not be summed.",
+      "Risk-Top is preregistered for this fixed feasibility closeout; it does not retroactively enter or alter the completed round-two comparison.",
+      "AUC, threshold-group AP and a fixed-budget ID tie break answer different descriptive questions."
+    ],
+    "low_future_event_support": true,
+    "margin": {
+      "average_precision": 0.5745675684013442,
+      "average_precision_na_reason": null,
+      "constant_score": false,
+      "negative_events": 672,
+      "positive_events": 14,
+      "roc_auc": 0.9842687074829932,
+      "roc_auc_na_reason": null,
+      "score_unique_values": 677,
+      "top100": {
+        "actual_size": 100,
+        "detected": 14,
+        "precision": 0.14,
+        "recall": 1.0
+      }
+    },
+    "margin_score_definition": "negative f2 top-one minus top-two probability gap",
+    "pool_count": 686,
+    "pool_future_flip_rate": 0.02040816326530612,
+    "positive_risk_coverage": {
+      "future_flip_count": 14,
+      "future_flip_recall": 1.0,
+      "pool_count": 675,
+      "pool_fraction": 0.9839650145772595
+    },
+    "reference_probability_label_alignment": "inherited frozen score contract; no inference of class columns from DEV gold",
+    "repaired_then_recurred_count": 1,
+    "risk_groups": [
+      {
+        "discovery_support": 40,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 1.75,
+        "future_flip_rate": 0.03571428571428571,
+        "group_number": 1,
+        "historical_negative_flips": [
+          3,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          30,
+          28
+        ],
+        "historical_weight": 0.019335860870133833,
+        "low_future_event_support": true,
+        "normalized_weight": 0.09894176263599913,
+        "pool_support": 28,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_query"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 17,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 4.454545454545455,
+        "future_flip_rate": 0.09090909090909091,
+        "group_number": 2,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          9
+        ],
+        "historical_weight": 0.015262276785714285,
+        "low_future_event_support": true,
+        "normalized_weight": 0.0780971986279404,
+        "pool_support": 11,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "lists_remove"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 15,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 4.454545454545455,
+        "future_flip_rate": 0.09090909090909091,
+        "group_number": 3,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          9
+        ],
+        "historical_weight": 0.015262276785714285,
+        "low_future_event_support": true,
+        "normalized_weight": 0.0780971986279404,
+        "pool_support": 11,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "lists_remove"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 19,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 4,
+        "historical_negative_flips": [
+          1,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          14,
+          13
+        ],
+        "historical_weight": 0.013951627174190974,
+        "low_future_event_support": true,
+        "normalized_weight": 0.07139059354667378,
+        "pool_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_query"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 23,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 5,
+        "historical_negative_flips": [
+          0,
+          2
+        ],
+        "historical_old_correct_opportunities": [
+          14,
+          18
+        ],
+        "historical_weight": 0.012721238938053098,
+        "low_future_event_support": true,
+        "normalized_weight": 0.06509468659804063,
+        "pool_support": 16,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "play_radio"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 21,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 3.0625000000000004,
+        "future_flip_rate": 0.0625,
+        "group_number": 6,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          16,
+          15
+        ],
+        "historical_weight": 0.011451863354037268,
+        "low_future_event_support": true,
+        "normalized_weight": 0.05859928106253536,
+        "pool_support": 16,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_query"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 26,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 2.45,
+        "future_flip_rate": 0.05,
+        "group_number": 7,
+        "historical_negative_flips": [
+          1,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          18,
+          18
+        ],
+        "historical_weight": 0.009986205488832701,
+        "low_future_event_support": true,
+        "normalized_weight": 0.05109949744397173,
+        "pool_support": 20,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "lists_query"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 357,
+        "enrichment_na_reason": null,
+        "future_flip_count": 5,
+        "future_flip_enrichment": 0.8844765342960289,
+        "future_flip_rate": 0.018050541516245487,
+        "group_number": 8,
+        "historical_negative_flips": [
+          17,
+          5
+        ],
+        "historical_old_correct_opportunities": [
+          272,
+          272
+        ],
+        "historical_weight": 0.008544228949858089,
+        "low_future_event_support": false,
+        "normalized_weight": 0.043720891370824175,
+        "pool_support": 277,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 36,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 2.3333333333333335,
+        "future_flip_rate": 0.047619047619047616,
+        "group_number": 9,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          22,
+          21
+        ],
+        "historical_weight": 0.008520776098901098,
+        "low_future_event_support": true,
+        "normalized_weight": 0.04360088293530072,
+        "pool_support": 21,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 14,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 10,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          11
+        ],
+        "historical_weight": 0.007068853874379452,
+        "low_future_event_support": true,
+        "normalized_weight": 0.03617138470559204,
+        "pool_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "play_radio"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 16,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 4.454545454545455,
+        "future_flip_rate": 0.09090909090909091,
+        "group_number": 11,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          12,
+          12
+        ],
+        "historical_weight": 0.0067161820480404555,
+        "low_future_event_support": true,
+        "normalized_weight": 0.03436676000517673,
+        "pool_support": 11,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "cooking_recipe"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 18,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 3.7692307692307696,
+        "future_flip_rate": 0.07692307692307693,
+        "group_number": 12,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          13,
+          13
+        ],
+        "historical_weight": 0.006379913562461412,
+        "low_future_event_support": true,
+        "normalized_weight": 0.032646071337338885,
+        "pool_support": 13,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "lists_query"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 15,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 13,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          11,
+          13
+        ],
+        "historical_weight": 0.006379913562461412,
+        "low_future_event_support": true,
+        "normalized_weight": 0.032646071337338885,
+        "pool_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "news_query"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 32,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 14,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          28,
+          27
+        ],
+        "historical_weight": 0.006196120689655173,
+        "low_future_event_support": true,
+        "normalized_weight": 0.03170560166197669,
+        "pool_support": 27,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "datetime_query"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 20,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 3.7692307692307696,
+        "future_flip_rate": 0.07692307692307693,
+        "group_number": 15,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          13,
+          14
+        ],
+        "historical_weight": 0.006058930008045052,
+        "low_future_event_support": true,
+        "normalized_weight": 0.031003595790766388,
+        "pool_support": 13,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "cooking_recipe"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 12,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 16,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          10,
+          9
+        ],
+        "historical_weight": 0.005887276785714286,
+        "low_future_event_support": true,
+        "normalized_weight": 0.03012524480894959,
+        "pool_support": 9,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "qa_stock"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 19,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 17,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          14,
+          15
+        ],
+        "historical_weight": 0.005752212389380531,
+        "low_future_event_support": true,
+        "normalized_weight": 0.029434119157374896,
+        "pool_support": 16,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_remove"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 15,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 18,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          12,
+          11
+        ],
+        "historical_weight": 0.004942602040816327,
+        "low_future_event_support": true,
+        "normalized_weight": 0.025291336197086994,
+        "pool_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "recommendation_locations"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 24,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 19,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          17,
+          19
+        ],
+        "historical_weight": 0.004650532779483475,
+        "low_future_event_support": true,
+        "normalized_weight": 0.023796815331315654,
+        "pool_support": 20,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_remove"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 30,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 20,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          19,
+          20
+        ],
+        "historical_weight": 0.004402654867256637,
+        "low_future_event_support": true,
+        "normalized_weight": 0.022528421970452323,
+        "pool_support": 19,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "qa_factoid"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 29,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 21,
+        "historical_negative_flips": [
+          0,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          19,
+          21
+        ],
+        "historical_weight": 0.004164497657470068,
+        "low_future_event_support": true,
+        "normalized_weight": 0.02130976952570128,
+        "pool_support": 21,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "news_query"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 19,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 3.0625000000000004,
+        "future_flip_rate": 0.0625,
+        "group_number": 22,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          16,
+          15
+        ],
+        "historical_weight": 0.003299689440993789,
+        "low_future_event_support": true,
+        "normalized_weight": 0.016884538611239005,
+        "pool_support": 16,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "weather_query"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 46,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 23,
+        "historical_negative_flips": [
+          1,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          28,
+          28
+        ],
+        "historical_weight": 0.0027273420811718034,
+        "low_future_event_support": true,
+        "normalized_weight": 0.013955832359100166,
+        "pool_support": 27,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "qa_factoid"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 47,
+        "enrichment_na_reason": null,
+        "future_flip_count": 2,
+        "future_flip_enrichment": 4.083333333333333,
+        "future_flip_rate": 0.08333333333333333,
+        "group_number": 24,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          22,
+          23
+        ],
+        "historical_weight": 0.0013092376373626373,
+        "low_future_event_support": true,
+        "normalized_weight": 0.006699379997615476,
+        "pool_support": 24,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "general_quirky"
+            },
+            {
+              "feature": "has_question_mark",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 513,
+        "enrichment_na_reason": null,
+        "future_flip_count": 7,
+        "future_flip_enrichment": 0.9245283018867925,
+        "future_flip_rate": 0.018867924528301886,
+        "group_number": 25,
+        "historical_negative_flips": [
+          6,
+          9
+        ],
+        "historical_old_correct_opportunities": [
+          365,
+          371
+        ],
+        "historical_weight": 0.0012523999735175337,
+        "low_future_event_support": false,
+        "normalized_weight": 0.0064085411938654335,
+        "pool_support": 371,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 41,
+        "enrichment_na_reason": null,
+        "future_flip_count": 1,
+        "future_flip_enrichment": 1.2564102564102564,
+        "future_flip_rate": 0.02564102564102564,
+        "group_number": 26,
+        "historical_negative_flips": [
+          1,
+          1
+        ],
+        "historical_old_correct_opportunities": [
+          39,
+          39
+        ],
+        "historical_weight": 0.001058099268949596,
+        "low_future_event_support": true,
+        "normalized_weight": 0.005414302855035516,
+        "pool_support": 39,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_set"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 53,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 27,
+        "historical_negative_flips": [
+          2,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          49,
+          47
+        ],
+        "historical_weight": 0.0008405854430379747,
+        "low_future_event_support": true,
+        "normalized_weight": 0.004301282779128924,
+        "pool_support": 47,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "play_music"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 27,
+        "enrichment_na_reason": null,
+        "future_flip_count": 0,
+        "future_flip_enrichment": 0.0,
+        "future_flip_rate": 0.0,
+        "group_number": 28,
+        "historical_negative_flips": [
+          1,
+          0
+        ],
+        "historical_old_correct_opportunities": [
+          24,
+          24
+        ],
+        "historical_weight": 0.000744047619047619,
+        "low_future_event_support": true,
+        "normalized_weight": 0.003807297922142128,
+        "pool_support": 24,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "datetime_query"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        }
+      },
+      {
+        "discovery_support": 907,
+        "enrichment_na_reason": null,
+        "future_flip_count": 13,
+        "future_flip_enrichment": 0.9521674140508221,
+        "future_flip_rate": 0.01943198804185351,
+        "group_number": 29,
+        "historical_negative_flips": [
+          25,
+          14
+        ],
+        "historical_old_correct_opportunities": [
+          659,
+          664
+        ],
+        "historical_weight": 0.0005592407468905473,
+        "low_future_event_support": false,
+        "normalized_weight": 0.002861639603576668,
+        "pool_support": 669,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "has_question_mark",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      }
+    ],
+    "risk_score_definition": "sum of frozen normalized group weights covering each pool row; not calibrated future probability",
+    "risk_top": {
+      "average_precision": 0.03031183432198658,
+      "average_precision_na_reason": null,
+      "constant_score": false,
+      "negative_events": 672,
+      "positive_events": 14,
+      "roc_auc": 0.5818983843537415,
+      "roc_auc_na_reason": null,
+      "score_unique_values": 40,
+      "top100": {
+        "actual_size": 100,
+        "detected": 3,
+        "precision": 0.03,
+        "recall": 0.21428571428571427
+      }
+    },
+    "roc_auc_definition": "positive-negative pair agreement with 0.5 credit for exactly tied scores",
+    "scope": "PRESPECIFIED_NEW_MODEL_OLD_DEV_FEASIBILITY_DIAGNOSTIC",
+    "top100_confusion_strata": [
+      {
+        "future_flip_count": 3,
+        "future_flip_rate": 0.23076923076923078,
+        "sample_count": 13,
+        "stratum": "both_top100"
+      },
+      {
+        "future_flip_count": 0,
+        "future_flip_rate": 0.0,
+        "sample_count": 87,
+        "stratum": "risk_top100_only"
+      },
+      {
+        "future_flip_count": 11,
+        "future_flip_rate": 0.12643678160919541,
+        "sample_count": 87,
+        "stratum": "margin_top100_only"
+      },
+      {
+        "future_flip_count": 0,
+        "future_flip_rate": 0.0,
+        "sample_count": 499,
+        "stratum": "neither_top100"
+      }
+    ],
+    "top_budget_tie_rule": "descending score, then sample_id UTF-8 bytes"
+  }
+}

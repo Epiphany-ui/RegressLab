@@ -1,0 +1,1488 @@
+{
+  "status": "PASS",
+  "independent_risk_weight_maximum_error": 0.0,
+  "independent_group_proxy_maximum_error": 2.220446049250313e-16,
+  "environment_count": 200,
+  "unique_paired_history_count": 100,
+  "exact_saturated_by_20": 138,
+  "exact_saturated_by_50": 200,
+  "first_saturation_rank_min": 12,
+  "first_saturation_rank_max": 48,
+  "first_saturation_rank_mean": 20.6,
+  "independent_greedy_objective_checks": [
+    {
+      "rank": 1,
+      "chosen_marginal": 0.23731999729529535,
+      "best_marginal": 0.23731999729529535,
+      "regret": 0.0,
+      "risk_saturated_before_choice": false
+    },
+    {
+      "rank": 2,
+      "chosen_marginal": 0.14050554947326738,
+      "best_marginal": 0.14050554947326738,
+      "regret": 0.0,
+      "risk_saturated_before_choice": false
+    },
+    {
+      "rank": 3,
+      "chosen_marginal": 0.11549899984299469,
+      "best_marginal": 0.11549899984299469,
+      "regret": 0.0,
+      "risk_saturated_before_choice": false
+    },
+    {
+      "rank": 5,
+      "chosen_marginal": 0.06743411141616618,
+      "best_marginal": 0.06743411141616618,
+      "regret": 0.0,
+      "risk_saturated_before_choice": false
+    },
+    {
+      "rank": 10,
+      "chosen_marginal": 0.01242923052121675,
+      "best_marginal": 0.01242923052121675,
+      "regret": 0.0,
+      "risk_saturated_before_choice": false
+    },
+    {
+      "rank": 20,
+      "chosen_marginal": 0.003914055350509704,
+      "best_marginal": 0.003914055350509704,
+      "regret": 0.0,
+      "risk_saturated_before_choice": true
+    },
+    {
+      "rank": 30,
+      "chosen_marginal": 0.002402530854563323,
+      "best_marginal": 0.002402530854563323,
+      "regret": 0.0,
+      "risk_saturated_before_choice": true
+    },
+    {
+      "rank": 50,
+      "chosen_marginal": 0.0015056998718878667,
+      "best_marginal": 0.0015056998718878667,
+      "regret": 0.0,
+      "risk_saturated_before_choice": true
+    },
+    {
+      "rank": 75,
+      "chosen_marginal": 0.000750070899698585,
+      "best_marginal": 0.000750070899698585,
+      "regret": 0.0,
+      "risk_saturated_before_choice": true
+    },
+    {
+      "rank": 100,
+      "chosen_marginal": 0.0005992732949341995,
+      "best_marginal": 0.0005992732949341995,
+      "regret": 0.0,
+      "risk_saturated_before_choice": true
+    }
+  ],
+  "environment_saturation": [
+    {
+      "environment_id": "risk_persists--complementary--seed1000",
+      "first_exact_group_saturation_rank": 13,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 87,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--strong_margin--seed1000",
+      "first_exact_group_saturation_rank": 13,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 87,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--complementary--seed1001",
+      "first_exact_group_saturation_rank": 12,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 88,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--strong_margin--seed1001",
+      "first_exact_group_saturation_rank": 12,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 88,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--complementary--seed1002",
+      "first_exact_group_saturation_rank": 17,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 83,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--strong_margin--seed1002",
+      "first_exact_group_saturation_rank": 17,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 83,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--complementary--seed1003",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--strong_margin--seed1003",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--complementary--seed1004",
+      "first_exact_group_saturation_rank": 21,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 79,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--strong_margin--seed1004",
+      "first_exact_group_saturation_rank": 21,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 79,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--complementary--seed1005",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--strong_margin--seed1005",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--complementary--seed1006",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--strong_margin--seed1006",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--complementary--seed1007",
+      "first_exact_group_saturation_rank": 30,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 70,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--strong_margin--seed1007",
+      "first_exact_group_saturation_rank": 30,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 70,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--complementary--seed1008",
+      "first_exact_group_saturation_rank": 25,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 75,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--strong_margin--seed1008",
+      "first_exact_group_saturation_rank": 25,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 75,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--complementary--seed1009",
+      "first_exact_group_saturation_rank": 47,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 53,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--strong_margin--seed1009",
+      "first_exact_group_saturation_rank": 47,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 53,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--complementary--seed1010",
+      "first_exact_group_saturation_rank": 48,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 52,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--strong_margin--seed1010",
+      "first_exact_group_saturation_rank": 48,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 52,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--complementary--seed1011",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--strong_margin--seed1011",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--complementary--seed1012",
+      "first_exact_group_saturation_rank": 12,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 88,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--strong_margin--seed1012",
+      "first_exact_group_saturation_rank": 12,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 88,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--complementary--seed1013",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--strong_margin--seed1013",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--complementary--seed1014",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--strong_margin--seed1014",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--complementary--seed1015",
+      "first_exact_group_saturation_rank": 27,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 73,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--strong_margin--seed1015",
+      "first_exact_group_saturation_rank": 27,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 73,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--complementary--seed1016",
+      "first_exact_group_saturation_rank": 17,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 83,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--strong_margin--seed1016",
+      "first_exact_group_saturation_rank": 17,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 83,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--complementary--seed1017",
+      "first_exact_group_saturation_rank": 13,
+      "hgc_groups": 26,
+      "remaining_budget_after_saturation": 87,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--strong_margin--seed1017",
+      "first_exact_group_saturation_rank": 13,
+      "hgc_groups": 26,
+      "remaining_budget_after_saturation": 87,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--complementary--seed1018",
+      "first_exact_group_saturation_rank": 28,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 72,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--strong_margin--seed1018",
+      "first_exact_group_saturation_rank": 28,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 72,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--complementary--seed1019",
+      "first_exact_group_saturation_rank": 15,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 85,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_persists--strong_margin--seed1019",
+      "first_exact_group_saturation_rank": 15,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 85,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--complementary--seed1000",
+      "first_exact_group_saturation_rank": 13,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 87,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--strong_margin--seed1000",
+      "first_exact_group_saturation_rank": 13,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 87,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--complementary--seed1001",
+      "first_exact_group_saturation_rank": 12,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 88,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--strong_margin--seed1001",
+      "first_exact_group_saturation_rank": 12,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 88,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--complementary--seed1002",
+      "first_exact_group_saturation_rank": 17,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 83,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--strong_margin--seed1002",
+      "first_exact_group_saturation_rank": 17,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 83,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--complementary--seed1003",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--strong_margin--seed1003",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--complementary--seed1004",
+      "first_exact_group_saturation_rank": 21,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 79,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--strong_margin--seed1004",
+      "first_exact_group_saturation_rank": 21,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 79,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--complementary--seed1005",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--strong_margin--seed1005",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--complementary--seed1006",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--strong_margin--seed1006",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--complementary--seed1007",
+      "first_exact_group_saturation_rank": 30,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 70,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--strong_margin--seed1007",
+      "first_exact_group_saturation_rank": 30,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 70,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--complementary--seed1008",
+      "first_exact_group_saturation_rank": 25,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 75,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--strong_margin--seed1008",
+      "first_exact_group_saturation_rank": 25,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 75,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--complementary--seed1009",
+      "first_exact_group_saturation_rank": 47,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 53,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--strong_margin--seed1009",
+      "first_exact_group_saturation_rank": 47,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 53,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--complementary--seed1010",
+      "first_exact_group_saturation_rank": 48,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 52,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--strong_margin--seed1010",
+      "first_exact_group_saturation_rank": 48,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 52,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--complementary--seed1011",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--strong_margin--seed1011",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--complementary--seed1012",
+      "first_exact_group_saturation_rank": 12,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 88,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--strong_margin--seed1012",
+      "first_exact_group_saturation_rank": 12,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 88,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--complementary--seed1013",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--strong_margin--seed1013",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--complementary--seed1014",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--strong_margin--seed1014",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--complementary--seed1015",
+      "first_exact_group_saturation_rank": 27,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 73,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--strong_margin--seed1015",
+      "first_exact_group_saturation_rank": 27,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 73,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--complementary--seed1016",
+      "first_exact_group_saturation_rank": 17,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 83,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--strong_margin--seed1016",
+      "first_exact_group_saturation_rank": 17,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 83,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--complementary--seed1017",
+      "first_exact_group_saturation_rank": 13,
+      "hgc_groups": 26,
+      "remaining_budget_after_saturation": 87,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--strong_margin--seed1017",
+      "first_exact_group_saturation_rank": 13,
+      "hgc_groups": 26,
+      "remaining_budget_after_saturation": 87,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--complementary--seed1018",
+      "first_exact_group_saturation_rank": 28,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 72,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--strong_margin--seed1018",
+      "first_exact_group_saturation_rank": 28,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 72,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--complementary--seed1019",
+      "first_exact_group_saturation_rank": 15,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 85,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "risk_reversed--strong_margin--seed1019",
+      "first_exact_group_saturation_rank": 15,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 85,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--complementary--seed1000",
+      "first_exact_group_saturation_rank": 13,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 87,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--strong_margin--seed1000",
+      "first_exact_group_saturation_rank": 13,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 87,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--complementary--seed1001",
+      "first_exact_group_saturation_rank": 12,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 88,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--strong_margin--seed1001",
+      "first_exact_group_saturation_rank": 12,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 88,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--complementary--seed1002",
+      "first_exact_group_saturation_rank": 17,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 83,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--strong_margin--seed1002",
+      "first_exact_group_saturation_rank": 17,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 83,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--complementary--seed1003",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--strong_margin--seed1003",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--complementary--seed1004",
+      "first_exact_group_saturation_rank": 21,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 79,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--strong_margin--seed1004",
+      "first_exact_group_saturation_rank": 21,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 79,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--complementary--seed1005",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--strong_margin--seed1005",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--complementary--seed1006",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--strong_margin--seed1006",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--complementary--seed1007",
+      "first_exact_group_saturation_rank": 30,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 70,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--strong_margin--seed1007",
+      "first_exact_group_saturation_rank": 30,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 70,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--complementary--seed1008",
+      "first_exact_group_saturation_rank": 25,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 75,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--strong_margin--seed1008",
+      "first_exact_group_saturation_rank": 25,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 75,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--complementary--seed1009",
+      "first_exact_group_saturation_rank": 47,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 53,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--strong_margin--seed1009",
+      "first_exact_group_saturation_rank": 47,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 53,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--complementary--seed1010",
+      "first_exact_group_saturation_rank": 48,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 52,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--strong_margin--seed1010",
+      "first_exact_group_saturation_rank": 48,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 52,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--complementary--seed1011",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--strong_margin--seed1011",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--complementary--seed1012",
+      "first_exact_group_saturation_rank": 12,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 88,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--strong_margin--seed1012",
+      "first_exact_group_saturation_rank": 12,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 88,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--complementary--seed1013",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--strong_margin--seed1013",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--complementary--seed1014",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--strong_margin--seed1014",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--complementary--seed1015",
+      "first_exact_group_saturation_rank": 27,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 73,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--strong_margin--seed1015",
+      "first_exact_group_saturation_rank": 27,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 73,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--complementary--seed1016",
+      "first_exact_group_saturation_rank": 17,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 83,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--strong_margin--seed1016",
+      "first_exact_group_saturation_rank": 17,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 83,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--complementary--seed1017",
+      "first_exact_group_saturation_rank": 13,
+      "hgc_groups": 26,
+      "remaining_budget_after_saturation": 87,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--strong_margin--seed1017",
+      "first_exact_group_saturation_rank": 13,
+      "hgc_groups": 26,
+      "remaining_budget_after_saturation": 87,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--complementary--seed1018",
+      "first_exact_group_saturation_rank": 28,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 72,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--strong_margin--seed1018",
+      "first_exact_group_saturation_rank": 28,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 72,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--complementary--seed1019",
+      "first_exact_group_saturation_rank": 15,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 85,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "new_risk--strong_margin--seed1019",
+      "first_exact_group_saturation_rank": 15,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 85,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--complementary--seed1000",
+      "first_exact_group_saturation_rank": 24,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 76,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--strong_margin--seed1000",
+      "first_exact_group_saturation_rank": 24,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 76,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--complementary--seed1001",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--strong_margin--seed1001",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--complementary--seed1002",
+      "first_exact_group_saturation_rank": 13,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 87,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--strong_margin--seed1002",
+      "first_exact_group_saturation_rank": 13,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 87,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--complementary--seed1003",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--strong_margin--seed1003",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--complementary--seed1004",
+      "first_exact_group_saturation_rank": 18,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 82,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--strong_margin--seed1004",
+      "first_exact_group_saturation_rank": 18,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 82,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--complementary--seed1005",
+      "first_exact_group_saturation_rank": 13,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 87,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--strong_margin--seed1005",
+      "first_exact_group_saturation_rank": 13,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 87,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--complementary--seed1006",
+      "first_exact_group_saturation_rank": 17,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 83,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--strong_margin--seed1006",
+      "first_exact_group_saturation_rank": 17,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 83,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--complementary--seed1007",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--strong_margin--seed1007",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--complementary--seed1008",
+      "first_exact_group_saturation_rank": 20,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 80,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--strong_margin--seed1008",
+      "first_exact_group_saturation_rank": 20,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 80,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--complementary--seed1009",
+      "first_exact_group_saturation_rank": 22,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 78,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--strong_margin--seed1009",
+      "first_exact_group_saturation_rank": 22,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 78,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--complementary--seed1010",
+      "first_exact_group_saturation_rank": 22,
+      "hgc_groups": 27,
+      "remaining_budget_after_saturation": 78,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--strong_margin--seed1010",
+      "first_exact_group_saturation_rank": 22,
+      "hgc_groups": 27,
+      "remaining_budget_after_saturation": 78,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--complementary--seed1011",
+      "first_exact_group_saturation_rank": 15,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 85,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--strong_margin--seed1011",
+      "first_exact_group_saturation_rank": 15,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 85,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--complementary--seed1012",
+      "first_exact_group_saturation_rank": 18,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 82,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--strong_margin--seed1012",
+      "first_exact_group_saturation_rank": 18,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 82,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--complementary--seed1013",
+      "first_exact_group_saturation_rank": 17,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 83,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--strong_margin--seed1013",
+      "first_exact_group_saturation_rank": 17,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 83,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--complementary--seed1014",
+      "first_exact_group_saturation_rank": 12,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 88,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--strong_margin--seed1014",
+      "first_exact_group_saturation_rank": 12,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 88,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--complementary--seed1015",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--strong_margin--seed1015",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--complementary--seed1016",
+      "first_exact_group_saturation_rank": 14,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 86,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--strong_margin--seed1016",
+      "first_exact_group_saturation_rank": 14,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 86,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--complementary--seed1017",
+      "first_exact_group_saturation_rank": 18,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 82,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--strong_margin--seed1017",
+      "first_exact_group_saturation_rank": 18,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 82,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--complementary--seed1018",
+      "first_exact_group_saturation_rank": 15,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 85,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--strong_margin--seed1018",
+      "first_exact_group_saturation_rank": 15,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 85,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--complementary--seed1019",
+      "first_exact_group_saturation_rank": 12,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 88,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "overlap--strong_margin--seed1019",
+      "first_exact_group_saturation_rank": 12,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 88,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--complementary--seed1000",
+      "first_exact_group_saturation_rank": 13,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 87,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--strong_margin--seed1000",
+      "first_exact_group_saturation_rank": 13,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 87,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--complementary--seed1001",
+      "first_exact_group_saturation_rank": 12,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 88,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--strong_margin--seed1001",
+      "first_exact_group_saturation_rank": 12,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 88,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--complementary--seed1002",
+      "first_exact_group_saturation_rank": 17,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 83,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--strong_margin--seed1002",
+      "first_exact_group_saturation_rank": 17,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 83,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--complementary--seed1003",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--strong_margin--seed1003",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--complementary--seed1004",
+      "first_exact_group_saturation_rank": 21,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 79,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--strong_margin--seed1004",
+      "first_exact_group_saturation_rank": 21,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 79,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--complementary--seed1005",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--strong_margin--seed1005",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--complementary--seed1006",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--strong_margin--seed1006",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--complementary--seed1007",
+      "first_exact_group_saturation_rank": 30,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 70,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--strong_margin--seed1007",
+      "first_exact_group_saturation_rank": 30,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 70,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--complementary--seed1008",
+      "first_exact_group_saturation_rank": 25,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 75,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--strong_margin--seed1008",
+      "first_exact_group_saturation_rank": 25,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 75,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--complementary--seed1009",
+      "first_exact_group_saturation_rank": 47,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 53,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--strong_margin--seed1009",
+      "first_exact_group_saturation_rank": 47,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 53,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--complementary--seed1010",
+      "first_exact_group_saturation_rank": 48,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 52,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--strong_margin--seed1010",
+      "first_exact_group_saturation_rank": 48,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 52,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--complementary--seed1011",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--strong_margin--seed1011",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--complementary--seed1012",
+      "first_exact_group_saturation_rank": 12,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 88,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--strong_margin--seed1012",
+      "first_exact_group_saturation_rank": 12,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 88,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--complementary--seed1013",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--strong_margin--seed1013",
+      "first_exact_group_saturation_rank": 19,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 81,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--complementary--seed1014",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--strong_margin--seed1014",
+      "first_exact_group_saturation_rank": 16,
+      "hgc_groups": 28,
+      "remaining_budget_after_saturation": 84,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--complementary--seed1015",
+      "first_exact_group_saturation_rank": 27,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 73,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--strong_margin--seed1015",
+      "first_exact_group_saturation_rank": 27,
+      "hgc_groups": 29,
+      "remaining_budget_after_saturation": 73,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--complementary--seed1016",
+      "first_exact_group_saturation_rank": 17,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 83,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--strong_margin--seed1016",
+      "first_exact_group_saturation_rank": 17,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 83,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--complementary--seed1017",
+      "first_exact_group_saturation_rank": 13,
+      "hgc_groups": 26,
+      "remaining_budget_after_saturation": 87,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--strong_margin--seed1017",
+      "first_exact_group_saturation_rank": 13,
+      "hgc_groups": 26,
+      "remaining_budget_after_saturation": 87,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--complementary--seed1018",
+      "first_exact_group_saturation_rank": 28,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 72,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--strong_margin--seed1018",
+      "first_exact_group_saturation_rank": 28,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 72,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--complementary--seed1019",
+      "first_exact_group_saturation_rank": 15,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 85,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    },
+    {
+      "environment_id": "no_group_signal--strong_margin--seed1019",
+      "first_exact_group_saturation_rank": 15,
+      "hgc_groups": 30,
+      "remaining_budget_after_saturation": 85,
+      "zero_risk_marginal_for_all_candidates_after_saturation": true
+    }
+  ],
+  "interpretation": "Fixed k=3 group coverage becomes constant once each retained group has three selected members; subsequent HGC choices optimize only the facility marginal from their existing prefix. This is the specified objective, not a target-driven parameter change or full-sequence equality to Facility.",
+  "scientific_scope": "Synthetic mechanisms are paired and only check an instantiated mechanism; positive Risk-Top cannot establish natural-task benefit or justify a replacement method without a new protocol."
+}

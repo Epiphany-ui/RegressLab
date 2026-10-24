@@ -1,0 +1,69 @@
+{
+  "executed_code_commit": "fde3489",
+  "scope": "fixed feasibility closeout; original raw artifacts unchanged",
+  "runs": {
+    "natural": {
+      "registered_git_commit": "fde3489abf7869de4c21855d48fa31c2fd3081c5",
+      "registered_working_tree_dirty": false,
+      "all_code_files_match_commit": {
+        "experiments/preflight/__init__.py": true,
+        "experiments/preflight/baselines.py": true,
+        "experiments/preflight/clinc.py": true,
+        "experiments/preflight/data.py": true,
+        "experiments/preflight/diagnostics.py": true,
+        "experiments/preflight/feasibility.py": true,
+        "experiments/preflight/fetch.py": true,
+        "experiments/preflight/hgc.py": true,
+        "experiments/preflight/identity.py": true,
+        "experiments/preflight/linear_state.py": true,
+        "experiments/preflight/mechanisms.py": true,
+        "experiments/preflight/round2.py": true,
+        "experiments/preflight/runner.py": true,
+        "experiments/preflight/verify.py": true,
+        "experiments/preflight/verify2.py": true,
+        "experiments/preflight/verify_feasibility.py": true
+      },
+      "dependency_lock_matches_commit": true
+    },
+    "mechanisms": {
+      "registered_git_commit": "fde3489abf7869de4c21855d48fa31c2fd3081c5",
+      "registered_working_tree_dirty": false,
+      "all_code_files_match_commit": {
+        "experiments/preflight/__init__.py": true,
+        "experiments/preflight/baselines.py": true,
+        "experiments/preflight/clinc.py": true,
+        "experiments/preflight/data.py": true,
+        "experiments/preflight/diagnostics.py": true,
+        "experiments/preflight/feasibility.py": true,
+        "experiments/preflight/fetch.py": true,
+        "experiments/preflight/hgc.py": true,
+        "experiments/preflight/identity.py": true,
+        "experiments/preflight/linear_state.py": true,
+        "experiments/preflight/mechanisms.py": true,
+        "experiments/preflight/round2.py": true,
+        "experiments/preflight/runner.py": true,
+        "experiments/preflight/verify.py": true,
+        "experiments/preflight/verify2.py": true,
+        "experiments/preflight/verify_feasibility.py": true
+      },
+      "dependency_lock_matches_commit": true
+    }
+  },
+  "copied_files": {
+    "natural/report.json": "88c3b8f1a7fbf587d9e16da376d395041902e396a669771ff6a02a055e131baf",
+    "natural/preregistration.json": "4d2901c71b167b1eeef77692b524779de7da94284811890241e64ca54f70a204",
+    "natural/matrix-freeze.json": "f4c2b24f846b9aabbff6ca73035d293758fb4a8c8bfc81e455dd9a2d286c0c6f",
+    "natural/events.jsonl": "5478005708263bd00597a16e6013975c5252d9963da0ea0d833ff9637b5148f9",
+    "natural/deployment-costs.json": "0b7b0000d574ac07501052aaf1ba1a7458f638faba6202c0fa0c2577060f0da0",
+    "natural/history-diagnostics.json": "02f473c7b47f9ccc7f9d8038e431b7378c2ec436e3ff8c7521ee90e30ddd8968",
+    "mechanisms/report.json": "7ed7fc7b367bf462b46f508af35be13901277dd7531ea265f37f9353ea7300a3",
+    "mechanisms/preregistration.json": "75ea3c489d2c9a19c6bdeaab3befcd4e75e570a9f17994a3b3744cd93db84a6f",
+    "mechanisms/matrix-freeze.json": "7a794cabb1a046c6436715706d7ef0e3beab0ac7ca6e235c53e78ddd8fcf1493",
+    "mechanisms/events.jsonl": "709c0077d52afa1d4e32860814faadb0eb4c8322c4326a8b2170c91a1558991e"
+  },
+  "post_run_model_free_cross_source_check": {
+    "clinc_official_val_rows_matching_any_massive_text_after_normalization": 0,
+    "new_exclusions_applied": false,
+    "scope": "exact normalized text only; does not prove statistical or semantic independence"
+  }
+}

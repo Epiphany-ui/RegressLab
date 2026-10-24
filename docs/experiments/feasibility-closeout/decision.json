@@ -1,0 +1,60 @@
+{
+  "schema_version": "regresslab-feasibility-decision-v1",
+  "preexperiments_complete": true,
+  "formal_paper_experiments_complete": false,
+  "current_hgc_method": {
+    "decision": "NO_GO",
+    "machine_recommendation": "NO_GO_CURRENT_HGC_METHOD",
+    "reason": "Current coverage objective underuses transferable risk; natural Recall and CPU cost do not justify scaling this method.",
+    "universal_method_failure_claim": false
+  },
+  "broader_research_question": {
+    "decision": "CONDITIONAL_RESEARCH_VALUE",
+    "reason": "Fresh CLINC growth chains contain historical risk association, while strong margin remains better; supports an applicability/mechanism comparison candidate, not a new superior algorithm."
+  },
+  "proposed_title": "文本分类模型回归测试中历史风险迁移与选样方法的适用条件研究",
+  "suggested_action": "Keep the research question, withdraw the current HGC-superiority claim, and confirm the expected contribution form before formal study.",
+  "if_novel_superior_algorithm_is_mandatory": "Change the specific proposal; current evidence does not support that promise.",
+  "natural_screen": {
+    "adequate_natural_event_support": false,
+    "cached_history_hgc_cost_screen": false,
+    "external_families": {
+      "sgd-data-growth": {
+        "adequate_event_support": false,
+        "chain_count": 2,
+        "chains_with_new_events_beyond_margin": 1,
+        "hgc_minus_margin": -0.6619318181818181,
+        "risk_auc": 0.7213312285092045,
+        "risk_top_minus_facility": 0.2869318181818182,
+        "risk_top_minus_random": 0.2990056818181818
+      },
+      "sgd-epoch-growth": {
+        "adequate_event_support": false,
+        "chain_count": 2,
+        "chains_with_new_events_beyond_margin": 0,
+        "hgc_minus_margin": -1.0,
+        "risk_auc": 0.7379851564193449,
+        "risk_top_minus_facility": -0.16666666666666666,
+        "risk_top_minus_random": -0.05
+      }
+    },
+    "formal_test_model_input_count": 0,
+    "hgc_practical_recall_screen": false,
+    "historical_signal_screen": false,
+    "recommendation": "NO_GO_CURRENT_HGC_METHOD",
+    "statistical_superiority_established": false,
+    "thesis_approval_established": false
+  },
+  "academic_novelty_established": false,
+  "graduation_acceptance_established": false,
+  "neural_model_efficacy_established": false,
+  "new_parameter_search_authorized_by_this_decision": false,
+  "unchanged_formal_test_policy": "No formal TEST model inputs/predictions/evaluation",
+  "evidence": [
+    "natural/report.json",
+    "natural/history-diagnostics.json",
+    "mechanisms/report.json",
+    "mechanisms/independent-formula-audit.json",
+    "prior-history-diagnostics.json"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "original_artifacts_unchanged": true,
+  "checks": [
+    {
+      "case": "delete_registered_environment_from_freeze",
+      "status": "REJECTED",
+      "reason": "MECHANISM_FREEZE_FILE_SET_MISMATCH"
+    },
+    {
+      "case": "alter_cached_target_label_against_registered_rng",
+      "status": "REJECTED",
+      "reason": "SYNTHETIC_TARGET_REPLAY_MISMATCH"
+    }
+  ]
+}

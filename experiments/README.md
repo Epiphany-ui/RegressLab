@@ -1,6 +1,20 @@
 # CPU开发预实验
 
-已实现独立包`preflight`，用于先验证真实数据、四版链、自然未来翻转及强基线是否可运行。两轮结果见[最新HGC报告](../docs/experiments/cpu-preflight-v2/README.md)与[首轮报告](../docs/experiments/cpu-preflight-v1/README.md)，最新经过见[开发日志](../docs/development/logs/2026-10-24-cpu-preflight-v2.md)。第二轮已有固定最小HGC；通用研究平台和正式TEST评价仍未实现。
+已实现独立包`preflight`，用于先验证真实数据、四版链、自然未来翻转及强基线是否可运行。最终结论见[预实验收尾](../docs/experiments/feasibility-closeout/README.md)，经过见[收尾日志](../docs/development/logs/2026-10-24-feasibility-closeout.md)。原[第二轮](../docs/experiments/cpu-preflight-v2/README.md)和[首轮](../docs/experiments/cpu-preflight-v1/README.md)保留追溯；当前HGC不支持扩大，广义问题仅保留为条件研究候选。通用平台和正式TEST评价未实现。
+
+预实验收尾已按固定登记完成。实际执行入口如下；现有目录会拒绝覆盖，复核需本机完整工件及原两轮模型：
+
+```bash
+cd experiments
+uv run python -m preflight.mechanisms --registered-config configs/feasibility-closeout-v1.json --output ../artifacts/preflight/feasibility-closeout-20261024-mechanisms
+uv run python -m preflight.mechanisms --verify ../artifacts/preflight/feasibility-closeout-20261024-mechanisms
+timeout --signal=TERM 1200s uv run python -m preflight.feasibility --config configs/feasibility-closeout-v1.json --output ../artifacts/preflight/feasibility-closeout-20261024-natural
+uv run python -m preflight.verify_feasibility ../artifacts/preflight/feasibility-closeout-20261024-natural
+```
+
+`clinc.py`固定官方commit/许可并仅返回闭集TRAIN/VAL；`linear_state.py`分别核对LR/SGD线性标签状态与概率合同；`diagnostics.py`区分旧结果后验/新外部事前诊断；`mechanisms.py`只产生合成证据；`feasibility.py`运行一次无调参自然收尾。当前227项单元测试通过，自然2,088单元与机制14,400单元均已完整复核；当前HGC判定NO_GO不等于全部历史风险问题无价值。
+
+这次收尾由用户明确授权，并在新目标前固定协议，HGC参数不变；不改写原两轮登记，也不将首轮基线试跑说成HGC已经充分开发。后续新问题不由这些入口自动开启。以下保留历史运行说明。
 
 第二轮已实际执行的入口（输出目录现已存在，重复执行会拒绝覆盖）：
 

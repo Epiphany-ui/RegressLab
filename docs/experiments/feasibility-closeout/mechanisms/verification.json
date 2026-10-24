@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "purpose": "SYNTHETIC_MECHANISM_CHECK_ONLY",
+  "environment_count": 200,
+  "frozen_files_verified": 201,
+  "selection_environments_replayed": 100,
+  "target_environments_replayed": 200,
+  "cells_recomputed": 14400,
+  "aggregate_rows_recomputed": 150,
+  "paired_comparisons_recomputed": 40,
+  "event_count": 403,
+  "all_suites_frozen_before_any_target_event": true,
+  "natural_model_effect_proven": false,
+  "formal_gate_approved": false,
+  "limitations": [
+    "Replays the existing generator, HGC and metric implementations; not an independent formula proof.",
+    "Synthetic mechanisms do not establish natural task benefit or cross-model independence."
+  ]
+}
