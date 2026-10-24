@@ -1,0 +1,25 @@
+{
+  "original_artifacts_unchanged": true,
+  "checks": [
+    {
+      "case": "delete_all_aggregates",
+      "status": "REJECTED",
+      "reason": "AGGREGATE_SET_OR_VALUE_MISMATCH"
+    },
+    {
+      "case": "forge_report_model_hash",
+      "status": "REJECTED",
+      "reason": "REPORT_CHAIN_SUMMARY_MISMATCH"
+    },
+    {
+      "case": "modify_frozen_full_dev_gold",
+      "status": "REJECTED",
+      "reason": "FROZEN_INPUT_CHANGED"
+    },
+    {
+      "case": "omit_all_target_events_and_rehash",
+      "status": "REJECTED",
+      "reason": "EVENT_SET_MISMATCH"
+    }
+  ]
+}

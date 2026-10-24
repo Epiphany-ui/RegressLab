@@ -1,6 +1,6 @@
 # v2 工程设计与开发计划
 
-当前权威：研究v2；状态：`research-v2-draft1`软件设计。Web仍为0.1描述性Demo；已通过独立`preflight`入口完成[首轮CPU开发预实验](../../experiments/cpu-preflight-v1/README.md)。通用lab、HGC、神经训练与研究API仍待实现；正式实验门禁尚未通过，最新优先级见07。
+当前权威：研究v2；状态：`research-v2-draft1`软件设计。Web仍为0.1描述性Demo；已通过独立`preflight`入口完成[两轮CPU开发预实验](../../experiments/cpu-preflight-v2/README.md)，固定最小HGC未显示收益。通用lab、其余核心方法、神经训练与研究API仍待实现；正式实验门禁尚未通过，当前停止同DEV继续寻优，最新优先级见07。
 
 | 文档 | 用途 |
 |---|---|

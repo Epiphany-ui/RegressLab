@@ -1,6 +1,6 @@
 # v2 研究原型架构
 
-状态：通用研究系统的工程设计。已实现的独立CPU预实验入口见[报告](../../experiments/cpu-preflight-v1/README.md)，不等于下列全部模块已完成。研究依据见[范围与决策](01-scope-and-decisions.md)。目标是让实验独立可运行、边界可检查、结果可复现，Web作为已有证据的读取器。
+状态：通用研究系统的工程设计。已实现的独立CPU预实验和最小HGC入口见[第二轮报告](../../experiments/cpu-preflight-v2/README.md)，不等于下列全部模块已完成。研究依据见[范围与决策](01-scope-and-decisions.md)。目标是让实验独立可运行、边界可检查、结果可复现，Web作为已有证据的读取器。
 
 ## 1. 三个执行边界
 

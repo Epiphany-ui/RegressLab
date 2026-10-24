@@ -1,0 +1,29 @@
+{
+  "executed_code_commit": "da2ba31",
+  "registered_working_tree_dirty": false,
+  "registered_code_files_match_commit": {
+    "experiments/preflight/__init__.py": true,
+    "experiments/preflight/baselines.py": true,
+    "experiments/preflight/data.py": true,
+    "experiments/preflight/fetch.py": true,
+    "experiments/preflight/hgc.py": true,
+    "experiments/preflight/identity.py": true,
+    "experiments/preflight/round2.py": true,
+    "experiments/preflight/runner.py": true,
+    "experiments/preflight/verify.py": true,
+    "experiments/preflight/verify2.py": true
+  },
+  "dependency_lock_matches_commit": true,
+  "original_local_report_sha256": "455312d67b97a9a3d938d6d4765ca873b6ef8363ab124cf4f9899c977127bf89",
+  "projections": [
+    "report-summary.json: identity components reduced to inference hashes",
+    "identity-summary.json: prior-node components reduced to hashes",
+    "group-summaries.json: per-sample memberships omitted"
+  ],
+  "byte_identical_original_snapshots": {
+    "preregistration.json": "85a73eb12ae90a82999569142cc300bb649fa9fe0abe500334e2c8e6a349ca65",
+    "matrix-freeze.json": "ba32f08e4bd0c1ae81b2d9046547b33e2032cb6695c2af0b3ddb95e216f4bc2d",
+    "events.jsonl": "66c519333fb12b06071e24e6c55e7a0668c21171913690406db317af44d01b9f",
+    "deployment-costs.json": "77a152f13a933692ffcca3fe52edf4b5e6498b49575fdcba8cf40b51fe9d8380"
+  }
+}

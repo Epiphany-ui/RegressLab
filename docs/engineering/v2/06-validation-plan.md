@@ -1,6 +1,6 @@
 # v2 验证计划与研究关卡
 
-状态：**PLANNED_NOT_IMPLEMENTED**。下列测试文件、fixture、CLI和研究结果尚未实现或执行；现有Demo测试仍只证明旧描述性流程。本文将[三个研究问题](../../research/v2/source/01-research-position.md)、[算法原案](../../research/v2/source/03-algorithm-spec.md)与[实验关卡](../../research/v2/source/04-experiment-protocol.md)转成可核验的未来验收条件，不承诺HGC胜出。
+状态：**统一lab验收仍为计划，preflight已部分实现并完成两轮开发运行**。已执行内容见[第二轮报告](../../experiments/cpu-preflight-v2/README.md)，不能据此把下列全部测试文件、fixture、CLI和研究门标为完成；现有Demo测试仍只证明旧描述性流程。本文将[三个研究问题](../../research/v2/source/01-research-position.md)、[算法原案](../../research/v2/source/03-algorithm-spec.md)与[实验关卡](../../research/v2/source/04-experiment-protocol.md)转成可核验的未来验收条件，不承诺HGC胜出。
 
 ## 1. 证据分层
 

@@ -1,6 +1,18 @@
 # CPU开发预实验
 
-已实现独立包`preflight`，用于先验证真实数据、四版链、自然未来翻转及强基线是否可运行。首轮结果见[报告](../docs/experiments/cpu-preflight-v1/README.md)，实施经过见[开发日志](../docs/development/logs/2026-10-23-cpu-preflight.md)。它不是通用研究平台，也不包含HGC或正式TEST评价。
+已实现独立包`preflight`，用于先验证真实数据、四版链、自然未来翻转及强基线是否可运行。两轮结果见[最新HGC报告](../docs/experiments/cpu-preflight-v2/README.md)与[首轮报告](../docs/experiments/cpu-preflight-v1/README.md)，最新经过见[开发日志](../docs/development/logs/2026-10-24-cpu-preflight-v2.md)。第二轮已有固定最小HGC；通用研究平台和正式TEST评价仍未实现。
+
+第二轮已实际执行的入口（输出目录现已存在，重复执行会拒绝覆盖）：
+
+```bash
+cd experiments
+uv run python -m preflight.round2 --output ../artifacts/preflight/cpu-pilot-20261024-v2
+uv run python -m preflight.verify2 ../artifacts/preflight/cpu-pilot-20261024-v2
+```
+
+`round2.py`按新登记先训练全部模型，再在任何DEV预测前审查语义推理身份；`hgc.py`只接受全D历史与P表示；`identity.py`只给准备器/审计器使用，不传目标权重给selector。第二轮83文件/2,064单元/516条主预算成本已复核。当前两轮开发上限已用完，不继续同DEV寻优；当前HGC在检出及成本上均未达到登记筛查规则。
+
+完整复核需本机两轮可信工件及模型（verify2会加载本运行器产生的pickle），首轮freeze哈希固定在配置中。仓库的摘要不包含词表/权重/逐样本数据；仅克隆仓库不能恢复首次工件。缺少工件时须恢复原本地备份，不能换一份新跑的旧实验冒充同一曝光历史。以下保留首轮复现说明，不意味着允许追加开发寻优。
 
 需要Python 3.11+、uv和curl；实际执行环境/版本在报告中记录，依赖由本目录`uv.lock`锁定。该环境与Web后端分开。
 

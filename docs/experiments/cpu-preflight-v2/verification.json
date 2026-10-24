@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "purpose": "DEVELOPMENT_ROUND_2_ONLY",
+  "frozen_files_verified": 83,
+  "chains_verified": 6,
+  "cells_recomputed": 2064,
+  "aggregates_recomputed": 240,
+  "primary_deployment_cost_rows_recomputed": 516,
+  "events_verified": 65,
+  "full_current_correct_pools_reconstructed": true,
+  "history_only_selection_replayed": true,
+  "hgc_risk_diagnostics_recomputed": true,
+  "model_semantic_identities_recomputed": 24,
+  "previously_exposed_nodes_verified_from_local_models": 24,
+  "previously_exposed_nodes_registered": 24,
+  "global_identity_gate_before_history_events": true,
+  "target_events_after_global_freeze": true,
+  "formal_blind_evaluation_eligible": false,
+  "limitations": [
+    "Trusted local sklearn pickle files only; never apply this CLI to untrusted uploads.",
+    "Selectors, HGC, metrics and screen formulas are replayed with existing implementations, not independent algorithms.",
+    "Cached target labels are validated and aligned but target inference is not executed again by this audit.",
+    "Event hashes establish internal consistency, not external proof of timing or previously unseen outcomes.",
+    "Second development round reuses DEV data; related LR chains are not independent updates or formal blind evidence.",
+    "Fixed-order warm-cache cost medians do not establish neural deployment savings or a hard resource timeout.",
+    "Previous-round trusted local model files are required to verify all registered prior exposures."
+  ]
+}

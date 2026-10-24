@@ -1,8 +1,8 @@
 # RegressLab · 文本分类回归选样研究
 
-当前研究方向是**《基于历史群体风险的文本分类模型回归测试样本选择方法研究》**：利用f0/f1/f2的历史，在执行目标f3前选出有限预算测试集，比较HGC与强基线的未来负向翻转检出和成本。HGC是待验证候选，尚无真实收益结果。
+当前研究方向是**《基于历史群体风险的文本分类模型回归测试样本选择方法研究》**：利用f0/f1/f2的历史，在执行目标f3前选出有限预算测试集，比较HGC与强基线的未来负向翻转检出和成本。HGC是待验证候选；第二轮固定配置在当前CPU开发设置中未显示收益。
 
-**已完成首轮真实CPU开发预实验；Web仍为0.1描述性Demo。** MASSIVE中文数据上训练24个模型、运行6条四版链和9种基线，每条链发现5—9条未来负向翻转。这说明有开发信号，但跨链等价模型复用、信号稀疏等问题尚未解决，不能当作正式实验结论。详见[预实验报告](docs/experiments/cpu-preflight-v1/README.md)和[开发日志](docs/development/logs/2026-10-23-cpu-preflight.md)。下一步先复核实验有效性，再推进HGC；神经模型迁移由资源预实验决定。
+**已完成两轮真实CPU开发预实验；Web仍为0.1描述性Demo。** 第二轮修复模型复用检查，完成24次训练、6条四版链、9基线＋固定HGC，共2,064个单元。HGC在B=100时Recall为0—0.50，margin为0.80—1.00；当前缓存情景中HGC总成本为全P推理的11—15倍，三项开发筛查均未通过。详见[第二轮报告](docs/experiments/cpu-preflight-v2/README.md)、[开发日志](docs/development/logs/2026-10-24-cpu-preflight-v2.md)及[首轮记录](docs/experiments/cpu-preflight-v1/README.md)。保留负结果，不再追加第三轮同DEV寻优；先做机制诊断与独立数据审计，再决定研究范围。
 
 从 [研究资料](docs/research/v2/README.md)、[工程设计与实施计划](docs/engineering/v2/README.md) 或 [统一文档导航](docs/README.md) 开始。8份源Markdown逐字节保留；源包未附其引用的Word，差异见[导入清单](docs/research/v2/import-manifest.json)。
 
@@ -16,7 +16,7 @@ RegressLab/
 ├── e2e/                       # 已实现：Demo浏览器测试
 ├── examples/                  # 已实现：v1合成夹具，不是v2实验结果
 ├── lab/                       # 本次规划：离线选择/冻结/评测，尚无算法代码
-├── experiments/               # 已实现：独立CPU预实验、基线、冻结与结果复核
+├── experiments/               # 已实现：独立CPU预实验、最小HGC、基线、冻结与结果复核
 ├── scripts/                   # 启动、夹具、当前文档/历史合同校验
 └── docs/
     ├── research/v2/           # 新研究原文与来源清单

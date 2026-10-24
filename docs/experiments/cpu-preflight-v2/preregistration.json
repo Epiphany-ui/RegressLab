@@ -1,0 +1,235 @@
+{
+  "code_files": {
+    "experiments/preflight/__init__.py": "3a03a776bec9c2a70968f0beb40b71122ad65493bb1ded96112881a4d1f256f0",
+    "experiments/preflight/baselines.py": "15c7759da50bffe7c19ecb3cb0910f61e7aca50163da62f0ce95bd0a6cceb79e",
+    "experiments/preflight/data.py": "8c38dac9ca751e434b77520d03a3796d2ad5aa569f9e8c3f54118b52b0c95f46",
+    "experiments/preflight/fetch.py": "8a7ded7fafdb6d9206094ffe5a03ca1c450ca107b0358fe0f676b3cdc53fb035",
+    "experiments/preflight/hgc.py": "4bb521469eee746e4b65b807a055da0887c2a0db046a134d56b58ed9e3d4ef03",
+    "experiments/preflight/identity.py": "7c00ab4e4b334f7f2a40687db5779334614281c476481386a2b41641fb5e12e3",
+    "experiments/preflight/round2.py": "514c6e429b36ef9b94aeae1e8a030b2f3a6900c907955b69a2df37776e838d24",
+    "experiments/preflight/runner.py": "1866b511d484b90bb890c9f45e3ac4403226d6f7016f27010730bc802904cc29",
+    "experiments/preflight/verify.py": "4d11f615bdcc47f5c76f75bd724e8aa0e323863fd5ad33b572ac278508e4c1b6",
+    "experiments/preflight/verify2.py": "c99b86dbac30bdf5ab935bde96bda838883fe9f3357d44333ae4136445562584"
+  },
+  "config": {
+    "archive_sha256": "4cba5faa11c71437928e17cb1b9b3d8b8e727e7ea363a3a9a8045e19c0491577",
+    "budgets": [
+      20,
+      50,
+      100,
+      200
+    ],
+    "classifier": {
+      "max_iter": 1000,
+      "solver": "lbfgs",
+      "tol": 0.0001
+    },
+    "classifier_representation": {
+      "analyzer": "char",
+      "fit_on": "SAME_REALIZATION_F0_40_PERCENT_TRAIN_ONLY",
+      "lowercase": false,
+      "max_features": 30000,
+      "min_df": 2,
+      "ngram_range": [
+        2,
+        4
+      ],
+      "norm": "l2",
+      "sublinear_tf": true
+    },
+    "cleaning_policy": "EXCLUDE_WHOLE_CROSS_PARTITION_CONFLICTING_OR_DUPLICATE_ID_COMPONENT",
+    "cost_policy": {
+      "full_baseline_scope": "entire current-correct P, not full DEV_SELECTOR",
+      "hard_timeout": false,
+      "history_setup": "training and full-D f0-f2 inference reported separately, no invented amortization",
+      "post_freeze_target_measurement": "raw normalized text -> frozen vectorizer.transform -> classifier.predict, 5 repetitions, median, warm-cache order fixed",
+      "pre_freeze_probe": "all methods and seeds at B=100; must equal main frozen prefixes",
+      "primary_budget": 100,
+      "reference_probabilities": "shared historical f2 cache assumed; extra full-P score reconstruction measured separately, cache construction not free in general",
+      "representation_charged_to": [
+        "facility",
+        "kcenter",
+        "hgc"
+      ],
+      "suite_scope": "all B=100 suites, including each of 20 stochastic seeds",
+      "target_benchmark_execution_count": "5*full_P plus 5*each primary-budget suite; research measurement costs, not deployment savings"
+    },
+    "cpu_threads": 2,
+    "dataset": "MASSIVE-1.1-zh-CN-cleaned-subset",
+    "dev_split": {
+      "dev_model_fraction": 0.5,
+      "protocol": "pilot-dev-v1",
+      "seed": 42
+    },
+    "development_round": 2,
+    "families": [
+      {
+        "C": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "id": "data-growth",
+        "train_fractions": [
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ]
+      },
+      {
+        "C": [
+          0.125,
+          0.25,
+          0.5,
+          0.75
+        ],
+        "id": "regularization",
+        "train_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "freeze_policy": "TRAIN_ALL_MODELS_THEN_GLOBAL_SEMANTIC_IDENTITY_GATE_BEFORE_ANY_DEV_MODEL_PREDICTION_THEN_ALL_SUITE_FREEZE_BEFORE_F3_DEV_PREDICTION",
+    "hgc": {
+      "jaccard": 0.9,
+      "k": 3,
+      "lambda": 0.5,
+      "length_boundaries": [
+        10,
+        20,
+        40
+      ],
+      "m": 30,
+      "max_groups": 30,
+      "min_support": 10,
+      "negation_terms": [
+        "不",
+        "没",
+        "无",
+        "别",
+        "未",
+        "不要",
+        "不能",
+        "not",
+        "no",
+        "never",
+        "without"
+      ],
+      "question_marks": [
+        "?",
+        "？"
+      ]
+    },
+    "hgc_feature_policy": {
+      "candidate_order": "descending w, descending P support, UTF-8 canonical predicate",
+      "chinese_negation": "substring",
+      "conditions": "all categorical values, including false; singles and pairs of distinct features",
+      "digits": "Unicode str.isdigit",
+      "english_negation": "case-insensitive whole word",
+      "length": "len of NFKC/whitespace-normalized text, including internal spaces",
+      "scope": "all DEV_SELECTOR for historical risk; P only for selections and TF-IDF representation"
+    },
+    "hgc_screen": {
+      "claim": "descriptive practical screen only, not noninferiority or statistical approval",
+      "comparison": "per-family mean of per-chain HGC minus ref-margin Recall@100",
+      "cost_scenario": "cached history and f2 probabilities, charge pool representation to representation methods; require (selection + representation + selected inference)/full-P inference <= 0.8",
+      "max_hgc_deployment_cost_ratio": 0.8,
+      "minimum_family_mean_difference": -0.03,
+      "on_failure": "report negative/inconclusive; no third tuning round or selecting a new winning configuration"
+    },
+    "identity_policy": {
+      "algorithm": "canonical inference identity of fitted TF-IDF config/vocabulary/IDF and classifier classes/coef/intercept",
+      "claim": "absence of exact semantic collision does not imply statistical independence",
+      "compare_current_targets_to": "all current f0-f2, other current f3, and all 24 previously exposed v1 nodes",
+      "inference_predictions_used_for_gate": false,
+      "on_collision": "STOP_BEFORE_ANY_CURRENT_DEV_PREDICTION_NO_AUTOMATIC_RETUNING"
+    },
+    "limitations": [
+      "Development-only second round on already used DEV_SELECTOR; never a formal untouched test.",
+      "One dataset and one LR architecture; distinct seeds and recipes do not establish independent model families.",
+      "DEV halves each miss two labels; recurrent-event support may be zero and must be reported.",
+      "Only one HGC configuration; no Risk-LR, Behavior-Anchor, Grad-PD, external dataset, GPU or formal TEST evaluation.",
+      "Cost benchmarks use this small CPU task and fixed warm-cache order; not generalizable to neural deployment savings.",
+      "No statistical superiority or noninferiority claims; retain every chain, cell, failure and zero denominator."
+    ],
+    "max_development_rounds": 2,
+    "max_training_seconds_per_model": 180,
+    "methods": [
+      "random",
+      "stratified",
+      "past-flip",
+      "ref-maxprob",
+      "ref-margin",
+      "ref-entropy",
+      "ref-deepgini",
+      "facility",
+      "kcenter",
+      "hgc"
+    ],
+    "parent_run_id": "798590e4-ee01-40f7-9e19-4c2cdda13765",
+    "primary_budget": 100,
+    "primary_comparator": "ref-margin",
+    "prior_exposure_run": "artifacts/preflight/cpu-pilot-20261023-v1",
+    "prior_freeze_sha256": "e9274da9250232272f58872d1679ee6eefcab4adb9d576b50e14a37dc8df5047",
+    "purpose": "DEVELOPMENT_SIGNAL_PILOT",
+    "schema_version": "regresslab-cpu-preflight-v2",
+    "selection_representation": {
+      "analyzer": "char",
+      "fit_on": "CURRENT_CORRECT_DEV_SELECTOR_POOL_ONLY",
+      "lowercase": false,
+      "max_features": 20000,
+      "min_df": 1,
+      "ngram_range": [
+        2,
+        4
+      ],
+      "norm": "l2",
+      "sublinear_tf": true
+    },
+    "selection_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "signal_rule": {
+      "decision": "EXPLORATORY_SCREEN_NOT_FORMAL_G1_APPROVAL",
+      "min_chains_with_future_flips_per_family": 2,
+      "min_future_flips_per_valid_chain": 20,
+      "rationale": "20 events limit one-event Recall change to 0.05; not a statistical power calculation"
+    },
+    "test_policy": "AUDIT_ONLY_NO_MODEL_INPUT_OR_EVALUATION",
+    "training_seeds": [
+      101,
+      211,
+      307
+    ]
+  },
+  "config_sha256": "c0913422d34cb440f68999ea333a1374c3f52bc9f242dab6b9605051e43bb70c",
+  "dependency_lock_sha256": "99f88a3239512b4197cdfd96de94f9d32cf609a0d4aac23c7065132b9d7bcf14",
+  "git_base_commit": "da2ba31b358bc4c56f8cd4136dcc38a22e4ca2b1",
+  "registered_at": "2026-10-24T06:52:33.858424+00:00",
+  "run_id": "95ae9b2e-0f1d-4a32-b95a-3a485b66cd92",
+  "working_tree_dirty": false
+}

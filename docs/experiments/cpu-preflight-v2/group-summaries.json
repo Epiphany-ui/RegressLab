@@ -1,0 +1,6356 @@
+[
+  {
+    "config": {
+      "jaccard": 0.9,
+      "k": 3,
+      "lambda": 0.5,
+      "length_boundaries": [
+        10,
+        20,
+        40
+      ],
+      "m": 30,
+      "max_groups": 30,
+      "min_support": 10,
+      "negation_terms": [
+        "不",
+        "没",
+        "无",
+        "别",
+        "未",
+        "不要",
+        "不能",
+        "not",
+        "no",
+        "never",
+        "without"
+      ],
+      "question_marks": [
+        "?",
+        "？"
+      ]
+    },
+    "d_count": 935,
+    "pool_count": 685,
+    "candidate_counts": {
+      "atomic_conditions": 68,
+      "enumerated_candidates": 684,
+      "excluded_positive_no_pool": 0,
+      "jaccard_duplicates": 41,
+      "nonempty_candidates": 405,
+      "omitted_by_group_cap": 0,
+      "positive_weight_candidates": 62,
+      "positive_weight_with_pool_candidates": 62,
+      "retained_groups": 21
+    },
+    "weights": [
+      0.11602843856287934,
+      0.10528579056180536,
+      0.07823908347999753,
+      0.07229778212252429,
+      0.07069932417232627,
+      0.05576582364305646,
+      0.05257742860374706,
+      0.04293926567768993,
+      0.04243585266279734,
+      0.04100064807833392,
+      0.04100064807833392,
+      0.04100064807833392,
+      0.04100064807833392,
+      0.0373939176609274,
+      0.03571350917099936,
+      0.035255572466141846,
+      0.035255572466141846,
+      0.027042601362970677,
+      0.022988246299652453,
+      0.005526431540968229,
+      0.0005527672320389191
+    ],
+    "global_transitions": [
+      {
+        "b": 11,
+        "e": 627,
+        "excluded_reason": null,
+        "p0": 0.017543859649122806,
+        "transition": "f0-f1",
+        "valid": true
+      },
+      {
+        "b": 8,
+        "e": 665,
+        "excluded_reason": null,
+        "p0": 0.012030075187969926,
+        "transition": "f1-f2",
+        "valid": true
+      }
+    ],
+    "valid_transition_count": 2,
+    "fallback": "NONE",
+    "effective_lambda": 0.5,
+    "proxy_values": [
+      {
+        "F": 0.1113813167329791,
+        "G": 0.7844598444120987,
+        "J": 0.4479205805725389,
+        "actual_size": 20,
+        "budget": 20
+      },
+      {
+        "F": 0.2654016241920222,
+        "G": 1.0,
+        "J": 0.6327008120960111,
+        "actual_size": 50,
+        "budget": 50
+      },
+      {
+        "F": 0.46945791666945347,
+        "G": 1.0,
+        "J": 0.7347289583347267,
+        "actual_size": 100,
+        "budget": 100
+      },
+      {
+        "F": 0.83057839138492,
+        "G": 1.0,
+        "J": 0.91528919569246,
+        "actual_size": 200,
+        "budget": 200
+      }
+    ],
+    "risk_build_seconds": 0.027302487000042674,
+    "similarity_build_seconds": 0.003622581000001901,
+    "greedy_seconds": 0.05907422199999246,
+    "total_seconds": 0.09420008300003246,
+    "groups": [
+      {
+        "b": [
+          1,
+          1
+        ],
+        "d_support": 17,
+        "e": [
+          10,
+          11
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.11602843856287934,
+        "p": [
+          0.038157894736842106,
+          0.03319273794241702
+        ],
+        "p0": [
+          0.017543859649122806,
+          0.012030075187969926
+        ],
+        "p_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "general_quirky"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"general_quirky\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "9c67c678ac5dffdc20283ee4bb1719d05cb034192ef9262fe78d555ef968f25b",
+        "q": 1.0,
+        "rank": 1,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0206140350877193,
+          0.021162662754447094
+        ],
+        "valid_transition_count": 2,
+        "w": 0.020888348921083197
+      },
+      {
+        "b": [
+          1,
+          2
+        ],
+        "d_support": 46,
+        "e": [
+          27,
+          28
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.10528579056180536,
+        "p": [
+          0.02677746999076639,
+          0.04070521130412238
+        ],
+        "p0": [
+          0.017543859649122806,
+          0.012030075187969926
+        ],
+        "p_support": 29,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "qa_factoid"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"qa_factoid\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "0f5d7a04867c7710c2eaad19f2fa1a6f92eb635b119eead72affa1786df4c76e",
+        "q": 1.0,
+        "rank": 2,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.009233610341643583,
+          0.02867513611615245
+        ],
+        "valid_transition_count": 2,
+        "w": 0.018954373228898015
+      },
+      {
+        "b": [
+          1,
+          1
+        ],
+        "d_support": 30,
+        "e": [
+          20,
+          20
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.07823908347999753,
+        "p": [
+          0.030526315789473683,
+          0.027218045112781954
+        ],
+        "p0": [
+          0.017543859649122806,
+          0.012030075187969926
+        ],
+        "p_support": 20,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "qa_factoid"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"qa_factoid\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "b13609a82b8dfccce24f7fe95ac2f3fade756568bbbb3a09ee7a9fc91a5ff813",
+        "q": 1.0,
+        "rank": 3,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.012982456140350877,
+          0.01518796992481203
+        ],
+        "valid_transition_count": 2,
+        "w": 0.014085213032581454
+      },
+      {
+        "b": [
+          1,
+          1
+        ],
+        "d_support": 45,
+        "e": [
+          21,
+          23
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.07229778212252429,
+        "p": [
+          0.029927760577915376,
+          0.025677401049794296
+        ],
+        "p0": [
+          0.017543859649122806,
+          0.012030075187969926
+        ],
+        "p_support": 22,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "general_quirky"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"general_quirky\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "b9fdce3039ffe283a93e9f5b13d73086df71ad9b2f6823e44d0f77b8d8647a9a",
+        "q": 1.0,
+        "rank": 4,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.01238390092879257,
+          0.013647325861824372
+        ],
+        "valid_transition_count": 2,
+        "w": 0.01301561339530847
+      },
+      {
+        "b": [
+          1,
+          1
+        ],
+        "d_support": 29,
+        "e": [
+          22,
+          23
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.07069932417232627,
+        "p": [
+          0.029352226720647773,
+          0.025677401049794296
+        ],
+        "p0": [
+          0.017543859649122806,
+          0.012030075187969926
+        ],
+        "p_support": 23,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "news_query"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"news_query\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "52e330373c1dd707711af7598781f3b68cd01d73322f53e1c358ae1ea67c6b80",
+        "q": 1.0,
+        "rank": 5,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.011808367071524967,
+          0.013647325861824372
+        ],
+        "valid_transition_count": 2,
+        "w": 0.012727846466674669
+      },
+      {
+        "b": [
+          2,
+          1
+        ],
+        "d_support": 53,
+        "e": [
+          49,
+          47
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.05576582364305646,
+        "p": [
+          0.031978680879413725,
+          0.01767405526804023
+        ],
+        "p0": [
+          0.017543859649122806,
+          0.012030075187969926
+        ],
+        "p_support": 46,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "play_music"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"play_music\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "b83ca2060de58bd3105a6dd85c5bdebdaabd0800414e0d756da5c7aa654d1036",
+        "q": 1.0,
+        "rank": 6,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.014434821230290917,
+          0.005643980080070305
+        ],
+        "valid_transition_count": 2,
+        "w": 0.010039400655180612
+      },
+      {
+        "b": [
+          1,
+          1
+        ],
+        "d_support": 33,
+        "e": [
+          30,
+          29
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.05257742860374706,
+        "p": [
+          0.02543859649122807,
+          0.0230661399260864
+        ],
+        "p0": [
+          0.017543859649122806,
+          0.012030075187969926
+        ],
+        "p_support": 28,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "play_music"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"play_music\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "c830d94c3dc42a9ff17bb91528346ec6a89ad5cc9d6503602078deaf65cae9a6",
+        "q": 1.0,
+        "rank": 7,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.007894736842105263,
+          0.011036064738116478
+        ],
+        "valid_transition_count": 2,
+        "w": 0.00946540079011087
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 13,
+        "e": [
+          10,
+          9
+        ],
+        "low_support": [
+          false,
+          true
+        ],
+        "normalized_weight": 0.04293926567768993,
+        "p": [
+          0.038157894736842106,
+          0.009253903990746095
+        ],
+        "p0": [
+          0.017543859649122806,
+          0.012030075187969926
+        ],
+        "p_support": 9,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "lists_createoradd"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"lists_createoradd\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "8214ad832ab516fcc5a7b616a2227047be5f4fda8603ef7d224d27292163293e",
+        "q": 0.5,
+        "rank": 8,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0206140350877193,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.007730263157894737
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 14,
+        "e": [
+          10,
+          12
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.04243585266279734,
+        "p": [
+          0.013157894736842105,
+          0.032402434658073756
+        ],
+        "p0": [
+          0.017543859649122806,
+          0.012030075187969926
+        ],
+        "p_support": 11,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "news_query"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"news_query\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "3a95fbd7730c644e89a14b04252e10018abc2d472575d37159d9ab7637346d9a",
+        "q": 0.5,
+        "rank": 9,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.02037235947010383
+        ],
+        "valid_transition_count": 2,
+        "w": 0.007639634801288936
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 20,
+        "e": [
+          11,
+          12
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.04100064807833392,
+        "p": [
+          0.037227214377406934,
+          0.008592910848549946
+        ],
+        "p0": [
+          0.017543859649122806,
+          0.012030075187969926
+        ],
+        "p_support": 13,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "cooking_recipe"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"cooking_recipe\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "28fb456c56848956989ad4ca05ad8083690a268bd0b589682ff23dc46904ed0d",
+        "q": 0.5,
+        "rank": 10,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.019683354728284124,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.007381258023106547
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 15,
+        "e": [
+          11,
+          12
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.04100064807833392,
+        "p": [
+          0.037227214377406934,
+          0.008592910848549946
+        ],
+        "p0": [
+          0.017543859649122806,
+          0.012030075187969926
+        ],
+        "p_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "recommendation_locations"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"recommendation_locations\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "49ae2444d9856b749d390c9d31323054e2e517b5043d320d47607d0c2cb2496f",
+        "q": 0.5,
+        "rank": 11,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.019683354728284124,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.007381258023106547
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 17,
+        "e": [
+          11,
+          10
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.04100064807833392,
+        "p": [
+          0.037227214377406934,
+          0.009022556390977444
+        ],
+        "p0": [
+          0.017543859649122806,
+          0.012030075187969926
+        ],
+        "p_support": 11,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "lists_remove"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"lists_remove\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "b868739aacc54e134476186b4bf3418ebac08fd51e1970d489cb2e0cc264d576",
+        "q": 0.5,
+        "rank": 12,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.019683354728284124,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.007381258023106547
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 15,
+        "e": [
+          11,
+          10
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.04100064807833392,
+        "p": [
+          0.037227214377406934,
+          0.009022556390977444
+        ],
+        "p0": [
+          0.017543859649122806,
+          0.012030075187969926
+        ],
+        "p_support": 11,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "lists_remove"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"lists_remove\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "dbe1ce82caeb50fcd426645548ae4c28e80fa8e40ae8d48c626bcd5e10b994eb",
+        "q": 0.5,
+        "rank": 13,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.019683354728284124,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.007381258023106547
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 15,
+        "e": [
+          13,
+          12
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.0373939176609274,
+        "p": [
+          0.03549571603427173,
+          0.008592910848549946
+        ],
+        "p0": [
+          0.017543859649122806,
+          0.012030075187969926
+        ],
+        "p_support": 13,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "news_query"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"news_query\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "f467d921ba0c14543d13e8b184eaeadbb5fa0ae1038fdc118c012cc34693584d",
+        "q": 0.5,
+        "rank": 14,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.01795185638514892,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.006731946144430845
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 27,
+        "e": [
+          14,
+          14
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.03571350917099936,
+        "p": [
+          0.034688995215311005,
+          0.008202323991797676
+        ],
+        "p0": [
+          0.017543859649122806,
+          0.012030075187969926
+        ],
+        "p_support": 14,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":true}]}",
+        "predicate_sha256": "a998beffcb8ad2d5394b5f315c0f022f4aa5e5bd1d950fe516e08248962f1ad1",
+        "q": 0.5,
+        "rank": 15,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0171451355661882,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.006429425837320574
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 21,
+        "e": [
+          14,
+          17
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.035255572466141846,
+        "p": [
+          0.011961722488038277,
+          0.028955367141257397
+        ],
+        "p0": [
+          0.017543859649122806,
+          0.012030075187969926
+        ],
+        "p_support": 16,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_query"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"calendar_query\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "eae1ad30d0f22ea08fe15b08f6949fb3cbe4de2b4f6b029952acdee1d4acd835",
+        "q": 0.5,
+        "rank": 16,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.016925291953287475
+        ],
+        "valid_transition_count": 2,
+        "w": 0.006346984482482803
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 20,
+        "e": [
+          16,
+          17
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.035255572466141846,
+        "p": [
+          0.011441647597254004,
+          0.028955367141257397
+        ],
+        "p0": [
+          0.017543859649122806,
+          0.012030075187969926
+        ],
+        "p_support": 16,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "social_post"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"social_post\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "f84be3713238f54ca43104b3ae3d174ef1af54af5b5468c9378858604b0808ca",
+        "q": 0.5,
+        "rank": 17,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.016925291953287475
+        ],
+        "valid_transition_count": 2,
+        "w": 0.006346984482482803
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 36,
+        "e": [
+          20,
+          21
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.027042601362970677,
+        "p": [
+          0.030526315789473683,
+          0.007076514816452897
+        ],
+        "p0": [
+          0.017543859649122806,
+          0.012030075187969926
+        ],
+        "p_support": 22,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"21-40\"}]}",
+        "predicate_sha256": "f1644d4ea08945b1285d1490ff4dffdc2a7d6077aea884af76813cec07602aee",
+        "q": 0.5,
+        "rank": 18,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.012982456140350877,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.004868421052631579
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 40,
+        "e": [
+          26,
+          29
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.022988246299652453,
+        "p": [
+          0.009398496240601503,
+          0.0230661399260864
+        ],
+        "p0": [
+          0.017543859649122806,
+          0.012030075187969926
+        ],
+        "p_support": 29,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_query"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"calendar_query\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "d28d49cc6cbcab9f07ee305968c2b869f64976b73712f4dfcfa10fd761cafd7c",
+        "q": 0.5,
+        "rank": 19,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.011036064738116478
+        ],
+        "valid_transition_count": 2,
+        "w": 0.004138524276793679
+      },
+      {
+        "b": [
+          4,
+          4
+        ],
+        "d_support": 357,
+        "e": [
+          250,
+          267
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.005526431540968229,
+        "p": [
+          0.016165413533834588,
+          0.01468317257790942
+        ],
+        "p0": [
+          0.017543859649122806,
+          0.012030075187969926
+        ],
+        "p_support": 275,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "5e462415d7cecda7cf65a4393a370667daa4760eec43a7030faedcdce4b60ec3",
+        "q": 0.5,
+        "rank": 20,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.0026530973899394953
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0009949115212273107
+      },
+      {
+        "b": [
+          10,
+          8
+        ],
+        "d_support": 907,
+        "e": [
+          613,
+          650
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.0005527672320389191,
+        "p": [
+          0.016370631087828436,
+          0.012295444493586908
+        ],
+        "p0": [
+          0.017543859649122806,
+          0.012030075187969926
+        ],
+        "p_support": 670,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "has_question_mark",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false},{\"feature\":\"has_question_mark\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "128a2f9d3a74b1f019f299ae416ead0971f3f61423f8c87ab625f3f520837cf0",
+        "q": 0.5,
+        "rank": 21,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.00026536930561698365
+        ],
+        "valid_transition_count": 2,
+        "w": 9.951348960636887e-05
+      }
+    ],
+    "chain_id": "data-growth-seed101",
+    "hgc_facility_common_members_at_100": 73,
+    "hgc_facility_identical_order_at_100": false
+  },
+  {
+    "config": {
+      "jaccard": 0.9,
+      "k": 3,
+      "lambda": 0.5,
+      "length_boundaries": [
+        10,
+        20,
+        40
+      ],
+      "m": 30,
+      "max_groups": 30,
+      "min_support": 10,
+      "negation_terms": [
+        "不",
+        "没",
+        "无",
+        "别",
+        "未",
+        "不要",
+        "不能",
+        "not",
+        "no",
+        "never",
+        "without"
+      ],
+      "question_marks": [
+        "?",
+        "？"
+      ]
+    },
+    "d_count": 935,
+    "pool_count": 679,
+    "candidate_counts": {
+      "atomic_conditions": 68,
+      "enumerated_candidates": 684,
+      "excluded_positive_no_pool": 0,
+      "jaccard_duplicates": 39,
+      "nonempty_candidates": 405,
+      "omitted_by_group_cap": 0,
+      "positive_weight_candidates": 63,
+      "positive_weight_with_pool_candidates": 63,
+      "retained_groups": 24
+    },
+    "weights": [
+      0.14547855306040608,
+      0.13039673545094116,
+      0.10528118109996695,
+      0.09851667875129182,
+      0.07008865973640722,
+      0.06378474735811618,
+      0.05029239599043996,
+      0.04336083855203576,
+      0.03575103338523689,
+      0.035151879903334585,
+      0.03171268591404402,
+      0.028579198057134828,
+      0.028579198057134828,
+      0.02718524351128142,
+      0.025161457991610625,
+      0.019510161086657277,
+      0.01841550625937463,
+      0.011622047824798944,
+      0.011524418161725763,
+      0.008734627474802196,
+      0.005498473884616704,
+      0.0025553431442240466,
+      0.0021774456411499856,
+      0.0006414897032681137
+    ],
+    "global_transitions": [
+      {
+        "b": 13,
+        "e": 626,
+        "excluded_reason": null,
+        "p0": 0.020766773162939296,
+        "transition": "f0-f1",
+        "valid": true
+      },
+      {
+        "b": 9,
+        "e": 661,
+        "excluded_reason": null,
+        "p0": 0.01361573373676248,
+        "transition": "f1-f2",
+        "valid": true
+      }
+    ],
+    "valid_transition_count": 2,
+    "fallback": "NONE",
+    "effective_lambda": 0.5,
+    "proxy_values": [
+      {
+        "F": 0.10390991564344132,
+        "G": 0.8584698129297579,
+        "J": 0.4811898642865996,
+        "actual_size": 20,
+        "budget": 20
+      },
+      {
+        "F": 0.274424934195152,
+        "G": 0.9999999999999999,
+        "J": 0.637212467097576,
+        "actual_size": 50,
+        "budget": 50
+      },
+      {
+        "F": 0.47826613441423826,
+        "G": 0.9999999999999999,
+        "J": 0.739133067207119,
+        "actual_size": 100,
+        "budget": 100
+      },
+      {
+        "F": 0.8375968095687217,
+        "G": 0.9999999999999999,
+        "J": 0.9187984047843608,
+        "actual_size": 200,
+        "budget": 200
+      }
+    ],
+    "risk_build_seconds": 0.030126950999999735,
+    "similarity_build_seconds": 0.0034667420000005222,
+    "greedy_seconds": 0.061617592000004606,
+    "total_seconds": 0.09911514899999929,
+    "groups": [
+      {
+        "b": [
+          5,
+          0
+        ],
+        "d_support": 48,
+        "e": [
+          27,
+          24
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.14547855306040608,
+        "p": [
+          0.09864917885768736,
+          0.007564296520423601
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 25,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "general_quirky"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"general_quirky\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "ebaf81c4cf0c63aaf1956533f642e3a5530c559be1b1d4112351614f13c1b3fd",
+        "q": 0.5,
+        "rank": 1,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.07788240569474805,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.02920590213553052
+      },
+      {
+        "b": [
+          3,
+          0
+        ],
+        "d_support": 17,
+        "e": [
+          10,
+          9
+        ],
+        "low_support": [
+          false,
+          true
+        ],
+        "normalized_weight": 0.13039673545094116,
+        "p": [
+          0.09057507987220448,
+          0.010473641335971139
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "general_quirky"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"general_quirky\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "9c67c678ac5dffdc20283ee4bb1719d05cb034192ef9262fe78d555ef968f25b",
+        "q": 0.5,
+        "rank": 2,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.06980830670926517,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.026178115015974442
+      },
+      {
+        "b": [
+          1,
+          2
+        ],
+        "d_support": 29,
+        "e": [
+          22,
+          23
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.10528118109996695,
+        "p": [
+          0.03121159990169575,
+          0.045442868152884425
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 21,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "news_query"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"news_query\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "52e330373c1dd707711af7598781f3b68cd01d73322f53e1c358ae1ea67c6b80",
+        "q": 1.0,
+        "rank": 3,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.010444826738756451,
+          0.03182713441612194
+        ],
+        "valid_transition_count": 2,
+        "w": 0.021135980577439196
+      },
+      {
+        "b": [
+          1,
+          1
+        ],
+        "d_support": 14,
+        "e": [
+          11,
+          11
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.09851667875129182,
+        "p": [
+          0.03958544377776046,
+          0.03435297590494816
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "news_query"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"news_query\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "3a95fbd7730c644e89a14b04252e10018abc2d472575d37159d9ab7637346d9a",
+        "q": 1.0,
+        "rank": 4,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.018818670614821165,
+          0.020737242168185677
+        ],
+        "valid_transition_count": 2,
+        "w": 0.01977795639150342
+      },
+      {
+        "b": [
+          2,
+          0
+        ],
+        "d_support": 27,
+        "e": [
+          15,
+          13
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.07008865973640722,
+        "p": [
+          0.05828895988640398,
+          0.009499349118671499
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 13,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "general_quirky"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"general_quirky\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "53bcf2452dd331a6dc41b87fe815d86fa71b1911c1fe85b5ed53c07222b25d0c",
+        "q": 0.5,
+        "rank": 5,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.037522186723464676,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.014070820021299255
+      },
+      {
+        "b": [
+          1,
+          1
+        ],
+        "d_support": 30,
+        "e": [
+          21,
+          20
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.06378474735811618,
+        "p": [
+          0.03182359205663096,
+          0.02816944024205749
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 20,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "qa_factoid"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"qa_factoid\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "b13609a82b8dfccce24f7fe95ac2f3fade756568bbbb3a09ee7a9fc91a5ff813",
+        "q": 1.0,
+        "rank": 6,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.011056818893691662,
+          0.014553706505295007
+        ],
+        "valid_transition_count": 2,
+        "w": 0.012805262699493334
+      },
+      {
+        "b": [
+          2,
+          0
+        ],
+        "d_support": 33,
+        "e": [
+          25,
+          23
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.05029239599043996,
+        "p": [
+          0.04769096717978507,
+          0.00770701909628065
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 23,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "email_sendemail"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"email_sendemail\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "9f410cec2a2a1dd1681bc8808170699a543a925e7e10c58eb35a9e4683448647",
+        "q": 0.5,
+        "rank": 7,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.026924194016845773,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.010096572756317165
+      },
+      {
+        "b": [
+          1,
+          1
+        ],
+        "d_support": 46,
+        "e": [
+          29,
+          28
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.04336083855203576,
+        "p": [
+          0.027508528726918287,
+          0.024284000208670248
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 28,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "qa_factoid"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"qa_factoid\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "0f5d7a04867c7710c2eaad19f2fa1a6f92eb635b119eead72affa1786df4c76e",
+        "q": 1.0,
+        "rank": 8,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.00674175556397899,
+          0.010668266471907767
+        ],
+        "valid_transition_count": 2,
+        "w": 0.008705011017943378
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 15,
+        "e": [
+          12,
+          13
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.03575103338523689,
+        "p": [
+          0.014833409402099498,
+          0.03275516307215987
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "news_query"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"news_query\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "f467d921ba0c14543d13e8b184eaeadbb5fa0ae1038fdc118c012cc34693584d",
+        "q": 0.5,
+        "rank": 9,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.01913942933539739
+        ],
+        "valid_transition_count": 2,
+        "w": 0.007177286000774021
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 23,
+        "e": [
+          11,
+          15
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.035151879903334585,
+        "p": [
+          0.03958544377776046,
+          0.009077155824508321
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 18,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "play_radio"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"play_radio\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "616237bd4f64e5b5967d64110067e2b4c011720900456c5fc8d9d93a5c2c878f",
+        "q": 0.5,
+        "rank": 10,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.018818670614821165,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.007057001480557937
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 14,
+        "e": [
+          13,
+          12
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.03171268591404402,
+        "p": [
+          0.03774426034623672,
+          0.009725524097687486
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "email_sendemail"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"email_sendemail\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "f0a872e2dc53cc4075df7011d5987eeda448cc6425674669fe86f99525b78b69",
+        "q": 0.5,
+        "rank": 11,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.016977487183297422,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.006366557693736533
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 27,
+        "e": [
+          15,
+          16
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.028579198057134828,
+        "p": [
+          0.03606673766418175,
+          0.008879826350062488
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 16,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":true}]}",
+        "predicate_sha256": "a998beffcb8ad2d5394b5f315c0f022f4aa5e5bd1d950fe516e08248962f1ad1",
+        "q": 0.5,
+        "rank": 12,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.015299964501242456,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.005737486687965921
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 19,
+        "e": [
+          15,
+          15
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.028579198057134828,
+        "p": [
+          0.03606673766418175,
+          0.009077155824508321
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 15,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "weather_query"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"weather_query\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "26b684d503d8069dbcaafb78d31229406220f502d00935d10563ef5fad84d032",
+        "q": 0.5,
+        "rank": 13,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.015299964501242456,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.005737486687965921
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 26,
+        "e": [
+          18,
+          20
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.02718524351128142,
+        "p": [
+          0.012979233226837061,
+          0.02816944024205749
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 19,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "qa_definition"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"qa_definition\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "f9c15ec2197deac643330be202fbac70fcc8b77ec5b5fe5416dbdbb43e041387",
+        "q": 0.5,
+        "rank": 14,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.014553706505295007
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0054576399394856276
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 29,
+        "e": [
+          20,
+          22
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.025161457991610625,
+        "p": [
+          0.012460063897763577,
+          0.027086000232747584
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 21,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "qa_definition"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"qa_definition\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "cbc8b55057713402733f573662e60a4edb8794a17351fca5e404e27655b7228a",
+        "q": 0.5,
+        "rank": 15,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.013470266495985104
+        ],
+        "valid_transition_count": 2,
+        "w": 0.005051349935994414
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 23,
+        "e": [
+          22,
+          21
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.019510161086657277,
+        "p": [
+          0.03121159990169575,
+          0.008009255139272047
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 21,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_set"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"calendar_set\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "48bc5b960d816bda3e68062cd5d11f49a97aa32e64e68ee444a1ab8f516a86b0",
+        "q": 0.5,
+        "rank": 16,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.010444826738756451,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.003916810027033669
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 33,
+        "e": [
+          30,
+          30
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.01841550625937463,
+        "p": [
+          0.010383386581469648,
+          0.023474533535047908
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 29,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "play_music"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"play_music\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "c830d94c3dc42a9ff17bb91528346ec6a89ad5cc9d6503602078deaf65cae9a6",
+        "q": 0.5,
+        "rank": 17,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.009858799798285425
+        ],
+        "valid_transition_count": 2,
+        "w": 0.003697049924357035
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 41,
+        "e": [
+          41,
+          41
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.011622047824798944,
+        "p": [
+          0.008774692885748999,
+          0.019837633973279922
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 40,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_set"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"calendar_set\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "2d749784b9463392b9fe681fb541216f558029ed1cc9d7ac954ad54f0fa293cd",
+        "q": 0.5,
+        "rank": 18,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.006221900236517441
+        ],
+        "valid_transition_count": 2,
+        "w": 0.00233321258869404
+      },
+      {
+        "b": [
+          7,
+          3
+        ],
+        "d_support": 357,
+        "e": [
+          253,
+          265
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.011524418161725763,
+        "p": [
+          0.026936407049074837,
+          0.011554142413908048
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 271,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "5e462415d7cecda7cf65a4393a370667daa4760eec43a7030faedcdce4b60ec3",
+        "q": 0.5,
+        "rank": 19,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.00616963388613554,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0023136127073008273
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 53,
+        "e": [
+          47,
+          47
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.008734627474802196,
+        "p": [
+          0.008090950582963363,
+          0.018291844313024344
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 46,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "play_music"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"play_music\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "b83ca2060de58bd3105a6dd85c5bdebdaabd0800414e0d756da5c7aa654d1036",
+        "q": 0.5,
+        "rank": 20,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.004676110576261862
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0017535414660981984
+      },
+      {
+        "b": [
+          5,
+          6
+        ],
+        "d_support": 513,
+        "e": [
+          338,
+          357
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.005498473884616704,
+        "p": [
+          0.015279899986109182,
+          0.016559359204400194
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 369,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "be4e25c5bb6b0ba049f8d9c48ab27b382480e7f076b4bebf0047bbcfdc4254cd",
+        "q": 0.5,
+        "rank": 21,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.002943625467637711
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0011038595503641416
+      },
+      {
+        "b": [
+          1,
+          1
+        ],
+        "d_support": 66,
+        "e": [
+          65,
+          64
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.0025553431442240466,
+        "p": [
+          0.017084244156717672,
+          0.014983744809605046
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 63,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_set"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"calendar_set\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "cf5ab624e4e668a2e1bb23051398d2a021cb5a10881732d0708e9e3cf981a60d",
+        "q": 0.5,
+        "rank": 22,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.001368011072842566
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0005130041523159623
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 53,
+        "e": [
+          44,
+          45
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.0021774456411499856,
+        "p": [
+          0.021932475606597012,
+          0.005446293494704993
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 45,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "weather_query"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"weather_query\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "681818504e3d6455e9b0a1b4f9c29a6f271c066e3d8bf6483577997f94b0a39d",
+        "q": 0.5,
+        "rank": 23,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0011657024436577152,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0004371384163716432
+      },
+      {
+        "b": [
+          12,
+          9
+        ],
+        "d_support": 907,
+        "e": [
+          611,
+          644
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.0006414897032681137,
+        "p": [
+          0.019692672690933197,
+          0.013959157287986461
+        ],
+        "p0": [
+          0.020766773162939296,
+          0.01361573373676248
+        ],
+        "p_support": 662,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "has_question_mark",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false},{\"feature\":\"has_question_mark\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "128a2f9d3a74b1f019f299ae416ead0971f3f61423f8c87ab625f3f520837cf0",
+        "q": 0.5,
+        "rank": 24,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.0003434235512239795
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0001287838317089923
+      }
+    ],
+    "chain_id": "data-growth-seed211",
+    "hgc_facility_common_members_at_100": 75,
+    "hgc_facility_identical_order_at_100": false
+  },
+  {
+    "config": {
+      "jaccard": 0.9,
+      "k": 3,
+      "lambda": 0.5,
+      "length_boundaries": [
+        10,
+        20,
+        40
+      ],
+      "m": 30,
+      "max_groups": 30,
+      "min_support": 10,
+      "negation_terms": [
+        "不",
+        "没",
+        "无",
+        "别",
+        "未",
+        "不要",
+        "不能",
+        "not",
+        "no",
+        "never",
+        "without"
+      ],
+      "question_marks": [
+        "?",
+        "？"
+      ]
+    },
+    "d_count": 935,
+    "pool_count": 681,
+    "candidate_counts": {
+      "atomic_conditions": 68,
+      "enumerated_candidates": 684,
+      "excluded_positive_no_pool": 0,
+      "jaccard_duplicates": 42,
+      "nonempty_candidates": 405,
+      "omitted_by_group_cap": 0,
+      "positive_weight_candidates": 67,
+      "positive_weight_with_pool_candidates": 67,
+      "retained_groups": 25
+    },
+    "weights": [
+      0.13054186112024072,
+      0.08809714015047398,
+      0.08348607397224696,
+      0.08041319408768088,
+      0.06913920026323327,
+      0.05258333852934663,
+      0.04068733475202466,
+      0.03933430352407628,
+      0.03907364830480757,
+      0.03907364830480757,
+      0.03607144096114785,
+      0.03607144096114785,
+      0.033336096492480115,
+      0.032057620273428886,
+      0.030923383001982385,
+      0.03083354729774154,
+      0.03009338021178912,
+      0.02925462426796092,
+      0.02327490547105067,
+      0.019381203525209095,
+      0.014903299155376318,
+      0.00934784532975578,
+      0.008895616045163156,
+      0.0026021633445895156,
+      0.0005236906522382795
+    ],
+    "global_transitions": [
+      {
+        "b": 14,
+        "e": 620,
+        "excluded_reason": null,
+        "p0": 0.02258064516129032,
+        "transition": "f0-f1",
+        "valid": true
+      },
+      {
+        "b": 9,
+        "e": 665,
+        "excluded_reason": null,
+        "p0": 0.013533834586466165,
+        "transition": "f1-f2",
+        "valid": true
+      }
+    ],
+    "valid_transition_count": 2,
+    "fallback": "NONE",
+    "effective_lambda": 0.5,
+    "proxy_values": [
+      {
+        "F": 0.12293082861436852,
+        "G": 0.770689292290617,
+        "J": 0.4468100604524928,
+        "actual_size": 20,
+        "budget": 20
+      },
+      {
+        "F": 0.28031624330232335,
+        "G": 0.9982652244369403,
+        "J": 0.6392907338696319,
+        "actual_size": 50,
+        "budget": 50
+      },
+      {
+        "F": 0.48366919615088705,
+        "G": 1.0,
+        "J": 0.7418345980754435,
+        "actual_size": 100,
+        "budget": 100
+      },
+      {
+        "F": 0.8440921998268951,
+        "G": 1.0,
+        "J": 0.9220460999134475,
+        "actual_size": 200,
+        "budget": 200
+      }
+    ],
+    "risk_build_seconds": 0.02674094700000751,
+    "similarity_build_seconds": 0.0034344759999953567,
+    "greedy_seconds": 0.04899024600001667,
+    "total_seconds": 0.0826210440000068,
+    "groups": [
+      {
+        "b": [
+          3,
+          0
+        ],
+        "d_support": 17,
+        "e": [
+          10,
+          10
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.13054186112024072,
+        "p": [
+          0.09193548387096774,
+          0.010150375939849625
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 11,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "general_quirky"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"general_quirky\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "9c67c678ac5dffdc20283ee4bb1719d05cb034192ef9262fe78d555ef968f25b",
+        "q": 0.5,
+        "rank": 1,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.06935483870967742,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.026008064516129033
+      },
+      {
+        "b": [
+          3,
+          0
+        ],
+        "d_support": 45,
+        "e": [
+          23,
+          23
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.08809714015047398,
+        "p": [
+          0.06938527084601338,
+          0.007660661086678962
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 24,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "general_quirky"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"general_quirky\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "b9fdce3039ffe283a93e9f5b13d73086df71ad9b2f6823e44d0f77b8d8647a9a",
+        "q": 0.5,
+        "rank": 2,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.046804625684723065,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.01755173463177115
+      },
+      {
+        "b": [
+          2,
+          0
+        ],
+        "d_support": 16,
+        "e": [
+          10,
+          8
+        ],
+        "low_support": [
+          false,
+          true
+        ],
+        "normalized_weight": 0.08348607397224696,
+        "p": [
+          0.06693548387096775,
+          0.010684606252473288
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 9,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "cooking_recipe"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"cooking_recipe\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "ab55bef76810b82894b0f26eed9e3b0cae7977d21220c8421420f7a2e971c1dc",
+        "q": 0.5,
+        "rank": 3,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.04435483870967742,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.01663306451612903
+      },
+      {
+        "b": [
+          2,
+          0
+        ],
+        "d_support": 20,
+        "e": [
+          11,
+          10
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.08041319408768088,
+        "p": [
+          0.06530291109362707,
+          0.010150375939849625
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 11,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "cooking_recipe"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"cooking_recipe\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "28fb456c56848956989ad4ca05ad8083690a268bd0b589682ff23dc46904ed0d",
+        "q": 0.5,
+        "rank": 4,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.042722265932336745,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.01602084972462628
+      },
+      {
+        "b": [
+          3,
+          0
+        ],
+        "d_support": 46,
+        "e": [
+          32,
+          29
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.06913920026323327,
+        "p": [
+          0.05931321540062435,
+          0.006881610806677711
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 30,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "qa_factoid"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"qa_factoid\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "0f5d7a04867c7710c2eaad19f2fa1a6f92eb635b119eead72affa1786df4c76e",
+        "q": 0.5,
+        "rank": 5,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.036732570239334024,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.01377471383975026
+      },
+      {
+        "b": [
+          2,
+          0
+        ],
+        "d_support": 30,
+        "e": [
+          23,
+          21
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.05258333852934663,
+        "p": [
+          0.0505173463177115,
+          0.00796107916850951
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 22,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "qa_factoid"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"qa_factoid\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "b13609a82b8dfccce24f7fe95ac2f3fade756568bbbb3a09ee7a9fc91a5ff813",
+        "q": 0.5,
+        "rank": 6,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.02793670115642118,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.010476262933657943
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 10,
+        "e": [
+          10,
+          10
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.04068733475202466,
+        "p": [
+          0.016935483870967744,
+          0.035150375939849626
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 9,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "alarm_set"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"alarm_set\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "91cc11f1c73dba2c1cf11784fd71d2c1573e85569c9ee6fd83cd398e7951bc0e",
+        "q": 0.5,
+        "rank": 7,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.021616541353383457
+        ],
+        "valid_transition_count": 2,
+        "w": 0.008106203007518797
+      },
+      {
+        "b": [
+          1,
+          1
+        ],
+        "d_support": 33,
+        "e": [
+          30,
+          29
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.03933430352407628,
+        "p": [
+          0.02795698924731183,
+          0.023830763349050592
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 28,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "play_music"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"play_music\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "c830d94c3dc42a9ff17bb91528346ec6a89ad5cc9d6503602078deaf65cae9a6",
+        "q": 1.0,
+        "rank": 8,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.005376344086021506,
+          0.010296928762584426
+        ],
+        "valid_transition_count": 2,
+        "w": 0.007836636424302967
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 17,
+        "e": [
+          8,
+          11
+        ],
+        "low_support": [
+          true,
+          false
+        ],
+        "normalized_weight": 0.03907364830480757,
+        "p": [
+          0.017826825127334467,
+          0.034293049697414264
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "lists_remove"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"lists_remove\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "b868739aacc54e134476186b4bf3418ebac08fd51e1970d489cb2e0cc264d576",
+        "q": 0.5,
+        "rank": 9,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.020759215110948102
+        ],
+        "valid_transition_count": 2,
+        "w": 0.007784705666605538
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 15,
+        "e": [
+          8,
+          11
+        ],
+        "low_support": [
+          true,
+          false
+        ],
+        "normalized_weight": 0.03907364830480757,
+        "p": [
+          0.017826825127334467,
+          0.034293049697414264
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "lists_remove"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"lists_remove\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "dbe1ce82caeb50fcd426645548ae4c28e80fa8e40ae8d48c626bcd5e10b994eb",
+        "q": 0.5,
+        "rank": 10,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.020759215110948102
+        ],
+        "valid_transition_count": 2,
+        "w": 0.007784705666605538
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 13,
+        "e": [
+          13,
+          13
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.03607144096114785,
+        "p": [
+          0.015753938484621154,
+          0.03269802413009267
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "alarm_set"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"alarm_set\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "83a7cc800f4909a5d4e9b65011f7de51c866eedd3a6a2c1b8891cbf34e767f8d",
+        "q": 0.5,
+        "rank": 11,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.019164189543626507
+        ],
+        "valid_transition_count": 2,
+        "w": 0.00718657107885994
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 15,
+        "e": [
+          11,
+          13
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.03607144096114785,
+        "p": [
+          0.016522423288749016,
+          0.03269802413009267
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "recommendation_locations"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"recommendation_locations\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "49ae2444d9856b749d390c9d31323054e2e517b5043d320d47607d0c2cb2496f",
+        "q": 0.5,
+        "rank": 12,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.019164189543626507
+        ],
+        "valid_transition_count": 2,
+        "w": 0.00718657107885994
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 23,
+        "e": [
+          14,
+          15
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.033336096492480115,
+        "p": [
+          0.015395894428152493,
+          0.031244778613199665
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 15,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "play_radio"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"play_radio\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "616237bd4f64e5b5967d64110067e2b4c011720900456c5fc8d9d93a5c2c878f",
+        "q": 0.5,
+        "rank": 13,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.0177109440267335
+        ],
+        "valid_transition_count": 2,
+        "w": 0.006641604010025063
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 19,
+        "e": [
+          15,
+          16
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.032057620273428886,
+        "p": [
+          0.015053763440860216,
+          0.030565544295521413
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 15,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "weather_query"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"weather_query\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "26b684d503d8069dbcaafb78d31229406220f502d00935d10563ef5fad84d032",
+        "q": 0.5,
+        "rank": 14,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.017031709709055248
+        ],
+        "valid_transition_count": 2,
+        "w": 0.006386891140895717
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 14,
+        "e": [
+          13,
+          12
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.030923383001982385,
+        "p": [
+          0.03900975243810953,
+          0.00966702470461869
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "email_sendemail"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"email_sendemail\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "f0a872e2dc53cc4075df7011d5987eeda448cc6425674669fe86f99525b78b69",
+        "q": 0.5,
+        "rank": 15,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.016429107276819205,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.006160915228807202
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 21,
+        "e": [
+          17,
+          17
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.03083354729774154,
+        "p": [
+          0.014413177762525738,
+          0.029915213565829466
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 16,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_query"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"calendar_query\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "eae1ad30d0f22ea08fe15b08f6949fb3cbe4de2b4f6b029952acdee1d4acd835",
+        "q": 0.5,
+        "rank": 16,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.0163813789793633
+        ],
+        "valid_transition_count": 2,
+        "w": 0.006143017117261238
+      },
+      {
+        "b": [
+          7,
+          6
+        ],
+        "d_support": 357,
+        "e": [
+          254,
+          274
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.03009338021178912,
+        "p": [
+          0.027033166742389824,
+          0.02107241788682232
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 278,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "5e462415d7cecda7cf65a4393a370667daa4760eec43a7030faedcdce4b60ec3",
+        "q": 1.0,
+        "rank": 17,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0044525215810995,
+          0.007538583300356154
+        ],
+        "valid_transition_count": 2,
+        "w": 0.005995552440727827
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 27,
+        "e": [
+          14,
+          14
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.02925462426796092,
+        "p": [
+          0.03812316715542522,
+          0.009227614490772385
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 14,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":true}]}",
+        "predicate_sha256": "a998beffcb8ad2d5394b5f315c0f022f4aa5e5bd1d950fe516e08248962f1ad1",
+        "q": 0.5,
+        "rank": 18,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.015542521994134898,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.005828445747800587
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 26,
+        "e": [
+          18,
+          18
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.02327490547105067,
+        "p": [
+          0.03494623655913978,
+          0.008458646616541353
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 20,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "lists_query"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"lists_query\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "fa972e8f41ce1e4152ea7ca35e2b62d5454a92df041179dcaee8b96766263861",
+        "q": 0.5,
+        "rank": 19,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.012365591397849462,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.004637096774193548
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 40,
+        "e": [
+          28,
+          29
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.019381203525209095,
+        "p": [
+          0.01167964404894327,
+          0.023830763349050592
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 28,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_query"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"calendar_query\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "d28d49cc6cbcab9f07ee305968c2b869f64976b73712f4dfcfa10fd761cafd7c",
+        "q": 0.5,
+        "rank": 20,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.010296928762584426
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0038613482859691604
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 33,
+        "e": [
+          25,
+          24
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.014903299155376318,
+        "p": [
+          0.030498533724340176,
+          0.007518796992481203
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 24,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "email_sendemail"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"email_sendemail\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "9f410cec2a2a1dd1681bc8808170699a543a925e7e10c58eb35a9e4683448647",
+        "q": 0.5,
+        "rank": 21,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.007917888563049853,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.002969208211143695
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 53,
+        "e": [
+          43,
+          46
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.00934784532975578,
+        "p": [
+          0.009279717189571365,
+          0.01850019786307875
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 45,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "weather_query"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"weather_query\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "681818504e3d6455e9b0a1b4f9c29a6f271c066e3d8bf6483577997f94b0a39d",
+        "q": 0.5,
+        "rank": 22,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.004966363276612584
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0018623862287297191
+      },
+      {
+        "b": [
+          1,
+          1
+        ],
+        "d_support": 53,
+        "e": [
+          48,
+          47
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.008895616045163156,
+        "p": [
+          0.021505376344086023,
+          0.018259935553168637
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 46,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "play_music"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"play_music\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "b83ca2060de58bd3105a6dd85c5bdebdaabd0800414e0d756da5c7aa654d1036",
+        "q": 0.5,
+        "rank": 23,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.00472610096670247
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0017722878625134263
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 41,
+        "e": [
+          40,
+          39
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.0026021633445895156,
+        "p": [
+          0.023963133640552997,
+          0.005884275907159202
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 40,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_set"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"calendar_set\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "2d749784b9463392b9fe681fb541216f558029ed1cc9d7ac954ad54f0fa293cd",
+        "q": 0.5,
+        "rank": 24,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0013824884792626728,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0005184331797235024
+      },
+      {
+        "b": [
+          13,
+          9
+        ],
+        "d_support": 908,
+        "e": [
+          606,
+          651
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.0005236906522382795,
+        "p": [
+          0.021505376344086023,
+          0.013812063197641682
+        ],
+        "p0": [
+          0.02258064516129032,
+          0.013533834586466165
+        ],
+        "p_support": 667,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "16ab477e9a0834545f781cbf7b0e7900e0ef1d0df156124f605f82ba7f8f1606",
+        "q": 0.5,
+        "rank": 25,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.0002782286111755159
+        ],
+        "valid_transition_count": 2,
+        "w": 0.00010433572919081845
+      }
+    ],
+    "chain_id": "data-growth-seed307",
+    "hgc_facility_common_members_at_100": 68,
+    "hgc_facility_identical_order_at_100": false
+  },
+  {
+    "config": {
+      "jaccard": 0.9,
+      "k": 3,
+      "lambda": 0.5,
+      "length_boundaries": [
+        10,
+        20,
+        40
+      ],
+      "m": 30,
+      "max_groups": 30,
+      "min_support": 10,
+      "negation_terms": [
+        "不",
+        "没",
+        "无",
+        "别",
+        "未",
+        "不要",
+        "不能",
+        "not",
+        "no",
+        "never",
+        "without"
+      ],
+      "question_marks": [
+        "?",
+        "？"
+      ]
+    },
+    "d_count": 935,
+    "pool_count": 654,
+    "candidate_counts": {
+      "atomic_conditions": 68,
+      "enumerated_candidates": 684,
+      "excluded_positive_no_pool": 0,
+      "jaccard_duplicates": 25,
+      "nonempty_candidates": 405,
+      "omitted_by_group_cap": 0,
+      "positive_weight_candidates": 39,
+      "positive_weight_with_pool_candidates": 39,
+      "retained_groups": 14
+    },
+    "weights": [
+      0.266197819312402,
+      0.16899112044620718,
+      0.0816701204491274,
+      0.07290998567078284,
+      0.06800819124953175,
+      0.06529247716787454,
+      0.05860772480817949,
+      0.05269429002844925,
+      0.04263272979233875,
+      0.039816143174814515,
+      0.03820684602326792,
+      0.02219341590141961,
+      0.020686195694569344,
+      0.002092940281035426
+    ],
+    "global_transitions": [
+      {
+        "b": 3,
+        "e": 459,
+        "excluded_reason": null,
+        "p0": 0.006535947712418301,
+        "transition": "f0-f1",
+        "valid": true
+      },
+      {
+        "b": 7,
+        "e": 591,
+        "excluded_reason": null,
+        "p0": 0.011844331641285956,
+        "transition": "f1-f2",
+        "valid": true
+      }
+    ],
+    "valid_transition_count": 2,
+    "fallback": "NONE",
+    "effective_lambda": 0.5,
+    "proxy_values": [
+      {
+        "F": 0.11891306383648254,
+        "G": 0.9872643846589108,
+        "J": 0.5530887242476966,
+        "actual_size": 20,
+        "budget": 20
+      },
+      {
+        "F": 0.2877820464812363,
+        "G": 1.0,
+        "J": 0.6438910232406181,
+        "actual_size": 50,
+        "budget": 50
+      },
+      {
+        "F": 0.48304821719553004,
+        "G": 1.0,
+        "J": 0.7415241085977651,
+        "actual_size": 100,
+        "budget": 100
+      },
+      {
+        "F": 0.8424197374056135,
+        "G": 1.0,
+        "J": 0.9212098687028067,
+        "actual_size": 200,
+        "budget": 200
+      }
+    ],
+    "risk_build_seconds": 0.024446941000007882,
+    "similarity_build_seconds": 0.003147247999947922,
+    "greedy_seconds": 0.05395650100001603,
+    "total_seconds": 0.08524255199995423,
+    "groups": [
+      {
+        "b": [
+          1,
+          2
+        ],
+        "d_support": 45,
+        "e": [
+          13,
+          23
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.266197819312402,
+        "p": [
+          0.02781577747378021,
+          0.044440187721482616
+        ],
+        "p0": [
+          0.006535947712418301,
+          0.011844331641285956
+        ],
+        "p_support": 24,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "general_quirky"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"general_quirky\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "b9fdce3039ffe283a93e9f5b13d73086df71ad9b2f6823e44d0f77b8d8647a9a",
+        "q": 1.0,
+        "rank": 1,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.021279829761361908,
+          0.03259585608019666
+        ],
+        "valid_transition_count": 2,
+        "w": 0.026937842920779286
+      },
+      {
+        "b": [
+          1,
+          2
+        ],
+        "d_support": 17,
+        "e": [
+          8,
+          11
+        ],
+        "low_support": [
+          true,
+          false
+        ],
+        "normalized_weight": 0.16899112044620718,
+        "p": [
+          0.03147574819401445,
+          0.05744707193264826
+        ],
+        "p0": [
+          0.006535947712418301,
+          0.011844331641285956
+        ],
+        "p_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "general_quirky"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"general_quirky\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "9c67c678ac5dffdc20283ee4bb1719d05cb034192ef9262fe78d555ef968f25b",
+        "q": 0.5,
+        "rank": 2,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.045602740291362305
+        ],
+        "valid_transition_count": 2,
+        "w": 0.017101027609260865
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 10,
+        "e": [
+          7,
+          10
+        ],
+        "low_support": [
+          true,
+          false
+        ],
+        "normalized_weight": 0.0816701204491274,
+        "p": [
+          0.005299417064122946,
+          0.03388324873096447
+        ],
+        "p0": [
+          0.006535947712418301,
+          0.011844331641285956
+        ],
+        "p_support": 9,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "alarm_set"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"alarm_set\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "91cc11f1c73dba2c1cf11784fd71d2c1573e85569c9ee6fd83cd398e7951bc0e",
+        "q": 0.5,
+        "rank": 3,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.02203891708967851
+        ],
+        "valid_transition_count": 2,
+        "w": 0.008264593908629441
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 13,
+        "e": [
+          10,
+          13
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.07290998567078284,
+        "p": [
+          0.004901960784313725,
+          0.03151930114508322
+        ],
+        "p0": [
+          0.006535947712418301,
+          0.011844331641285956
+        ],
+        "p_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "alarm_set"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"alarm_set\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "83a7cc800f4909a5d4e9b65011f7de51c866eedd3a6a2c1b8891cbf34e767f8d",
+        "q": 0.5,
+        "rank": 4,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.01967496950379727
+        ],
+        "valid_transition_count": 2,
+        "w": 0.007378113563923976
+      },
+      {
+        "b": [
+          0,
+          2
+        ],
+        "d_support": 53,
+        "e": [
+          48,
+          48
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.06800819124953175,
+        "p": [
+          0.002513826043237808,
+          0.030196537810751007
+        ],
+        "p0": [
+          0.006535947712418301,
+          0.011844331641285956
+        ],
+        "p_support": 48,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "play_music"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"play_music\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "b83ca2060de58bd3105a6dd85c5bdebdaabd0800414e0d756da5c7aa654d1036",
+        "q": 0.5,
+        "rank": 5,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.018352206169465052
+        ],
+        "valid_transition_count": 2,
+        "w": 0.006882077313549395
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 19,
+        "e": [
+          16,
+          16
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.06529247716787454,
+        "p": [
+          0.004262574595055414,
+          0.029463694548664755
+        ],
+        "p0": [
+          0.006535947712418301,
+          0.011844331641285956
+        ],
+        "p_support": 15,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "weather_query"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"weather_query\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "26b684d503d8069dbcaafb78d31229406220f502d00935d10563ef5fad84d032",
+        "q": 0.5,
+        "rank": 6,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.017619362907378797
+        ],
+        "valid_transition_count": 2,
+        "w": 0.00660726109026705
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 36,
+        "e": [
+          16,
+          19
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.05860772480817949,
+        "p": [
+          0.004262574595055414,
+          0.027659794882419972
+        ],
+        "p0": [
+          0.006535947712418301,
+          0.011844331641285956
+        ],
+        "p_support": 19,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"21-40\"}]}",
+        "predicate_sha256": "f1644d4ea08945b1285d1490ff4dffdc2a7d6077aea884af76813cec07602aee",
+        "q": 0.5,
+        "rank": 7,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.015815463241134017
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0059307987154252565
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 23,
+        "e": [
+          22,
+          22
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.05269429002844925,
+        "p": [
+          0.003770739064856712,
+          0.026064037485357284
+        ],
+        "p0": [
+          0.006535947712418301,
+          0.011844331641285956
+        ],
+        "p_support": 21,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_set"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"calendar_set\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "48bc5b960d816bda3e68062cd5d11f49a97aa32e64e68ee444a1ab8f516a86b0",
+        "q": 0.5,
+        "rank": 8,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.014219705844071326
+        ],
+        "valid_transition_count": 2,
+        "w": 0.005332389691526747
+      },
+      {
+        "b": [
+          1,
+          1
+        ],
+        "d_support": 66,
+        "e": [
+          65,
+          64
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.04263272979233875,
+        "p": [
+          0.01259029927760578,
+          0.01441840371530403
+        ],
+        "p0": [
+          0.006535947712418301,
+          0.011844331641285956
+        ],
+        "p_support": 63,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_set"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"calendar_set\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "cf5ab624e4e668a2e1bb23051398d2a021cb5a10881732d0708e9e3cf981a60d",
+        "q": 1.0,
+        "rank": 9,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.006054351565187479,
+          0.0025740720740180727
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0043142118196027755
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 33,
+        "e": [
+          30,
+          30
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.039816143174814515,
+        "p": [
+          0.0032679738562091504,
+          0.022588832487309644
+        ],
+        "p0": [
+          0.006535947712418301,
+          0.011844331641285956
+        ],
+        "p_support": 30,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "play_music"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"play_music\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "c830d94c3dc42a9ff17bb91528346ec6a89ad5cc9d6503602078deaf65cae9a6",
+        "q": 0.5,
+        "rank": 10,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.01074450084602369
+        ],
+        "valid_transition_count": 2,
+        "w": 0.004029187817258883
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 41,
+        "e": [
+          41,
+          40
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.03820684602326792,
+        "p": [
+          0.016846175089754212,
+          0.005076142131979695
+        ],
+        "p0": [
+          0.006535947712418301,
+          0.011844331641285956
+        ],
+        "p_support": 40,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_set"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"calendar_set\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "2d749784b9463392b9fe681fb541216f558029ed1cc9d7ac954ad54f0fa293cd",
+        "q": 0.5,
+        "rank": 11,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.01031022737733591,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0038663352665009665
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 53,
+        "e": [
+          45,
+          46
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.02219341590141961,
+        "p": [
+          0.00261437908496732,
+          0.017833288805770772
+        ],
+        "p0": [
+          0.006535947712418301,
+          0.011844331641285956
+        ],
+        "p_support": 45,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "weather_query"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"weather_query\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "681818504e3d6455e9b0a1b4f9c29a6f271c066e3d8bf6483577997f94b0a39d",
+        "q": 0.5,
+        "rank": 12,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.005988957164484816
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0022458589366818062
+      },
+      {
+        "b": [
+          2,
+          3
+        ],
+        "d_support": 357,
+        "e": [
+          195,
+          232
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.020686195694569344,
+        "p": [
+          0.009760348583877995,
+          0.012806602859689232
+        ],
+        "p0": [
+          0.006535947712418301,
+          0.011844331641285956
+        ],
+        "p_support": 261,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "5e462415d7cecda7cf65a4393a370667daa4760eec43a7030faedcdce4b60ec3",
+        "q": 1.0,
+        "rank": 13,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.003224400871459695,
+          0.0009622712184032756
+        ],
+        "valid_transition_count": 2,
+        "w": 0.002093336044931485
+      },
+      {
+        "b": [
+          3,
+          7
+        ],
+        "d_support": 907,
+        "e": [
+          448,
+          577
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.002092940281035426,
+        "p": [
+          0.006686356550988596,
+          0.012117512272221711
+        ],
+        "p0": [
+          0.006535947712418301,
+          0.011844331641285956
+        ],
+        "p_support": 639,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "has_question_mark",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false},{\"feature\":\"has_question_mark\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "128a2f9d3a74b1f019f299ae416ead0971f3f61423f8c87ab625f3f520837cf0",
+        "q": 1.0,
+        "rank": 14,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.00015040883857029563,
+          0.0002731806309357552
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0002117947347530254
+      }
+    ],
+    "chain_id": "regularization-seed101",
+    "hgc_facility_common_members_at_100": 75,
+    "hgc_facility_identical_order_at_100": false
+  },
+  {
+    "config": {
+      "jaccard": 0.9,
+      "k": 3,
+      "lambda": 0.5,
+      "length_boundaries": [
+        10,
+        20,
+        40
+      ],
+      "m": 30,
+      "max_groups": 30,
+      "min_support": 10,
+      "negation_terms": [
+        "不",
+        "没",
+        "无",
+        "别",
+        "未",
+        "不要",
+        "不能",
+        "not",
+        "no",
+        "never",
+        "without"
+      ],
+      "question_marks": [
+        "?",
+        "？"
+      ]
+    },
+    "d_count": 935,
+    "pool_count": 651,
+    "candidate_counts": {
+      "atomic_conditions": 68,
+      "enumerated_candidates": 684,
+      "excluded_positive_no_pool": 0,
+      "jaccard_duplicates": 28,
+      "nonempty_candidates": 405,
+      "omitted_by_group_cap": 0,
+      "positive_weight_candidates": 42,
+      "positive_weight_with_pool_candidates": 42,
+      "retained_groups": 14
+    },
+    "weights": [
+      0.274569066843299,
+      0.1653562209927028,
+      0.07943004186970902,
+      0.07673429064814133,
+      0.06335795608064267,
+      0.060808925979465175,
+      0.060808925979465175,
+      0.04855864546509891,
+      0.0466097847923181,
+      0.04313195284551994,
+      0.03457165476659139,
+      0.023425440841727735,
+      0.020636834923345157,
+      0.002000257971973568
+    ],
+    "global_transitions": [
+      {
+        "b": 6,
+        "e": 466,
+        "excluded_reason": null,
+        "p0": 0.012875536480686695,
+        "transition": "f0-f1",
+        "valid": true
+      },
+      {
+        "b": 4,
+        "e": 582,
+        "excluded_reason": null,
+        "p0": 0.006872852233676976,
+        "transition": "f1-f2",
+        "valid": true
+      }
+    ],
+    "valid_transition_count": 2,
+    "fallback": "NONE",
+    "effective_lambda": 0.5,
+    "proxy_values": [
+      {
+        "F": 0.11339614033378409,
+        "G": 0.9765745591582723,
+        "J": 0.5449853497460282,
+        "actual_size": 20,
+        "budget": 20
+      },
+      {
+        "F": 0.2860336072370314,
+        "G": 1.0,
+        "J": 0.6430168036185158,
+        "actual_size": 50,
+        "budget": 50
+      },
+      {
+        "F": 0.4828788138196106,
+        "G": 1.0,
+        "J": 0.7414394069098054,
+        "actual_size": 100,
+        "budget": 100
+      },
+      {
+        "F": 0.8428247247239913,
+        "G": 1.0,
+        "J": 0.9214123623619956,
+        "actual_size": 200,
+        "budget": 200
+      }
+    ],
+    "risk_build_seconds": 0.05456838899999639,
+    "similarity_build_seconds": 0.0029370130000074823,
+    "greedy_seconds": 0.04958792899998343,
+    "total_seconds": 0.11128593500001216,
+    "groups": [
+      {
+        "b": [
+          1,
+          2
+        ],
+        "d_support": 45,
+        "e": [
+          13,
+          18
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.274569066843299,
+        "p": [
+          0.03223874638187444,
+          0.04596219931271478
+        ],
+        "p0": [
+          0.012875536480686695,
+          0.006872852233676976
+        ],
+        "p_support": 23,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "general_quirky"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"general_quirky\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "b9fdce3039ffe283a93e9f5b13d73086df71ad9b2f6823e44d0f77b8d8647a9a",
+        "q": 1.0,
+        "rank": 1,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.019363209901187742,
+          0.0390893470790378
+        ],
+        "valid_transition_count": 2,
+        "w": 0.02922627849011277
+      },
+      {
+        "b": [
+          1,
+          2
+        ],
+        "d_support": 17,
+        "e": [
+          8,
+          11
+        ],
+        "low_support": [
+          true,
+          false
+        ],
+        "normalized_weight": 0.1653562209927028,
+        "p": [
+          0.03648068669527897,
+          0.053809404073422176
+        ],
+        "p0": [
+          0.012875536480686695,
+          0.006872852233676976
+        ],
+        "p_support": 10,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "general_quirky"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"general_quirky\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "9c67c678ac5dffdc20283ee4bb1719d05cb034192ef9262fe78d555ef968f25b",
+        "q": 0.5,
+        "rank": 2,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.046936551839745204
+        ],
+        "valid_transition_count": 2,
+        "w": 0.01760120693990445
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 23,
+        "e": [
+          9,
+          11
+        ],
+        "low_support": [
+          true,
+          false
+        ],
+        "normalized_weight": 0.07943004186970902,
+        "p": [
+          0.009904258831297457,
+          0.029419160170983154
+        ],
+        "p0": [
+          0.012875536480686695,
+          0.006872852233676976
+        ],
+        "p_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "play_radio"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"play_radio\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "616237bd4f64e5b5967d64110067e2b4c011720900456c5fc8d9d93a5c2c878f",
+        "q": 0.5,
+        "rank": 3,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.02254630793730618
+        ],
+        "valid_transition_count": 2,
+        "w": 0.008454865476489817
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 13,
+        "e": [
+          10,
+          12
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.07673429064814133,
+        "p": [
+          0.034656652360515024,
+          0.004909180166912126
+        ],
+        "p0": [
+          0.012875536480686695,
+          0.006872852233676976
+        ],
+        "p_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "alarm_set"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"alarm_set\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "83a7cc800f4909a5d4e9b65011f7de51c866eedd3a6a2c1b8891cbf34e767f8d",
+        "q": 0.5,
+        "rank": 4,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.021781115879828325,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.008167918454935622
+      },
+      {
+        "b": [
+          1,
+          1
+        ],
+        "d_support": 53,
+        "e": [
+          48,
+          48
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.06335795608064267,
+        "p": [
+          0.01777264223616155,
+          0.015463917525773196
+        ],
+        "p0": [
+          0.012875536480686695,
+          0.006872852233676976
+        ],
+        "p_support": 47,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "play_music"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"play_music\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "b83ca2060de58bd3105a6dd85c5bdebdaabd0800414e0d756da5c7aa654d1036",
+        "q": 1.0,
+        "rank": 5,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.004897105755474854,
+          0.00859106529209622
+        ],
+        "valid_transition_count": 2,
+        "w": 0.006744085523785537
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 36,
+        "e": [
+          16,
+          18
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.060808925979465175,
+        "p": [
+          0.030136219443926106,
+          0.00429553264604811
+        ],
+        "p0": [
+          0.012875536480686695,
+          0.006872852233676976
+        ],
+        "p_support": 21,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"21-40\"}]}",
+        "predicate_sha256": "f1644d4ea08945b1285d1490ff4dffdc2a7d6077aea884af76813cec07602aee",
+        "q": 0.5,
+        "rank": 6,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.01726068296323941,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.006472756111214779
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 19,
+        "e": [
+          16,
+          15
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.060808925979465175,
+        "p": [
+          0.030136219443926106,
+          0.004581901489117984
+        ],
+        "p0": [
+          0.012875536480686695,
+          0.006872852233676976
+        ],
+        "p_support": 15,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "weather_query"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"weather_query\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "26b684d503d8069dbcaafb78d31229406220f502d00935d10563ef5fad84d032",
+        "q": 0.5,
+        "rank": 7,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.01726068296323941,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.006472756111214779
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 23,
+        "e": [
+          22,
+          21
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.04855864546509891,
+        "p": [
+          0.026658963354242324,
+          0.004042854255104104
+        ],
+        "p0": [
+          0.012875536480686695,
+          0.006872852233676976
+        ],
+        "p_support": 21,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_set"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"calendar_set\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "48bc5b960d816bda3e68062cd5d11f49a97aa32e64e68ee444a1ab8f516a86b0",
+        "q": 0.5,
+        "rank": 8,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.013783426873555629,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.005168785077583361
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 33,
+        "e": [
+          29,
+          30
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.0466097847923181,
+        "p": [
+          0.0065468829562813705,
+          0.020103092783505156
+        ],
+        "p0": [
+          0.012875536480686695,
+          0.006872852233676976
+        ],
+        "p_support": 29,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "play_music"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"play_music\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "c830d94c3dc42a9ff17bb91528346ec6a89ad5cc9d6503602078deaf65cae9a6",
+        "q": 0.5,
+        "rank": 9,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.013230240549828179
+        ],
+        "valid_transition_count": 2,
+        "w": 0.004961340206185567
+      },
+      {
+        "b": [
+          2,
+          0
+        ],
+        "d_support": 66,
+        "e": [
+          65,
+          63
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.04313195284551994,
+        "p": [
+          0.025118590467585272,
+          0.0022170491076377342
+        ],
+        "p0": [
+          0.012875536480686695,
+          0.006872852233676976
+        ],
+        "p_support": 63,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_set"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"calendar_set\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "cf5ab624e4e668a2e1bb23051398d2a021cb5a10881732d0708e9e3cf981a60d",
+        "q": 0.5,
+        "rank": 10,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.012243053986898577,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.004591145245086966
+      },
+      {
+        "b": [
+          3,
+          3
+        ],
+        "d_support": 357,
+        "e": [
+          197,
+          233
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.03457165476659139,
+        "p": [
+          0.01491747178158855,
+          0.012190819646427032
+        ],
+        "p0": [
+          0.012875536480686695,
+          0.006872852233676976
+        ],
+        "p_support": 266,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "5e462415d7cecda7cf65a4393a370667daa4760eec43a7030faedcdce4b60ec3",
+        "q": 1.0,
+        "rank": 11,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0020419353009018546,
+          0.005317967412750055
+        ],
+        "valid_transition_count": 2,
+        "w": 0.003679951356825955
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 41,
+        "e": [
+          41,
+          40
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.023425440841727735,
+        "p": [
+          0.019524874569304237,
+          0.0029455081001472753
+        ],
+        "p0": [
+          0.012875536480686695,
+          0.006872852233676976
+        ],
+        "p_support": 40,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_set"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"calendar_set\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "2d749784b9463392b9fe681fb541216f558029ed1cc9d7ac954ad54f0fa293cd",
+        "q": 0.5,
+        "rank": 12,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.006649338088617542,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0024935017832315785
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 53,
+        "e": [
+          44,
+          45
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.020636834923345157,
+        "p": [
+          0.01873332560027839,
+          0.0027491408934707906
+        ],
+        "p0": [
+          0.012875536480686695,
+          0.006872852233676976
+        ],
+        "p_support": 45,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "weather_query"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"weather_query\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "681818504e3d6455e9b0a1b4f9c29a6f271c066e3d8bf6483577997f94b0a39d",
+        "q": 0.5,
+        "rank": 13,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.005857789119591695,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0021966709198468857
+      },
+      {
+        "b": [
+          6,
+          4
+        ],
+        "d_support": 907,
+        "e": [
+          456,
+          568
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.002000257971973568,
+        "p": [
+          0.013140465214857204,
+          0.007033755128779781
+        ],
+        "p0": [
+          0.012875536480686695,
+          0.006872852233676976
+        ],
+        "p_support": 636,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "has_question_mark",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false},{\"feature\":\"has_question_mark\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "128a2f9d3a74b1f019f299ae416ead0971f3f61423f8c87ab625f3f520837cf0",
+        "q": 1.0,
+        "rank": 14,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.00026492873417050813,
+          0.00016090289510280545
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0002129158146366568
+      }
+    ],
+    "chain_id": "regularization-seed211",
+    "hgc_facility_common_members_at_100": 75,
+    "hgc_facility_identical_order_at_100": false
+  },
+  {
+    "config": {
+      "jaccard": 0.9,
+      "k": 3,
+      "lambda": 0.5,
+      "length_boundaries": [
+        10,
+        20,
+        40
+      ],
+      "m": 30,
+      "max_groups": 30,
+      "min_support": 10,
+      "negation_terms": [
+        "不",
+        "没",
+        "无",
+        "别",
+        "未",
+        "不要",
+        "不能",
+        "not",
+        "no",
+        "never",
+        "without"
+      ],
+      "question_marks": [
+        "?",
+        "？"
+      ]
+    },
+    "d_count": 935,
+    "pool_count": 661,
+    "candidate_counts": {
+      "atomic_conditions": 68,
+      "enumerated_candidates": 684,
+      "excluded_positive_no_pool": 0,
+      "jaccard_duplicates": 25,
+      "nonempty_candidates": 405,
+      "omitted_by_group_cap": 0,
+      "positive_weight_candidates": 39,
+      "positive_weight_with_pool_candidates": 39,
+      "retained_groups": 14
+    },
+    "weights": [
+      0.27339950962675746,
+      0.1594057503583134,
+      0.08005598918311498,
+      0.07193671336452588,
+      0.07115873516860115,
+      0.06679554768461812,
+      0.06487647352227449,
+      0.05319992301393565,
+      0.04402256271378049,
+      0.03954238894567601,
+      0.03242987619945066,
+      0.024930379677957405,
+      0.016275201041485308,
+      0.0019709494995090466
+    ],
+    "global_transitions": [
+      {
+        "b": 4,
+        "e": 463,
+        "excluded_reason": null,
+        "p0": 0.008639308855291577,
+        "transition": "f0-f1",
+        "valid": true
+      },
+      {
+        "b": 6,
+        "e": 589,
+        "excluded_reason": null,
+        "p0": 0.010186757215619695,
+        "transition": "f1-f2",
+        "valid": true
+      }
+    ],
+    "valid_transition_count": 2,
+    "fallback": "NONE",
+    "effective_lambda": 0.5,
+    "proxy_values": [
+      {
+        "F": 0.11873103699323148,
+        "G": 0.9891900412668498,
+        "J": 0.5539605391300406,
+        "actual_size": 20,
+        "budget": 20
+      },
+      {
+        "F": 0.2843339668333623,
+        "G": 1.0000000000000002,
+        "J": 0.6421669834166812,
+        "actual_size": 50,
+        "budget": 50
+      },
+      {
+        "F": 0.47941235897182644,
+        "G": 1.0000000000000002,
+        "J": 0.7397061794859133,
+        "actual_size": 100,
+        "budget": 100
+      },
+      {
+        "F": 0.8389964063606234,
+        "G": 1.0000000000000002,
+        "J": 0.9194982031803118,
+        "actual_size": 200,
+        "budget": 200
+      }
+    ],
+    "risk_build_seconds": 0.025491651999971054,
+    "similarity_build_seconds": 0.003257083999983479,
+    "greedy_seconds": 0.05133013099998607,
+    "total_seconds": 0.08358279300000504,
+    "groups": [
+      {
+        "b": [
+          1,
+          2
+        ],
+        "d_support": 45,
+        "e": [
+          13,
+          19
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.27339950962675746,
+        "p": [
+          0.029283238736249936,
+          0.0470531166626243
+        ],
+        "p0": [
+          0.008639308855291577,
+          0.010186757215619695
+        ],
+        "p_support": 24,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "general_quirky"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"general_quirky\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "b9fdce3039ffe283a93e9f5b13d73086df71ad9b2f6823e44d0f77b8d8647a9a",
+        "q": 1.0,
+        "rank": 1,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.02064392988095836,
+          0.03686635944700461
+        ],
+        "valid_transition_count": 2,
+        "w": 0.028755144663981484
+      },
+      {
+        "b": [
+          1,
+          2
+        ],
+        "d_support": 17,
+        "e": [
+          9,
+          12
+        ],
+        "low_support": [
+          true,
+          false
+        ],
+        "normalized_weight": 0.1594057503583134,
+        "p": [
+          0.03228664783740378,
+          0.054895302773061684
+        ],
+        "p0": [
+          0.008639308855291577,
+          0.010186757215619695
+        ],
+        "p_support": 11,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "general_quirky"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"general_quirky\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "9c67c678ac5dffdc20283ee4bb1719d05cb034192ef9262fe78d555ef968f25b",
+        "q": 0.5,
+        "rank": 2,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.04470854555744199
+        ],
+        "valid_transition_count": 2,
+        "w": 0.016765704584040746
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 10,
+        "e": [
+          8,
+          10
+        ],
+        "low_support": [
+          true,
+          false
+        ],
+        "normalized_weight": 0.08005598918311498,
+        "p": [
+          0.006820506991019666,
+          0.03264006791171477
+        ],
+        "p0": [
+          0.008639308855291577,
+          0.010186757215619695
+        ],
+        "p_support": 9,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "alarm_set"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"alarm_set\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "91cc11f1c73dba2c1cf11784fd71d2c1573e85569c9ee6fd83cd398e7951bc0e",
+        "q": 0.5,
+        "rank": 3,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.022453310696095078
+        ],
+        "valid_transition_count": 2,
+        "w": 0.008419991511035653
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 13,
+        "e": [
+          11,
+          13
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.07193671336452588,
+        "p": [
+          0.006321445503871885,
+          0.030362853871362578
+        ],
+        "p0": [
+          0.008639308855291577,
+          0.010186757215619695
+        ],
+        "p_support": 12,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "alarm_set"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"alarm_set\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "83a7cc800f4909a5d4e9b65011f7de51c866eedd3a6a2c1b8891cbf34e767f8d",
+        "q": 0.5,
+        "rank": 4,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.020176096655742885
+        ],
+        "valid_transition_count": 2,
+        "w": 0.007566036245903581
+      },
+      {
+        "b": [
+          2,
+          0
+        ],
+        "d_support": 53,
+        "e": [
+          49,
+          48
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.07115873516860115,
+        "p": [
+          0.028597205894414522,
+          0.003917983544469113
+        ],
+        "p0": [
+          0.008639308855291577,
+          0.010186757215619695
+        ],
+        "p_support": 48,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "play_music"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"play_music\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "b83ca2060de58bd3105a6dd85c5bdebdaabd0800414e0d756da5c7aa654d1036",
+        "q": 0.5,
+        "rank": 5,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.019957897039122947,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.007484211389671105
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 36,
+        "e": [
+          16,
+          18
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.06679554768461812,
+        "p": [
+          0.027373462296929288,
+          0.006366723259762309
+        ],
+        "p0": [
+          0.008639308855291577,
+          0.010186757215619695
+        ],
+        "p_support": 21,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "21-40"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"21-40\"}]}",
+        "predicate_sha256": "f1644d4ea08945b1285d1490ff4dffdc2a7d6077aea884af76813cec07602aee",
+        "q": 0.5,
+        "rank": 6,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.018734153441637712,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.007025307540614143
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 19,
+        "e": [
+          16,
+          16
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.06487647352227449,
+        "p": [
+          0.005634331862146681,
+          0.028382667749317192
+        ],
+        "p0": [
+          0.008639308855291577,
+          0.010186757215619695
+        ],
+        "p_support": 15,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "weather_query"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"weather_query\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "26b684d503d8069dbcaafb78d31229406220f502d00935d10563ef5fad84d032",
+        "q": 0.5,
+        "rank": 7,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.0181959105336975
+        ],
+        "valid_transition_count": 2,
+        "w": 0.006823466450136562
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 23,
+        "e": [
+          22,
+          22
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.05319992301393565,
+        "p": [
+          0.004984216647283602,
+          0.0251077445474729
+        ],
+        "p0": [
+          0.008639308855291577,
+          0.010186757215619695
+        ],
+        "p_support": 21,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_set"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"calendar_set\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "48bc5b960d816bda3e68062cd5d11f49a97aa32e64e68ee444a1ab8f516a86b0",
+        "q": 0.5,
+        "rank": 8,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.014920987331853207
+        ],
+        "valid_transition_count": 2,
+        "w": 0.005595370249444952
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 33,
+        "e": [
+          30,
+          30
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.04402256271378049,
+        "p": [
+          0.020986321094312456,
+          0.0050933786078098476
+        ],
+        "p0": [
+          0.008639308855291577,
+          0.010186757215619695
+        ],
+        "p_support": 30,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "play_music"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "1-10"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"play_music\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"1-10\"}]}",
+        "predicate_sha256": "c830d94c3dc42a9ff17bb91528346ec6a89ad5cc9d6503602078deaf65cae9a6",
+        "q": 0.5,
+        "rank": 9,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.012347012239020879,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.00463012958963283
+      },
+      {
+        "b": [
+          1,
+          1
+        ],
+        "d_support": 66,
+        "e": [
+          65,
+          64
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.03954238894567601,
+        "p": [
+          0.01325451858588155,
+          0.01388939060072969
+        ],
+        "p0": [
+          0.008639308855291577,
+          0.010186757215619695
+        ],
+        "p_support": 63,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_set"
+            },
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"calendar_set\"},{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "cf5ab624e4e668a2e1bb23051398d2a021cb5a10881732d0708e9e3cf981a60d",
+        "q": 1.0,
+        "rank": 10,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.004615209730589974,
+          0.0037026333851099954
+        ],
+        "valid_transition_count": 2,
+        "w": 0.004158921557849984
+      },
+      {
+        "b": [
+          1,
+          0
+        ],
+        "d_support": 41,
+        "e": [
+          41,
+          40
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.03242987619945066,
+        "p": [
+          0.017734919234630244,
+          0.00436575309240844
+        ],
+        "p0": [
+          0.008639308855291577,
+          0.010186757215619695
+        ],
+        "p_support": 40,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "calendar_set"
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"calendar_set\"},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "2d749784b9463392b9fe681fb541216f558029ed1cc9d7ac954ad54f0fa293cd",
+        "q": 0.5,
+        "rank": 11,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.009095610379338667,
+          0.0
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0034108538922520003
+      },
+      {
+        "b": [
+          0,
+          1
+        ],
+        "d_support": 53,
+        "e": [
+          45,
+          46
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.024930379677957405,
+        "p": [
+          0.0034557235421166306,
+          0.017178983111428826
+        ],
+        "p0": [
+          0.008639308855291577,
+          0.010186757215619695
+        ],
+        "p_support": 45,
+        "predicate": {
+          "all": [
+            {
+              "feature": "gold_label",
+              "op": "eq",
+              "value": "weather_query"
+            },
+            {
+              "feature": "has_digit",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"gold_label\",\"op\":\"eq\",\"value\":\"weather_query\"},{\"feature\":\"has_digit\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "681818504e3d6455e9b0a1b4f9c29a6f271c066e3d8bf6483577997f94b0a39d",
+        "q": 0.5,
+        "rank": 12,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.0,
+          0.006992225895809132
+        ],
+        "valid_transition_count": 2,
+        "w": 0.0026220847109284244
+      },
+      {
+        "b": [
+          2,
+          3
+        ],
+        "d_support": 357,
+        "e": [
+          200,
+          236
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.016275201041485308,
+        "p": [
+          0.00982251854634238,
+          0.012427077881460868
+        ],
+        "p0": [
+          0.008639308855291577,
+          0.010186757215619695
+        ],
+        "p_support": 267,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "length_bin",
+              "op": "eq",
+              "value": "11-20"
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false},{\"feature\":\"length_bin\",\"op\":\"eq\",\"value\":\"11-20\"}]}",
+        "predicate_sha256": "5e462415d7cecda7cf65a4393a370667daa4760eec43a7030faedcdce4b60ec3",
+        "q": 1.0,
+        "rank": 13,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.001183209691050803,
+          0.0022403206658411735
+        ],
+        "valid_transition_count": 2,
+        "w": 0.001711765178445988
+      },
+      {
+        "b": [
+          4,
+          6
+        ],
+        "d_support": 907,
+        "e": [
+          453,
+          575
+        ],
+        "low_support": [
+          false,
+          false
+        ],
+        "normalized_weight": 0.0019709494995090466,
+        "p": [
+          0.008818176533454963,
+          0.010422483828873704
+        ],
+        "p0": [
+          0.008639308855291577,
+          0.010186757215619695
+        ],
+        "p_support": 645,
+        "predicate": {
+          "all": [
+            {
+              "feature": "has_negation",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "feature": "has_question_mark",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "predicate_canonical": "{\"all\":[{\"feature\":\"has_negation\",\"op\":\"eq\",\"value\":false},{\"feature\":\"has_question_mark\",\"op\":\"eq\",\"value\":false}]}",
+        "predicate_sha256": "128a2f9d3a74b1f019f299ae416ead0971f3f61423f8c87ab625f3f520837cf0",
+        "q": 1.0,
+        "rank": 14,
+        "statistical_confirmation": "NOT_PERFORMED",
+        "u": [
+          0.00017886767816338667,
+          0.00023572661325400946
+        ],
+        "valid_transition_count": 2,
+        "w": 0.00020729714570869807
+      }
+    ],
+    "chain_id": "regularization-seed307",
+    "hgc_facility_common_members_at_100": 71,
+    "hgc_facility_identical_order_at_100": false
+  }
+]
