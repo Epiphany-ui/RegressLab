@@ -1,0 +1,421 @@
+{
+  "schema_version": "regresslab-feasibility-closeout-v1",
+  "purpose": "FIXED_FEASIBILITY_CLOSEOUT",
+  "authorization": "User explicitly authorized completion of feasibility tests and a continue/redirect decision on 2026-10-24. One fixed diagnostic matrix, not an automatic third parameter search.",
+  "hgc": {
+    "lambda": 0.5,
+    "m": 30,
+    "k": 3,
+    "min_support": 10,
+    "max_groups": 30,
+    "jaccard": 0.9,
+    "length_boundaries": [
+      10,
+      20,
+      40
+    ],
+    "negation_terms": [
+      "不",
+      "没",
+      "无",
+      "别",
+      "未",
+      "不要",
+      "不能",
+      "not",
+      "no",
+      "never",
+      "without"
+    ],
+    "question_marks": [
+      "?",
+      "？"
+    ]
+  },
+  "hgc_configuration_count": 1,
+  "hgc_parameter_search": false,
+  "datasets": [
+    "massive",
+    "clinc"
+  ],
+  "clinc_cache": "datasets/clinc150-828f8093932c",
+  "dataset_roles": {
+    "massive": "Already exposed half-DEV, SGD optimization/probability-link sensitivity, not an independent architecture.",
+    "clinc": "Fresh full official validation after model-free audit; no model or selector tuning; no DEV_MODEL; never pooled with MASSIVE."
+  },
+  "profiles": [
+    {
+      "dataset": "massive",
+      "id": "sgd-data-growth",
+      "seeds": [
+        701,
+        709
+      ],
+      "fractions": [
+        0.4,
+        0.6,
+        0.8,
+        1.0
+      ],
+      "epochs": [
+        20,
+        20,
+        20,
+        20
+      ]
+    },
+    {
+      "dataset": "clinc",
+      "id": "sgd-data-growth",
+      "seeds": [
+        501,
+        503
+      ],
+      "fractions": [
+        0.4,
+        0.6,
+        0.8,
+        1.0
+      ],
+      "epochs": [
+        20,
+        20,
+        20,
+        20
+      ]
+    },
+    {
+      "dataset": "clinc",
+      "id": "sgd-epoch-growth",
+      "seeds": [
+        601,
+        607
+      ],
+      "fractions": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "epochs": [
+        4,
+        8,
+        16,
+        32
+      ]
+    }
+  ],
+  "classifier": {
+    "loss": "log_loss",
+    "penalty": "l2",
+    "alpha": 0.0001,
+    "fit_intercept": true,
+    "shuffle": true,
+    "tol": null,
+    "early_stopping": false,
+    "learning_rate": "optimal",
+    "average": false,
+    "n_jobs": 2
+  },
+  "classifier_representation": {
+    "analyzer": "char",
+    "ngram_range": [
+      2,
+      4
+    ],
+    "min_df": 2,
+    "max_features": 30000,
+    "sublinear_tf": true,
+    "lowercase": false,
+    "norm": "l2",
+    "fit_on": "SAME_REALIZATION_F0_40_PERCENT_TRAIN_ONLY"
+  },
+  "selection_representation": {
+    "analyzer": "char",
+    "ngram_range": [
+      2,
+      4
+    ],
+    "min_df": 1,
+    "max_features": 20000,
+    "sublinear_tf": true,
+    "lowercase": false,
+    "norm": "l2",
+    "fit_on": "CURRENT_CORRECT_DEV_SELECTOR_POOL_ONLY"
+  },
+  "budgets": [
+    20,
+    50,
+    100,
+    200
+  ],
+  "primary_budget": 100,
+  "selection_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "methods": [
+    "random",
+    "stratified",
+    "past-flip",
+    "ref-maxprob",
+    "ref-margin",
+    "ref-entropy",
+    "ref-deepgini",
+    "facility",
+    "kcenter",
+    "hgc",
+    "risk-top"
+  ],
+  "cpu_threads": 2,
+  "max_fit_seconds": 180,
+  "max_total_seconds": 900,
+  "resource_policy": "Soft post-fit elapsed checks; shell timeout1200s for natural run. No retries/recipe search/GPU.",
+  "external_families": [
+    "sgd-data-growth",
+    "sgd-epoch-growth"
+  ],
+  "seeds_per_external_family": 2,
+  "previous_runs": [
+    {
+      "path": "artifacts/preflight/cpu-pilot-20261023-v1",
+      "freeze_sha256": "e9274da9250232272f58872d1679ee6eefcab4adb9d576b50e14a37dc8df5047"
+    },
+    {
+      "path": "artifacts/preflight/cpu-pilot-20261024-v2",
+      "freeze_sha256": "ba32f08e4bd0c1ae81b2d9046547b33e2032cb6695c2af0b3ddb95e216f4bc2d"
+    }
+  ],
+  "decision_policy": {
+    "minimum_events_per_chain": 20,
+    "hgc_min_family_difference": -0.03,
+    "hgc_required_improvement_one_family": 0.05,
+    "hgc_max_cost_ratio": 0.8,
+    "risk_auc_floor": 0.6,
+    "risk_min_recall_gain": 0.05,
+    "risk_min_chains_with_additions_per_family": 1,
+    "screen_scope": "Descriptive practical feasibility, not statistical tests, novelty or thesis approval.",
+    "synthetic_evidence": "Never overrides negative natural evidence to grant GO.",
+    "insufficient_signal": "Practical NO_GO_CURRENT_HGC_METHOD means evidence does not support current investment, not universal failure.",
+    "no_followup_search": true
+  },
+  "cost_policy": {
+    "primary_budget": 100,
+    "pre_freeze_probe": "all methods and seeds at B=100; must equal main frozen prefixes",
+    "post_freeze_target_measurement": "raw normalized text -> frozen vectorizer.transform -> classifier.predict, 5 repetitions, median, warm-cache order fixed",
+    "full_baseline_scope": "entire current-correct P, not full DEV_SELECTOR",
+    "suite_scope": "all B=100 suites, including each of 20 stochastic seeds",
+    "representation_charged_to": [
+      "facility",
+      "kcenter",
+      "hgc"
+    ],
+    "reference_probabilities": "shared historical f2 cache assumed; extra full-P score reconstruction measured separately, cache construction not free in general",
+    "history_setup": "training and full-D f0-f2 inference reported separately, no invented amortization",
+    "target_benchmark_execution_count": "5*full_P plus 5*each primary-budget suite; research measurement costs, not deployment savings",
+    "hard_timeout": false,
+    "risk_top": "Independent risk group build and ranking; no TFIDF cost.",
+    "target_repetitions": 5
+  },
+  "formal_test_policy": "TEST/OOS model-free component audit only, never model input/prediction/evaluation",
+  "mechanisms": {
+    "schema_version": "regresslab-fixed-mechanisms-v1",
+    "purpose": "SYNTHETIC_MECHANISM_CHECK_ONLY",
+    "n_rows": 800,
+    "environment_seeds": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010,
+      1011,
+      1012,
+      1013,
+      1014,
+      1015,
+      1016,
+      1017,
+      1018,
+      1019
+    ],
+    "selection_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "scenarios": [
+      "risk_persists",
+      "risk_reversed",
+      "new_risk",
+      "overlap",
+      "no_group_signal"
+    ],
+    "margin_regimes": {
+      "complementary": {
+        "intercept": 0.01,
+        "difficulty_coefficient": 0.12,
+        "group_coefficient": 0.28
+      },
+      "strong_margin": {
+        "intercept": 0.01,
+        "difficulty_coefficient": 0.45,
+        "group_coefficient": 0.06
+      }
+    },
+    "budgets": [
+      20,
+      50,
+      100
+    ],
+    "primary_budget": 100,
+    "methods": [
+      "hgc",
+      "facility",
+      "risk-top",
+      "random",
+      "ref-margin"
+    ],
+    "hgc": {
+      "lambda": 0.5,
+      "m": 30,
+      "k": 3,
+      "min_support": 10,
+      "max_groups": 30,
+      "jaccard": 0.9,
+      "length_boundaries": [
+        10,
+        20,
+        40
+      ],
+      "negation_terms": [
+        "不",
+        "没",
+        "无",
+        "别",
+        "未",
+        "不要",
+        "不能",
+        "not",
+        "no",
+        "never",
+        "without"
+      ],
+      "question_marks": [
+        "?",
+        "？"
+      ]
+    },
+    "representation": {
+      "analyzer": "char",
+      "ngram_range": [
+        2,
+        4
+      ],
+      "min_df": 1,
+      "max_features": 5000,
+      "sublinear_tf": true,
+      "lowercase": false,
+      "norm": "l2"
+    },
+    "features": {
+      "negation_probability": 0.25,
+      "digit_probability": 0.25,
+      "question_probability": 0.5,
+      "gold": "balanced A/B, independently shuffled",
+      "difficulty": "independent Uniform[0,1]"
+    },
+    "history": {
+      "f0_correct_probability": 0.9,
+      "negative_flip_base": 0.015,
+      "single_group_coefficient": 0.18,
+      "overlap_each_group_coefficient": 0.13,
+      "repair_probabilities": [
+        0.5,
+        0.75
+      ]
+    },
+    "reference_probability": {
+      "predicted_class_intercept": 0.95,
+      "difficulty_coefficient": -0.4
+    },
+    "target_wrong_to_correct_probability": 0.75,
+    "rng": {
+      "algorithm": "NumPy default_rng(SeedSequence([environment_seed, stream]))",
+      "feature_stream": 11,
+      "history_stream": 23,
+      "difficulty_stream": 37,
+      "target_stream": 97,
+      "paired_scenarios_and_regimes": true
+    },
+    "target_group": {
+      "risk_persists": "negation",
+      "risk_reversed": "not negation",
+      "new_risk": "digit",
+      "overlap": "(negation + digit)/2",
+      "no_group_signal": "zero; target depends only on difficulty"
+    },
+    "history_group": "negation, except overlap uses additive negation/digit coefficients",
+    "freeze_policy": "ALL_200_ENVIRONMENT_SUITES_BEFORE_ANY_SYNTHETIC_TARGET",
+    "cpu_threads": 2,
+    "numerical_tie_tolerance": 1e-12,
+    "limitations": [
+      "Synthetic DGP, labels, confidence and histories are not trained model outputs.",
+      "Every scenario includes a genuinely informative margin comparator; no-group-signal control retains difficulty signal.",
+      "Same-seed scenarios/regimes are paired, not independent model families; selection seeds are aggregated within environment.",
+      "A positive synthetic result cannot establish natural-data superiority, net deployment savings, novelty or thesis acceptability.",
+      "Failure or reversal scenarios are retained; no parameter search or post-result mechanism changes."
+    ]
+  },
+  "limitations": [
+    "Fixed feasibility closeout, not a formal evaluation or full core-method comparison.",
+    "SGD and LR remain linear classifiers on TFIDF; this changes optimization/probability link, not a neural architecture.",
+    "Independent CLINC data still has only two related SGD realizations per family; not population-level independent samples.",
+    "SGD multiclass probability is normalized one-vs-rest sigmoid, unlike prior LR softmax; compare methods within each same chain.",
+    "MASSIVE half-DEV was already exposed; do not pool with CLINC full validation.",
+    "Risk-LR, Behavior-Anchor, Legacy-adapt, Grad-PD, external slice finders, neural models and full ablations are not implemented.",
+    "Synthetic scenarios/difficulty/confidence are generated, not trained model outputs or natural efficacy evidence.",
+    "Cached-history cost uses fixed-order warm-cache medians and does not establish free historical setup or amortization.",
+    "No statistical superiority/noninferiority, universal failure, academic novelty or graduation approval follows from the feasibility screen."
+  ]
+}
