@@ -1,0 +1,23 @@
+[project]
+name = "regresslab-neural-probe"
+version = "0.1.0"
+description = "Isolated CPU PyTorch environment for small, bounded neural update chains"
+requires-python = ">=3.14,<3.15"
+dependencies = [
+  "torch>=2.10,<3",
+  "numpy>=2.2,<3",
+  "scipy>=1.15,<2",
+  "scikit-learn>=1.7,<2",
+  "threadpoolctl>=3.6,<4",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<10"]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }

@@ -1,0 +1,230 @@
+{
+  "schema_version": "regresslab-history-increment-v1",
+  "purpose": "FROZEN_HISTORY_INCREMENT_CHECK",
+  "authorization": "2026-10-24 user explicitly requested archive HGC, matched Risk-LR increment test, whole unseen chains, and bounded neural resource/real-chain validation.",
+  "dataset": "clinc150",
+  "clinc_cache": "datasets/clinc150-828f8093932c",
+  "data_scope": "Already-exposed official VAL; new whole update realizations, not unseen texts. TEST/OOS never model inputs.",
+  "hgc_archived": true,
+  "hgc_code_sha256": "4bb521469eee746e4b65b807a055da0887c2a0db046a134d56b58ed9e3d4ef03",
+  "historical_group_config": {
+    "lambda": 0.5,
+    "m": 30,
+    "k": 3,
+    "min_support": 10,
+    "max_groups": 30,
+    "jaccard": 0.9,
+    "length_boundaries": [
+      10,
+      20,
+      40
+    ],
+    "negation_terms": [
+      "不",
+      "没",
+      "无",
+      "别",
+      "未",
+      "不要",
+      "不能",
+      "not",
+      "no",
+      "never",
+      "without"
+    ],
+    "question_marks": [
+      "?",
+      "？"
+    ]
+  },
+  "linear_classifier": {
+    "loss": "log_loss",
+    "penalty": "l2",
+    "alpha": 0.0001,
+    "fit_intercept": true,
+    "shuffle": true,
+    "tol": null,
+    "early_stopping": false,
+    "learning_rate": "optimal",
+    "average": false,
+    "n_jobs": 2
+  },
+  "classifier_representation": {
+    "analyzer": "char",
+    "ngram_range": [
+      2,
+      4
+    ],
+    "min_df": 2,
+    "max_features": 30000,
+    "sublinear_tf": true,
+    "lowercase": false,
+    "norm": "l2",
+    "fit_on": "SAME_REALIZATION_FIXED_40_PERCENT_TRAIN_BASIS"
+  },
+  "neural": {
+    "architecture": "word-mean-embedding-relu-mlp",
+    "embedding_dim": 64,
+    "hidden_dim": 64,
+    "dropout": 0.0,
+    "optimizer": "Adam",
+    "learning_rate": 0.003,
+    "weight_decay": 0.0,
+    "batch_size": 128,
+    "vocabulary_limit": 12000,
+    "min_frequency": 1,
+    "max_length": 40,
+    "threads": 2,
+    "device": "cpu",
+    "tokenizer": "nfkc-space-casefold-unicode-word-or-punctuation-v1"
+  },
+  "linear_epochs": 20,
+  "neural_epochs": 12,
+  "basis_fraction": 0.4,
+  "basis_contract": "Same fixed 40% TRAIN basis per seed; may include TRAIN rows outside a refresh slot. Never VAL/TEST. Different architecture-specific tokenization.",
+  "families": [
+    "data-growth",
+    "data-refresh"
+  ],
+  "growth_fractions": [
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "refresh_contract": "Stratify TRAIN by label; order by SHA256(pilot-train-v1|seed|sample_id), ID tie; array_split into five blocks; f0/f1/f2/f3 exclude block0/1/2/3, respectively. About80% TRAIN each; natural incoming/outgoing data, no label corruption.",
+  "neural_development_seeds": [
+    901,
+    907
+  ],
+  "heldout_seeds": [
+    1103,
+    1109,
+    1117
+  ],
+  "architectures": [
+    "sgd",
+    "neural"
+  ],
+  "linear_development_chain_ids": [
+    "clinc-sgd-data-growth-seed501",
+    "clinc-sgd-data-growth-seed503",
+    "clinc-sgd-epoch-growth-seed601",
+    "clinc-sgd-epoch-growth-seed607"
+  ],
+  "prior_runs": [
+    {
+      "path": "artifacts/preflight/cpu-pilot-20261023-v1",
+      "freeze_sha256": "e9274da9250232272f58872d1679ee6eefcab4adb9d576b50e14a37dc8df5047"
+    },
+    {
+      "path": "artifacts/preflight/cpu-pilot-20261024-v2",
+      "freeze_sha256": "ba32f08e4bd0c1ae81b2d9046547b33e2032cb6695c2af0b3ddb95e216f4bc2d"
+    },
+    {
+      "path": "artifacts/preflight/feasibility-closeout-20261024-natural",
+      "freeze_sha256": "f4c2b24f846b9aabbff6ca73035d293758fb4a8c8bfc81e455dd9a2d286c0c6f"
+    }
+  ],
+  "predictor": {
+    "C_grid": [
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "selection": "leave-one-whole-development-chain-out macro average precision; smallest C breaks ties",
+    "architecture_specific": true,
+    "scaler": "weighted StandardScaler fit on training folds only",
+    "weights": "each chain total1, positives/negatives each .5 if both present; missing class chain uniform total1",
+    "solver": "lbfgs",
+    "max_iter": 1000,
+    "features": [
+      "margin",
+      "past_wrong_fraction",
+      "negative_flip_opportunity_rate",
+      "max_gold_probability_drop",
+      "mean_adjacent_total_variation",
+      "frozen_group_risk"
+    ],
+    "feature_search": false
+  },
+  "methods": [
+    "ref-margin",
+    "margin-lr",
+    "margin-history-lr",
+    "risk-top",
+    "random"
+  ],
+  "budgets": [
+    20,
+    50,
+    100,
+    200
+  ],
+  "primary_budget": 100,
+  "selection_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "decision_policy": {
+    "chains_per_cell": 3,
+    "minimum_events_per_chain": 20,
+    "minimum_mean_recall_gain": 0.05,
+    "minimum_positive_chains": 2,
+    "maximum_chain_loss": 0.05,
+    "minimum_mean_gain_over_raw_margin": 0.0,
+    "raw_margin_gain_must_be_positive": true,
+    "mean_AP_gain_must_be_positive": true,
+    "replication": "Both architectures pass in the same registered update condition. One architecture only is exploratory conditional signal, not GO.",
+    "insufficient_events": "INCONCLUSIVE_EVENT_SUPPORT and stop automatic scaling/search",
+    "no_increment": "NO_DETECTED_STABLE_INCREMENT and stop pursuing historical-risk new algorithms in tested setting",
+    "novelty_or_title_established": false
+  },
+  "resource_probe_path": "artifacts/preflight/history-increment-20261024-resource",
+  "resource_policy": {
+    "device": "cpu",
+    "threads": 2,
+    "probe_seed": 90001,
+    "probe_fraction": 0.1,
+    "probe_epochs": 2,
+    "probe_max_fit_seconds": 120,
+    "probe_max_rss_mib": 2048,
+    "max_fit_seconds": 180,
+    "max_total_seconds": 1800,
+    "outer_timeout_seconds": 2100,
+    "no_recipe_retry": true
+  },
+  "cost_policy": {
+    "history_cached": true,
+    "historical_setup_not_free": true,
+    "target_benchmark_repeats": 3,
+    "scope": "text normalize/encode/transform and model probability inference, warm cache; fixed four deterministic primary suites; selection plus shared historical feature construction shown separately; no claimed deployment savings"
+  },
+  "freeze_policy": "Freeze all twelve heldout chains, models, predictors, histories, scores, pool IDs/gold, and all 1152 suites before ANY heldout-VAL target inference; up to32 TRAIN rows are allowed only for save/restore validation. Neural development targets may only fit development predictors.",
+  "formal_test_model_input_count": 0,
+  "limits": [
+    "3 related seeds per architecture/update condition; descriptive screening, not significance or universal null.",
+    "Only one dataset and one small non-pretrained neural architecture.",
+    "Risk-LR is an adapted diagnostic tool, not the complete original reproduction or a novel algorithm.",
+    "No HGC parameter/feature/objective tuning and no automatic extra chains after results."
+  ]
+}
