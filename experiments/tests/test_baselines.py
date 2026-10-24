@@ -1,7 +1,10 @@
 """Exact fixtures for history-only CPU preflight selection."""
 
 from collections import Counter
+import hashlib
 import inspect
+import json
+import math
 
 import numpy as np
 import pytest
@@ -166,6 +169,43 @@ def test_class_probability_column_order_is_explicit_not_assumed_alphabetical():
 
 
 def test_selector_signature_cannot_accept_an_extra_future_version():
-    assert list(inspect.signature(select_baselines).parameters) == ["sample_ids", "labels", "history", "reference_probabilities", "representations", "class_labels", "budgets", "seeds"]
+    parameters = inspect.signature(select_baselines).parameters
+    assert list(parameters) == ["sample_ids", "labels", "history", "reference_probabilities", "representations", "class_labels", "budgets", "seeds", "timings"]
+    assert parameters["timings"].kind == inspect.Parameter.KEYWORD_ONLY
+    assert parameters["timings"].default is None
     with pytest.raises(TypeError):
         select_baselines(**inputs(), target_predictions=np.asarray(["B"] * 4))
+
+
+def test_optional_timings_cover_each_method_seed_once_without_changing_selections():
+    values = inputs()
+    values["seeds"] = list(range(20))
+    untimed = select_baselines(**values)
+    timings = []
+    timed = select_baselines(**values, timings=timings)
+    serialize = lambda result: json.dumps(result, sort_keys=True, separators=(",", ":")).encode()
+    assert serialize(timed) == serialize(untimed)
+    # This digest was captured before adding timing instrumentation and covers
+    # all 340 method/seed/budget outputs, including stratified's own quotas.
+    assert hashlib.sha256(serialize(timed)).hexdigest() == "02ed98b1244d249ff0be817565e68caa3eef06aed4c0c19f223bcae7c5088f74"
+    expected = {(method, seed) for method in ("random", "stratified", "past-flip", "kcenter") for seed in range(20)}
+    expected |= {(method, None) for method in ("ref-maxprob", "ref-margin", "ref-entropy", "ref-deepgini", "facility", "__shared_validation__")}
+    assert len(timings) == len(expected) == 86  # 85 method rows + shared validation.
+    assert {(row["method"], row["seed"]) for row in timings} == expected
+    for row in timings:
+        assert set(row) == {"method", "seed", "selection_seconds", "max_budget", "includes_shared_representation"}
+        assert math.isfinite(row["selection_seconds"]) and row["selection_seconds"] >= 0
+        assert row["max_budget"] == 10
+        assert row["includes_shared_representation"] is False
+
+
+def test_timings_append_to_caller_list_and_cover_empty_pool():
+    values = inputs()
+    values.update(sample_ids=[], labels=[], history=np.empty((0, 3), dtype=str), reference_probabilities=np.empty((0, 2)), representations=sparse.csr_matrix((0, 2)))
+    sentinel = {"existing": True}
+    timings = [sentinel]
+    result = select_baselines(**values, timings=timings)
+    assert timings[0] is sentinel
+    assert len(timings) == 1 + (4 * len(values["seeds"]) + 5) + 1
+    assert all(row["indices"] == [] for row in result)
+    assert all(math.isfinite(row["selection_seconds"]) and row["selection_seconds"] >= 0 for row in timings[1:])

@@ -10,6 +10,7 @@ from __future__ import annotations
 import hashlib
 from collections import Counter
 from numbers import Integral
+from time import perf_counter
 
 import numpy as np
 from scipy import sparse
@@ -124,6 +125,8 @@ def select_baselines(
     class_labels: list[str],
     budgets: list[int],
     seeds: list[int],
+    *,
+    timings: list[dict] | None = None,
 ) -> list[dict]:
     """Select nine baselines from f2-correct rows using only f0/f1/f2.
 
@@ -137,7 +140,18 @@ def select_baselines(
     reference-score rankings and Facility are deterministic (seed=None).
     Every ranking/greedy sequence is computed once, then shared across budgets.
     Stratified recomputes its proportional quotas for each effective budget.
+
+    Optional ``timings`` receives one wall-time row per method/seed, covering
+    its maximum-budget selection and every requested budget result. Nominal
+    ``max_budget`` is max(budgets), including when the pool is smaller. A
+    separate ``__shared_validation__`` row covers input validation, vector
+    normalization and common ID sorting. Method-specific preparation (including
+    Facility anchors and similarities) belongs to that method's row. Caller-fit
+    representations and model inference are excluded. Random permutations and
+    method scores are recomputed within each method/seed so one row describes
+    a standalone selection, not twenty seeds' combined deployment cost.
     """
+    shared_begin = perf_counter()
     _ids(sample_ids, "sample_ids", unique=True)
     _ids(labels, "labels", unique=False)
     _ids(class_labels, "class_labels", unique=True)
@@ -190,17 +204,28 @@ def select_baselines(
     max_size = min(max(budgets), n)
     output = []
 
+    def record_timing(method, seed, begin):
+        if timings is not None:
+            timings.append({
+                "method": method, "seed": int(seed) if seed is not None else None,
+                "selection_seconds": perf_counter() - begin,
+                "max_budget": int(max(budgets)), "includes_shared_representation": False,
+            })
+
+    record_timing("__shared_validation__", None, shared_begin)
+
     def append_prefixes(method, seed, order):
         for budget in budgets:
             output.append({"method": method, "seed": int(seed) if seed is not None else None, "budget": int(budget), "indices": [int(index) for index in order[:min(budget, n)]]})
 
-    old_correct = history[:, :2] == gold[:, None]
-    flips = old_correct & (history[:, 1:3] != gold[:, None])
-    opportunities = old_correct.sum(axis=1)
-    past_risk = np.divide(flips.sum(axis=1), opportunities, out=np.zeros(n, dtype=np.float64), where=opportunities > 0)
     for seed in seeds:
+        begin = perf_counter()
         permutation = np.random.default_rng(int(seed)).permutation(sorted_indices)
         append_prefixes("random", seed, permutation)
+        record_timing("random", seed, begin)
+
+        begin = perf_counter()
+        permutation = np.random.default_rng(int(seed)).permutation(sorted_indices)
         for budget in budgets:
             quotas = _proportional_quotas(labels, min(budget, n))
             used = Counter()
@@ -211,27 +236,43 @@ def select_baselines(
                     chosen.append(int(index))
                     used[label] += 1
             output.append({"method": "stratified", "seed": int(seed), "budget": int(budget), "indices": chosen})
+        record_timing("stratified", seed, begin)
+
+        begin = perf_counter()
+        permutation = np.random.default_rng(int(seed)).permutation(sorted_indices)
+        old_correct = history[:, :2] == gold[:, None]
+        flips = old_correct & (history[:, 1:3] != gold[:, None])
+        opportunities = old_correct.sum(axis=1)
+        past_risk = np.divide(flips.sum(axis=1), opportunities, out=np.zeros(n, dtype=np.float64), where=opportunities > 0)
         # Stable sorting retains the seeded permutation within equal risk.
         past_order = sorted(permutation.tolist(), key=lambda index: -past_risk[index])
         append_prefixes("past-flip", seed, past_order)
-        append_prefixes("kcenter", seed, _kcenter_order(vectors, sorted_indices, int(seed), max_size))
+        record_timing("past-flip", seed, begin)
 
-    if n:
-        ordered_probabilities = np.sort(probabilities, axis=1)
-        with np.errstate(divide="ignore", invalid="ignore"):
-            log_probabilities = np.zeros_like(probabilities)
-            np.log(probabilities, out=log_probabilities, where=probabilities > 0)
-        risks = {
-            "ref-maxprob": -ordered_probabilities[:, -1],
-            "ref-margin": -(ordered_probabilities[:, -1] - ordered_probabilities[:, -2]),
-            "ref-entropy": -(probabilities * log_probabilities).sum(axis=1),
-            "ref-deepgini": 1.0 - np.square(probabilities).sum(axis=1),
-        }
-    else:
-        risks = {name: np.empty(0) for name in ("ref-maxprob", "ref-margin", "ref-entropy", "ref-deepgini")}
-    for method, scores in risks.items():
+        begin = perf_counter()
+        append_prefixes("kcenter", seed, _kcenter_order(vectors, sorted_indices, int(seed), max_size))
+        record_timing("kcenter", seed, begin)
+
+    for method in ("ref-maxprob", "ref-margin", "ref-entropy", "ref-deepgini"):
+        begin = perf_counter()
+        if not n:
+            scores = np.empty(0)
+        elif method in ("ref-maxprob", "ref-margin"):
+            ordered_probabilities = np.sort(probabilities, axis=1)
+            scores = -ordered_probabilities[:, -1] if method == "ref-maxprob" else -(ordered_probabilities[:, -1] - ordered_probabilities[:, -2])
+        elif method == "ref-entropy":
+            with np.errstate(divide="ignore", invalid="ignore"):
+                log_probabilities = np.zeros_like(probabilities)
+                np.log(probabilities, out=log_probabilities, where=probabilities > 0)
+            scores = -(probabilities * log_probabilities).sum(axis=1)
+        else:
+            scores = 1.0 - np.square(probabilities).sum(axis=1)
         order = sorted(sorted_indices.tolist(), key=lambda index: (-scores[index], sample_ids[index].encode("utf-8")))
         append_prefixes(method, None, order)
+        record_timing(method, None, begin)
+
+    begin = perf_counter()
     anchor_indices = _anchors(sample_ids, labels, sorted_indices)
     append_prefixes("facility", None, _facility_order(vectors, anchor_indices, sorted_indices, max_size))
+    record_timing("facility", None, begin)
     return output
